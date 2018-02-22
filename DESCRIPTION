@@ -1,0 +1,18 @@
+Package: interlineaR
+Type: Package
+Title: Importing interlinearized corpora and associated dictionaries.
+Version: 1.0
+Date: 2015-03-18
+Author: Sylvain Loiseau
+Maintainer: Sylvain Loiseau <sylvain.loiseau@univ-paris13.fr>
+Description: utility functions for importing into R corpora of interlinearized texts and associated dictionaries
+License: BSD_3_clause + file LICENSE
+Depends: R (>= 2.9.0), xml2
+Lazyload: yes
+URL: http://www.r-project.org
+Collate: read.emeld.R read.lift.R interlineaR.R
+Encoding: UTF-8
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

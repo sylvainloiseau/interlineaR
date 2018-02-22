@@ -1,0 +1,1817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- selection of 10 first texts
+of corpus of the tuwari language.
+Very preliminary stage of the analysis.
+Exported from SIL Fieldworks the 20180203.
+-->
+
+<document xsi:noNamespaceSchemaLocation="file:FlexInterlinear.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <interlinear-text guid="d7d0638a-11ca-4952-b9c9-657daaec7f16">
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">Lexems</item></word>
+              <word><item type="txt" lang="tww">with</item></word>
+              <word><item type="txt" lang="tww">same</item></word>
+              <word><item type="txt" lang="tww">base</item></word>
+              <word><item type="txt" lang="tww">and</item></word>
+              <word><item type="txt" lang="tww">different</item></word>
+              <word><item type="txt" lang="tww">suffixe</item></word>
+              <word><item type="punct" lang="tww">(</item></word>
+              <word><item type="txt" lang="tww">si</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">si</item>
+                    <item type="cf" lang="tww">se</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_make</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">-fo</item></word>
+              <word><item type="punct" lang="tww">/</item></word>
+              <word><item type="txt" lang="tww">-he</item></word>
+              <word><item type="punct" lang="tww">)</item></word>
+              <word><item type="txt" lang="tww">are</item></word>
+              <word><item type="txt" lang="tww">linked</item></word>
+              <word><item type="txt" lang="tww">with</item></word>
+              <word><item type="txt" lang="tww">a</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">a</item>
+                    <item type="cf" lang="tww">a</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">I</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">"</item></word>
+              <word><item type="txt" lang="tww">cross</item></word>
+              <word><item type="txt" lang="tww">references</item></word>
+              <word><item type="punct" lang="tww">"</item></word>
+              <word><item type="txt" lang="tww">ty^pe</item></word>
+              <word><item type="punct" lang="tww">"</item></word>
+              <word><item type="txt" lang="tww">same</item></word>
+              <word><item type="txt" lang="tww">lexem</item></word>
+              <word><item type="txt" lang="tww">different</item></word>
+              <word><item type="txt" lang="tww">genre</item></word>
+              <word><item type="punct" lang="tww">".</item></word>
+            </words><item type="segnum" lang="en">1</item><item type="gls" lang="en" /><item type="gls" lang="tpi" /></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="5014a2a9-4480-4085-8877-182d0dc1017e">
+    <item type="title" lang="en">141104_01_T2 (correction dans 2015.III.S18)</item>
+    <item type="title-abbreviation" lang="en">2014T2</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">a</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">a</item>
+                    <item type="cf" lang="tww">a</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">I</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">otoiso</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">otoiso</item>
+                    <item type="cf" lang="tww">otoiso</item>
+                    <item type="gls" lang="en">tomorrow</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">nahamwelo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">naham</item>
+                    <item type="cf" lang="tww">naham</item>
+                    <item type="gls" lang="en">Naham</item>
+                    <item type="msa" lang="en">n_Npr </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-we</item>
+                    <item type="cf" lang="tww">-we</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">n_Npr:(NounGenderNumber)</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-lo</item>
+                    <item type="cf" lang="tww">-lo</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">COMITATIVE</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">na</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">na</item>
+                    <item type="cf" lang="tww">na</item>
+                    <item type="gls" lang="en">to_find</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">balusesapo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">balu</item>
+                    <item type="cf" lang="tww">balu</item>
+                    <item type="gls" lang="en">plane</item>
+                    <item type="msa" lang="en">n  (sapoi) sapo</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-se</item>
+                    <item type="cf" lang="tww">-se</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">n_Npr:Tout</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-sapo</item>
+                    <item type="cf" lang="tww">-sapo</item>
+                    <item type="gls" lang="en">-CL8</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">holotuafemamo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">holo</item>
+                    <item type="cf" lang="tww">holo</item>
+                    <item type="gls" lang="en">week</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">tuafe</item>
+                    <item type="cf" lang="tww">tuafe</item>
+                    <item type="gls" lang="en">behind</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL4</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">koplofe</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">k-</item>
+                    <item type="cf" lang="tww">k-</item>
+                    <item type="gls" lang="en">?-(+aplo)</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">oplo</item>
+                    <item type="cf" lang="tww">aplo</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_finish</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-fe</item>
+                    <item type="cf" lang="tww">-fe</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL6</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">malenaimwii</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">male</item>
+                    <item type="cf" lang="tww">mali</item>
+                    <item type="gls" lang="en">to_talk</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-nai</item>
+                    <item type="cf" lang="tww">-nai</item>
+                    <item type="gls" lang="en">-IRREALIS</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mwii</item>
+                    <item type="cf" lang="tww">-mwii</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+            </words><item type="segnum" lang="en">1</item><item type="gls" lang="en">I, tomorrow, next week, salim i kam, salim tok i go</item><item type="gls" lang="tpi" /><item type="note" lang="en">[mainaimwii] -&gt; / malenaimwii/</item><item type="note" lang="en">gros problème : -mwelo, -welo, -we-lo... ?</item></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="800844aa-e036-4252-ba39-fb5ce55e8167">
+    <item type="title" lang="en">141104_02_T3 A day working on the airstrip (correction dans 2015.III.S18)</item>
+    <item type="title-abbreviation" lang="en">2014T3</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">ta</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ta</item>
+                    <item type="cf" lang="tww">ta</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">we</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">ofa</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ofa</item>
+                    <item type="cf" lang="tww">ofa</item>
+                    <item type="gls" lang="en">today</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">hepitia</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">hepitia</item>
+                    <item type="cf" lang="tww">hepitia</item>
+                    <item type="gls" lang="en">children</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">tonelo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">to</item>
+                    <item type="cf" lang="tww">to</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">man</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ne</item>
+                    <item type="cf" lang="tww">-ne</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">Noun</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-lo</item>
+                    <item type="cf" lang="tww">-lo</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">COMITATIVE</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">ofa</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ofa</item>
+                    <item type="cf" lang="tww">ofa</item>
+                    <item type="gls" lang="en">today</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">uefemo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">u</item>
+                    <item type="cf" lang="tww">u</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">water</item>
+                    <item type="msa" lang="en">n  (tanoi) tano</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">efe</item>
+                    <item type="cf" lang="tww">efe</item>
+                    <item type="gls" lang="en">road</item>
+                    <item type="msa" lang="en">n  (mo) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL4</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">moholuwa</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">mo-</item>
+                    <item type="cf" lang="tww">m-</item>
+                    <item type="gls" lang="en">?-</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">holuwa</item>
+                    <item type="cf" lang="tww">holua</item>
+                    <item type="gls" lang="en">to_work</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">mise</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">m-</item>
+                    <item type="cf" lang="tww">m-</item>
+                    <item type="gls" lang="en">?-</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">i</item>
+                    <item type="cf" lang="tww">i</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-se</item>
+                    <item type="cf" lang="tww">-se</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">-DURATIF?</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">,</item></word>
+              <word><item type="txt" lang="tww">koluwalomlenami</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">k-</item>
+                    <item type="cf" lang="tww">ko-</item>
+                    <item type="gls" lang="en">above-</item>
+                    <item type="msa" lang="en">Noun</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">oluwa</item>
+                    <item type="cf" lang="tww">holua</item>
+                    <item type="gls" lang="en">to_work</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-lo</item>
+                    <item type="cf" lang="tww">-lo</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">-PRESENTATIF</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mle</item>
+                    <item type="cf" lang="tww">-mlei</item>
+                    <item type="gls" lang="en">-PL</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-nami</item>
+                    <item type="cf" lang="tww">-nami</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">twooclockmi</item><morphemes>
+                  <morph>
+                    <item type="txt" lang="tww">twooclock</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mi</item>
+                    <item type="cf" lang="tww">-mi</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL5</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">homo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">homo</item>
+                    <item type="cf" lang="tww">homo</item>
+                    <item type="gls" lang="en">inside</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">teiama</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">teia</item>
+                    <item type="cf" lang="tww">teia</item>
+                    <item type="gls" lang="en">garden</item>
+                    <item type="msa" lang="en">n  (ei) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">sihomolo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">si</item>
+                    <item type="cf" lang="tww">si</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">bush_ground</item>
+                    <item type="msa" lang="en">n  (fo) </item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">homo</item>
+                    <item type="cf" lang="tww">homo</item>
+                    <item type="gls" lang="en">inside</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-lo</item>
+                    <item type="cf" lang="tww">-lo</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="tww" />
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">moluwane</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">m-</item>
+                    <item type="cf" lang="tww">m-</item>
+                    <item type="gls" lang="en">?-</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">oluwa</item>
+                    <item type="cf" lang="tww">holua</item>
+                    <item type="gls" lang="en">to_work</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ne</item>
+                    <item type="cf" lang="tww">-ne</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-MEDIAL</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">sohe</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">so</item>
+                    <item type="cf" lang="tww">so</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">time</item>
+                    <item type="msa" lang="en">n  (he) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-he</item>
+                    <item type="cf" lang="tww">-he</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL7</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">toueimo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">tou</item>
+                    <item type="cf" lang="tww">tou</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">night</item>
+                    <item type="msa" lang="en">n  (ei) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ei</item>
+                    <item type="cf" lang="tww">-hei</item>
+                    <item type="gls" lang="en">-CL</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">5</item>
+                    <item type="gls" lang="en">-TIME</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">onoma</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">onoma</item>
+                    <item type="cf" lang="tww">onoma</item>
+                    <item type="gls" lang="en">inside</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">waialei</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">wa-</item>
+                    <item type="cf" lang="tww">wa-</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">back-</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ia</item>
+                    <item type="cf" lang="tww">ia</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-lei</item>
+                    <item type="cf" lang="tww">-lei</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-PL</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+            </words><item type="segnum" lang="en">1</item><item type="gls" lang="en">we, today, young men, men, went to work. The work done, at two o'clock, we go to the garden cleaning ground(?), then the night we come back to the house.</item><item type="gls" lang="tpi" /><item type="note" lang="en">Cahier : wefemo</item></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="f188f43f-98a1-40b0-871b-c41cabb54068">
+    <item type="title" lang="en">141104_03_T4 How Martin Sipamo killed a crocodile (correction dans 2015.III.S18)</item>
+    <item type="title-abbreviation" lang="en">2014T4</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">aio</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">aio</item>
+                    <item type="cf" lang="tww">aio</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">1S</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">!</item></word>
+            </words><item type="segnum" lang="en">1.1</item><item type="gls" lang="en">Listen! </item><item type="gls" lang="tpi" /></word>
+          <word><words>
+              <word><item type="txt" lang="tww">a</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">a</item>
+                    <item type="cf" lang="tww">a</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">I</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">heifolo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">heifo</item>
+                    <item type="cf" lang="tww">heifo</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">dog</item>
+                    <item type="msa" lang="en">n  (mo) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-lo</item>
+                    <item type="cf" lang="tww">-lo</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">COMITATIVE</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">mio</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">mio</item>
+                    <item type="cf" lang="tww">mio</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">to_go_down</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">.</item></word>
+            </words><item type="segnum" lang="en">1.2</item><item type="gls" lang="en">I went downstream with a dog.</item><item type="gls" lang="tpi">mi wantem dog go daun.</item><item type="note" lang="en" /><item type="note" lang="en" /></word>
+          <word><words>
+              <word><item type="txt" lang="tww">mione</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">mio-</item>
+                    <item type="cf" lang="tww">mio-</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">down-</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ne</item>
+                    <item type="cf" lang="tww">-ne</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-MEDIAL</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">tepiso</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">tepiso</item>
+                    <item type="cf" lang="tww">tepeso</item>
+                    <item type="gls" lang="en">Tepeso</item>
+                    <item type="msa" lang="en">n_Npr_toponyme </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">leimo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">lei</item>
+                    <item type="cf" lang="tww">lei</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_look</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">6</item>
+                    <item type="gls" lang="en">-ADVLZ_simultaneous</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">leimo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">lei</item>
+                    <item type="cf" lang="tww">lei</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_look</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">6</item>
+                    <item type="gls" lang="en">-ADVLZ_simultaneous</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">hao</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">hao</item>
+                    <item type="cf" lang="tww">hao</item>
+                    <item type="gls" lang="en">fish</item>
+                    <item type="msa" lang="en">n  (fo) </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">sinapimi</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">sinapi</item>
+                    <item type="cf" lang="tww">sinapi</item>
+                    <item type="gls" lang="en">crocodile</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mi</item>
+                    <item type="cf" lang="tww">-mi</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL5</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">kupaomo</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ku-</item>
+                    <item type="cf" lang="tww">ku-</item>
+                    <item type="gls" lang="en">insaid-</item>
+                    <item type="msa" lang="en">S'attache à n'importe quelle catégorie</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-pao</item>
+                    <item type="cf" lang="tww">-pao</item>
+                    <item type="gls" lang="en">deep</item>
+                    <item type="msa" lang="en">Noun</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">-inside</item>
+                    <item type="msa" lang="en">Noun</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">wuaflo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">wuaflo</item>
+                    <item type="cf" lang="tww">uaflo</item>
+                    <item type="gls" lang="en">to_lay</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">upaoma</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">u</item>
+                    <item type="cf" lang="tww">u</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">water</item>
+                    <item type="msa" lang="en">n  (tanoi) tano</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-pao</item>
+                    <item type="cf" lang="tww">-pao</item>
+                    <item type="gls" lang="en">deep</item>
+                    <item type="msa" lang="en">Noun</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">.</item></word>
+            </words><item type="segnum" lang="en">1.3</item><item type="gls" lang="en">Downstream, on Tepeso, I saw a crocodile, sleeping deep inside the water.</item><item type="gls" lang="en">Tamblau, lo Tepeso, mi lukluk na lukim pukpuk i slip insaid lo wara.</item><item type="note" lang="en"> ‎‎upaoma - akiapmin.</item></word>
+          <word><words>
+              <word><item type="txt" lang="tww">hao</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">hao</item>
+                    <item type="cf" lang="tww">hao</item>
+                    <item type="gls" lang="en">fish</item>
+                    <item type="msa" lang="en">n  (fo) </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">sinapimi</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">sinapi</item>
+                    <item type="cf" lang="tww">sinapi</item>
+                    <item type="gls" lang="en">crocodile</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mi</item>
+                    <item type="cf" lang="tww">-mi</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL5</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">heianokumi</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">heiano</item>
+                    <item type="cf" lang="tww">heiane</item>
+                    <item type="gls" lang="en">spear</item>
+                    <item type="msa" lang="en">n  (fo) </item>
+                  </morph>
+                  <morph>
+                    <item type="txt" lang="tww">-ku</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mi</item>
+                    <item type="cf" lang="tww">-mi</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">Noun</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">iefimo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">iefi</item>
+                    <item type="cf" lang="tww">iefi</item>
+                    <item type="gls" lang="en">to_shoot</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">6</item>
+                    <item type="gls" lang="en">-ADVLZ_previousness</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">hestomuno</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">hesto</item>
+                    <item type="cf" lang="tww">hesto</item>
+                    <item type="gls" lang="en">neck</item>
+                    <item type="msa" lang="en">n  (mo) </item>
+                  </morph>
+                  <morph>
+                    <item type="txt" lang="tww">-mu</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-no</item>
+                    <item type="cf" lang="tww">-no</item>
+                    <item type="hn" lang="en">6</item>
+                    <item type="gls" lang="en">-flesh</item>
+                    <item type="msa" lang="en">n&gt;n</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">weteto</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">weteto</item>
+                    <item type="cf" lang="tww">weteto</item>
+                    <item type="gls" lang="en">to_catch(for a spear)</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">.</item></word>
+            </words><item type="segnum" lang="en">1.4</item><item type="gls" lang="en">I shoot the crocodile with a spear on the top of the neck and I get him.</item><item type="gls" lang="tpi" /><item type="note" lang="en" /></word>
+          <word><words>
+              <word><item type="txt" lang="tww">saaolalo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">saaola</item>
+                    <item type="cf" lang="tww">saaola</item>
+                    <item type="gls" lang="en">to_die(man_animal)</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-lo</item>
+                    <item type="cf" lang="tww">-lo</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">-PRESENTATIF</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">fali</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">fali</item>
+                    <item type="cf" lang="tww">fali</item>
+                    <item type="gls" lang="en">ACCOMPL</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">waflohei</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">waflo</item>
+                    <item type="cf" lang="tww">uaflo</item>
+                    <item type="gls" lang="en">to_lay</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-he</item>
+                    <item type="cf" lang="tww">-he</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-i</item>
+                    <item type="cf" lang="tww">-io</item>
+                    <item type="gls" lang="en">-ACT</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+            </words><item type="segnum" lang="en">1.5</item><item type="gls" lang="en">He was killed.</item><item type="gls" lang="tpi" /><item type="note" lang="en">J'entends "saawealohoi"</item></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="9e797465-459e-41ca-a238-08dc50062963">
+    <item type="title" lang="en">141105_01_T5</item>
+    <item type="title-abbreviation" lang="en">2014T5</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">ta</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ta</item>
+                    <item type="cf" lang="tww">ta</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">we</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">ifo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ifo</item>
+                    <item type="cf" lang="tww">ife</item>
+                    <item type="gls" lang="en">upstream</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">ioma</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">io</item>
+                    <item type="cf" lang="tww">io</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">motomo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">moto</item>
+                    <item type="cf" lang="tww">motor</item>
+                    <item type="gls" lang="en">motor</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL4</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">iamwii</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ia</item>
+                    <item type="cf" lang="tww">ia</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mwii</item>
+                    <item type="cf" lang="tww">-mwii</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">sumwari</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">sumwari</item>
+                    <item type="cf" lang="tww">sumwari</item>
+                    <item type="gls" lang="en">Sumwari</item>
+                    <item type="msa" lang="en">n_Npr_toponyme </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">oma</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">o</item>
+                    <item type="cf" lang="tww">o</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">house</item>
+                    <item type="msa" lang="en">n  (sapoi) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">.</item></word>
+            </words><item type="segnum" lang="en">1.1</item><item type="gls" lang="en">We went upstream to the houses of Sumwari with a motor canoe</item><item type="gls" lang="tpi" /><item type="note" lang="en">io-ma : pb, -ma sur V.</item></word>
+          <word><words>
+              <word><item type="txt" lang="tww">ta</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ta</item>
+                    <item type="cf" lang="tww">ta</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">we</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">mine</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">m-</item>
+                    <item type="cf" lang="tww">m-</item>
+                    <item type="gls" lang="en">?-</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">i</item>
+                    <item type="cf" lang="tww">i</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ne</item>
+                    <item type="cf" lang="tww">-ne</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-MEDIAL</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">,</item></word>
+              <word><item type="txt" lang="tww">efiamo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">efia</item>
+                    <item type="cf" lang="tww">efia</item>
+                    <item type="gls" lang="en">canoe</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL4</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">tefimwii</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">tefi</item>
+                    <item type="cf" lang="tww">tefi</item>
+                    <item type="gls" lang="en">to_push_to_pull</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mwii</item>
+                    <item type="cf" lang="tww">-mwii</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">,</item></word>
+              <word><item type="txt" lang="tww">kama</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">kama</item>
+                    <item type="cf" lang="tww">kemia</item>
+                    <item type="gls" lang="en">marita (red pandanus)</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">nisopu</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">nisopu</item>
+                    <item type="cf" lang="tww">nesopu</item>
+                    <item type="gls" lang="en">braising</item>
+                    <item type="msa" lang="en">n  (mo) </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">futeimwii</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">futei</item>
+                    <item type="cf" lang="tww">futei</item>
+                    <item type="gls" lang="en">to_cook_with_stone</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mwii</item>
+                    <item type="cf" lang="tww">-mwii</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">,</item></word>
+              <word><item type="txt" lang="tww">tiapitiapi</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">tiapitiapi</item>
+                    <item type="cf" lang="tww">tiapeli</item>
+                    <item type="gls" lang="en">happy</item>
+                    <item type="msa" lang="en">adj </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">maalene</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">maa-</item>
+                    <item type="cf" lang="tww">maa-</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">one-</item>
+                    <item type="msa" lang="en">S'attache à n'importe quelle catégorie</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-le</item>
+                    <item type="cf" lang="tww">-le</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-PL</item>
+                    <item type="msa" lang="en">n:(Num)</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ne</item>
+                    <item type="cf" lang="tww">-ne</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-MEDIAL</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">kemale</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">kema</item>
+                    <item type="cf" lang="tww">kemia</item>
+                    <item type="gls" lang="en">marita (red pandanus)</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-le</item>
+                    <item type="cf" lang="tww">-le</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-PL</item>
+                    <item type="msa" lang="en">n:(Num)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">iowe</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">iowe</item>
+                    <item type="cf" lang="tww">iowe</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">omwii</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">o</item>
+                    <item type="cf" lang="tww">o</item>
+                    <item type="hn" lang="en">4</item>
+                    <item type="gls" lang="en">to_eat</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mwii</item>
+                    <item type="cf" lang="tww">-mwii</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">.</item></word>
+            </words><item type="segnum" lang="en">1.2</item><item type="gls" lang="en">After going, we pull the canoe, we cook marita with mumu, and we are happy when the mumu is finished and we eat the marita [...].</item><item type="gls" lang="tpi" /><item type="note" lang="en">-mu == -mwii!!!</item><item type="note" lang="en">Reduplication</item></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="952f4a5f-bc33-410a-b35a-b1798c280906">
+    <item type="title" lang="en">141105_01_T5com</item>
+    <item type="title-abbreviation" lang="en">2014T5com</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">fihami</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">fihami</item>
+                    <item type="cf" lang="tww">fihami</item>
+                    <item type="gls" lang="en">enough</item>
+                    <item type="msa" lang="en">interj </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">!</item></word>
+            </words><item type="segnum" lang="en">1</item><item type="gls" lang="en">enough!</item><item type="gls" lang="tpi">em inap!</item></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="9bfa6c37-272a-4862-b927-80aff0a16176">
+    <item type="title" lang="en">141105_03_T6 Hurry, the night is coming</item>
+    <item type="title-abbreviation" lang="en">2014T6</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">aho</item></word>
+              <word><item type="txt" lang="tww">iaaima</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">iaa-</item>
+                    <item type="cf" lang="tww">iaa-</item>
+                    <item type="gls" lang="en">cross_side</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">i</item>
+                    <item type="cf" lang="tww">i</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">samueleloma</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">samuele</item>
+                    <item type="cf" lang="tww">samuel</item>
+                    <item type="gls" lang="en">Samuel</item>
+                    <item type="msa" lang="en">n_Npr </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-lo</item>
+                    <item type="cf" lang="tww">-lo</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-DEM</item>
+                    <item type="msa" lang="en">Demonstrative</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">miʔaine</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">miʔai</item>
+                    <item type="cf" lang="tww">miʔai</item>
+                    <item type="gls" lang="en">to_cross_toward_the_other_side</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ne</item>
+                    <item type="cf" lang="tww">-ne</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-MEDIAL</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">soho</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">so</item>
+                    <item type="cf" lang="tww">so</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">time</item>
+                    <item type="msa" lang="en">n  (he) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ho</item>
+                    <item type="cf" lang="tww">-he</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL7</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">touimo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">tou</item>
+                    <item type="cf" lang="tww">tou</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">night</item>
+                    <item type="msa" lang="en">n  (ei) </item>
+                  </morph>
+                  <morph>
+                    <item type="txt" lang="tww">i</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mo</item>
+                    <item type="cf" lang="tww">-mo</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-CL4</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">.</item></word>
+            </words><item type="segnum" lang="en">1.1</item><item type="gls" lang="en">I went visiting Samuel on the other bank, at the time the night was coming.</item><item type="gls" lang="tpi" /><item type="note" lang="en">mi'ajne parce que iai -&gt; i'aj ?</item><item type="note" lang="en">touimo = verbe ou jute n 'crépuscule'</item></word>
+          <word><words>
+              <word><item type="punct" lang="tww">"</item></word>
+              <word><item type="txt" lang="tww">waaiale</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">waai</item>
+                    <item type="cf" lang="tww">waai</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">quickly</item>
+                    <item type="msa" lang="en">adj </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ale</item>
+                    <item type="cf" lang="tww">-ale</item>
+                    <item type="gls" lang="en">-ADVLZ</item>
+                    <item type="msa" lang="en">adj&gt;adv</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">iaaio</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">iaa-</item>
+                    <item type="cf" lang="tww">iaa-</item>
+                    <item type="gls" lang="en">cross_side</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-io</item>
+                    <item type="cf" lang="tww">-io</item>
+                    <item type="gls" lang="en">-ACT</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">"</item></word>
+              <word><item type="txt" lang="tww">samuelwe</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">samuel</item>
+                    <item type="cf" lang="tww">samuel</item>
+                    <item type="gls" lang="en">Samuel</item>
+                    <item type="msa" lang="en">n_Npr </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-we</item>
+                    <item type="cf" lang="tww">-we</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">n_Npr:(NounGenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">nomolo</item><morphemes>
+                  <morph>
+                    <item type="txt" lang="tww">nomolo</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">iouwo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">io</item>
+                    <item type="cf" lang="tww">io</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">to_sing</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-u</item>
+                    <item type="cf" lang="tww">-u</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-TRANSITIF</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-wo</item>
+                    <item type="cf" lang="tww">-io</item>
+                    <item type="gls" lang="en">-ACT</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">,</item></word>
+              <word><item type="txt" lang="tww">waaialeio</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">waai</item>
+                    <item type="cf" lang="tww">waai</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">quickly</item>
+                    <item type="msa" lang="en">adj </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ale</item>
+                    <item type="cf" lang="tww">-ale</item>
+                    <item type="gls" lang="en">-ADVLZ</item>
+                    <item type="msa" lang="en">adj&gt;adv</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-io</item>
+                    <item type="cf" lang="tww">-io</item>
+                    <item type="gls" lang="en">-ACT</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">iaale</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">iaa-</item>
+                    <item type="cf" lang="tww">iaa-</item>
+                    <item type="gls" lang="en">cross_side</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-le</item>
+                    <item type="cf" lang="tww">-le</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">meʔaio</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">meʔa</item>
+                    <item type="cf" lang="tww">miʔa</item>
+                    <item type="gls" lang="en">to_cross</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-io</item>
+                    <item type="cf" lang="tww">-io</item>
+                    <item type="gls" lang="en">-ACT</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">,</item></word>
+              <word><item type="txt" lang="tww">meimo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">meimo</item>
+                    <item type="cf" lang="tww">meimo</item>
+                    <item type="gls" lang="en">then</item>
+                    <item type="msa" lang="en">correlconn </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">waaiale</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">waai</item>
+                    <item type="cf" lang="tww">waai</item>
+                    <item type="hn" lang="en">3</item>
+                    <item type="gls" lang="en">quickly</item>
+                    <item type="msa" lang="en">adj </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ale</item>
+                    <item type="cf" lang="tww">-ale</item>
+                    <item type="gls" lang="en">-ADVLZ</item>
+                    <item type="msa" lang="en">adj&gt;adv</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">meamwii</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">me-</item>
+                    <item type="cf" lang="tww">m-</item>
+                    <item type="gls" lang="en">?-</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">a</item>
+                    <item type="cf" lang="tww">a</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_come</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mwii</item>
+                    <item type="cf" lang="tww">-mwii</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">.</item></word>
+            </words><item type="segnum" lang="en">1.2</item><item type="gls" lang="en">"hariap, hariap", shout Samuel, "hariap",  then I hurry up.</item><item type="gls" lang="tpi" /><item type="note" lang="en">waaiale waaiale : hariap, hariap!</item><item type="note" lang="en">io-u-wo</item><item type="note" lang="en">meimo = then ici.</item></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="f28dd596-ec75-46ac-bd8f-a4a6895da2db">
+    <item type="title" lang="en">141105_04_T7</item>
+    <item type="title-abbreviation" lang="en">2014T7</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">ta</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ta</item>
+                    <item type="cf" lang="tww">ta</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">we</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">sumwari</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">sumwari</item>
+                    <item type="cf" lang="tww">sumwari</item>
+                    <item type="gls" lang="en">Sumwari</item>
+                    <item type="msa" lang="en">n_Npr_toponyme </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">oma</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">o</item>
+                    <item type="cf" lang="tww">o</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">house</item>
+                    <item type="msa" lang="en">n  (sapoi) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">otoisowo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">otoiso</item>
+                    <item type="cf" lang="tww">otoiso</item>
+                    <item type="gls" lang="en">tomorrow</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-wo</item>
+                    <item type="cf" lang="tww">-io</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">otoisowo</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">otoiso</item>
+                    <item type="cf" lang="tww">otoiso</item>
+                    <item type="gls" lang="en">tomorrow</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-wo</item>
+                    <item type="cf" lang="tww">-io</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">tautanopasema</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">tau</item>
+                    <item type="cf" lang="tww">tau</item>
+                    <item type="gls" lang="en">Tau</item>
+                    <item type="msa" lang="en">n_Npr_hydronyme </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-tano</item>
+                    <item type="cf" lang="tww">-tano</item>
+                    <item type="gls" lang="en">-CL3</item>
+                    <item type="msa" lang="en">n:(Class)</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">pase</item>
+                    <item type="cf" lang="tww">pase</item>
+                    <item type="gls" lang="en">sand</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">inaimwii</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">i</item>
+                    <item type="cf" lang="tww">i</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-nai</item>
+                    <item type="cf" lang="tww">-nai</item>
+                    <item type="gls" lang="en">-IRREALIS</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mwii</item>
+                    <item type="cf" lang="tww">-mwii</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+            </words><item type="segnum" lang="en">1</item><item type="gls" lang="en" /><item type="gls" lang="tpi" /></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="a396353d-4681-43ca-b1ad-a7f9fbea6674">
+    <item type="title" lang="en">141105_05_T8</item>
+    <item type="title-abbreviation" lang="en">2014T8</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">aio</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">aio</item>
+                    <item type="cf" lang="tww">aio</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">ay!</item>
+                    <item type="msa" lang="en">interj </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">a</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">a</item>
+                    <item type="cf" lang="tww">a</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">I</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">halileio</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">halile</item>
+                    <item type="cf" lang="tww">hahalei</item>
+                    <item type="gls" lang="en">to_be_tired</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-io</item>
+                    <item type="cf" lang="tww">-io</item>
+                    <item type="gls" lang="en">-ACT</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">waai mahelia nemeheio</item><morphemes>
+                  <morph type="phrase" guid="a23b6faa-1052-4f4d-984b-4b338bdaf95f">
+                    <item type="txt" lang="tww">waai mahelia nemeheio</item>
+                    <item type="cf" lang="tww">waai mahelia nemeheio</item>
+                    <item type="gls" lang="en">that_s_all</item>
+                    <item type="msa" lang="en">interj </item>
+                  </morph>
+                </morphemes></word>
+            </words><item type="segnum" lang="en">1</item><item type="gls" lang="en">I'm tired, that's all.</item><item type="gls" lang="tpi">mi less, em tasol.</item></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+  <interlinear-text guid="9a7a01bb-ca12-41b4-aa99-5f1029346878">
+    <item type="title" lang="en">141105_06_T9 ? voir liste des activités quotidiennes par sana</item>
+    <item type="title-abbreviation" lang="en">2014T9</item>
+    <paragraphs>
+      <paragraph>
+        <phrases>
+          <word><words>
+              <word><item type="txt" lang="tww">a</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">a</item>
+                    <item type="cf" lang="tww">a</item>
+                    <item type="hn" lang="en">2</item>
+                    <item type="gls" lang="en">I</item>
+                    <item type="msa" lang="en">pers </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">iaai</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">iaa-</item>
+                    <item type="cf" lang="tww">iaa-</item>
+                    <item type="gls" lang="en">cross_side</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">i</item>
+                    <item type="cf" lang="tww">i</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">teiama</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">teia</item>
+                    <item type="cf" lang="tww">teia</item>
+                    <item type="gls" lang="en">garden</item>
+                    <item type="msa" lang="en">n  (ei) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">ine</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">i</item>
+                    <item type="cf" lang="tww">i</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ne</item>
+                    <item type="cf" lang="tww">-ne</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-MEDIAL</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">kapihele</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">kapi</item>
+                    <item type="cf" lang="tww">kapi</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">banana</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">he</item>
+                    <item type="cf" lang="tww">he</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">shoot</item>
+                    <item type="msa" lang="en">n </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-le</item>
+                    <item type="cf" lang="tww">-le</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-PL</item>
+                    <item type="msa" lang="en">n:(Num)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">esinami</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">esi</item>
+                    <item type="cf" lang="tww">esi</item>
+                    <item type="gls" lang="en">to_harvest_to_dig_out</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-nami</item>
+                    <item type="cf" lang="tww">-nami</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">teiama</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">teia</item>
+                    <item type="cf" lang="tww">teia</item>
+                    <item type="gls" lang="en">garden</item>
+                    <item type="msa" lang="en">n  (ei) </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ma</item>
+                    <item type="cf" lang="tww">-ma</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-LOC</item>
+                    <item type="msa" lang="en">n:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">inami</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">i</item>
+                    <item type="cf" lang="tww">i</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-nami</item>
+                    <item type="cf" lang="tww">-nami</item>
+                    <item type="gls" lang="en">-?</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">osuatelene</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">osua</item>
+                    <item type="cf" lang="tww">osua</item>
+                    <item type="gls" lang="en">to_plant_with_digging_stick</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">tele</item>
+                    <item type="cf" lang="tww">tele</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">completely</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-ne</item>
+                    <item type="cf" lang="tww">-ne</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">-MEDIAL</item>
+                    <item type="msa" lang="en">v:Tout</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">onoma</item><morphemes>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">onoma</item>
+                    <item type="cf" lang="tww">onoma</item>
+                    <item type="gls" lang="en">inside</item>
+                    <item type="msa" lang="en">adv </item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="txt" lang="tww">waianaimwii</item><morphemes>
+                  <morph type="prefix" guid="d7f713db-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">wa-</item>
+                    <item type="cf" lang="tww">wa-</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">back-</item>
+                    <item type="msa" lang="en">Verb</item>
+                  </morph>
+                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">ia</item>
+                    <item type="cf" lang="tww">ia</item>
+                    <item type="hn" lang="en">1</item>
+                    <item type="gls" lang="en">to_go</item>
+                    <item type="msa" lang="en">v </item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-nai</item>
+                    <item type="cf" lang="tww">-nai</item>
+                    <item type="gls" lang="en">-IRREALIS</item>
+                    <item type="msa" lang="en">v:(TAM)</item>
+                  </morph>
+                  <morph type="suffix" guid="d7f713dd-e8cf-11d3-9764-00c04f186933">
+                    <item type="txt" lang="tww">-mwii</item>
+                    <item type="cf" lang="tww">-mwii</item>
+                    <item type="gls" lang="en">-MASC.SING</item>
+                    <item type="msa" lang="en">v:(GenderNumber)</item>
+                  </morph>
+                </morphemes></word>
+              <word><item type="punct" lang="tww">.</item></word>
+            </words><item type="segnum" lang="en">1</item><item type="gls" lang="en">I went to the garden on the other bank, after having uprooting some sticks of banana and having gone to the garden planting it will come back to the house.</item><item type="gls" lang="tpi" /></word>
+        </phrases>
+      </paragraph>
+    </paragraphs>
+    <languages>
+      <language lang="en" font="Times New Roman" />
+      <language lang="tww" font="Charis SIL" vernacular="true" />
+      <language lang="tpi" font="Charis SIL" vernacular="true" />
+    </languages>
+  </interlinear-text>
+</document>

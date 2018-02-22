@@ -1,0 +1,47 @@
+---
+title: "Importing interlinearized corpora and dictionary into R"
+author: "Sylvain Loiseau"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Importing interlinearized corpora and dictionary into R}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(interlineaR)
+```
+
+
+# Introduction
+
+This package contains utility functions for reading in into R documents
+in various file format containing interlinearized corpora or dictionary
+produced by descriptive linguistics softwares.
+
+Short selection of (very preliminary draft of a) dictionary and an
+interlinearized corpus of the Tuwari (Walioic (papuan), PNG) language
+[http://glottolog.org/resource/languoid/id/tuwa1242]
+are provided in the exampleData directory.
+
+# Reading EMELD XML interlinear corpus
+
+This file format as been introduced in Baden Hughes, Steven Bird and Catherine Bow \emph{Encoding and Presenting Interlinear Text Using XML Technologies}, [http://www.aclweb.org/anthology/U03-1008] and is used by SIL Fieldworks
+
+```{r}
+corpuspath <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
+corpus <- read.emeld(corpuspath)
+```
+
+# Reading LIFT XML dictionary
+
+```{r}
+dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="RFlex")
+dictionary <- read.lift(dicpath)
+```
+

@@ -1,0 +1,2689 @@
+\_sh v3.0  621  Text
+
+\id 2014.I.S2
+\ref 2014.I.S2.001
+\tx me  peisa to- u        -no?
+\mb me  peisa *-  u        -*
+\ge you good  -   to_sleep -
+\ps Pr  adv   -   v        -
+
+\nt Toolbox problème
+\ft yu olsem wanem?
+\ref 2014.I.S2.002
+\tx he       peisa to- u        -no?
+\mb he       peisa *-  u        -*
+\ge you(fem) good  -   to_sleep -
+\ps pr       adv   -   v        -
+
+\ft yu(F) olsem wanem?
+\nt Toolbox problem
+\ref 2014.I.S2.003
+\tx a  fali  peisa uwo
+\mb a  fali  peisa u        -wo
+\ge I  Accpl good  to_sleep -?
+\ps Pr mode  adv   v        -?
+
+\ft mi stap gut! (= I sleep gut ?)
+\ref 2014.I.S2.004
+\tx a  fali  peisa umwii
+\mb a  fali  peisa u        -mwii
+\ge I  Accpl good  to_sleep -Masc.Sing
+\ps Pr mode  adv   v        -tns
+
+\ft mi stap gut! (= I sleep gut ?)
+\ref 2014.I.S2.005
+\tx a  peisa funeio
+\mb a  peisa fe-  -ne    -io
+\ge I  good  Neg- -Dep   -Act
+\ps Pr adv   mod- -sfx.v -mod
+
+\ft mi no stap gut (?) (= I didn't sleep gut ?)
+\nt Toolbox problem : manque le u{to_sleep}
+\ref 2014.I.S2.006
+\tx a  kokuwa uwo
+\mb a  kokuwa u        -wo
+\ge I  bad    to_sleep -?
+\ps Pr adv    v        -?
+
+\ft mi no stap gut (?) (= I didn't sleep gut ?)
+\ref 2014.I.S2.007
+\ph muna
+\tx me  peisa mune
+\mb me  peisa m-     u        -ne
+\ge you good  ?-     to_sleep -Dep
+\ps Pr  adv   pfx.v- v        -sfx.v
+
+\ft yu stap good (lo wewak) = passé
+\ref 2014.I.S2.008
+\tx a  peisa mune                   amwii
+\mb a  peisa m-     u        -ne    a     -mwii
+\ge I  good  ?-     to_sleep -Dep   to_go -Masc.Sing
+\ps Pr adv   pfx.v- v        -sfx.v v     -tns
+\nt sur le lien entre -ne et un verbe principal : d'antériorité ici.
+\ft mi stap good na mi kam
+\ref 2014.I.S2.009
+\tx a  sole      ulowo            (ulomwii)
+\mb a  so   -le  u        -lo -wo u        -lo -mwii
+\ge I  taim -PL  to_sleep -?  -?  to_sleep -?  -Masc.Sing
+\ps Pr n7   -gdr v        -?  -?  v        -?  -tns
+
+\ft bai mi slip
+\ref 2014.I.S2.010
+\tx me  fali  temso      uno?
+\mb me  fali  te    -mso u        -no
+\ge you Accpl woman -?   to_sleep -Ask
+\ps Pr  mode  n     -?   v        -sfx
+
+\ft yu (M) maried pinis ?
+\ref 2014.I.S2.011
+\tx a  fali  temso        uwo
+\mb a  fali  te    -mso   u        -wo
+\ge I  Accpl woman -?     to_sleep -?
+\ps Pr mode  n     -sfx.n v        -sfx.v
+
+\ft yes, mi (M) married pinis
+\ref 2014.I.S2.012
+\tx he       fali  tomwo      uno?
+\mb he       fali  to  -mwo   u        -no
+\ge you(fem) Accpl man -?     to_sleep -Ask
+\ps pr       mode  n   -sfx.n v        -sfx
+
+\ft yu (F) maried pinis ?
+\ref 2014.I.S2.013
+\tx a  fali  tomwo      uwo
+\mb a  fali  to  -mwo   u        -wo
+\ge I  Accpl man -?     to_sleep -?
+\ps Pr mode  n   -sfx.n v        -sfx.v
+
+\ft yes, mi (F) married pinis
+\ref 2014.I.S2.014
+\tx a  temsele           amwii
+\mb a  te    -mse   -le  a     -mwii
+\ge I  woman -?     -PL  to_go -Masc.Sing
+\ps Pr n     -sfx.n -gdr v     -tns
+
+\ft mi kam wantaim meri
+\ref 2014.I.S2.015
+\tx a  tuafe  temse        u-nai-mwiio                (ulomwii)
+\mb a  tuafe  te    -mse   u        -nai   -mwii      u        -lo    -mwii
+\ge I  behind woman -?     to_sleep -Fut   -Masc.Sing to_sleep -?     -Masc.Sing
+\ps Pr adv    n     -sfx.n v        -sfx.v -sfx.v     v        -sfx.v -sfx.v
+
+\ft Bai mi maried sampla moon beain
+\ref 2014.I.S2.016
+\tx me  tetono   naloloslelono?
+\mb me  tetono   nalo       -lo           -sle    -lo           -no
+\ge you children what       -demonstratif -plenty -demonstratif -Ask
+\ps Pr  n        pr_interro -Pr           -nbr    -Pr           -sfx
+
+\ft hamas pikini bilong yu ?
+\ref 2014.I.S2.017
+\tx a  o     selisaio
+\mb a  o     selisa -io
+\ge I  child tree   -Act
+\ps Pr n     num    -mod
+
+\ft mi gat tripla pikinini
+\ref 2014.I.S2.018
+\tx me  o     naloloslelono?
+\mb me  o     nalo       -lo           -sle    -lo           -no
+\ge you house what       -demonstratif -plenty -demonstratif -Ask
+\ps Pr  n8    pr_interro -Pr           -nbr    -Pr           -sfx
+
+\ft hama haus bilong you?
+\ref 2014.I.S2.019
+\ph ...sapoi io
+\tx a  o     waisapoiio
+\mb a  o     wai -sapoi -io
+\ge I  house one -8     -Act
+\ps Pr n8    num -n8    -mod
+\nt problème toolbox
+\ft mi gat wanpla haus
+\ref 2014.I.S2.020
+\tx me  heime    nomalio
+\mb me  hei  -me nomali     -io
+\ge you name -?  wanem?     -Act
+\ps Pr  n    -?  Pr_interro -mod
+
+\ft wanem nem bilong yu ?
+\ref 2014.I.S2.021
+\tx heiamo             saliwiio
+\mb hei  - a       -mo sali  -wiio
+\ge name - 1S.POSS -4  Sali  -?
+\ps n    - poss    -n4 n_Npr -?
+
+\ft nem blong mi Sali
+\ref 2014.I.S2.022
+\tx a  hei-mo   sylvainwiio
+\mb a  hei  -mo sylvain -wiio
+\ge I  name -4  Sylvain -?
+\ps Pr n    -n4 n_Npr   -?
+
+\ft nem blong mi Sylvain
+\ref 2014.I.S2.023
+\tx a  hei-mo   saliwiio
+\mb a  hei  -mo sali  -wiio
+\ge I  name -4  Sali  -?
+\ps Pr n    -n4 n_Npr -?
+
+\ft nem blong mi Sali
+\ref 2014.I.S2.024
+\tx mene             honue        heimo maliio
+\mb me      -ne      honue        heimo maliio
+\ge 2S.POSS -poss    pikinini_man name  wanem
+\ps poss    -Pr_poss n            n     Pr_interro
+
+\ft wanem nem bilong pikini man bilong yu ?
+\ref 2014.I.S2.025
+\tx mene             ulense        heimo maliio
+\mb me      -ne      ulense        heimo maliio
+\ge 2S.POSS -poss    pikinini_meri name  wanem
+\ps poss    -Pr_poss n             n     Pr_interro
+
+\ft id., meri
+\ref 2014.I.S2.026
+\tx a       ulense        heimo soslin
+\mb a       ulense        heimo soslin
+\ge 1S.POSS pikinini_meri name  Soslin
+\ps poss    n             n     n_Npr
+
+\ft pikini man blong mi name blong en Soslin [enfant de Joseph]
+\ref 2014.I.S2.027
+\tx a  honue        heimo neto
+\mb a  honue        heimo neto
+\ge I  pikinini_man name  Neto
+\ps Pr n            n     n_Npr
+
+\ft pikini man blong mi name blong en Neto [enfant de Joseph]
+\ref 2014.I.S2.028
+\tx me  peisa mune                   waiamwiio
+\mb me  peisa m-     u        -ne    wa   - ia    -mwii
+\ge you good  ?-     to_sleep -Dep   back - to_go -Masc.Sing
+\ps Pr  adv   pfx.v- v        -sfx.v cli  - v     -sfx.v
+
+\ft good yu kam bek
+\ref 2014.I.S2.029
+\tx me  tense        tautano             pasema useseino?
+\mb me  te    -nse   tau           -tano pasema u        -sesei -no
+\ge you woman -?     Tau           -3    sand   to_sleep -?     -Ask
+\ps Pr  n     -sfx.n Npr_hydronyme -n3   n      v        -sfx.v -sfx
+
+\ft meri blong yu, em bilong Tau o nogat?
+\ref 2014.I.S2.030
+\tx mese  sumwari-ma      umse            umweio
+\mb mese  sumwari    -ma  u        -mse   u        -mweio
+\ge to_go Sumwari    -LOC to_sleep -?     to_sleep -?
+\ps v     n_toponyme -sfx v        -sfx.v v        -sfx.v
+
+\ft mi kissim meri bilong sumwari
+\nt analyse = ?
+\ref 2014.I.S2.031
+\tx he       tonwe          naswaia    uswe            uno?
+\mb he       to  -nwe       naswaia    u        -swe   u        -no
+\ge you(fem) man -Masc.Sing wanem      to_sleep -?     to_sleep -Ask
+\ps pr       n   -gdr       Pr_interro v        -sfx.v v        -sfx
+
+\nt analyse = ?
+\ft Yu kissim man blong wanem hap?
+\ref 2014.I.S2.032
+\tx he       to  isai-ma         umwe        uno           ?
+\mb he       to  isai       -ma  u-      mwe u        -no  *?
+\ge you(fem) man Ok Isaï   -LOC inside- he  to_sleep -Ask ***
+\ps pr       n   n_toponyme -sfx pfx-    Pr  v        -sfx ***
+
+\ft yu kissim man blong ok isai?
+\ref 2014.I.S2.033
+\tx minima ale maliio
+\mb minima ale maliio
+\ge ?      ?   wanem
+\ps ?      ?   Pr_interro
+
+\ft toktok olsem tasol
+\nt analyse = ?
+\ref 2014.I.S2.034
+\tx sonehe tetolweio   (tetolwiio)
+\mb sonehe tetol -weio tetol -wiio
+\ge time   dark  -?    dark  -?
+\ps n      adj   -?    adj   -?
+
+\ft time tudak now
+\ref 2014.I.S2.035
+\tx iahaosaole inaimwiio,              ufe
+\mb iahaosaole i     -nai   -mwii      ufe
+\ge ?          to_go -Fut   -Masc.Sing ?
+\ps ?          v     -sfx.v -sfx.v     ?
+
+\tx upasekalima      a
+\mb upase -kali -ma  a
+\ge sand  -big  -LOC to_go
+\ps n     -adj  -sfx v
+
+\ft tomora bai storlile antap la bikpla wild sand
+
+\id 2014.I.S5
+\ref 2014.I.S5.001
+\tx ta peisa ousaleolei
+\mb ta peisa ousaleo -lei
+\ge we good  to_stap -PL
+\ps Pr adv   v       -gdr
+
+\ft mipla stap gut
+\ref 2014.I.S5.002
+\tx me  eisapo waiamwii
+\mb me  eisapo wa   - ia    -mwii
+\ge you good   back - to_go -Masc.Sing
+\ps Pr  adj    cli  - v     -sfx.v
+
+\ft gutpla yu kam bek
+\ref 2014.I.S5.003
+\tx keisaalo
+\mb keisaalo
+\ge apinun
+\ps n
+
+\ft apinoon!
+\ref 2014.I.S5.004
+\tx a  sumwarima       mesi     amwii
+\mb a  sumwari    -ma  mesi     a     -mwii
+\ge I  Sumwari    -LOC hap asde to_go -Masc.Sing
+\ps Pr n_toponyme -sfx n        v     -sfx.v
+
+\ft hap asde mi kam lo sumwari
+\ref 2014.I.S5.005
+\tx a  sumwarima       ho        amwii
+\mb a  sumwari    -ma  ho        a     -mwii
+\ge I  Sumwari    -LOC yesterday to_go -Masc.Sing
+\ps Pr n_toponyme -sfx adv       v     -sfx.v
+
+\ft asday mi kam lo sumwari
+\ref 2014.I.S5.006
+\tx a  fonane motomolo miomwii
+\mb a  fonane motomolo mio  -mwii
+\ge I  today  motor    down -Masc.Sing
+\ps Pr adv    n        cli  -sfx.v
+
+\ft tude lo motor canoe kam (down). vs iamwii : kam antap
+\ref 2014.I.S5.007
+\tx peisao,    fi ami
+\mb peisa -io  fi a     -mi
+\ge good  -Act ?  to_go -?
+\ps adv   -mod ?  v     -?
+
+\ft em olright
+\ref 2014.I.S5.008
+\tx wiisei      toumwii
+\mb wiise -i    tou    -mwii
+\ge sago  -leaf to_cut -Masc.Sing
+\ps n     -n    v      -sfx.v
+
+\ft kut saksak
+\ref 2014.I.S5.009
+\tx ta kesialei     inowo
+\mb ta kesia   -lei i     -no  -wo
+\ge we to_play -PL  to_go -Fut -?
+\ps Pr v       -gdr v     -sfx -sfx.v
+
+\ft mipla laik go pilai
+\ref 2014.I.S5.010
+\tx me  ono       masele
+\mb me  o     -no 
+\ge you house -?  
+\ps Pr  n8    -?
+\nt problème d'analyse de Toolbox
+\ft yu stap la haus
+\ref 2014.I.S5.011
+\tx awaselo heliwolo
+\mb awaselo heliwolo
+\ge brata tambu
+\ps n
+
+\ft brata tambu (le mari de Margaret pour moi)
+\ref 2014.I.S5.012
+\tx touano       waaifo   no   kopulomo     honu
+\mb touano       waai -fo no   kopulo   -mo honu
+\ge moon (month) one  -2  week together -4  there
+\ps n2           card -n2 n4   adv      -n4 adv
+
+\tx unaimwii
+\mb u        -nai   -mwii
+\ge to_sleep -Fut   -Masc.Sing
+\ps v        -sfx.v -sfx.v
+\ft bai slip here wanpla moon and wanpla wik.
+\ref 2014.I.S5.013
+\tx sanepe      hanepe,   heianele    henele
+\mb sane   -pe  hane -pe  heiane -le  hane -le
+\ge banara -11  emia -11  spia   -PL  emia -PL
+\ps n11    -n11 Pr   -n11 n12    -gdr Pr   -gdr
+
+\ft banara emia, spia emia
+\ref 2014.I.S5.014
+\tx toutelihei
+\mb toutelihei
+\ge good night!
+\ps n
+\ft good night
+\ref 2014.I.S5.015
+\tx a  iahe     malete   tiomene
+\mb a  iahe     malete   tiomene
+\ge I  tok_ples to_speak to_learn
+\ps Pr n        v        v
+
+\ft mi lainim tok ples
+\ref 2014.I.S5.016
+\tx me  omemasapo             teiio
+\mb me  o     -me -ma  -sapoi tei   -io
+\ge you house -?  -LOC -8     to_go -Act
+\ps Pr  n8    -?  -sfx -n8    v     -mod
+\ft yu go la haus bilong yu
+\ref 2014.I.S5.017
+\tx mwe pamo   fali  tetaoleimwii.       a  me  fene finainemwii
+\mb mwe pamo   fali  tetaolei -mwii      a  me  fene fi      -nai   -ne    -mwii
+\ge he  before Accpl to_ask   -Masc.Sing I  you ?    to_give -Fut   -Dep   -Masc.Sing
+\ps Pr  adv    mode  v        -sfx.v     Pr Pr  ?    v       -sfx.v -sfx.v -sfx.v
+
+\ft em askim yu first (pas)
+\ref 2014.I.S5.018
+\tx olua inale  mali    tiomene
+\mb olua inale  mali    tiomene
+\ge ?    slowly to_talk to_learn
+\ps ?    adv    v       v
+\ft yu lainim isi-isi
+\ref 2014.I.S5.019
+\tx olu uli ale iio
+\mb olu uli ale i     -io
+\ge ?   ?   ?   to_go -Act
+\ps ?   ?   ?   v     -mod
+
+\ft mi go isi-isi
+\ref 2014.I.S5.020
+\tx upaselilo
+\mb upaselilo
+\ge wet (chaussure)
+\ps adj
+
+\ft wet (chaussure)
+\ref 2014.I.S5.021
+\tx a  computer-mi  munwane  amwii.
+\mb a  computer -mi munwane  a     -mwii
+\ge I  computer -5  to_carry to_go -Masc.Sing
+\ps Pr n5       -n5 v        v     -sfx.v
+
+\ft I kiss computer i kam
+\ref 2014.I.S5.022
+\tx me  a       computermi   munwane  a!
+\mb me  a       computer -mi munwane  a
+\ge you 1S.POSS computer -5  to_carry to_go
+\ps Pr  poss    n5       -n5 v        v
+
+\ft you kiss computer bilong mi i kam
+
+\id 2014.I.S6
+\ref 2014.I.S6.001
+\tx me  keiseihelo                  soasuniio
+\mb me  keisei    -he -lo           soasuni -io
+\ge you afternoon -7  -demonstratif to_look -Act
+\ps Pr  n         -n7 -Pr           v       -mod
+\ft bai mi lukim yu displa apinun
+\ref 2014.I.S6.002
+\tx a  ianiama    anaimwii
+\mb a  iania -ma  a      -nai   -mwii
+\ge I  hand  -LOC to_eat -Fut   -Masc.Sing
+\ps Pr n     -sfx v      -sfx.v -sfx.v
+
+\ft mi kaikai lo han
+\ref 2014.I.S6.003
+\tx a  moutehelo               anaimwii
+\mb a  moute -he -lo           a      -nai   -mwii
+\ge I  spoon -7  -demonstratif to_eat -Fut   -Masc.Sing
+\ps Pr n     -n7 -Pr           v      -sfx.v -sfx.v
+
+\ft mi kaikai lo spoon
+\ref 2014.I.S6.004
+\tx a  tiapihelo               anaimwii
+\mb a  tiapi -he -lo           a      -nai   -mwii
+\ge I  naip  -7  -demonstratif to_eat -Fut   -Masc.Sing
+\ps Pr n7    -n7 -Pr           v      -sfx.v -sfx.v
+
+\ft mi kaikai lo naip
+\ref 2014.I.S6.005
+\tx a  solifelo               anaimwii
+\mb a  soli -fe -lo           a      -nai   -mwii
+\ge I  axe  -6  -demonstratif to_eat -Fut   -Masc.Sing
+\ps Pr n6   -n6 -Pr           v      -sfx.v -sfx.v
+
+\ft mi kaikai lo tamiok
+\ref 2014.I.S6.006
+\tx a  meaimolo                anaimwii
+\mb a  meai  -mo -lo           a      -nai   -mwii
+\ge I  stick -4  -demonstratif to_eat -Fut   -Masc.Sing
+\ps Pr n     -n4 -Pr           v      -sfx.v -sfx.v
+
+\ft mi kaikai lo stik
+\ref 2014.I.S6.007
+\tx a  heliio
+\mb a  heli     -io
+\ge I  to_think -Act
+\ps Pr v        -mod
+\ft mi tinim
+\ref 2014.I.S6.008
+\tx a  fenifo    peisa osaaleei heliio
+\mb a  feni  -fo peisa osaaleei heli     -io
+\ge I  tinim -2  good  very     to_think -Act
+\ps Pr n2    -n2 adv   adj      v        -mod
+
+\ft I think it is good.
+\nt possessif ou sujet?
+\ref 2014.I.S6.009
+\tx a  fenifo    kokualowo           peisa fehelineio
+\mb a  feni  -fo kokua -lo    -wo    peisa fe-  heli     -ne    -io
+\ge I  tinim -2  bad   -?     -?     good  Neg- to_think -Dep   -Act
+\ps Pr n2    -n2 adj   -sfx.v -sfx.v adv   mod- v        -sfx.v -mod
+
+\ft I my view, it's not gudpla tumas
+\ref 2014.I.S6.010
+\tx ta fenile     peisa fehelineio
+\mb ta feni  -le  peisa fe-  heli     -ne    -io
+\ge we tinim -PL  good  Neg- to_think -Dep   -Act
+\ps Pr n2    -gdr adv   mod- v        -sfx.v -mod
+\ft In their view, it's not good.
+\ref 2014.I.S6.011
+\tx a  fenifo    eitoeito            heliio
+\mb a  feni  -fo eito     - eito     heli     -io
+\ge I  tinim -2  too_much - too_much to_think -Act
+\ps Pr n2    -n2 adj      - adj      v        -mod
+\ft I think there is too much
+\ref 2014.I.S6.012
+\tx a  fenifo    o-eto-eto-sapoi                    heliio
+\mb a  feni  -fo o     - eto      - eto      -sapoi heli     -io
+\ge I  tinim -2  house - too_much - too_much -8     to_think -Act
+\ps Pr n2    -n2 n8    - adj      - adj      -n8    v        -mod
+\ft I think there is too much house
+\ref 2014.I.S6.013
+\tx me fali otuele mafohuno?
+\ft yu kaikai inap pinis?
+\ref 2014.I.S6.014
+\tx a fali otuele mafohuwo
+\ft mi kaikai pinis
+\ref 2014.I.S6.015
+\tx a fali hefafe
+\ft
+\ref 2014.I.S6.016
+\ph
+\tx a  fali  nofuafo        omononu     tehesiio
+\mb a  fali  nofua      -fo omo -nonu   tehasi -io
+\ge I  Accpl leaf(book) -2  ?   -inside write  -Act
+\ps Pr mode  n          -n2 n   -sfx    v      -mod
+
+\ft I write pinis inside the book
+\ref 2014.I.S6.017
+\tx a  ho        oeitoeitosle                        felineio
+\mb a  ho        o     - eito     - eito     -sle
+\ge I  yesterday house - too_much - too_much -plenty
+\ps Pr adv       n8    - adj      - adj      -nbr
+
+\ft asday, mi no lukim plenty haus
+\nt Toolbox problem
+
+\ref 2014.I.S6.018
+\tx a  opusonokaliso         fliineio
+\mb a  opsono  - kali - so   fe-  -lei -ne    -io
+\ge I  village - car  - taim Neg- -PL  -Dep   -Act
+\ps Pr n       - n    - n7   mod- -gdr -sfx.v -mod
+
+\nt opusono kalimo juste en dessous
+\ft mi no lukim bikpla ples
+\ref 2014.I.S6.019
+\tx a  fiolaluneio
+\mb a
+\ge I
+\ps Pr
+
+\ft lukluk i go down + neg
+\ref 2014.I.S6.020
+\tx fulaluneio non pour Irène : fleineio
+\ft lukluk i go antap + neg
+\ref 2014.I.S6.021
+\tx a  opusonokalimo     mulaluwo
+\mb a  opsono  -kali -mo mu-  lei     - lei     -wo
+\ge I  village -big  -4  up-  to_look - to_look -?
+\ps Pr n       -adj  -n4 cli- v       - v       -sfx.v
+
+\ft mi luk antap wanpla bikpla ples
+\ref 2014.I.S6.022
+\tx a  opusonokalimo     miolaluwo
+\mb a  opsono  -kali -mo mio-  lei     - lei     -wo
+\ge I  village -big  -4  down- to_look - to_look -?
+\ps Pr n       -adj  -n4 cli-  v       - v       -sfx.v
+
+\ft mi lukluk i go daun wanpla bikpla ples
+\ref 2014.I.S6.023
+\tx a  opusonokalimo     leiio
+\mb a  opsono  -kali -mo lei     -io
+\ge I  village -big  -4  to_look -Act
+\ps Pr n       -adj  -n4 v       -mod
+
+\ft mi lukim wanpla bikpla ples
+\ref 2014.I.S6.024
+\tx a  opusonokalimo     mionoleiio
+\mb a  opsono  -kali -mo
+\ge I  village -big  -4
+\ps Pr n       -adj  -n4
+
+\ft go down lukim (lukim pastaim na behin mi go daun)
+\ref 2014.I.S6.025
+\tx miolaluwo
+\ft lukluk i go daun (no go)
+\ref 2014.I.S6.026
+\tx iolalunaimwiio
+\ft io- sans mio- ?
+\ref 2014.I.S6.027
+\tx ulanaimwiio
+\ft 'antap' u- sans mu- ?
+\ref 2014.I.S6.028
+\tx a  tiapeli    heli
+\mb a  tiape li    heli
+\ge I  life  -?   to_think
+\ps Pr n4    -sfx v
+
+\ft I'm happy
+\ref 2014.I.S6.029
+\tx a  sole      unowo
+\mb a  so   -le  u        -no  -wo
+\ge I  taim -PL  to_sleep -Fut -?
+\ps Pr n7   -gdr v        -sfx -sfx.v
+
+\ft mi laik go slip
+\ref 2014.I.S6.030
+\tx me  sole      uwo
+\mb me  so   -le  u        -wo
+\ge you taim -PL  to_sleep -?
+\ps Pr  n7   -gdr v        -sfx.v
+
+\ft you slip
+\ref 2014.I.S6.031
+\tx me  sole      ine          uwo
+\mb me  so   -le  i     -ne    u        -wo
+\ge you taim -PL  to_go -Dep   to_sleep -?
+\ps Pr  n7   -gdr v     -sfx.v v        -sfx.v
+
+\ft yu go slip
+\ref 2014.I.S6.032
+\tx me  sole      mione       uno
+\mb me  so   -le  mio  -ne    u        -no
+\ge you taim -PL  down -Dep   to_sleep -Ask
+\ps Pr  n7   -gdr cli  -sfx.v v        -sfx
+
+\ft yu go slip tamblau?
+\ref 2014.I.S6.033
+\tx yo, a  sole      mione       uwo
+\mb yo  a  so   -le  mio  -ne    u        -wo
+\ge yes I  taim -PL  down -Dep   to_sleep -?
+\ps adv Pr n7   -gdr cli  -sfx.v v        -sfx.v
+
+\ft yes, I go slip tamblo
+\ref 2014.I.S6.034
+\tx eisabo   halfe maline         iale    meliio
+\mb eisabo   halfe mali    -ne    iale    meli    -io
+\ge thank_yu ?     to_talk -Dep   to_sing to_talk -Act
+\ps adv      ?     v       -sfx.v v       v       -mod
+\ft thank yu lo tok tok.
+\ref 2014.I.S6.035
+\tx a  sole      koma             une        uwo
+\mb a  so   -le  koma             u   -ne    u        -wo
+\ge I  taim -PL  antap_lo_montain up  -Dep   to_sleep -?
+\ps Pr n7   -gdr adv              cli -sfx.v v        -sfx.v
+\nt analyse = ?
+
+
+\ref 2014.I.S6.036
+\tx a sole ioma uwo
+\ft ?
+\ref 2014.I.S6.037
+\tx a sole ifema une iio
+\ft antap lo wara
+\ref 2014.I.S6.038
+\tx taanelo                     taanehelo
+\mb taa  -ne      -lo           taa  -ne      -he -lo
+\ge said -poss    -demonstratif said -poss    -7  -demonstratif
+\ps n    -Pr_poss -Pr           n    -Pr_poss -n7 -Pr
+
+\ft displa said
+\nt analyse = non !
+\ref 2014.I.S6.039
+\tx taai iaai mahalo
+\ft
+\ref 2014.I.S6.040
+\tx a  sole      une             iio
+\mb a  so   -le  u        -ne    i     -io
+\ge I  taim -PL  to_sleep -Dep   to_go -Act
+\ps Pr n7   -gdr v        -sfx.v v     -mod
+
+\ft mi go slip tasol (no antap o tamblau)
+\ref 2014.I.S6.041
+\tx a  sole      une             miowo
+\mb a  so   -le  u        -ne    mio  -wo
+\ge I  taim -PL  to_sleep -Dep   down -?
+\ps Pr n7   -gdr v        -sfx.v cli  -sfx.v
+
+\ft yu laik go slip antap (= tamblau?)
+\ref 2014.I.S6.042
+\tx a  sole      taanhelo           unowo
+\mb a  so   -le  taa  - *n  -he -lo u        -no  -wo
+\ge I  taim -PL  said - *** -7  -?  to_sleep -Fut -?
+\ps Pr n7   -gdr n    - *** -n7 -sfxv        -sfx -sfx.v
+
+\ft mi laik go slip lo displa said tasol
+\ref 2014.I.S6.043
+\tx a sole taai iaai mahalo une mia aio
+\ft ?
+\ref 2014.I.S6.044
+\tx me  nomu  slelaluwo
+\mb me  nomu  sele   -la    -lu    -wo
+\ge you there to_sit -?     -?     -?
+\ps Pr  adv   v      -sfx.v -sfx.v -sfx.v
+
+\nt analyse = ?
+\ft yu stap la hap
+\ref 2014.I.S6.045
+\tx afa         temiaimweio
+\mb a  -fa      temiai       -mweio
+\ge I  -DISTRIB to_go_upside -?
+\ps Pr -sfx     v            -sfx.v
+\ft mi go upside
+\ref 2014.I.S6.046
+\tx afa         honu  slelaimwiio
+\mb a  -fa      honu  sele   -lai   -mwii
+\ge I  -DISTRIB there to_sit -?     -Masc.Sing
+\ps Pr -sfx     adv   v      -sfx.v -sfx.v
+\ft mi stap hir
+\ref 2014.I.S6.047
+\tx uweio
+\mb uweio
+\ge no_gat
+\ps adv
+
+\ft no gat
+\ref 2014.I.S6.048
+\tx kopualelowo
+\mb kopuale -lo    -wo
+\ge no_gat  -?     -?
+\ps adv     -sfx.v -sfx.v
+\nt bon exemple de la valeur de -lowo
+\ft no gat
+\ref 2014.I.S6.049
+\tx mene         maatei
+\mb me  -ne      maa-    tei
+\ge you -poss    wanpla- to_go
+\ps Pr  -Pr_poss num-    v
+\nt bon exemple de la valeur de me*-ne*
+\ft yu tasol i go
+\ref 2014.I.S6.050
+\tx a  hahaleio
+\mb a  hahalei     -io
+\ge I  to_be_tired -Act
+\ps Pr v           -mod
+
+\ft mi les
+
+\id 2014.I.S8
+\ref 2014.I.S8.001
+\tx a  omwii.
+\mb a  o      -mwii
+\ge I  to_eat -Masc.Sing
+\ps pr v      -sfx.v
+
+\ft I eat
+\ref 2014.I.S8.002
+\tx a  anaimwii.
+\mb a  a      -nai   -mwii
+\ge I  to_eat -Fut   -Masc.Sing
+\ps pr v      -sfx.v -sfx.v
+
+\ft I will eat
+\fr bai mi kaikai
+\ref 2014.I.S8.003
+\tx a  ho        otuele    m-a-aplo.
+\mb a  ho        otue -le  m-     a      -aplo
+\ge I  yesterday food -PL  ?-     to_eat -ACC
+\ps pr adv       n    -gdr pfx.v- v      -sfx.v
+
+\ft I eated.
+\fr mi kaikai pinis
+\ref 2014.I.S8.004
+\tx a  ofa eseile     m-a-aplo.
+\mb a  ofa esei  -le  m-     a      -aplo
+\ge I  now water -PL  ?-     to_eat -ACC
+\ps pr adv n     -gdr pfx.v- v      -sfx.v
+
+\ft I drinked today.
+\fr mi drink pinis today
+\ref 2014.I.S8.005
+\tx a  ofa mamimo   fali  miefiio.
+\mb a  ofa mami -mo fali  m-     iefi     -io
+\ge I  now pig  -4  Accpl ?-     to_shoot -Act
+\ps pr adv n4   -n4 mode  pfx.v- v        -sfx.v
+
+\ft I shooted a pig today
+\fr mi shutim pinis
+\ref 2014.I.S8.006
+\tx a  ofa ule        meheiaplo.
+\mb a  ofa u     -le  m-     hei            -aplo
+\ge I  now water -PL  ?-     to_go_in_water -ACC
+\ps pr adv n     -gdr pfx.v- v              -sfx.v
+
+\ft I washed myself today
+\fr me waswas pinis today
+\ref 2014.I.S8.007
+\tx a  ofa sole      mune                   tio-mwii.
+\mb a  ofa so   -le  m-     u        -ne    ti         -io    -mwii
+\ge I  now taim -PL  ?-     to_sleep -Dep   to_go_down -Act   -Masc.Sing
+\ps pr adv n7   -gdr pfx.v- v        -sfx.v v          -sfx.v -sfx.v
+
+\ft I slept and I killap
+\fr mi slip pinis na killap
+\ref 2014.I.S8.008
+\tx a  sole      umwii
+\mb a  so   -le  u        -mwii
+\ge I  taim -PL  to_sleep -Masc.Sing
+\ps pr n7   -gdr v        -sfx.v
+
+\ft I slept.
+\fr mi slip pinis
+\ref 2014.I.S8.009
+\tx a  ofa sole      mune                   aplomwii
+\mb a  ofa so   -le  m-     u        -ne    *   -aplo  -mwii
+\ge I  now taim -PL  ?-     to_sleep -Dep   *** -ACC   -Masc.Sing
+\ps pr adv n7   -gdr pfx.v- v        -sfx.v *** -sfx.v -sfx.v
+
+\ft
+\fr mi slip pinis
+\ref 2014.I.S8.010
+\tx me  sole      fali  usueino?
+\mb me  so   -le  fali  u        -suei  -no
+\ge you taim -PL  Accpl to_sleep -?     -Ask
+\ps pr  n7   -gdr mode  v        -sfx.v -sfx
+
+\ft
+\fr yu (masc.) slip pinis
+\ref 2014.I.S8.011
+\tx mle sole      fali  usleino?
+\mb mle so   -le  fali  u        -slei  -no
+\ge all taim -PL  Accpl to_sleep -?     -Ask
+\ps ?   n7   -gdr mode  v        -sfx.v -sfx
+
+\ft
+\fr yu (pl.) slip pinis?
+\ref 2014.I.S8.012
+\tx he       fali  sole      useseino?
+\mb he       fali  so   -le  u        -sesei -no
+\ge you(fem) Accpl taim -PL  to_sleep -?     -Ask
+\ps pr       mode  n7   -gdr v        -sfx.v -sfx
+
+\ft
+\fr yu (fem.) slip pinis?
+\ref 2014.I.S8.013
+\tx yo, a  fali  sole      mune                   tiomwii.
+\mb yo  a  fali  so   -le  m-     u        -ne    ti         -io    -mwii
+\ge yes I  Accpl taim -PL  ?-     to_sleep -Dep   to_go_down -Act   -Masc.Sing
+\ps adv pr mode  n7   -gdr pfx.v- v        -sfx.v v          -sfx.v -sfx.v
+
+\ft yes, I slept and now I wake up
+\fr yes, mi slip pinis na killap
+\ref 2014.I.S8.014
+\tx a  fa  sole      f-u-ne-io
+\mb a  fa  so   -le  fe-    u    -ne    -io
+\ge I  yet taim -PL  Neg-   -?   -Dep   -Act
+\ps pr adv n7   -gdr pfx.v- -sfx -sfx.v -sfx.v
+
+\ft No, I didn't slept yet.
+\fr mi no slip yet
+\nt Problème d'analyse toolbox
+\ref 2014.I.S8.015
+\tx me  fali  otuele    osueino?
+\mb me  fali  otue -le  o      -suei  -no
+\ge you Accpl food -PL  to_eat -?     -Ask
+\ps pr  mode  n    -gdr v      -sfx.v -sfx
+
+\ft yu (masc.) finish eating?
+\fr yu kaikai pinis?
+\ref 2014.I.S8.016
+\tx yo, a  fali  otuele    omwii!
+\mb yo  a  fali  otue -le  o      -mwii
+\ge yes I  Accpl food -PL  to_eat -Masc.Sing
+\ps adv pr mode  n    -gdr v      -sfx.v
+
+\ft
+\ref 2014.I.S8.017
+\tx tei fali  otuele    osleino?
+\mb tei fali  otue -le  o      -slei  -no
+\ge 2P  Accpl food -PL  to_eat -?     -Ask
+\ps pr  mode  n    -gdr v      -sfx.v -sfx
+
+\ft
+\ref 2014.I.S8.018
+\tx yo, ta fali  otuele    olei!
+\mb yo  ta fali  otue -le  o      -lei
+\ge yes we Accpl food -PL  to_eat -PL
+\ps adv pr mode  n    -gdr v      -gdr
+
+\ft
+\ref 2014.I.S8.019
+\tx he       fali  otuele    oseseino?
+\mb he       fali  otue -le  o      -sesei -no
+\ge you(fem) Accpl food -PL  to_eat -?     -Ask
+\ps pr       mode  n    -gdr v      -sfx.v -sfx
+
+\ft
+\ref 2014.I.S8.020
+\tx yo, a  fali  otuele    omsei!
+\mb yo  a  fali  otue -le  o      -msei
+\ge yes I  Accpl food -PL  to_eat -Fem.Sing
+\ps adv pr mode  n    -gdr v      -sfx.v
+
+\ft
+\ref 2014.I.S8.021
+\tx heiso heisa, tei fali  otuele    osleino?
+\mb heiso heisa  tei fali  otue -le  o      -slei  -no
+\ge women women  2P  Accpl food -PL  to_eat -?     -Ask
+\ps n     n      pr  mode  n    -gdr v      -sfx.v -sfx
+
+\ft
+\ref 2014.I.S8.022
+\tx yo, ta fali  otuele    olei!
+\mb yo  ta fali  otue -le  o      -lei
+\ge yes we Accpl food -PL  to_eat -PL
+\ps adv pr mode  n    -gdr v      -gdr
+
+\ft
+\ref 2014.I.S8.023
+\tx tense        a  fufufo     miniaio.
+\mb te    -nse   a  fufu   -fo m-     nia     -io
+\ge woman -?     I  papaye -2  ?-     to_give -Act
+\ps n     -sfx.n pr n2     -n2 pfx.v- v       -sfx.v
+
+\ft
+\fr wanpela meri givim mi popo
+\ref 2014.I.S8.024
+\tx tonue      a  kapimi     meniaio.
+\mb to  -nue   a  kapi   -mi m-     nia     -io
+\ge man -?     I  banana -5  ?-     to_give -Act
+\ps n   -sfx.n pr n      -n5 pfx.v- v       -sfx.v
+
+\ft
+\ref 2014.I.S8.025
+\tx a  tense        fufufo     nefiio.
+\mb a  te    -nse   fufu   -fo nefi    -io
+\ge I  woman -?     papaye -2  to_give -Act
+\ps pr n     -sfx.n n2     -n2 v       -sfx.v
+
+\ft
+\ref 2014.I.S8.026
+\tx a  tonue      fufufo     nefiio.
+\mb a  to  -nue   fufu   -fo nefi    -io
+\ge I  man -?     papaye -2  to_give -Act
+\ps pr n   -sfx.n n2     -n2 v       -sfx.v
+
+\ft
+\ref 2014.I.S8.027
+\tx a  me  fufufo     nefiio.
+\mb a  me  fufu   -fo nefi    -io
+\ge I  you papaye -2  to_give -Act
+\ps pr pr  n2     -n2 v       -sfx.v
+
+\ft
+\ref 2014.I.S8.028
+\tx me  a  fufufo     miniaio.
+\mb me  a  fufu   -fo m-     nia     -io
+\ge you I  papaye -2  ?-     to_give -Act
+\ps pr  pr n2     -n2 pfx.v- v       -sfx.v
+
+\ft
+\ref 2014.I.S8.029
+\tx me  tense        fufufo     nefiio.
+\mb me  te    -nse   fufu   -fo nefi    -io
+\ge you woman -?     papaye -2  to_give -Act
+\ps pr  n     -sfx.n n2     -n2 v       -sfx.v
+
+\ft
+\ref 2014.I.S8.030
+\tx tense        me  fufufo     nefiio.
+\mb te    -nse   me  fufu   -fo nefi    -io
+\ge woman -?     you papaye -2  to_give -Act
+\ps n     -sfx.n pr  n2     -n2 v       -sfx.v
+
+\ft
+\ref 2014.I.S8.031
+\tx awa,    tense        maliio,    "a fufufo     niaio".
+\mb awa     te    -nse   maliio     a  fufu   -fo nia     -io
+\ge brother woman -?     wanem      I  papaye -2  to_give -Act
+\ps n       n     -sfx.n pr_interro pr n2     -n2 v       -sfx.v
+
+\ft
+\nt Daniel me demande d'aller demander une papaye à une femme.
+
+\ref 2014.I.S8.032
+\tx awa,    he       ine          tonue      mali-io:       "a kapisi        niaio".
+\mb awa     he       i     -ne    to  -nue   mali    -io    a  kapi   -si    nia     -io
+\ge brother you(fem) to_go -Dep   man -?     to_talk -Act   I  banana -?     to_give -Act
+\ps n       pr       v     -sfx.v n   -sfx.n v       -sfx.v pr n      -sfx.n v       -sfx.v
+
+\ft Sister, go ask this man to give me a banana.
+\ref 2014.I.S8.033
+\tx awa,    he       ine          tonue      mali-io:       "mle kapisi        nefiio"
+\mb awa     he       i     -ne    to  -nue   mali    -io    mle  kapi   -si    nefi    -io
+\ge brother you(fem) to_go -Dep   man -?     to_talk -Act   all  banana -?     to_give -Act
+\ps n       pr       v     -sfx.v n   -sfx.n v       -sfx.v ?    n      -sfx.n v       -sfx.v
+
+\ft Sister, go ask this man to give them a banana.
+\ref 2014.I.S8.034
+\tx nomosipia male nalu
+\ft go lo lotu
+\ref 2014.I.S8.035
+\tx fafonane
+\mb fafonane
+\ge after
+\ps adv
+
+\ft after (?)
+\ref 2014.I.S8.036
+\tx ielaei
+\mb ielaei
+\ge to_shake_hand
+\ps v
+
+\ft shake hand
+\ref 2014.I.S8.037
+\tx miamwoi
+\mb miamwoi
+\ge walking_stick
+\ps n
+
+\ft bâton de marche
+\ref 2014.I.S8.038
+\tx me  upasi     mene  waia
+\mb me  upasi     mene  wa   - ia
+\ge you wild_sand to_go back - to_go
+\ps pr  n         v     cli  - v
+
+\ft yu go lo waild sand na kam back
+\ref 2014.I.S8.039
+\tx a  ienife howaouu
+\mb a  ienife howaouu
+\ge I  hand   to_wash
+\ps pr n      v
+
+\ft mi wassim hand
+
+\id 2014.VI.S10
+\ref 2014.VI.S10.001
+\tx me  ane        a-li    iasane
+\mb me  a     -ne  a  -li  iasane
+\ge you to_go -Dep I  -?   to_help
+\ps Pr  v     -sfx Pr -sfx v
+
+\ft You come help me
+\ref 2014.VI.S10.002
+\tx a  me-li    iasane
+\mb a  me  -li  iasane
+\ge I  you -?   to_help
+\ps Pr Pr  -sfx v
+
+\ft I help you
+\ref 2014.VI.S10.003
+\tx me  ine        mweli    iasane
+\mb me  i     -ne  mwe -li  iasane
+\ge you to_go -Dep he  -?   to_help
+\ps Pr  v     -sfx Pr  -sfx v
+
+\ft You go help him
+\ref 2014.VI.S10.004
+\tx a  ine        mweli    iasane
+\mb a  i     -ne  mwe -li  iasane
+\ge I  to_go -Dep he  -?   to_help
+\ps Pr v     -sfx Pr  -sfx v
+
+\ft I go help him
+\ref 2014.VI.S10.005
+\tx me  mwe mafetelimwii
+\mb me  mwe mafeteli -mwii
+\ge you he  to_know  -Masc.Sing
+\ps Pr  Pr  v        -tns
+
+\ft
+\nt cf. tafeli-mwii normalement... ?
+\ref 2014.VI.S10.006
+\tx a  mwe mafetelimwii
+\mb a  mwe mafeteli -mwii
+\ge I  he  to_know  -Masc.Sing
+\ps Pr Pr  v        -tns
+
+\ft I help him
+\ref 2014.VI.S10.007
+\tx a  me-li    mala-luwo
+\mb a  me  -li  mala- lei     -wo
+\ge I  you -?   away- to_look -?
+\ps Pr Pr  -sfx pfx-  v       -?
+
+\ft mi lukim you you stap long we
+\ref 2014.VI.S10.008
+\tx a  mamimo   iefiio
+\mb a  mami -mo iefi     -io
+\ge I  pig  -4  to_shoot -Act
+\ps Pr n4   -n4 v        -mod
+
+\ft I shoot a pig
+\ref 2014.VI.S10.009
+\tx me  mamimo   iefiio
+\mb me  mami -mo iefi     -io
+\ge you pig  -4  to_shoot -Act
+\ps Pr  n4   -n4 v        -mod
+
+\ft You shoot a pig
+\ref 2014.VI.S10.010
+\tx a  nitano     aluwo
+\mb a  ni   -tano alu      -wo
+\ge I  fire -3    to_light -?
+\ps Pr n    -n3   v        -?
+
+\ft I light fire
+\ref 2014.VI.S10.011
+\ph miasanelei
+\tx tei   a-li    iasanelei
+\mb tei   a  -li  iasane  -lei
+\ge to_go I  -?   to_help -PL
+\ps v     Pr -sfx v       -gdr
+
+\ft you (pl) help me
+\ref 2014.VI.S10.012
+\tx fali  kuwalolo
+\mb fali  kuwa -lo -lo
+\ge Accpl ?    -?  -?
+\ps mode  ?    -?  -?
+
+\ft pinis algeta (après une chanson)
+\ref 2014.VI.S10.013
+\tx a  me  noumo      nefi
+\mb a  me  nou   -mo  nefi
+\ge I  you bilum -?   to_give
+\ps Pr Pr  n4    -vrb v
+
+
+\id 2014.VI.S11
+\ref 2014.VI.S11.001
+\tx tesei      heplele
+\mb tese -i    heplele
+\ge head -hair to_comb
+\ps n    -n    v
+
+\ft to cumb hair
+\ref 2014.VI.S11.002
+\tx soho unai          sohoi
+\mb soho u        -nai soho - i
+\ge time to_sleep -Fut time - to_go
+\ps n    v        -tns n    - v
+
+\ft time blo slip
+\nt analyse = ?
+\ref 2014.VI.S11.003
+\tx me  heitomule           tiano?
+\mb me  heitomu        -le  tia    -no
+\ge you food_or_hungry -PL  to_sit -Ask
+\ps Pr  n              -gdr v      -sfx
+\ft yu sit down hungry?
+\ref 2014.VI.S11.004
+\tx me  heitomule           kono!
+\mb me  heitomu        -le  kono
+\ge you food_or_hungry -PL  NC_feel?
+\ps Pr  n              -gdr v
+
+\ft no good yu stap hungry!
+
+\id 2014.VI.S12
+\ref 2014.VI.S12.001
+\tx heifale    one          natene        ane
+\mb heifa -le  o       -ne  nate     -ne  a     -ne
+\ge green -PL  to_cook -Dep to_carry -Dep to_go -Dep
+\ps n     -gdr v       -sfx v        -sfx v     -sfx
+\ft green kukum pinis karim I kam.
+\ref 2014.VI.S12.002
+\tx he       nouha         lene maalesi
+\mb he       nou   - ha    lene maalesi
+\ge you(fem) bilum - small ?    ?
+\ps pr       n4    - adj   ?    ?
+
+\ft yu save makim liklik bilum tasol
+\ref 2014.VI.S12.003
+\tx a  hahalei
+\mb a  hahalei
+\ge I  to_be_tired
+\ps Pr v
+
+\ft mi les
+\ref 2014.VI.S12.004
+\tx mwe solo     maaufe
+\mb mwe solo     maa-  u        -fe
+\ge he  to_sleep mas?- to_sleep -NOW
+\ps Pr  v        ?-    v        -sfx
+
+\ft em mas slip pinis
+\ref 2014.VI.S12.005
+\tx mwe otuele    maaofe
+\mb mwe otue -le  maa-  o       -fe
+\ge he  food -PL  mas?- to_cook -NOW
+\ps Pr  n    -gdr ?-    v       -sfx
+
+\ft em i mas kaikai pinis
+\ref 2014.VI.S12.006
+\ph maamofleife
+\tx mwe hao  maa-oflei-fe
+\mb mwe hao  maa-  oflei   -fe
+\ge he  fish mas?- to_turn -NOW
+\ps Pr  n    ?-    v       -sfx
+
+\ft em i mas tainim pis pinis
+\ref 2014.VI.S12.007
+\tx a  hao  fali  moflei
+\mb a  hao  fali  m- oflei
+\ge I  fish Accpl ?- to_turn
+\ps Pr n    mode  ?- v
+
+\ft mi mas tainim pis pinis.
+\ref 2014.VI.S12.008
+\ph te'a
+\tx misi    fali  metalo natene        iowo           siaio  tea    safuwo   ta tia'   aio
+\mb m- si   fali  metalo nate     -ne  i     -io  -wo siaio  tea    safu -wo ta tia    a      -io
+\ge ?- seed Accpl ?      to_carry -Dep to_go -Act -?  plate? to_kam ?    -?  we to_sit to_eat -Act
+\ps ?- n9   mode  v      v        -sfx v     -mod -?  n      v      ?    -?  Pr v      v      -mod
+
+\ft rice kukim pinis kissim i kam, karim i kom, putim lo plate na mipla kaikai
+
+\ref 2014.VI.S12.009
+\tx a  fali  mafuwo
+\mb a  fali  mafu -wo
+\ge I  Accpl ?    -?
+\ps Pr mode  ?    -?
+
+\ft mi pulap
+\ref 2014.VI.S12.010
+\ph eneleio
+\tx a  hepaemo   heneleio
+\mb a  hepaemo   henele       -io
+\ge I  back_side to_make_pain -Act
+\ps Pr n         v            -mod
+\ref 2014.VI.S12.011
+\ph una
+\tx a  solo     une           ano
+\mb a  solo     u        -ne  ano
+\ge I  to_sleep to_sleep -Dep to_want
+\ps Pr v        v        -sfx v
+
+\ft mi laik slip nau
+\ref 2014.VI.S12.012
+\ph una
+\tx a  solo     une           anowo
+\mb a  solo     u        -ne  ano     -wo
+\ge I  to_sleep to_sleep -Dep to_want -?
+\ps Pr v        v        -sfx v       -?
+
+\ft mi laik go slip
+\ref 2014.VI.S12.013
+\tx a  fali  metiaune            solowo
+\mb a  fali  m- tiau        -ne  sele   -wo
+\ge I  Accpl ?- to_stand_up -Dep to_sit -?
+\ps Pr mode  ?- v           -sfx v      -?
+
+\ft mi kilap sit daun
+\ref 2014.VI.S12.014
+\tx a  fali  metiaune            tetowo
+\mb a  fali  m- tiau        -ne  teto               -wo
+\ge I  Accpl ?- to_stand_up -Dep to_arrive_or_sanap -?
+\ps Pr mode  ?- v           -sfx v                  -?
+
+\ft mi kilap na sanap
+\ref 2014.VI.S12.015
+\ph ina
+\tx a  teiama      ine        anowo
+\mb a  teia   -ma  i     -ne  ano     -wo
+\ge I  garden -ALL to_go -Dep to_want -?
+\ps Pr n      -sfx v     -sfx v       -?
+
+\ft mi laik go lo gaden
+\ref 2014.VI.S12.016
+\ph ona
+\tx a  otuele    one          anowo
+\mb a  otue -le  o       -ne  ano     -wo
+\ge I  food -PL  to_cook -Dep to_want -?
+\ps Pr n    -gdr v       -sfx v       -?
+
+\ft mi laik kukim
+\ref 2014.VI.S12.017
+\ph heitomele
+\tx a  heitomule           anowo
+\mb a  heitomu        -le  ano     -wo
+\ge I  food_or_hungry -PL  to_want -?
+\ps Pr n              -gdr v       -?
+
+\ft mi hungry
+
+\id 2014.VI.S13
+\ref 2014.VI.S13.001
+\ph me ianufe ine na ana no
+\tx me  ianufe    ine        na      anono?
+\mb me  ianufe    i     -ne  na      ano     -no
+\ge you fire_wood to_go -Dep to_find to_want -Ask
+\ps Pr  n         v     -sfx v       v       -sfx
+
+\ft Yu laik go kissim paiawood
+\nt ???segmenter : na ana no(particule interrogative)? ou : naana ano...
+
+\ref 2014.VI.S13.002
+\tx ta me-li-lo     meli
+\mb ta me  -li  -lo meli
+\ge we you -?   -?  to_talk
+\ps Pr Pr  -sfx -?  v
+\ref 2014.VI.S13.003
+\tx a  mamimo   neheisa naano
+\mb a  mami -mo neheisa naano
+\ge I  pig  -4  to_buy  to_like
+\ps Pr n4   -n4 v       v
+\ref 2014.VI.S13.004
+\tx a  mwelilo                iasane
+\mb a  mwe -li  -lo           iasane
+\ge I  he  -?   -demonstratif to_help
+\ps Pr Pr  -sfx -Pr           v
+
+\ft mi helpim displa man (inap lukim em)
+\ref 2014.VI.S13.005
+\tx a  mweli    iasane
+\mb a  mwe -li  iasane
+\ge I  he  -?   to_help
+\ps Pr Pr  -sfx v
+
+\ft mi helpim one man (stap la hap)
+\ref 2014.VI.S13.006
+\tx a  hao  naaio
+\mb a  hao  na      - a     -io
+\ge I  fish to_find - to_go -Act
+\ps Pr n    v       - v     -mod
+\ft mi go painim pis
+\ref 2014.VI.S13.007
+\tx a  nou   mesi
+\mb a  nou   m- si
+\ge I  bilum ?- seed
+\ps Pr n4    ?- n9
+
+\ft mi makim bilum (bilum wantem string tasol)
+\ref 2014.VI.S13.008
+\tx a  noumo     se      naano
+\mb a  nou   -mo se      naano
+\ge I  bilum -4  to_make to_like
+\ps Pr n4    -n4 v       v
+\ft mi laik makim bilum
+\ref 2014.VI.S13.009
+\tx a  noumo     si
+\mb a  nou   -mo si
+\ge I  bilum -4  seed
+\ps Pr n4    -n4 n9
+
+\ft mi laik makim bilum
+\ref 2014.VI.S13.010
+\tx a  noumo     se      naanano
+\mb a  nou   -mo se      naanano
+\ge I  bilum -4  to_make to_want
+\ps Pr n4    -n4 v       v
+
+\ft mi laik makim bilum
+\ref 2014.VI.S13.011
+\tx a  noumo     senaimwii
+\mb a  nou   -mo se      -nai -mwii
+\ge I  bilum -4  to_make -Fut -Masc.Sing
+\ps Pr n4    -n4 v       -tns -tns
+
+\ft mi bai makim bilum
+\ref 2014.VI.S13.012
+\tx a  noukalimo       se-nai-msei
+\mb a  nou   -kali -mo se      -nai -msei
+\ge I  bilum -big  -4  to_make -Fut -Fem.Sing
+\ps Pr n4    -adj  -n4 v       -tns -tns
+
+\ft mi (F) bai makim bilum
+\ref 2014.VI.S13.013
+\tx a  noumo     fali  siaplo
+\mb a  nou   -mo fali  se      -aplo
+\ge I  bilum -4  Accpl to_make -Acc
+\ps Pr n4    -n4 mode  v       -asp
+
+\ft mi makim bilum pinis
+\nt -mwii ok.
+
+\ref 2014.VI.S13.014
+\tx a  noumo     se naanomsei
+\mb a  nou   -mo se naano   -msei
+\ge I  bilum -4  to_to_like -Fem.Sing
+\ps Pr n4    -n4 v  v       -tns
+
+\ft
+\ref 2014.VI.S13.015
+\tx a  eni  mitosiio
+\mb a  eni  mitosi -io
+\ge I  rope ?      -Act
+\ps Pr n    v      -mod
+
+\ft
+\ref 2014.VI.S13.016
+\tx a  eni  sanemele    si
+\mb a  eni  saneme -le  se
+\ge I  rope tulip  -PL  to_make
+\ps Pr n    n      -gdr v
+
+\ft mi makim tulip rope
+
+\id 2014.VI.S15. Manas, Waro, Arnold
+\ref 2014.VI.S15.001
+\tx henelifo   namla
+\mb heneli -fo nam-  lei
+\ge watch  -2  away- to_look
+\ps n2     -n2 pfx-  v
+
+\ft Look lo wash (look to your watch)
+\ref 2014.VI.S15.002
+\tx sona  so       moteino?
+\mb *sona *s  -io  motei   -no
+\ge ***   *** -Act to_kill -Ask
+\ps ***   *** -mod v       -sfx
+
+\ft wanem taim?
+\nt ?
+\ref 2014.VI.S15.003
+\tx henelifo   lei
+\mb heneli -fo lei
+\ge watch  -2  to_look
+\ps n2     -n2 v
+
+\ft
+\ref 2014.VI.S15.004
+\tx mami hale       mosi
+\mb mami ha    -le  mos- i
+\ge pig  small -PL  ?-   to_go
+\ps n4   adj   -gdr ?-   v
+
+\ft pik singaut
+\nt ? 'little pig sing' ou hale = iale 'singout'... ?
+\ref 2014.VI.S15.005
+\tx a  henelifo   namlano
+\mb a  heneli -fo nam-  lei     -no
+\ge I  watch  -2  away- to_look -Fut
+\ps Pr n2     -n2 pfx-  v       -sfx
+
+\ft mi laik lukim taim
+\nt ? voir ano... ('laik' = Fut)
+\ref 2014.VI.S15.006
+\tx keiseihelo                  sumoo sonaimi
+\mb keisei    -he -lo           sumoo so   -nai   -mi
+\ge afternoon -7  -demonstratif rain  taim -Fut   -?
+\ps n         -n7 -Pr           n     n7   -sfx.v -sfx.v
+
+\ft It's going to rain this afternoon
+\ref 2014.VI.S15.007
+\tx henelifo   namlei
+\mb heneli -fo nam-  lei
+\ge watch  -2  away- to_look
+\ps n2     -n2 pfx-  v
+
+\ft mi lukim san
+\nt Explication donnée : lei = lukim around (lukluk), namlei = lukim sampla samtin (lukim)
+\ref 2014.VI.S15.008
+\tx a  fali  lamlaio,                  a  fali  leio,        a  fali  laio,        a  fali
+\mb a  fali  lei     - m- lei     -io  a  fali  lei     -io  a  fali  lei     -io  a  fali
+\ge I  Accpl to_look - ?- to_look -Act I  Accpl to_look -Act I  Accpl to_look -Act I  Accpl
+\ps Pr mode  v       - ?- v       -mod Pr mode  v       -mod Pr mode  v       -mod Pr mode
+
+\tx lemwii
+\mb lei     -mwii
+\ge to_look -Masc.Sing
+\ps v       -tns
+
+\ft mi bin lukim
+\ref 2014.VI.S15.009
+\tx a  ho        ononu         meslene              homofema          mlalumwii
+\mb a  ho        o     -nonu   m-     sele   -ne    homo    -fe  -ma  m- lei     - lei     -mwii
+\ge I  yesterday house -inside ?-     to_sit -Dep   outside -NOW -ALL ?- to_look - to_look -Masc.Sing
+\ps Pr adv       n8    -sfx    pfx.v- v      -sfx.v adv     -sfx -sfx ?- v       - v       -tns
+
+\ft asday mi stap la haus lukim outsaid
+\nt ou simine mele lalumwii
+\nt Explication donnée : mlalumwii : lukluk long we / lalumwii
+\ref 2014.VI.S15.010
+\tx o     memwiino?
+\mb o     me      -mwii      -no
+\ge child 2S.POSS -Masc.Sing -Ask
+\ps n     poss    -tns       -sfx
+
+\ft It is your child?
+\ref 2014.VI.S15.011
+\tx o     amwii
+\mb o     a       -mwii
+\ge child 1S.POSS -Masc.Sing
+\ps n     poss    -tns
+\ft It's my child
+\ref 2014.VI.S15.012
+\tx me  heimo malela?
+\mb me  heimo malela
+\ge you name  wanem
+\ps Pr  n     interr
+\nt Explication donnée : mlamwii, mlalumwii : wanplan minim... ?
+\ref 2014.VI.S15.013
+\tx a  otoiso   ononu         meslene              homofema          ialuni
+\mb a  otoiso   o     -nonu   m-     sele   -ne    homo    -fe  -ma  ia    - lei     -ni
+\ge I  tomorrow house -inside ?-     to_sit -Dep   outside -NOW -ALL to_go - to_look -1
+\ps Pr adv      n8    -sfx    pfx.v- v      -sfx.v adv     -sfx -sfx v     - v       -n1
+
+\ft tomora mi bai stap la haus na luk utsaid
+\ref 2014.VI.S15.014
+\tx a  otoiso   ononu         me-sle-ne              homoma       lalunio
+\mb a  otoiso   o     -nonu   m-      sele   -ne     homo    -ma  lei     - lei     -ni -io
+\ge I  tomorrow house -inside ?-      to_sit -Dep    outside -ALL to_look - to_look -1  -Act
+\ps Pr adv      n8    -sfx    pfx.vb- v      -sfx.vb adv     -sfx v       - v       -n1 -mod
+
+\ft tomora mi bai stap la haus na luk lo bush
+\nt ? mauvaise analyse de to_look
+
+\id 2014.VI.S16
+\ref 2014.VI.S16.001
+\tx tuari tuafe  masapo seasunio
+\mb tuari tuafe  masapo suasoni
+\ge year  behind next   to_look_some_day??
+\ps n     adv    adj    v
+
+\ft seeing you next year
+\ref 2014.VI.S16.002
+\tx me  inaale selemwii
+\mb me  inale  sele   -mwii
+\ge you slowly to_sit -Masc.Sing
+\ps Pr  adv    v      -tns
+
+\ft yu sit down isiisi
+\nt ?mwii? même chose pour tete, imwii
+\ref 2014.VI.S16.003
+\tx me  otuele    inaale a
+\mb me  otue -le  inale  a
+\ge you food -PL  slowly to_eat
+\ps Pr  n    -gdr adv    v
+\ref 2014.VI.S16.004
+\tx me  eseile     inaale a
+\mb me  esei  -le  inale  a
+\ge you water -PL  slowly to_eat
+\ps Pr  n     -gdr adv    v
+
+
+\id 2014.VI.S17
+\ref 2014.VI.S17.001
+\tx inaalei
+\mb inale  i
+\ge slowly to_go
+\ps adv    v
+\nt problème de toolbox
+\ft to go isi isi
+\ref 2014.VI.S17.002
+\tx inaaleio
+\mb inale  i     -io
+\ge slowly to_go -Act
+\ps adv    v     -mod
+\nt problème de toolbox
+\ft to go isisi
+\ref 2014.VI.S17.003
+\tx araskas, esei  nuane           a!
+\mb araskas  esei  nua      -ne    a
+\ge araskas  water to_carry -Dep   to_go
+\ps Npr      n     v        -sfx.v v
+
+\ft go kissim wara i kam!
+\nt et non pas "va chercher de l'eau" seulement.
+\ref 2014.VI.S17.004
+\tx iosepwe     fesapo           honai          hefafene
+\mb iosep  -we  fe        -sapoi ho        -nai hefafe  -ne
+\ge Joesph -Com sing-sing -8     yesterday -Fut to_hear -Dep
+\ps Npr    -sfx n8        -n8    adv       -tns v       -sfx.v
+\nt ?Analyse
+\ft mipla laik harim singsing blo josep nau (?)
+
+\id 2014.VI.S19
+\ref 2014.VI.S19.001
+\tx honu  kowalemi
+\mb honu  kowa -le  -mi
+\ge there NEG  -PL  -?
+\ps adv   ?    -gdr -sfx.?
+
+\ft hir no gat
+\ref 2014.VI.S19.002
+\tx balusapoi    kowalemi
+\mb balu  -sapoi kowa -le  -mi
+\ge plane -8     NEG  -PL  -?
+\ps n8    -n8    ?    -gdr -sfx.?
+
+\ft balus no gat
+\ref 2014.VI.S19.003
+\tx sooime    mle tefalelei
+\mb sooi - me mle fe-  tafeli  -lei
+\ge ass  - ?  all Neg- to_know -PL
+\ps n    - ?  ?   mod- v       -gdr
+
+\ft all i no save ass (=origine, =story blo tumbuna)
+\ref 2014.VI.S19.004
+\tx pamo   honu  ulomwii              iosepwe
+\mb pamo   honu  u     -lo -mwii      iosep  -we
+\ge before there water -?  -Masc.Sing Joesph -SUJ
+\ps adv    adv   n     -?  -tns       Npr    -?
+
+\ft before em i stap hir josep
+\ref 2014.VI.S19.005
+\tx iale    melimo       fefafene            mwe kesialei
+\mb iale    meli    -mo  fe-  hefafe  -ne    mwe kesia   -lei
+\ge to_sing to_talk -?   Neg- to_hear -Dep   he  to_play -PL
+\ps v       v       -vrb mod- v       -sfx.v Pr  v       -gdr
+
+\ft n'écoutant pas les paroles il joue (ou ils jouent ?).
+\ref 2014.VI.S19.006
+\tx tetose                 oteinanomo mwe molune ii
+\mb teto               -se
+\ge to_arrive_or_sanap -?
+\ps v                  -?
+\nt analyse = ?
+\ft Susa blong en bai fightim em na em killap na run away
+\ref 2014.VI.S19.007
+\tx tei   waailae              solo     u
+\mb tei   waai - lei     - *e  solo     u
+\ge to_go one  - to_look - *** to_sleep to_sleep
+\ps v     card - v       - *** v        v
+
+\nt analyse = ?
+\ft yupla mas slip hariap
+\ref 2014.VI.S19.008
+\tx sohe     nemelimo   fu
+\mb so   -he nemeli -mo fu
+\ge taim -7  wind   -4  blow
+\ps n7   -n7 n4     -n4 v
+
+\ft Time wind i kam
+\ref 2014.VI.S19.009
+\tx me  fali  miafafemlei
+\mb me  fali  miafafe -mlei
+\ge you Accpl to_hear -Pl
+\ps Pr  mode  v       -tns
+
+\ft nau you harim pinis
+\ref 2014.VI.S19.010
+\tx a  fali  hefafe
+\mb a  fali  hefafe
+\ge I  Accpl to_hear
+\ps Pr mode  v
+\nt hefafe = miafafe
+\ft Ok, j'ai compris
+\ref 2014.VI.S19.011
+\tx pisapo
+\mb pi       -sapoi
+\ge singsing -8
+\ps n8       -n8
+
+\ft
+\ref 2014.VI.S19.012
+\tx me  sesime             mile      tolino
+\mb me  sesime             mi   -le  tou    -li  -no
+\ge you time_blo_sun(=day) tree -PL  to_cut -?   -?
+\ps Pr  adv                n    -gdr v      -sfx -?
+
+\ft
+\ref 2014.VI.S19.013
+\tx a  nofua      heitofolole                fali  mtehasi
+\mb a  nofua      heitofo -lo           -le  fali  m-     tehasi
+\ge I  leaf(book) six     -demonstratif -PL  Accpl ?-     write
+\ps Pr n          num     -Pr           -gdr mode  pfx.v- v
+
+\tx aplomwii
+\mb *   -aplo -mwii
+\ge *** -Acc  -Masc.Sing
+\ps *** -asp  -tns
+\nt Analyse ?
+
+\ref 2014.VI.S19.014
+\tx a  fa  pe teihasine     oplene
+\mb a  fa  pe tehasi -ne    oplene
+\ge I  yet ?  write  -Dep   ?
+\ps Pr adv ?  v      -sfx.v ?
+
+\nt problème d'analyse de toolbox. Ne prend pas la valeur {adv}{yet} de "fa".
+\ft mi no raidim yet / no raidim pinis
+\ref 2014.VI.S19.015
+\tx me  usiolo tehasi
+\mb me  usiolo tehasi
+\ge you ?      write
+\ps Pr  ?      v
+
+\ft yu raidim mo yet (?)
+\ref 2014.VI.S19.016
+\tx a  onoma    solo     ulimwii
+\mb a  onoma    solo     u        -li  -mwii
+\ge I  to_house to_sleep to_sleep -?   -Masc.Sing
+\ps Pr adv      v        v        -sfx -tns
+\ft yu slip insaid la haus
+\ref 2014.VI.S19.017
+\tx a  fiale         ilimwii
+\mb a  fiale         ili        -mwii
+\ge I  singaut(cris) to_singaut -Masc.Sing
+\ps Pr n             v          -tns
+
+\ft mi singaut (genre yo'o à la chute d'un arbre)
+\ref 2014.VI.S19.018
+\tx mi-o      mefaune,                   a  fiale         ilimwii
+\mb mi   -o   m-     faau         -ne    a  fiale         ili        -mwii
+\ge tree -10  ?-     to_fall_down -Dep   I  singaut(cris) to_singaut -Masc.Sing
+\ps n10  -n10 pfx.v- v            -sfx.v Pr n             v          -tns
+\ft diwai pul daun pinis, mi singaut
+\ref 2014.VI.S19.019
+\tx senia eliale     tetoumwii
+\mb senia eliale     teto               -u -mwii
+\ge ?     ass_nating to_arrive_or_sanap -? -Masc.Sing
+\ps ?     adj        v                  -? -tns
+
+\ft em sanap as nating
+\ref 2014.VI.S19.020
+\tx falikali    lomwii
+\mb fali  -kali lo  -mwii
+\ge Accpl -big  man -Masc.Sing
+\ps mode  -adj  n   -tns
+
+\ft bikpla man
+\ref 2014.VI.S19.021
+\tx fa      keitia  lomwii
+\mb fa      *keitia lo  -mwii
+\ge to_wait ***     man -Masc.Sing
+\ps v       ***     n   -tns
+\nt ?analyse pas bonne
+\ft shortpla man
+\ref 2014.VI.S19.022
+\tx
+\ft
+
+\id 2014.VI.S1.1 - Commentaires des images de Kissim Save (suite du cahier précédent)
+\ref 2014.VI.S1.001
+\tx kalini   kokualomo
+\mb kali -ni kokua - *lomo
+\ge car  -1  bad   - ***
+\ps n    -n1 adj   - ***
+
+\ft The car is damaged
+\fr kar i bagarap
+\ref 2014.VI.S1.002
+\tx tonwe          tunono     mosuaflene
+\mb to  -nwe       tunono     mos- uafle           -ne
+\ge man -Masc.Sing underneath ?-   to_slip, to_lay -Part
+\ps n   -gdr       adv        ?-   v               -mode
+
+\ft The man, laying underneath the car,
+\fr aninit
+\nt u'a ou wa ?
+\ref 2014.VI.S1.003
+\tx kalini   miamelei
+\mb kali -ni miamelei
+\ge car  -1  to_fix
+\ps n    -n1 v
+
+\ft fix the car
+\fr stretim
+\nt mi'amelei?
+\ref 2014.VI.S1.004
+\tx tonwe          nilamutano        mosesiane          nofuafo
+\mb to  -nwe       ni   - lamu -tano mos- esia     -ne  nofua      -fo
+\ge man -Masc.Sing fire - lamp -3    ?-   to_light -Dep leaf(book) -2
+\ps n   -gdr       n    - n    -n3   ?-   v        -sfx n          -n2
+
+\tx miamlaslomwii
+\mb miamla- slo    -mwii
+\ge ?-      to_sit -Masc.Sing
+\ps ?-      v      -tns
+
+\ft the man read while the light diffuse.
+\fr lam i light book rid (sit daun)
+\ref 2014.VI.S1.005
+\tx tonwe          mami temafo    foumwii
+\mb to  -nwe       mami tema  -fo fou     -mwii
+\ge man -Masc.Sing pig  fence -2  to_rope -Masc.Sing
+\ps n   -gdr       n    n5    -n2 v       -tns
+
+\ft The man make a panis for the pig.
+\fr man makim panis blo pik
+\ref 2014.VI.S1.006
+\tx tonle    tonwe          fukapelole            moteilo
+\mb to  -nle to  -nwe       fu    -kape  -lo -le  motei   -lo
+\ge man -PL  man -Masc.Sing stone -seven -?  -PL  to_kill -?
+\ps n   -gdr n   -gdr       n     -card  -?  -gdr v       -?
+
+\ft the men kill the man with(?) seven stone
+\nt un épisode biblique
+
+\ref 2014.VI.S1.007
+\tx teme-oi
+\ft ?
+\ref 2014.VI.S1.008
+\tx tonwe          wiisenowo     toumwii.          mtonami         wiiseno   miofaau.
+\mb to  -nwe       wiise -no -wo tou    -mwii      m- tou    -nami wiise -no mio-  faau
+\ge man -Masc.Sing sago  -?  -?  to_cut -Masc.Sing ?- to_cut -?    sago  -?  down- to_fall_down
+\ps n   -gdr       n     -?  -?  v      -tns       ?- v      -?    n     -?  spc-  v
+
+\tx miofaunami               eisonle    mane           wiisenoo     tofu.
+\mb mio-  faau         -nami eiso  -nle m- a     -ne   wiise - *noo tofu
+\ge down- to_fall_down -?    woman -PL  ?- to_go -Part sago  - ***  to_wash
+\ps spc-  v            -?    n     -gdr ?- v     -mode n     - ***  v
+\ft The man cut a sago tree. After cutting, the tree pull down. After pull down, the women go and wash the
+tree.
+\ref 2014.VI.S1.009
+\tx anase      melio:       "wiiseni  fali  fouwelowo.    a  wiisenine
+\mb ana    -se meli    -io  wiise -ni fali  fouwe - *lowo a  wiise -ni -ne
+\ge mother -?  to_talk -Act sago  -1  Accpl ?     - ***   I  sago  -1  -Part
+\ps n      -?  v       -mod n     -n1 mode  v     - ***   Pr n     -n1 -mode
+
+\tx nenaanowo. itanwe            anase      melio:       "a miokweii    wiise waaimo
+\mb *nenaanowo ita    -nwe       ana    -se meli    -io  a  mio-  kweii wiise waai -mo
+\ge ***        father -Masc.Sing mother -?  to_talk -Act I  down- ?     sago  one  -4
+\ps ***        n      -gdr       n      -?  v       -mod Pr spc-  ?     n     card -n4
+
+\tx meine        ali      touwo.     mikinwe         mene         solife
+\mb m- *ei -ne   a  - *li tou    -wo miki -nwe       m- *e  -ne   soli -fe
+\ge ?- *** -Part I  - *** to_cut -?  Miki -Masc.Sing ?- *** -Part axe  -6
+\ps ?- *** -mode Pr - *** v      -?  Npr  -gdr       ?- *** -mode n    -n6
+
+\tx nuane          ali      loma         aio".      itawa  aio        mateto
+\mb nua      -ne   a  - *li *   -lo -ma  a     -io  *itawa a     -io  m- a     - *teto
+\ge to_carry -Part I  - *** *** -?  -ALL to_go -Act ***    to_go -Act ?- to_go - ***
+\ps v        -mode Pr - *** *** -?  -sfx v     -mod ***    v     -mod ?- v     - ***
+
+\tx mane           waai wiise sooima.   mikinwe         solife   munuane           a.
+\mb m- a     -ne   waai wiise sooi -ma  miki -nwe       soli -fe m- nua      -ne   a
+\ge ?- to_go -Part one  sago  ass  -ALL Miki -Masc.Sing axe  -6  ?- to_carry -Part to_go
+\ps ?- v     -mode card n     n    -sfx Npr  -gdr       n    -n6 ?- v        -mode v
+
+\tx itanwe            mine         wiisoo  tou.
+\mb ita    -nwe       m- *i  -ne   *wiisoo tou
+\ge father -Masc.Sing ?- *** -Part ***     to_cut
+\ps n      -gdr       ?- *** -mode ***     v
+
+\ft
+\fr Mama i tok: "Saksak i sot. Mi mas kissim saksak." Papa i tokim mama, "mi mas makim wanpela
+saksak na mi mas katim. Miki i mas kisim akis i kam long mi." Papa i kam kamap long wanpela
+saksak. Miki i kissim akis i kam, na papa i katim saksak. 
+\nt La version vernaculaire est une traduction du texte en tok pisin proposé dans le livre scolaire "Kissim
+Save", vol. I, p. 30.
+
+
+\id 2014.VI.S3 Saki 1/12/2014 énoncés
+\ref 2014.VI.S3.001
+\tx tiplaaiale iio
+\mb tiplaaiale i     -io
+\ge naked      to_go -Act
+\ps adv        v     -mod
+\ft I go naked 
+\fr mi go as nating
+\ref 2014.VI.S3.002
+\tx a  onue     tiplaaialelowo
+\mb a  onue     tiplaaiale -lo -wo
+\ge I  pikinini naked      -?  -?
+\ps Pr n        adv        -?  -?
+
+\ft [a woman to a man] I put the baby naked
+\fr mi putim pikinini as nating
+\ref 2014.VI.S3.003
+\tx a  tiplaaialelo
+\mb a  tiplaaiale -lo
+\ge I  naked      -?
+\ps Pr adv        -?
+
+\ft
+\fr mi stap as nating
+\ref 2014.VI.S3.004
+\tx a  tiplaaialeslowo
+\mb a  tiplaaiale - slo    -wo
+\ge I  naked      - to_sit -?
+\ps Pr adv        - v      -?
+\ft I sit down naked
+\fr mi sit daun as nating
+\ref 2014.VI.S3.005
+\tx a  tiplaaialelowo
+\mb a  tiplaaiale -lo -wo
+\ge I  naked      -?  -?
+\ps Pr adv        -?  -?
+
+\ft I put naked(?)
+\fr as nating yu putim
+\ref 2014.VI.S3.006
+\tx mapo naanomo tiplaaialelono?
+\mb mapo naanomo aiale -lo -no
+\ge ?    ?       naked      -?  -Ask
+\ps ?    ?       adv        -?  -sfx
+
+\ft
+\fr blong wanem yu putim as nating?
+\ref 2014.VI.S3.007
+\tx a inaalale inaimwii
+\ft mi bai wokabout isi isi
+\ref 2014.VI.S3.008
+\tx a inaalale sihomole holuanaimwii
+\ft bai mi wok isi isi
+\ref 2014.VI.S3.009
+\tx fa      inale  aio
+\mb fa      inale  a      -io
+\ge to_wait slowly to_eat -Act
+\ps v       adv    v      -mod
+
+\ft wait, eat easy
+\ref 2014.VI.S3.010
+\tx ali     ali     kaanaio
+\mb ali     ali     ka-      ana    -io
+\ge quickly quickly Imp.Neg- mother -Act
+\ps adv     adv     mod-     n      -mod
+
+\ft
+\fr no kan kaikai hariap
+\ref 2014.VI.S3.011
+\tx ali     ali     inaimwii
+\mb ali     ali     i     -nai -mwii
+\ge quickly quickly to_go -Fut -Masc.Sing
+\ps adv     adv     v     -tns -tns
+
+\ft
+\ref 2014.VI.S3.012
+\tx a  ali     ali     io
+\mb a  ali     ali     i     -io
+\ge I  quickly quickly to_go -Act
+\ps Pr adv     adv     v     -mod
+
+\ft
+\fr mi go hariap
+\ref 2014.VI.S3.013
+\tx daniel, ali     ali     kainaio,                 a  helefe heneleio
+\mb daniel  ali     ali     ka-      i     -nai -io  a  helefe henele       -io
+\ge Daniel  quickly quickly Imp.Neg- to_go -Fut -Act I  leg    to_make_pain -Act
+\ps Npr     adv     adv     mod-     v     -tns -mod Pr n      v            -mod
+
+\ft
+\fr Daniel, yu no kan wokabout harriap, lek blo mi i pen
+\nt De nombreuses variantes de ali (vite), inale (lentement) et tiapla'a.... La forme de base est loin d'être
+identifiée
+
+\ref 2014.VI.S3.014
+\tx me  waaio
+\mb me  waai -io
+\ge you one  -Act
+\ps Pr  card -mod
+
+\ft
+\fr you wan yu go
+\ref 2014.VI.S3.015
+\tx me  taai
+\mb me  taai
+\ge you other_side
+\ps Pr  adv
+
+\ft
+\fr yu go la hap side
+
+\id 2014.VI.S4 Titione 1/12/2014 énoncés
+\ref 2014.VI.S4.001
+\tx tiapeli
+\mb *tiape -li
+\ge ***    -?
+\ps ***    -sfx
+
+\ft
+\fr yu no gat save
+\ref 2014.VI.S4.002
+\tx itawe       fali  tiapemo   mauwo
+\mb ita    -we  fali  tiape -mo mauwo
+\ge father -Com Accpl life  -4  to_die
+\ps n      -sfx mode  n4    -n4 v
+
+\ft papa died
+\fr ita indai pinis
+\ref 2014.VI.S4.003
+\tx a  mauwo
+\mb a  mauwo
+\ge I  to_die
+\ps Pr v
+
+\ref 2014.VI.S4.004
+\tx a  kapaile      funi      iio
+\mb a  kapaile      fu    -ni i     -io
+\ge I  excreta/shit stone -1  to_go -Act
+\ps Pr n            n     -n1 v     -mod
+
+\ft
+\ref 2014.VI.S4.005
+\tx afa       kapaile      funiio
+\mb a  -fa    kapaile      fu    -ni -io
+\ge I  -alone excreta/shit stone -1  -Act
+\ps Pr -sfx   n            n     -n1 -mod
+\nt dans les deux phrases ci-dessus, deux segmentations différentes... 1, 2 ou 3 "i" ?
+\ft
+
+\id 2014.VI.S6
+\ref 2014.VI.S6.001
+\tx a  efeile            ine         anowo
+\mb a  efe  - i     -le  i     -ne   ano -wo
+\ge I  road - to_go -PL  to_go -Part ?   -?
+\ps Pr n    - v     -gdr v     -mode v   -?
+\nt ???
+
+\ft
+\fr mi laik go
+\ref 2014.VI.S6.002
+\tx a  otuele    ane          anowo
+\mb a  otue -le  a      -ne   ano -wo
+\ge I  food -PL  to_eat -Part ?   -?
+\ps Pr n    -gdr v      -mode v   -?
+
+\ft
+\fr mi laik eat
+\ref 2014.VI.S6.003
+\tx a  eseile     ane          anowo
+\mb a  *esei -le  a      -ne   ano -wo
+\ge I  ***   -PL  to_eat -Part ?   -?
+\ps Pr ***   -gdr v      -mode v   -?
+
+\ft
+\fr mi laik drink
+\nt assimilation v / _a -> a même _# #a
+
+\ref 2014.VI.S6.004
+\tx a  soputele    fofune         anowo
+\mb a  sopute -le  fofu     -ne   ano -wo
+\ge I  tabac  -PL  to_smoke -Part ?   -?
+\ps Pr n      -gdr v        -mode v   -?
+\fr mi laik smoke
+\ref 2014.VI.S6.005
+\tx a  honu  selene       anowo
+\mb a  honu  sele   -ne   ano -wo
+\ge I  there to_sit -Part ?   -?
+\ps Pr adv   v      -mode v   -?
+
+\ft I would like to site there
+\fr mi laik sit daun lo hir
+\ref 2014.VI.S6.006
+\tx a  eseile     ine         tone         anowo
+\mb a  esei  -le  i     -ne   to     -ne   ano -wo
+\ge I  water -PL  to_go -Part to_get -Part ?   -?
+\ps Pr n     -gdr v     -mode v      -mode v   -?
+
+\ft I would like go and get water 
+\fr mi laik go kissim wara
+\ref 2014.VI.S6.007
+\tx a  eseile     ine         tone         nene           nuane
+\mb a  esei  -le  i     -ne   to     -ne   ne       -ne   nua      -ne
+\ge I  water -PL  to_go -Part to_get -Part to_catch -Part to_carry -Part
+\ps Pr n     -gdr v     -mode v      -mode v        -mode v        -mode
+
+\tx waiane                     anowo
+\mb wa   - i     - a     -ne   ano -wo
+\ge back - to_go - to_go -Part ?   -?
+\ps cli  - v     - v     -mode v   -?
+
+\ft I would like go and get water
+\fr Mi laik go kissim carying wara and come back
+\ref 2014.VI.S6.008
+\tx a  iefamo    hei
+\mb a  iefa  -mo hei
+\ge I  canoe -4  to_go_in_water
+\ps Pr n4    -n4 v
+
+\ft I pull a canoe
+\fr mi pullim kanu (vs paddle)
+\ref 2014.VI.S6.009
+\tx a  miomolo       heine                anowo
+\mb a  mio   -mo -lo hei            -ne   ano -wo
+\ge I  stick -4  -?  to_go_in_water -Part ?   -?
+\ps Pr n4    -n4 -?  v              -mode v   -?
+\fr I would like push the canoe with a stick
+\ref 2014.VI.S6.010
+\tx a  sawahelo            heine                anowo
+\mb a  sawa        -he -lo hei            -ne   ano -wo
+\ge I  fr. paggaie -7  -?  to_go_in_water -Part ?   -?
+\ps Pr n7          -n7 -?  v              -mode v   -?
+
+
+\id 2014.VI.S6 Pasteur Mark, 2/12/2014, énoncés chez lui
+\ref 2014.VI.S6.001
+\tx ita,   a  heitomule           kono!
+\mb ita    a  heitomu        -le  kono
+\ge father I  food_or_hungry -PL  NC_feel?
+\ps n      Pr n              -gdr v
+
+\ft papa, I feel hungry!
+\fr mi fil ungri!
+\ref 2014.VI.S6.002
+\tx ita,   otuesle      nia
+\mb ita    otue -sle    nia
+\ge father food -plenty to_give
+\ps n      n    -nbr    v
+
+\ft give me a lot of food!
+\fr give mi plenty kaikai!
+\nt phonétique : i/l (cf. fali / fai...) sie = sle
+
+\id 2014.VI.S7 Questionnaire négation
+\ref 2014.VI.S7.001
+\tx a  mamimo   iefiio
+\mb a  mami -mo iefi     -io
+\ge I  pig  -4  to_shoot -Act
+\ps Pr n    -n4 v        -mod
+
+\ft mi shutim pik
+\ref 2014.VI.S7.002
+\tx a  mamimo   feiefine
+\mb a  mami -mo fe-  iefi     -ne
+\ge I  pig  -4  Neg- to_shoot -Dep
+\ps Pr n    -n4 mod- v        -sfx
+
+\ft mi no shutim
+\ref 2014.VI.S7.003
+\tx a  tafelimwii
+\mb a  tafeli  -mwii
+\ge I  to_know -Masc.Sing
+\ps Pr v       -tns
+
+\ft mi save
+\ref 2014.VI.S7.004
+\ph a fetefeline
+\tx a  fetafeline
+\mb a  fe-  tafeli  -ne
+\ge I  Neg- to_know -Dep
+\ps Pr mod- v       -sfx
+
+\ft
+\ref 2014.VI.S7.005
+\tx afa      tafelimwii
+\mb a  -fa   tafeli  -mwii
+\ge I  -nbr  to_know -Masc.Sing
+\ps Pr -dual v       -tns
+
+\ft mi  tupla  save
+
+\nt attention si on construit le future en fa-ta... c'est compris comme a-fa ta... Comme l'assimilation
+régressive est bloqué, on a une assimilation progressive.
+\ref 2014.VI.S7.006
+\tx a  sihomole    holuanaimwii
+\mb a  sihomo -le  holua   -nai -mwii
+\ge I  work   -PL  to_work -Fut -Masc.Sing
+\ps Pr n      -gdr v       -tns -tns
+
+\ft mi bai wok
+\ref 2014.VI.S7.007
+\tx a  sihomole    foholuanaimwii
+\mb a  sihomo -le  fe-  - holua   -nai -mwii
+\ge I  work   -PL  Neg- - to_work -Fut -Masc.Sing
+\ps Pr n      -gdr mod- - v       -tns -tns
+
+\ft mi no bai go wok
+\ref 2014.VI.S7.008
+\ph a  tiaptiaptelilo
+\tx a  tiaptiap helilo
+\mb a  tiaptiap heli -lo
+\ge I  naked    ?    -?
+\ps Pr adj      ?    -?
+
+\ft mi go as nating (?)
+\ref 2014.VI.S7.009
+\tx a  tiaptiap heli feheline
+\mb a  tiaptiap heli fe-  heli -ne
+\ge I  naked    ?    Neg- ?    -Dep
+\ps Pr adj      ?    mod- ?    -sfx
+
+\ft mi no go as nating
+\ref 2014.VI.S7.010
+\tx a  kelisaule   tafifuuo
+\mb a  kelisaule   tafifu     -uo
+\ge I  all_samting to_raussim -Act
+\ps Pr Pr          v          -sfx
+
+\ft mi rausim al samtig (?)
+\ref 2014.VI.S7.011
+\ph a  kelisaule   futafufuneo
+\tx a  kelisaule   futafifuneuo
+
+
+\id 2014.VI.S8 Explication sur les migrations récentes avec kaillas à barbe
+\ref 2014.VI.S8.001
+\tx a  tafelimwii
+\mb a  tafeli  -mwii
+\ge I  to_know -Masc.Sing
+\ps Pr v       -tns
+
+\ft mi save
+\ref 2014.VI.S8.002
+\tx a  tafelilomwii
+\mb a  tafeli  -lo -mwii
+\ge I  to_know -?  -Masc.Sing
+\ps Pr v       -?  -tns
+
+\ft mi save
+\ref 2014.VI.S8.003
+\tx a  tafeli  suefine
+\mb a  tafeli  suefi  -ne
+\ge I  to_know not_to -Dep
+\ps Pr v       v      -sfx
+
+\ft mi no save
+\ref 2014.VI.S8.004
+\tx a  tafeli  fine
+\mb a  tafeli  suefi  -ne
+\ge I  to_know not_to -Dep
+\ps Pr v       v      -sfx
+
+\ft mi no save
+\ref 2014.VI.S8.005
+\ph a tafeleflone
+\tx a  tafeli folone
+\mb a  tafeli fe-  -lo -ne
+\ge I  to_knowNeg- -?  -Dep
+\ps Pr v      mod- -?  -sfx
+
+\nt fo = fe{neg} ?
+
+\id 2014.VI.S9 p. 53
+\ref 2014.VI.S9.001
+\tx sisi-kali-ei
+\mb si   - si   -kali -ei
+\ge seed - seed -big  -9
+\ps n9   - n9   -adj  -n9
+\nt sisi = réduplication ?
+\ref 2014.VI.S9.002
+\ph ti'a'u
+\tx tiau
+\mb tiau
+\ge to_stand_up
+\ps v
+\ft yu go antap
+\ref 2014.VI.S9.003
+\tx a  tou-mwii
+\mb a  tou      -mwii
+\ge I  go_antap -Masc.Sing
+\ps Pr v        -tns
+\ft mi go antap
+\ref 2014.VI.S9.004
+\tx me  tiio
+\mb me  ti         -io
+\ge you to_go_down -Act
+\ps Pr  v          -mod
+\ref 2014.VI.S9.005
+\tx a  temiio
+\mb a  temi       -io
+\ge I  to_go_down -Act
+\ps Pr v          -mod
+\ref 2014.VI.S9.006
+\tx me  teio
+\mb me  tei   -io
+\ge you to_go -Act
+\ps Pr  v     -mod
+\ft yu go
+\ref 2014.VI.S9.007
+\tx me  teaio
+\mb me  tea    -io
+\ge you yu_kam -Act
+\ps Pr  v      -mod
+\ft yu kam
+\ref 2014.VI.S9.008
+\tx me  tiao
+\mb me  tiao
+\ge you to_killap
+\ps Pr  v
+\ft yu killap
+\ref 2014.VI.S9.009
+\tx me  nalo       heli?
+\mb me  nalo       heli
+\ge you what       to_think
+\ps Pr  pr_interro v
+
+\ft yu tinim wanem?
+
+\id 2014.VI.T61 Récit par Manas de sa recherche d'or vers Black Wara
+\ref 2014.VI.T61.001
+\tx a  iemiata      pasoma kolele fealeinemo.                   a  eisefe sia
+\mb a  iemiata      pasoma kolele fe-  a   - lei     -ne   -mo  a  eisefe sia
+\ge I  River_Iemata bank   gold   Neg- ?   - to_look -Part -?   I  back   Sia_village
+\ps Pr Npr          n      n      mod- vrb - v       -mode -vrb Pr adv    Npr
+
+\tx konama     mione.     mitiaune             mase         elepitano         unianema
+\mb kona  -ma  mio  -ne   m- tiau        -ne   m- a     -se elepi       -tano uniane     -ma
+\ge there -ALL down -Part ?- to_stand_up -Part ?- to_go -?  River_Elepi -3    confluence -ALL
+\ps adv   -sfx cli  -mode ?- v           -mode ?- v     -?  Npr         -n3   n          -sfx
+
+\nt tiau / tia ? (cf. fou, tou...) = -u ?
+\tx honuma     tetomwii
+\mb honu  -ma  teto      -mwii
+\ge there -ALL to_arrive -Masc.Sing
+\ps adv   -sfx v         -tns
+
+\ft I don't find gold in the Iemia river. I go down back to Sia (lit. la hap blo Sia). I stand up, walk, and arrive
+to the mouth of the river Elepi.
+\fr mi killap wokabaut... lo hir mi kam komup
+\ref 2014.VI.T61.002
+\tx kolelemo   mohowaaune
+\mb kolele -mo m- howaa   -u -ne
+\ge gold   -4  ?- to_wash -? -Part
+\ps n      -n4 ?- v       -? -mode
+\ft To wash gold
+\ref 2014.VI.T61.003
+\tx a  kolele fleinemwii
+\mb a  kolele fe-  - lei     -ne   -mwii
+\ge I  gold   Neg- - to_look -Part -Masc.Sing
+\ps Pr n      mod- - v       -mode -tns
+
+\ft
+\fr Mi no lukim gold
+\ref 2014.VI.T61.004
+\tx a  kolele leimwii
+\mb a  kolele lei     -mwii
+\ge I  gold   to_look -Masc.Sing
+\ps Pr n      v       -tns
+
+\ft
+\fr mi lukim gold
+
+\id 2014.VI.T62 Manas. Comment ils sont allés aider Samuel à finir une palissade.
+\ref 2014.VI.T62.001
+\tx ta samuelwe    miasanene              mwe tema  tuwe fo.     mofone
+\mb ta samuel -we  m- iasa    -ne   -ne   mwe tema  tuwe fou     m- fou     -ne
+\ge we Samuel -Com ?- to_help -Part -Part he  fence half to_rope ?- to_rope -Part
+\ps Pr Npr    -sfx ?- v       -mode -mode Pr  n     adv  v       ?- v       -mode
+
+\tx foaplene        ta ho        eisefe wamealei
+\mb fou     -aplene ta ho        eisefe wa   - mea    -lei
+\ge to_rope -Acc    we yesterday back   back - upside -PL
+\ps v       -mod    Pr adv       adv    cli  - cli    -gdr
+
+\ft We helped Samuel makim a fence. Once makim done, we come back  displa side.
+\nt Alternance fo / fou ? (to / tou) ?
+
+\ref 2014.VI.T62.002
+\tx ta samuelwe    melimwii
+\mb ta samuel -we  meli    -mwii
+\ge we Samuel -Com to_talk -Masc.Sing
+\ps Pr Npr    -sfx v       -tns
+
+\ft we speak to Samuel
+\ref 2014.VI.T62.003
+\tx samuelwe    talilo      melimwii
+\mb samuel -we  ta -li  -lo meli    -mwii
+\ge Samuel -Com we -?   -?  to_talk -Masc.Sing
+\ps Npr    -sfx Pr -sfx -?  v       -tns
+
+\ft Samuel speak to us
+\ref 2014.VI.T62.004
+\tx samuelwe    talilo      nefimwii
+\mb samuel -we  ta -li  -lo nefi    -mwii
+\ge Samuel -Com we -?   -?  to_give -Masc.Sing
+\ps Npr    -sfx Pr -sfx -?  v       -tns
+
+\ft Samuel give to us
+\ref 2014.VI.T62.005
+\tx ta kopulo   temami    fonailii
+\mb ta kopulo   tema  -mi fou     -nai -lei
+\ge we together fence -5  to_rope -Fut -PL
+\ps Pr adv      n5    -n5 v       -tns -gdr
+
+\nt incohérence dans les suffixes de classe de tema : tema-fo ou tema-mi ? -mi n'est pas un suffixe de
+classe. 
+\ft we together will make fence
+\ref 2014.VI.T62.006
+\tx a  sihomole    tuwe holua
+\mb a  sihomo -le  tuwe holua
+\ge I  work   -PL  half to_work
+\ps Pr n      -gdr adv  v
+
+\ft I make half work
+\ref 2014.VI.T62.007
+\tx a  meane        iio
+\mb a  mea    -ne   i     -io
+\ge I  upside -Part to_go -Act
+\ps Pr cli    -mode v     -mod
+
+\nt analyser me-a (go) -ne
+\ft
+\fr mi kom lo upsaid na mi go now
+
+\id 2014.VI.T63 Manas. ce qu'il a fait aujourd'hui
+\ref 2014.VI.T63.001
+\tx a  otoiso   waaima    miʔaine.              mile      taaplene       eisefe onoma
+\mb a  otoiso   waai -ma  miʔa    - i     -ne   mi   -le  tou    -aplene eisefe onoma
+\ge I  tomorrow one  -ALL crossing - to_go -Part tree -PL  to_cut -Acc    back   to_house
+\ps Pr adv      card -sfx cli      - v     -mode n    -gdr v      -mod    adv    adv
+\nt le coup de glotte indique que ce sont deux morphèmes différents ? OU bien certain qu'il y a des nons-"j"
+dns un morphème ? En tout cas il y a des glidisation à la frontière (teiama-i)
+\tx waiaanaimwii.
+\mb wa   - iaa        -nai -mwii
+\ge back - cross_side -Fut -Masc.Sing
+\ps cli  - cli        -tns -tns
+\nt iaa ou ia ?
+
+\ft
+\fr go upside = kutim wara nau.
+\nt ta -> to ce n'est pas une variante mais une simple assimilation
+\nt waai : pas sûr que ce ne soit pas upside.
+\nt mi'aine = m-i'ai-ne ou mi-ai-ne ? cf. com 1. Il y a pourtant ci-dessus : "wa-iaa-nai-mwii" et ci-dessous un
+autre mi'aine. OU = mea dans le précédent texte ? ou m-i-ai... ???
+
+\ref 2014.VI.T63.002
+\tx a  uefe         miʔaine       teiama     i
+\mb a  u     - efe  m- *ʔai -ne   *teia -ma  i
+\ge I  water - road ?- ***   -Part ***   -ALL to_go
+\ps Pr n     - n    ?- ***   -mode ***   -sfx v
+
+\id 2014.VI.T64
+\ref 2014.VI.T64 com 1
+\tx a  balusapo     uselene             inaimwii
+\mb a  balu  -sapoi u-      sele   -ne  i     -nai -mwii
+\ge I  plane -8     inside- to_sit -Dep to_go -Fut -Masc.Sing
+\ps Pr n8    -n8    pfx-    v      -sfx v     -tns -tns
+
+\nt insertion voyelle : "sle" noté
+\nt pas de préposition. Plutôt un "verbe prépositionné". "Je, avion, asseoir-dans".
+\ft I will sit inside the plane
+
+\id 2014.VI.T65
+\ref 2014.VI.T65.001
+\tx
+
+\id 2014.VI.T66
+\ref 2014.VI.T66.001
+\tx
+
+\id 2014.VI.T69
+\ref 2014.VI.T69.001 com 1
+\tx me  taai
+\mb me  taai
+\ge you other_side
+\ps Pr  adv
+\ft yu go lo hap said
+\ref 2014.VI.T69.001 com 2
+\tx me  waaio
+\mb me  waai -io
+\ge you one  -Act
+\ps Pr  card -mod
+\ft yu wan yu go
+\nt On voit bien entre ces deux énoncés qu'il faut choisir si -i == -io et -i / -io == prédicat ou "aller"
+
+\ref 2014.VI.T69.001 com 3
+\tx itetenaimwii
+\mb i     - tete     -nai -mwii
+\ge to_go - stand_up -Fut -Masc.Sing
+\ps v     - v?       -tns -tns
+
+\ft go kam up lo ples pinis
+\ref 2014.VI.T69.001 com 4
+\tx miotetenaimwii
+\mb mio  - tete     -nai -mwii
+\ge down - stand_up -Fut -Masc.Sing
+\ps cli  - v?       -tns -tns
+
+\ft go tamblau pinis
+\ref 2014.VI.T69.001 com 5
+\tx utetenaimwii
+\mb u-      tete     -nai -mwii
+\ge inside- stand_up -Fut -Masc.Sing
+\ps pfx-    v?       -tns -tns
+
+\ft go antap pinis
+\ref 2014.VI.T69.001 com 6
+\tx motofuo
+\mb 
+
+\ft ?
+
+\ref 2014.VI.T69.001 com 6
+\tx a  heitomule           konowo
+\mb a  heitomu        -le  kono     -wo
+\ge I  food_or_hungry -PL  NC_feel? -?
+\ps Pr n              -gdr v        -?
+
+\ft Mi feeling hungry (transcrit heitomele)
+\ref 2014.VI.T69.001 com 7
+\tx sosolo   suasoni            io
+\mb soso -lo suasoni            i     -io
+\ge time -?  to_look_some_day?? to_go -Act
+\ps n    -?  v                  v     -mod
+
+\ft Lukim you sampla taim
+
+\id 2014.VI.T69
+\ref 2014.VI.T69.001 com 1
+\tx a  heitomule           konowo
+\mb a  heitomu        -le  kono     -wo
+\ge I  food_or_hungry -PL  NC_feel? -?
+\ps Pr n              -gdr v        -?
+\nt écrit heitomele ici.
+
+\ref 2014.VI.T69.001 com 2
+\tx sosolo   suasonio
+\mb soso -lo suasoni            -io
+\ge time -?  to_look_some_day?? -Act
+\ps n    -?  v                  -mod
+
+\ft See you!
+\fr ok lukim yu sampla time
+
+\id 2014.VI.T71
+\ref 2014.VI.T71.001
+\ph eisofo
+\tx a  teiama      iise,             mile      to,    mile      toaple        fefe
+\mb a  teia   -ma  i     - i     -se mi   -le  tou    mi   -le  tou    -aple  fefe
+\ge I  garden -ALL to_go - to_go -?  tree -PL  to_cut tree -PL  to_cut -PINIS taro
+\ps Pr n      -sfx v     - v     -?  n    -gdr v      n    -gdr v      -sfx   n
+
+\tx sumole           eli      kapi   he                  nemle    eliaple         minami eisefe
+\mb sumo        -le  eli      kapi   he                  nem -le  eli      -aple  minami eisefe
+\ge young_stick -PL  to_plant banana stick_to_be_planted all -PL  to_plant -PINIS em_nau back
+\ps n           -gdr v        n      n                   Pr  -gdr v        -sfx   adv    adv
+
+\tx opsonoma     waia         waianami           a  ule
+\mb opsono  -ma  wa   - ia    wa   - ia    -nami a  u     -le
+\ge village -ALL back - to_go back - to_go -?    I  water -PL
+\ps n       -sfx cli  - v     cli  - v     -?    Pr n     -gdr
+
+\tx heinei              ine        a  opo  iale
+\mb hei            -nei i     -ne  a  opo  iale
+\ge to_go_in_water -go? to_go -Dep I  bird to_sing
+\ps v              -v?  v     -sfx Pr n    v
+
+\tx hefafe.
+\mb hefafe
+\ge to_hear
+\ps v
+
+\ft I went to the garden, cuted trees, having cuted trees I planted taro, banana, having planting all now I go
+back to the village. Once came back I went wash myself, and then I heard a bird.
+\nt "ine" à la fin = revenu de la baignade ou bien une fois allé à la rivière ?
+
+\id 2014.VI.T72 chanson moderne n°1 de Alphonse
+
+\ref 2014.VI.T72.001
+\tx iteteni              uuia luuo
+\mb i     - tete     -ni uuia lei     -uo
+\ge to_go - stand_up -1  ?    to_look -Act
+\ps v     - v?       -n1 ?    v       -sfx
+\nt l'analyse de cette phrase est n'importe quoi.
+\ft You stand up and look
+\ref 2014.VI.T72.002
+\tx u     tautano             metine aio
+\mb u     tau           -tano metine a     -io
+\ge water Tau           -3    tide   to_go -Act
+\ps n     Npr_hydronyme -n3   n      v     -mod
+
+\nt Je dois couper en deux pour des questions de parsing mais ce serait plutôt "u-tau-tano"
+\ft The river tau is growing (tide is up)
+\ref 2014.VI.T72.003 
+\tx heliio
+\mb heli     -io
+\ge to_think -Act
+\ps v        -mod
+\ft You think:
+\ref 2014.VI.T72.004
+\ph efemo
+\tx inai       maia    efewo    na      aio
+\mb i     -nai maia    efe  -wo na      a     -io
+\ge to_go -Fut to_must road -?  to_find to_go -Act
+\ps v     -tns v       n    -?  v       v     -mod
+\ft I must find my path
+\ref 2014.VI.T72.005
+\ph mi-o ialeiou
+\tx opo  kowe-mo          ialeiu
+\mb opo  kowe         -mo iale    -iu
+\ge bird bird_species -4  to_sing -?
+\ps n    n            -n4 v       -?
+\ft a bird Kowe sing (this bird sings at the end of the day)
+\ref 2014.VI.T72.006
+\tx henelifo   tea    miofe
+\mb heneli -fo tea    mio      -fe
+\ge sun    -2  to_kam down     -NOW
+\ps n2     -n2 v      cli      -sfx
+
+\nt Je dois couper en deux pour des questions de parsing de toolbox mais ce serait plutôt "tea-mio-fe"
+\ft The sun go down now.
+\ref 2014.VI.T72 com 1
+\ph tafelene
+\tx me  tafeline     maia
+\mb me  tafeli  -ne  maia
+\ge you to_know -Dep to_must
+\ps Pr  v       -sfx v
+\ft yu must to know
+\ref 2014.VI.T72 com 2
+\tx ialeiowo
+\mb iale    -io  -wo
+\ge to_sing -Act -?
+\ps v       -mod -?
+\ft you ask sampla man singaut
+\ref 2014.VI.T72 com 3
+\tx ialeiowu
+\mb iale    -io  -wu
+\ge to_sing -Act -?
+\ps v       -mod -?
+\ft sampla man singaut tasol
+
+\id 2014.VI.T74 Chant de messe d'Alphonse
+\ref 2014.VI.T74.001
+\tx ita    naho awa-lisa
+\mb ita    naho awa     -lisa
+\ge father ?    brother -?
+\ps n      ?    n       -?
+
+\ft Papa, brata, kuntry... yupla algeta
+\ref 2014.VI.T74.002
+\tx ta ailile ka-ianlela
+\mb ta ailile ka-      ianlela
+\ge we heavy  Imp.Neg- ?
+\ps Pr adv    mod-     ?
+
+\ft mipla no kan waitim heavy
+\ref 2014.VI.T74.003
+\ph tiausi
+\tx efe-ha-mo        tea-usi
+\mb efe  - ha    -mo tea    - usi
+\ge road - small -4  to_kam - inside
+\ps n4   - adj   -n4 v      - adv
+
+\ft rod liklik go inside
+
+\id 2014.VI.T75
+\ref 2014.VI.T75.001
+\ph teina
+\tx ana    aio        teine      ano
+\mb ana    a     -io  tei   -ne  ano
+\ge mother to_go -Act to_go -Dep to_want
+\ps n      v     -mod v     -sfx v
+
+\nt assimilation. aio est plus probalement une interpelation comme dans le texte de penila, même cahier.
+\ft Mama mi go mi laik go
+\ref 2014.VI.T75.002
+\tx he       nalo       a-li    maisiei?
+\mb he       nalo       a  -li  maisiei
+\ge you(fem) what       I  -?   to_tie
+\ps pr       pr_interro Pr -sfx v
+
+\ft
+\ref 2014.VI.T75.003
+\tx a-li-lo     fene kaina
+\mb a  -li  -lo fene ka-      ina
+\ge I  -?   -?  ?    Imp.Neg- ?
+\ps Pr -sfx -?  ?    mod-     ?
+
+\ft yu can't worry for me.
+\nt ????????
+\ref 2014.VI.T75.004
+\ph heisofo
+\tx a  ine        eisefe te-wa-ianaimwii
+\mb a  i     -ne  eisefe te- wa   - ia    -nai -mwii
+\ge I  to_go -Dep back   ?-  back - to_go -Fut -Masc.Sing
+\ps Pr v     -sfx adv    ?-  cli  - v     -tns -tns
+
+\id 2014.VI.T77
+\ref 2014.VI.T77.001
+\tx waro tale   otoiso   mislaali       mese
+\mb waro tale   otoiso   m-     lei     mese
+\ge Waro we_two tomorrow ?-     to_look to_go
+\ps Npr  Pr     adv      pfx.v- v       v
+
+\ft Tomorrow, Waro and I will go and look
+\ref 2014.VI.T77.002
+\tx a  warowelo                meli
+\mb a  waro -we  -lo           meli
+\ge I  Waro -Com -demonstratif to_talk
+\ps Pr Npr  -sfx -Pr           v
+
+\ft I talk to waro
+\ref 2014.VI.T77.003
+\tx me  efe  henolo             slaali
+\mb me  efe  heno -lo           lei
+\ge you road ?    -demonstratif to_look
+\ps Pr  n4   ?    -Pr           v
+
+\ft yu go and look this road
+\ref 2014.VI.T77.004
+\ph slaalenaimwiio
+\tx a  honu  slaalinaimwiio
+\mb a  honu  lei     -nai -mwii      -io
+\ge I  there to_look -Fut -Masc.Sing -Act
+\ps Pr adv   v       -tns -tns       -mod
+
+\nt ?
+\ft mi bai wash lo hir i go
+\ref 2014.VI.T77.005
+\tx tale   mislaali       mise
+\mb tale   m-     lei     mese
+\ge we_two ?-     to_look to_go
+\ps Pr     pfx.v- v       v
+
+\ft mitupla wash i go
+\ref 2014.VI.T77.006
+\tx mwefa        neisiwaaimi           iefi
+\mb mwe -fa      neisi    -waai -mi    iefi
+\ge he  -DISTRIB cassoari -one  -?     to_shoot
+\ps Pr  -sfx     n        -num  -sfx.? v
+
+\ft em shut wanpla muruk
+\ref 2014.VI.T77.007
+\ph miafenuana
+\tx afa         mitiaune                  mamiwaaimi        miefi           nuana
+\mb a  -fa      m-     tiau        -ne    mami -waai -mi    m-     iefi     nua      - na
+\ge I  -DISTRIB ?-     to_stand_up -Dep   pig  -one  -?     ?-     to_shoot to_carry - to_find
+\ps Pr -sfx     pfx.v- v           -sfx.v n4   -num  -sfx.? pfx.v- v        v        - v
+
+\nt ? nua-ne ?
+\ft mi tu killap wanpla pik shutim na karim i kom
+\ref 2014.VI.T77.008
+\ph miafene
+\tx miefine                ta nuane           wa
+\mb m-     iefi     -ne    ta nua      -ne    wa
+\ge ?-     to_shoot -Dep   we to_carry -Dep   back
+\ps pfx.v- v        -sfx.v Pr v        -sfx.v cli
+
+\ft shutim pinis mipla karim na kam back
+
+\id 2014.VI.T78 Chant de joseph (141105_13). Éléments Arepi. Chante le eau de la rivière waro puis l'aval
+\ref 2014.VI.T78.001
+\tx
