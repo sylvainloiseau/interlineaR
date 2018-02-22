@@ -21,5 +21,5 @@ corpus <- read.emeld("path")
 Import a dictionary in the LIFT XML format (as exported from SIL FieldWorks for instance) :
 
 ```{r}
-dictionary <- read.lift("path")
+dictionary <- read.lift("path", language.code="tww")
 ```

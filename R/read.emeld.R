@@ -38,7 +38,13 @@ read.emeld <- function(file) {
     word_gls=xml_text(xml_find_first(words, "item[@type='gls']"))
     # ,
     # word_id=xml_text(xml_find_first(words, "position()"))
-  )
+  );
+
+  notes <- xml_find_all(corpusdoc, "/document/interlinear-text//phrases/word")
+  phrasesdf <- data.frame(
+    note=xml_text(xml_find_first(notes, "item[@type='note']"))
+  );
+  
   # number of morphems by word
   morphs.by.word <- xml_find_num(words, "count(morphemes/morph)")
   
@@ -61,5 +67,6 @@ read.emeld <- function(file) {
   phrases <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph/phrases/word")
   morph.by.phrases <- xml_find_num(phrases, "count(.//morph)")
   corpus$phrases_id <- rep(1:length(phrases), times=morph.by.phrases)
+  corpus$note <- rep(phrasesdf$note, times=morph.by.phrases)
   return(corpus)
 }

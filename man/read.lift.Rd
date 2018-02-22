@@ -4,10 +4,12 @@
 \alias{read.lift}
 \title{Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) format and turn it into a data.frame}
 \usage{
-read.lift(file)
+read.lift(file, language.code = "tww")
 }
 \arguments{
 \item{file}{: a length-one character vector containing the path to a LIFT XML document.}
+
+\item{language.code}{: the code of the language.}
 }
 \value{
 a data.frame
@@ -17,7 +19,7 @@ Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) format and turn it i
 }
 \examples{
 path <- system.file("exampleData", "tuwariDictionary.lift", package="RFlex")
-dictionary <- read.lift(path)
+dictionary <- read.lift(path, language.code="tww")
 }
 \references{
 http://code.google.com/p/lift-standard
