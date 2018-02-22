@@ -31,7 +31,7 @@ are provided in the exampleData directory.
 
 # Reading EMELD XML interlinear corpus
 
-This file format as been introduced in Baden Hughes, Steven Bird and Catherine Bow \emph{Encoding and Presenting Interlinear Text Using XML Technologies}, [http://www.aclweb.org/anthology/U03-1008] and is used by SIL Fieldworks
+This XML vocabulary has been introduced in Baden Hughes, Steven Bird and Catherine Bow _Encoding and Presenting Interlinear Text Using XML Technologies_, [http://www.aclweb.org/anthology/U03-1008] and is used by SIL Fieldworks
 
 ```{r}
 corpuspath <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
@@ -39,6 +39,8 @@ corpus <- read.emeld(corpuspath)
 ```
 
 # Reading LIFT XML dictionary
+
+This XML vocabulary has been introduced by SIL : [http://code.google.com/p/lift-standard]
 
 ```{r}
 dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="RFlex")
