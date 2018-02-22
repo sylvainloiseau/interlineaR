@@ -5,3 +5,7 @@
 
 
 # Installation
+
+```{r}
+devtools::install_github("sylvainloiseau/interlineaR")
+```
