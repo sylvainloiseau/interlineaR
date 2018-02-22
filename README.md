@@ -9,3 +9,17 @@
 ```{r}
 devtools::install_github("sylvainloiseau/interlineaR")
 ```
+
+# Usage
+
+Import an interlinearised corpus in the EMELD XML format (as exported from SIL FieldWorks for instance) :
+
+```{r}
+corpus <- read.emeld("path")
+```
+
+Import a dictionary in the LIFT XML format (as exported from SIL FieldWorks for instance) :
+
+```{r}
+dictionary <- read.lift("path")
+```
