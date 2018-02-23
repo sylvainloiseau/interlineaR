@@ -2,15 +2,50 @@
 % Please edit documentation in R/read.emeld.R
 \name{read.emeld}
 \alias{read.emeld}
-\title{Create a data frame importing an interlinearised corpus in ELMED XML.}
+\title{Turn an EMELD XML document containing an interlinearized corpus into a list of data.frame.}
 \usage{
-read.emeld(file)
+read.emeld(file, vernacular.languages, analysis.languages = "en",
+  get.morphems = TRUE, get.words = TRUE, get.sentences = TRUE,
+  get.texts = TRUE, text.fields = c("title", "title-abbreviation", "source",
+  "comment"), sentence.fields = c("segnum", "gls", "lit", "note"),
+  words.vernacular.fields = "txt", words.analysis.fields = c("gls", "pos"),
+  morphems.vernacular.fields = c("txt", "cf"),
+  morphems.analysis.fields = c("gls", "msa", "hn"))
 }
 \arguments{
-\item{file}{the uri of the XML document}
+\item{file}{the path (or url) to a document in ELMED vocabulary}
+
+\item{vernacular.languages}{a character vector of one or more codes of languages analysed in the document.}
+
+\item{analysis.languages}{a character vector of one or more codes of languages used for the analyses (in glosses, translations, notes) in the document.}
+
+\item{get.morphems}{logical should the returned list include a slot for the description of morphems?}
+
+\item{get.words}{logical should the returned list include a slot for the description of words?}
+
+\item{get.sentences}{logical should the returned list include a slot for the description of sentences?}
+
+\item{get.texts}{logical should the returned list include a slot for the description of texts?}
+
+\item{text.fields}{information to be extracted for the texts (and turned into corresponding column in the data.frame describing texts)}
+
+\item{sentence.fields}{information to be extracted for the sentences (and turned into corresponding column in the data.frame describing sentences)}
+
+\item{words.vernacular.fields}{information (in vernacular language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)}
+
+\item{words.analysis.fields}{information (in analysis language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)}
+
+\item{morphems.vernacular.fields}{information (in vernacular language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems)}
+
+\item{morphems.analysis.fields}{information (in analysis language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems)}
 }
 \value{
-a data frame
+a named list. The elements are named "morphems", "words", "sentences", "texts" 
+(some element may have been excluded throuth the "get.*" arguments, see above).
+Each element is a data.frame containing the information on the corresponding unit.
+In each data.frame, each row is an occurrence (the first row of the result$morphems data.frame describe the first morphem of the corpus).
+In each data.frame, the first columns give ids refering to the line in other data.frame (so that we can link the first morphem to the text, the sentence or the word it belongs to).
+The following columns give information about the actual occurrence. Which information are extracted from the document and included in the data frame depends upton the *.fields parameters (see above).
 }
 \description{
 The EMELD XML vocabulary has been proposed for the encoding of interlinear glosses.
@@ -18,11 +53,19 @@ It is used by the FieldWorks software (SIL FLEX) as an export format.
 }
 \examples{
 path <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
-corpus <- read.emeld(path)
+corpus <- read.emeld(path, vernacular="tww", analysis="en")
+head(corpus$morphems)
+
+# In some cases, one may have to combine information coming from various data.frame.
+# Lets imagine one needs to have in the same data.frame the morphems data 
+# plus the "note" field attached to sentences:
+# - The easy way is to combine all the columns of the two data frame 'morphems' and 'sentence' :
+combined <- merge(corpus$morphems, corpus$sentences, by.x="sentence_id", by.y="sentence_id")
+
+# - Alternatively, one may use vector extraction in order to add only the desired column
+# to the morphems data frame:
+corpus$morphems$note = corpus$sentences$note.en[ corpus$morphems$sentence_id ]
 }
 \references{
 Baden Hughes, Steven Bird and Catherine Bow \emph{Encoding and Presenting Interlinear Text Using XML Technologies}, http://www.aclweb.org/anthology/U03-1008
-}
-\seealso{
-read.lift
 }

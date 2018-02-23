@@ -10,12 +10,6 @@
 #' @examples
 #' path <- system.file("exampleData", "tuwariDictionary.lift", package="RFlex")
 #' dictionary <- read.lift(path, language.code="tww")
-#' @importFrom xml2 read_xml
-#' @importFrom xml2 xml_attr
-#' @importFrom xml2 xml_find_all
-#' @importFrom xml2 xml_find_first
-#' @importFrom xml2 xml_find_num
-#' @importFrom xml2 xml_text
 read.lift <- function(file, language.code="tww") {
   dictionarydoc <- read_xml(file)
   entries <- xml_find_all(dictionarydoc, "/lift/entry")

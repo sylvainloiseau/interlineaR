@@ -35,7 +35,7 @@ XML vocabulary introduced in Baden Hughes, Steven Bird and Catherine Bow, _Encod
 
 ```{r}
 corpuspath <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
-corpus <- read.emeld(corpuspath)
+corpus <- read.emeld(corpuspath, vernacular.languages="tww")
 ```
 
 # Reading LIFT XML dictionary

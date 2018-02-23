@@ -1,72 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
-<!-- selection of 10 first texts
+<!-- selection of 9 first texts
 of corpus of the tuwari language.
 Very preliminary stage of the analysis.
 Exported from SIL Fieldworks the 20180203.
 -->
 
 <document xsi:noNamespaceSchemaLocation="file:FlexInterlinear.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <interlinear-text guid="d7d0638a-11ca-4952-b9c9-657daaec7f16">
-    <paragraphs>
-      <paragraph>
-        <phrases>
-          <word><words>
-              <word><item type="txt" lang="tww">Lexems</item></word>
-              <word><item type="txt" lang="tww">with</item></word>
-              <word><item type="txt" lang="tww">same</item></word>
-              <word><item type="txt" lang="tww">base</item></word>
-              <word><item type="txt" lang="tww">and</item></word>
-              <word><item type="txt" lang="tww">different</item></word>
-              <word><item type="txt" lang="tww">suffixe</item></word>
-              <word><item type="punct" lang="tww">(</item></word>
-              <word><item type="txt" lang="tww">si</item><morphemes>
-                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
-                    <item type="txt" lang="tww">si</item>
-                    <item type="cf" lang="tww">se</item>
-                    <item type="hn" lang="en">1</item>
-                    <item type="gls" lang="en">to_make</item>
-                    <item type="msa" lang="en">v </item>
-                  </morph>
-                </morphemes></word>
-              <word><item type="txt" lang="tww">-fo</item></word>
-              <word><item type="punct" lang="tww">/</item></word>
-              <word><item type="txt" lang="tww">-he</item></word>
-              <word><item type="punct" lang="tww">)</item></word>
-              <word><item type="txt" lang="tww">are</item></word>
-              <word><item type="txt" lang="tww">linked</item></word>
-              <word><item type="txt" lang="tww">with</item></word>
-              <word><item type="txt" lang="tww">a</item><morphemes>
-                  <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
-                    <item type="txt" lang="tww">a</item>
-                    <item type="cf" lang="tww">a</item>
-                    <item type="hn" lang="en">2</item>
-                    <item type="gls" lang="en">I</item>
-                    <item type="msa" lang="en">pers </item>
-                  </morph>
-                </morphemes></word>
-              <word><item type="punct" lang="tww">"</item></word>
-              <word><item type="txt" lang="tww">cross</item></word>
-              <word><item type="txt" lang="tww">references</item></word>
-              <word><item type="punct" lang="tww">"</item></word>
-              <word><item type="txt" lang="tww">ty^pe</item></word>
-              <word><item type="punct" lang="tww">"</item></word>
-              <word><item type="txt" lang="tww">same</item></word>
-              <word><item type="txt" lang="tww">lexem</item></word>
-              <word><item type="txt" lang="tww">different</item></word>
-              <word><item type="txt" lang="tww">genre</item></word>
-              <word><item type="punct" lang="tww">".</item></word>
-            </words><item type="segnum" lang="en">1</item><item type="gls" lang="en" /><item type="gls" lang="tpi" /></word>
-        </phrases>
-      </paragraph>
-    </paragraphs>
-    <languages>
-      <language lang="en" font="Times New Roman" />
-      <language lang="tww" font="Charis SIL" vernacular="true" />
-      <language lang="tpi" font="Charis SIL" vernacular="true" />
-    </languages>
-  </interlinear-text>
-  <interlinear-text guid="5014a2a9-4480-4085-8877-182d0dc1017e">
+
+<interlinear-text guid="5014a2a9-4480-4085-8877-182d0dc1017e">
     <item type="title" lang="en">141104_01_T2 (correction dans 2015.III.S18)</item>
     <item type="title-abbreviation" lang="en">2014T2</item>
     <paragraphs>
@@ -954,7 +896,12 @@ Exported from SIL Fieldworks the 20180203.
                   </morph>
                 </morphemes></word>
               <word><item type="punct" lang="tww">.</item></word>
-            </words><item type="segnum" lang="en">1.1</item><item type="gls" lang="en">We went upstream to the houses of Sumwari with a motor canoe</item><item type="gls" lang="tpi" /><item type="note" lang="en">io-ma : pb, -ma sur V.</item></word>
+            </words>
+			<item type="segnum" lang="en">1.1</item>
+			<item type="gls" lang="en">We went upstream to the houses of Sumwari with a motor canoe</item>
+			<item type="gls" lang="tpi" />
+			<item type="note" lang="en">io-ma : pb, -ma sur V.</item>
+		    </word>
           <word><words>
               <word><item type="txt" lang="tww">ta</item><morphemes>
                   <morph type="stem" guid="d7f713e8-e8cf-11d3-9764-00c04f186933">
