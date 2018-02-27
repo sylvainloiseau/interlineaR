@@ -10,7 +10,7 @@
 #' @references Baden Hughes, Steven Bird and Catherine Bow \emph{Encoding and Presenting Interlinear Text Using XML Technologies}, http://www.aclweb.org/anthology/U03-1008
 #' @seealso read.lift
 #' @examples
-#' path <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
+#' path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
 #' corpus <- read.emeld.old(path)
 read.emeld.old <- function(file) {
   corpusdoc <- read_xml(file)
@@ -98,7 +98,7 @@ read.emeld.old <- function(file) {
 #' @references Baden Hughes, Steven Bird and Catherine Bow \emph{Encoding and Presenting Interlinear Text Using XML Technologies}, http://www.aclweb.org/anthology/U03-1008
 #'
 #' @examples
-#' path <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
+#' path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
 #' corpus <- read.emeld(path, vernacular="tww", analysis="en")
 #' head(corpus$morphems)
 #' 
@@ -107,10 +107,12 @@ read.emeld.old <- function(file) {
 #' # plus the "note" field attached to sentences:
 #' # - The easy way is to combine all the columns of the two data frame 'morphems' and 'sentence' :
 #' combined <- merge(corpus$morphems, corpus$sentences, by.x="sentence_id", by.y="sentence_id")
+#' head(combined)
 #' 
 #' # - Alternatively, one may use vector extraction in order to add only the desired column
 #' # to the morphems data frame:
 #' corpus$morphems$note = corpus$sentences$note.en[ corpus$morphems$sentence_id ]
+#' head(corpus$morphems)
 read.emeld <- function(file,
                         vernacular.languages,
                         analysis.languages="en", 
@@ -188,6 +190,7 @@ read.emeld <- function(file,
     morphs.by.word      <- xml_find_num(words, "count(./morphemes/morph)");
     
     morphs              <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph/phrases/word/words/word/morphemes/morph");
+    #print(xml_text(morphs[1:3]))
     morphemsdf <- data.frame(
       text_id      = rep(1:length(texts), times=morph.by.texts),
       #paragraph_id = rep(1:length(paragraphs), times=morph.by.paragraphs),

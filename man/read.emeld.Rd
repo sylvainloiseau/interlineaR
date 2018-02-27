@@ -52,7 +52,7 @@ The EMELD XML vocabulary has been proposed for the encoding of interlinear gloss
 It is used by the FieldWorks software (SIL FLEX) as an export format.
 }
 \examples{
-path <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
+path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
 corpus <- read.emeld(path, vernacular="tww", analysis="en")
 head(corpus$morphems)
 
@@ -61,10 +61,12 @@ head(corpus$morphems)
 # plus the "note" field attached to sentences:
 # - The easy way is to combine all the columns of the two data frame 'morphems' and 'sentence' :
 combined <- merge(corpus$morphems, corpus$sentences, by.x="sentence_id", by.y="sentence_id")
+head(combined)
 
 # - Alternatively, one may use vector extraction in order to add only the desired column
 # to the morphems data frame:
 corpus$morphems$note = corpus$sentences$note.en[ corpus$morphems$sentence_id ]
+head(corpus$morphems)
 }
 \references{
 Baden Hughes, Steven Bird and Catherine Bow \emph{Encoding and Presenting Interlinear Text Using XML Technologies}, http://www.aclweb.org/anthology/U03-1008

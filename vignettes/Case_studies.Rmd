@@ -1,0 +1,28 @@
+---
+title: "Case studies"
+author: "Sylvain Loiseau"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Case studies}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(interlineaR)
+```
+
+
+# Frequency of the part of speech in the lexicon
+
+# Fréquency of the part of speech in the corpora
+
+# Are Affixe types specialized in some parts of speech ?
+
+# Frequencies of the meaning of a polysemous lexems
+

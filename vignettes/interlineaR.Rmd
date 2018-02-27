@@ -2,9 +2,12 @@
 title: "Importing interlinearized corpora and dictionary into R"
 author: "Sylvain Loiseau"
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output:
+  rmarkdown::html_vignette:
+    toc: true
 vignette: >
   %\VignetteIndexEntry{Importing interlinearized corpora and dictionary into R}
+  %\VignetteDepends{kableExtra}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,36 +17,98 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+library(knitr)
 library(interlineaR)
+library(kableExtra)
 ```
-
 
 # Introduction
 
-This package contains utility functions for reading in into R documents
-in various file format containing interlinearized corpora or dictionary
-produced by descriptive linguistics softwares.
+This package contains utility functions for importing into R corpus
+in various formats containing [*interlinearized corpora*](https://www.eva.mpg.de/lingua/resources/glossing-rules.php)
+or dictionaryies produced by descriptive linguistics softwares, such as [SIL Toolbox](https://software.sil.org/toolbox/)
+of [SIL Fieldworks](https://software.sil.org/fieldworks/).
 
 Short selection of (very preliminary draft of a) dictionary and an
 interlinearized corpus of the Tuwari (Walioic (papuan), PNG) language
-[http://glottolog.org/resource/languoid/id/tuwa1242]
+(http://glottolog.org/resource/languoid/id/tuwa1242)
 are provided in the exampleData directory.
 
 # Reading EMELD XML interlinear corpus
 
-XML vocabulary introduced in Baden Hughes, Steven Bird and Catherine Bow, _Encoding and Presenting Interlinear Text Using XML Technologies_, [http://www.aclweb.org/anthology/U03-1008], it is used by SIL Fieldworks as an export format.
+## Turning the EMELD XML document into a set of data frames
+
+EMELD is an XML vocabulary introduced in Baden Hughes, Steven Bird and Catherine Bow, _Encoding and Presenting Interlinear Text Using XML Technologies_, [http://www.aclweb.org/anthology/U03-1008], it is used by SIL Fieldworks as an export format.
 
 ```{r}
-corpuspath <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
+corpuspath <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
 corpus <- read.emeld(corpuspath, vernacular.languages="tww")
 ```
+
+The returned object is a list of data.frame, named 'morphems', 'words', 'sentences', 'texts' (unless some of them have been discarted through the function arguments). Each data frame describe the occurrences of a linguistic unit (texts, sentences, words, morphems.) Each data frame contains as many rows as there are occurrences of this unit.
+
+Let's look at the first row of the texts data.frame:
+
+```{r}
+kable(head(corpus$morphems))
+```
+
+The first columns contain ids (referencing to which text, sentence or word each morphem belongs to). Other columns contains information extracted from the document. The names of the column are made of the field name and the language of the field, separated by a dot. (The parameters of read.emeld allow you to indicate which field, and in wich language(s), you are interested in, for each unit). Each field may be repeated in different languages.
+
+Let's turn to the other data frame:
+
+```{r}
+kable(head(corpus$words))
+```
+
+```{r}
+
+kable(head(corpus$sentences), booktabs = T)
+```
+
+```{r}
+kable(head(corpus$texts))
+```
+
+## Contructing data set combining information from several data frame
+
+# Reading Toolbox interlinear corpus
+
+Toolbox [https://software.sil.org/toolbox/] is widely used for producing interlinearized corpora. It uses a specific text-based format.
+
+```{r}
+corpuspath <- system.file("exampleData", "tuwariToolbox.txt", package="interlineaR")
+corpus <- read.toolbox(corpuspath)
+```
+
+Just as read.emeld, the result is a list containing the slots 'morphems', 'sentences' and 'texts' (but not 'words' since it cannot be infered). These slots are data frames.
+
+As with read.emeld, the morphem data frame contains one occurrence of morphem by row. The first two columns reference the text and the id this occurrence belongs to; the last three columns correspond to the form, the gloss and the part of speech of this occurrence.
+
+```{r}
+kable(head(corpus$morphems))
+```
+
+The 'sentences' data frame contains a numeric id, the reference created for each sentence ("ref" field in toolbox), plus (as with read.emeld) the original text, the free translation as well as the note ("tx", "nt", "ft" field in toolbox).
+
+
+```{r}
+kable(head(corpus$sentences))
+```
+
+the text data.frame contains a numeric id and the title (toolbox ID) of each text.
 
 # Reading LIFT XML dictionary
 
 This XML vocabulary has been introduced by SIL : [http://code.google.com/p/lift-standard] and is used by SIL Fieldworks as an export format.
 
 ```{r}
-dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="RFlex")
+dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 dictionary <- read.lift(dicpath, language.code="tww")
 ```
+
+```{r}
+kable(head(dictionary))
+```
+
 

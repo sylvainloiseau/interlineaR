@@ -17,7 +17,7 @@ The EMELD XML vocabulary has been proposed for the encoding of interlinear gloss
 It is used by the FieldWorks software (SIL FLEX) as an export format.
 }
 \examples{
-path <- system.file("exampleData", "tuwariInterlinear.xml", package="RFlex")
+path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
 corpus <- read.emeld.old(path)
 }
 \references{
