@@ -1,36 +1,52 @@
-#' Read a toolbox (SIL) text file and turn it into a list of data frame.
+#' Read a toolbox (SIL) text file
 #' 
-#' The triplet of lines (mb, ge, ps) (containing reps. morphems, glosses
-#' and part of speech) that do not have an equal number of white-space
-#' separated item ('unaligned') are discarded.
-#'
 #' @param path : the path to a toolbox text file.
-#' 
-#' @param add.unaligned : If TRUE: if any of the mb/ge/ps triplet does not have the same
-#' number of morphems (resp. morphem glosses and part of speech),
-#' an extra slot named 'unaligned' is added to the returned list giving information on all the unaligned triplets. If FALSE: print
-#' a warning message only.
-#' 
-#' @return a list with three slots "texts", "sentences" and "morphemes", each containing a data frame.
-#' In these data frame, each row is an occurrence of the unit concerned.
+#' @param text.fields.suppl character vector: the code of supplementary fields to be searched for each text (genre, ...). "id" is mandatory and need not to be listed here.
+#' @param sentence.fields.suppl character vector: the code of supplementary fields to be searched for each sentence (such as tx, ft, nt). "ref" is mandatory and need not to be listed here.
+#' @param word.fields.suppl character vector: the code of supplementary fields to be searched for each word. "tx" is mandatory and need not to be listed here.
+#' @param morphem.fields.suppl character vector: the code of supplementary fields to be searched for each morphem. "mb", "ge", "ps" are mandatory and need not to be listed here.
+#'
+#' @return a list with four slots "texts", "sentences", "words" and "morphemes",
+#' each one containing a data frame. In these data frame, each row describe an occurrence
+#' of the corresponding unit.
 #' 
 #' @export
 #' @seealso read.emeld
 #' @references https://software.sil.org/toolbox/
-#' @importFrom stats reshape
+#' @importFrom reshape2 dcast
 #' @examples
 #' corpuspath <- system.file("exampleData", "tuwariToolbox.txt", package="interlineaR")
 #' corpus <- read.toolbox(corpuspath)
-read.toolbox <- function(path, add.unaligned=FALSE) {
-  lines <- readLines(path)
+read.toolbox <- function(path,
+                         text.fields.suppl=NULL,
+                         sentence.fields.suppl=c("tx", "nt", "ft"),
+												 word.fields.suppl=NULL,
+                         morphem.fields.suppl=NULL) {
+ 
+  lines <- readLines(path);
+
+  ## fields have mandatory elements for each level
+  text.fields <- unique(c("id", text.fields.suppl));
+  sentence.fields <- unique(c("ref", sentence.fields.suppl))
+  word.fields  <- unique(c("tx", morphem.fields.suppl))
+  morphem.fields  <- unique(c("mb", "ge", "ps", morphem.fields.suppl))
 
   ## clean texts
   fields <- .line2field(lines);
-  fields <- .remove.header(fields, "id");
+
   ## Blank lines cannot be remove yet. They are indicative of interlinear triplet (mb, ge, ps)
-  #fields <- fields[!grepl(x=fields, pattern = "^$")];
-  
+
+  ## get index of id, ref and blank lines
   texts_index     <- grepl(pattern = "\\\\id",  x=fields, perl=TRUE);
+  ### Remove all lines up to the first line beginning with "\id"
+  first_id <- which(texts_index)[1]
+  if(length(first_id) == 0) {
+  	stop("The file seems not to be well-formed. No \\id field (i.e. text title) found.")
+  }
+  if (first_id > 1) {
+    fields <- fields[-(1:(first_id-1))]
+    texts_index <- texts_index[-(1:(first_id-1))]
+  }
   sentences_index <- grepl(pattern = "\\\\ref", x=fields, perl=TRUE);
   triplet_index   <- grepl(pattern = "^$",      x=fields, perl=TRUE);
 
@@ -45,97 +61,46 @@ read.toolbox <- function(path, add.unaligned=FALSE) {
   triplet_ids    <- triplet_ids[!triplet_index]
   
   ## extract field name
-  field.end   <- regexpr(" ", fields )
-  field_name  <- sapply(fields, substr, start=2, stop=field.end) # trimws();
-  field_value <- sapply(fields, substr, start=field.end+1, stop=length(fields))# trimws();
-  
-  # field_name <- trimws(field_name);
-  # field_value <- trimws(field_value);
-  
+  field.end   <- regexpr("\\\\\\b\\w+\\b", fields);
+  field.end   <- attr(field.end, "match.length");
+  field_name  <- substr(fields, start=2, stop=field.end)
+  field_value <- substr(fields, start=field.end+2, stop=nchar(fields));
+  field_name  <- trimws(field_name);
+  field_value <- trimws(field_value);
+
+  ## Create a dataframe in "long" (not wide) format: key / values pairs on two columns.
   df <- data.frame(
     texts_ids=texts_ids,
     sentences_ids=sentences_ids,
     triplet_ids=triplet_ids,
     field_name=field_name,   # contain "id" and "ref", "tx", and "ge", mb", "ps"...
-    field_value=field_value  # contain "you Accpl woman -? to_sleep -Ask", "Pr mode n -sfx.n v -sfx.v", etc.
+    field_value=field_value,  # contain "you Accpl woman -? to_sleep -Ask", "Pr mode n -sfx.n v -sfx.v", etc.
+    stringsAsFactors=FALSE
   );
 
+  ## texts slot
   res <- list();
-  res$texts <- df[field_name == "id ", c(1,5)]
-  
-  sentences <- df[field_name %in% c("ref", "tx ", "nt ", "ft "), c(1,2,4,5)]
-  sentences <- reshape(sentences, idvar = c("texts_ids", "sentences_ids"), direction = "wide", timevar="field_name");
-  colnames(sentences) <- c("texts_ids", "sentences_ids", "ref", "tx", "nt", "ft");
+  res$texts <- df[field_name %in% text.fields, c(1,5)]
+
+  ## sentences slot
+  sentences <- df[field_name %in% sentence.fields, c(1,2,4,5)]
+  ## Base R
+  #sentences <- reshape(sentences, idvar = c("texts_ids", "sentences_ids"), direction = "wide", timevar="field_name");
+  ## package reshape2
+  sentences <- dcast(sentences, texts_ids + sentences_ids ~ field_name, fun.aggregate = paste, collapse=" ", value.var="field_value")
+  ## package tidyr
+  #sentences <- spread(sentences, key=field_name, value=field_value, fill="")
   res$sentences <- sentences;
 
-  ## Checking that there is the same nbr of mb, ge and ps field by triplet
-  ## No: reshape take care of this below
-  # s <- split(df, f=list(df$sentences_ids, df$triplet_ids));
-  # n.mb.by.triplet <- sapply(s, function(x) {sum(x$field_name == "mb " )})
-  # n.ge.by.triplet <- sapply(s, function(x) {sum(x$field_name == "ge " )})
-  # n.ps.by.triplet <- sapply(s, function(x) {sum(x$field_name == "ps " )})
-  # same.nb <- n.mb.by.triplet == n.ge.by.triplet & n.mb.by.triplet == n.ps.by.triplet
-  # different <- names(n.mb.by.triplet[! same.nb]);
-  # if (length(different) > 0) {
-  #   warning(paste0(length(different), " incomplet interlinear triplet(s) (ie. mb/ge/ps group) are deleted belonging to sentence(s): ", paste( unique(df$sentence_ids[df$triplet_ids %in% different]) ,collapse=" ")))
-  #   df[!df$sentences_id == as.numeric(different),]
-  # }
-  
-  ## from long to wide format (with mb, ge and ps as different columns)
-  morphs <- df[df$field_name %in% c("mb ", "ge ", "ps "), ];
-  morphs <- reshape(morphs, idvar = c("texts_ids", "sentences_ids", "triplet_ids"), direction = "wide", timevar="field_name");
-  colnames(morphs) <- c("texts_ids", "sentences_ids", "triplet_ids", "mb", "ge", "ps");
+  ## words slot
+  words <- align.fields.with.masterfield(df, fields=word.fields, masterfield="tx", unit_id_name="words_id");
+  res$words <- words;
 
-  ## tokenizing each of mb, ge, ps columns.
-  sep=' +';
-  ### First, we have to remove unequals length fields.
-  mb <- strsplit(as.character(morphs$mb), sep, perl = TRUE);
-  ge <- strsplit(as.character(morphs$ge), sep, perl = TRUE);
-  ps <- strsplit(as.character(morphs$ps), sep, perl = TRUE);
-  lmb <- sapply(mb, length);
-  lge <- sapply(ge, length);
-  lps <- sapply(ps, length);
-  different <- lmb != lge | lmb != lps
-  ndifferent <- length(different);
-  if (ndifferent > 0) {
-    ref <- res$sentences[ morphs[different,]$sentences_ids, "ref"];
-    if (add.unaligned) {
-      res$unaligned <- data.frame(ref=ref, mb=morphs$mb[different], ge=morphs$ge[different], ps=morphs$ps[different]);
-    } 
-    msg <- paste0(
-      length(different),
-      " interlinearized lines were deleted ",
-      "due to un enequals numbers of morphems between the mb, ge and ps lines. ",
-      "These interlinearized lines belong to the following references: ",
-      paste(unique(ref), collapse= " ")
-    );
-    warning(msg);
-  }
+  ## morphems slot
+  words.outer <- df[field_name == "tx", "field_value"];
+  morphems <- align.fields.with.masterfield(df, fields=morphem.fields, masterfield="mb", unit_id_name="morphems_id"); #, included.in=words.outer);
+  res$morphems <- morphems;
 
-  ### Then, the data frame is reshaped either with base R... 
-  morphs <- morphs[!different,];
-  ntokens   <- lmb[!different];
-  morphs <- data.frame(
-    texts_ids     = rep(morphs$texts_ids, ntokens),
-    sentences_ids = rep(morphs$sentences_ids, ntokens),
-    #triplet_ids= rep(morphs$triplet_ids, ntokens), ## we get rid of this information now
-    mb = unlist(mb[!different]),
-    ge = unlist(ge[!different]),
-    ps = unlist(ps[!different])
-  );
-
-    ### ...or using dplyr
-    # morphs <- morphs[!different,];
-    # morphs %>%
-    # group_by(triplet_ids) %>%
-    # mutate(
-    #   mb = strsplit(as.character(mb), sep),
-    #   ge = strsplit(as.character(ge), sep),
-    #   ps = strsplit(as.character(ps), sep)
-    # ) %>%
-    # unnest();
-  
-  res$morphems <- morphs;
   return(res);
 }
 
@@ -166,37 +131,42 @@ read.toolbox <- function(path, add.unaligned=FALSE) {
 #   return(entry)
 # }
 
-# read and collapse multi-line fields into one line.
+#' read and collapse multi-line fields into one line.
+#' One can encouter:
+#'     \mb samuel -we  ta -li  -lo
+#'     nefi    -mwii
+#' where a field is actually on two lines.
 .line2field <- function(lines) {
-  continuing.index <- grep(pattern = "^[^\\\\]", x=lines);
-  lines[continuing.index-1] <- paste(lines[continuing.index-1], lines[continuing.index], sep=" ");
-  lines <- lines[-continuing.index];
-  return(lines);
-
-  # field_index <- grep(pattern = "^\\\\", x=lines, perl=TRUE)
-  # length_field <- c(field_index[2:length(field_index)] - field_index[1:(length(field_index)-1)], (length(lines)+1) - field_index[length(field_index)]);
-  # field_id <- rep(1:length(field_index), length_field)
-  # field <- split(lines, field_id)
-  # field_merged <- sapply(field, paste, collapse=" ");
-  # return(field_merged);
+	continuing.index <- grep(pattern = "^[^\\\\]", x=lines);
+	if (length(continuing.index) > 0) {
+		lines[continuing.index-1] <- paste(lines[continuing.index-1], lines[continuing.index], sep=" ");
+		lines <- lines[-continuing.index];
+	}
+	return(lines);
 }
 
-#' Remove all lines up to the first line beginning with "\ref"
+#' Get the boudaries (start, end) of tokens in a vector of untokenized string.
 #'
-.remove.header <- function(field, key) {
-  # group fields by entry.
-  key <- paste("^\\\\", key, sep="");
-  while(! grepl(pattern=key, x=field[1], perl=T)) {
-    field <- field[-1];
-  }
-  return(field);
-}
+#' For words (tx) or morphems (mb), several other fields may be aligned according to the positions
+#' of tokens in this two "master" fields. The end boundaries of token is the last character of the token
+#' or, if there are following white space, the last white space following it.
+#' 
+#' @param string character vector: strings to be tokenized in morphems
+#' @return a list with two slot: (i) "index_mb_start", a list of vectors 
+#' (one per string in mb) giving the position of the first character of each morphems and (ii)
+#' "index_mb_end", a list of vectors (one per string in mb) giving the position of the last character
+#' of each morphems
+get.tokens.boundaries <- function(string) {
+  index_start <- gregexpr("( [^ ]|^.)", string, perl=T);
+  #mb_lengths <- nchar(string);
 
+  index_end <- lapply(index_start, function(x) { x[-1] });
+  index_end <- mapply(function(x, y) { c(x, y) }, index_end, 10000); #mb_lengths
+  index_start <- mapply(function(x, y) {c(1, x[-1]+1)}, index_start);
 
-.get.index <- function(data, key) {
-  key <- paste("^\\\\", key, sep="");
-  id_index <- grep(pattern = key, x=data, perl=TRUE)
-  return(id_index);
+  index_start <- lapply(index_start, `attributes<-`, NULL)
+  index_end <- lapply(index_end, `attributes<-`, NULL)
+  return(list(index_start=index_start, index_end=index_end));
 }
 
 # .group.by.key <- function(data, key) {
@@ -207,3 +177,75 @@ read.toolbox <- function(path, add.unaligned=FALSE) {
 #   data <- split(data, entry_id)
 #   return(data);
 # }
+
+#' Segment a group of fields associated to an unit (fields related to word, or to morphem) in toolbox
+#'
+#' Segment into tokens a master field (such as tx for words, or mb for morphems), and segment other fields
+#' associated with it (such as ge", or "ps" for the "mb" master field.)
+#' 
+#' @param longformat the data table of the toolbox fields in long format (melted)
+#' @param fields character vector: the aligned fields to tokenize (for instance, "mb", "ge" and "ps")
+#' @param masterfield the master in the fields to be tokenized (for instance, "mb").
+#' @param unit_id_name character vector (length-1): the name of the column to be created containing an ID for each token.
+#' @param included.in character vector: an optional super-ordinated unit (for instance words for morphems).
+#' @param included.in_idcharacter vector (length-1): the name of the column to be created containing an ID of the outer unit.
+#'
+#' @return a data frame with one token by row
+#' 
+align.fields.with.masterfield <- function(longformat,
+																					fields=c("mb", "ge", "ps"),
+																					masterfield="mb",
+																					unit_id_name="morphems_id",
+																					included.in=NULL, included.in_id="words_id") {
+  data <- longformat[longformat$field_name %in% fields, ];
+  actual.fields <- unique(data$field_name); # actually found
+  data <- dcast(data, texts_ids + sentences_ids + triplet_ids ~ field_name, fun.aggregate = paste, collapse=" ", value.var="field_value")
+
+  if (nrow(data) == 0) {
+  	stop(paste0("empty \"", masterfield, "\" matrix"))
+  }
+
+  is.empty <- data[[masterfield]]  == "";
+  data <- data[!is.empty,];
+  
+  boundaries <- get.tokens.boundaries(data[[masterfield]]);
+  start_b <- boundaries$index_start
+  end_b <- boundaries$index_end
+  
+  n.tokens.by.master <- lengths(start_b);
+
+  units <- data.frame(
+    texts_ids     = rep(data$texts_ids, n.tokens.by.master),
+    sentences_ids = rep(data$sentences_ids, n.tokens.by.master),
+    triplet_ids   = rep(data$triplet_ids, n.tokens.by.master),
+    stringsAsFactors=FALSE
+  );
+  
+  units[[ unit_id_name ]] <- 1:sum(n.tokens.by.master);
+
+  # bug TODO: the last "end" as to be replaced by the actual length of the string.
+  for (f in actual.fields) {
+    units[[f]]<- trimws(
+      unlist(
+        mapply(
+          function(text, start, end) {
+            substring(text, first = start, last= end)
+          },
+          data[[f]],
+          start_b,
+          end_b,
+          SIMPLIFY=FALSE)
+      )
+    );
+  }
+
+  if (!is.null(included.in)) {
+    super <- get.tokens.boundaries(included.in);
+    outer_start <- super$index_start;
+    
+    ids <- mapply(function(inner, outer)  sapply(inner, function(x) sum(outer <= x)), start_b, outer_start, SIMPLIFY = FALSE )
+    units[[included.in_id]] <- unlist(ids)
+  }
+
+  return(units);
+}

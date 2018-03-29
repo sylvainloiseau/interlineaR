@@ -2,15 +2,17 @@
 #'
 #' @param file : a length-one character vector containing the path to a LIFT XML document.
 #' @param language.code : the code of the language.
-#' @return a data.frame
+#'
+#' @return a list with two slots named "lexems" and "senses", each slot containing a data.frame
+#'
 #' @export
 #'
 #' @seealso read.emeld
 #' @references http://code.google.com/p/lift-standard
 #' @examples
-#' path <- system.file("exampleData", "tuwariDictionary.lift", package="RFlex")
-#' dictionary <- read.lift.old(path, language.code="tww")
-read.lift.old <- function(file, language.code="tww") {
+#' path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
+#' dictionary <- read.lift(path, language.code="tww")
+read.lift <- function(file, language.code="tww") {
   dictionarydoc <- read_xml(file)
   entries <- xml_find_all(dictionarydoc, "/lift/entry")
   dictionary <- data.frame(
@@ -33,7 +35,7 @@ read.lift.old <- function(file, language.code="tww") {
     # }),
     class=xml_text(xml_find_first(entries, "sense/grammatical-info/trait[@name='Noun-infl-class']/@value")),
     stringsAsFactors = FALSE
-    );
+  );
   return(dictionary)
 }
 
@@ -41,16 +43,15 @@ read.lift.old <- function(file, language.code="tww") {
 #'
 #' @param file : a length-one character vector containing the path to a LIFT XML document.
 #' @param language.code : the code of the language.
-#'
-#' @return a data frame containing a dictionary
-#' @export
+#' @return a data.frame
 #'
 #' @seealso read.emeld
 #' @references http://code.google.com/p/lift-standard
+#' @export
 #' @examples
-#' path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
+#' path <- system.file("exampleData", "tuwariDictionary.lift", package="RFlex")
 #' dictionary <- read.lift.old(path, language.code="tww")
-read.lift <- function(file, language.code="tww") {
+read.lift.old <- function(file, language.code="tww") {
   dictionarydoc <- read_xml(file)
   entries <- xml_find_all(dictionarydoc, "/lift/entry")
   dictionary <- data.frame(

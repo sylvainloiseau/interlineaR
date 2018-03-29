@@ -1,0 +1,786 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LIEN ENTRE LE FICHIER XML ET LA FEUILLE DE STYLE-->
+<?xml-stylesheet type="text/xsl" href="view_text.xsl"?>
+
+<TEXT xml:lang="nge" id="crdo-NGE_FOURMI"> 
+   
+  <!--EMPLACEMENT DU FICHIER AUDIO (à mettre dans le répertoire "audio")-->
+   <HEADER><SOUNDFILE href="../audio/FOURMI.wav"></SOUNDFILE></HEADER>
+   
+  <S id="FOURMIs1"><AUDIO start="16.7578" end="20.7109"/>
+    <FORM kindOf="phono">à bꜛé ɲꜜê tʃúʔú wù-ʃíʔìnɨ́ wû-tsé,</FORM>
+    <W>
+      <M class="i">
+        <FORM kindOf="phono">à</FORM>
+        <TRANSL xml:lang="fr">1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M class="i">
+        <FORM kindOf="phono">bꜛé</FORM>
+        <TRANSL xml:lang="fr">P2+être+Loc+9</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ɲꜜê</FORM>
+        <TRANSL xml:lang="fr">corps+AL+3</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tʃúʔú</FORM>
+        <TRANSL xml:lang="fr">nuit</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">wù-ʃíʔìnɨ́</FORM>
+        <TRANSL xml:lang="fr">3-belle</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">wû-tsé</FORM>
+        <TRANSL xml:lang="fr">3-certaine</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">C'était par une belle nuit,</TRANSL>
+  </S>
+  <S id="FOURMIs2"><AUDIO start="21.2266" end="30.0781"/>
+    <FORM kindOf="phono">ɨ̀-lꜛɯ́ꜜ ́ nꜜô yí ŋ̀kɨ́ ndzɯ́ə́ yí tsɛ̀ʔɛ́ ŋkə̰̌ ádꜛíʔꜜə́=mândzɔ̌ŋ bꜛó ŋ̀kwɛ́ nꜛɔ́ꜜ ́ŋ ntíʔꜜə́ ndʒꜜwíːꜜ ́tə́,</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">ɨ̀-lꜛɯ́ꜜ ́</FORM>
+        <TRANSL xml:lang="fr">3-fourmi+3</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">nꜜô</FORM>
+        <TRANSL xml:lang="fr">S+boire+Fo</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">yí</FORM>
+        <TRANSL xml:lang="fr">elle</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋ̀kɨ́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+aussi</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ndzɯ́ə́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+manger+Fo</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">yí</FORM>
+        <TRANSL xml:lang="fr">elle</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tsɛ̀ʔɛ́</FORM>
+        <TRANSL xml:lang="fr">juste</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋkə̰̌</FORM>
+        <TRANSL xml:lang="fr">vrai</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ádꜛíʔꜜə́=mândzɔ̌ŋ</FORM>
+        <TRANSL xml:lang="fr">Loc+7+place+7=réunion+AL</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">bꜛó</FORM>
+        <TRANSL xml:lang="fr">eux</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋ̀kwɛ́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+rentrer</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">nꜛɔ́ꜜ ́ŋ</FORM>
+        <TRANSL xml:lang="fr">C[-F]+s'allonger</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ntíʔꜜə́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+puis+I</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ndʒꜜwíːꜜ ́tə́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+se reposer</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono"></FORM>
+        <TRANSL xml:lang="fr"></TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">la fourmi but et mangea vraiment beaucoup à (la réunion de) son association, rentra chez elle, s'allongea et commença à se reposer ;</TRANSL>
+  </S>
+  <S id="FOURMIs3"><AUDIO start="30.2500" end="32.6563"/>
+    <FORM kindOf="phono">à tɨ̀nꜛə́ tꜜɨ́ ʒwìːtɨ́ lá,</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">à</FORM>
+        <TRANSL xml:lang="fr">1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tɨ̀nꜛə́</FORM>
+        <TRANSL xml:lang="fr">P0+Aux+A</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tꜜɨ́</FORM>
+        <TRANSL xml:lang="fr">C[+F]+Aux</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ʒwìːtɨ́</FORM>
+        <TRANSL xml:lang="fr">C[+F]+se reposer</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">lá</FORM>
+        <TRANSL xml:lang="fr">Ma</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">à peine avait-elle commencé à se reposer</TRANSL>
+  </S>
+  <S id="FOURMIs4"><AUDIO start="32.7422" end="34.8047"/>
+    <FORM kindOf="phono">fɨ̀-lꜛyé wꜜɛ́mꜜə́ wûmbɔ́ŋə̀.</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">fɨ̀-lꜛyé</FORM>
+        <TRANSL xml:lang="fr">19-sommeil+19</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">wꜜɛ́mꜜə́</FORM>
+        <TRANSL xml:lang="fr">S+saisir+Fo</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">wûmbɔ́ŋə̀</FORM>
+        <TRANSL xml:lang="fr">elle+Me</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">que le sommeil l'envahit.</TRANSL>
+  </S>
+  <S id="FOURMIs5"><AUDIO start="36.6094" end="39.1875"/>
+    <FORM kindOf="phono">ò ʒɛ᷈ nù z-á mbꜛáʔꜜá fúnꜜɨ́ ?</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">ò</FORM>
+        <TRANSL xml:lang="fr">tu</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ʒɛ᷈</FORM>
+        <TRANSL xml:lang="fr">P0+savoir+7</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">nù</FORM>
+        <TRANSL xml:lang="fr">chose</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">z-á</FORM>
+        <TRANSL xml:lang="fr">7-Rel</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">mbꜛáʔꜜá</FORM>
+        <TRANSL xml:lang="fr">que+7</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">fúnꜜɨ́</FORM>
+        <TRANSL xml:lang="fr">P0+sortir+R</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">Sais-tu ce qui arriva ?</TRANSL>
+  </S>
+  <S id="FOURMIs6"><AUDIO start="40.3906" end="42.6250"/>
+    <FORM kindOf="phono">à-nù zâ-tsànɨ́nə̂ fúə̀.</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">à-nù</FORM>
+        <TRANSL xml:lang="fr">7-chose</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">zâ-tsànɨ́nə̂</FORM>
+        <TRANSL xml:lang="fr">7-merveilleuse+7</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">fúə̀</FORM>
+        <TRANSL xml:lang="fr">P2+sortir+Me</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">Il arriva quelque chose de merveilleux.</TRANSL>
+  </S>
+  <S id="FOURMIs7"><AUDIO start="43.3125" end="45.4610"/>
+    <FORM kindOf="phono">ǹ-dzɛ̀m lyê w-ɛ́rə́ ;</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">ǹ-dzɛ̀m</FORM>
+        <TRANSL xml:lang="fr">9-rêve+9</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">lyê</FORM>
+        <TRANSL xml:lang="fr">S+dormir+Fo</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">w-ɛ́rə́</FORM>
+        <TRANSL xml:lang="fr">1-elle</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">Le sommeil la saisit ;</TRANSL>
+  </S>
+  <S id="FOURMIs8"><AUDIO start="45.8906" end="49.5000"/>
+    <FORM kindOf="phono">w-ɛ́rə́ zɔ́ʔɔ́ b-àngyě mꜛû=m-bí w-ɛ̂n tsɛ̀ʔɛ̀ bɨ̀-tsùmə̀.</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">w-ɛ́rə́</FORM>
+        <TRANSL xml:lang="fr">1-elle+1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">zɔ́ʔɔ́</FORM>
+        <TRANSL xml:lang="fr">S+épouser</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">b-àngyě</FORM>
+        <TRANSL xml:lang="fr">2-femmes+Loc+9</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">mꜛû=m-bí</FORM>
+        <TRANSL xml:lang="fr">intérieur+9=9-monde</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">w-ɛ̂n</FORM>
+        <TRANSL xml:lang="fr">1-ce ci</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tsɛ̀ʔɛ̀</FORM>
+        <TRANSL xml:lang="fr">juste</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">bɨ̀-tsùmə̀</FORM>
+        <TRANSL xml:lang="fr">2-toutes+Me</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">elle épousait les femmes de ce monde, toutes sans exception.</TRANSL>
+  </S>
+  <S id="FOURMIs9"><AUDIO start="49.9297" end="56.8047"/>
+    <FORM kindOf="phono">á mꜛû=n-dzɛ̀m w-á w-ɛ́rə́ lánɨ̀ ntsí ꜛámꜜú nɨ̀-dɔ́rɨ́ tsɛ̀ʔɛ̀ nà-wìə́.</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">á</FORM>
+        <TRANSL xml:lang="fr">Loc+9</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">mꜛû=n-dzɛ̀m</FORM>
+        <TRANSL xml:lang="fr">intérieur+9=9-rêve</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">w-á</FORM>
+        <TRANSL xml:lang="fr">1-le</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">w-ɛ́rə́</FORM>
+        <TRANSL xml:lang="fr">1-elle+1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">lánɨ̀</FORM>
+        <TRANSL xml:lang="fr">S+vraiment</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ntsí</FORM>
+        <TRANSL xml:lang="fr">C[-F]+être</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ꜛámꜜú</FORM>
+        <TRANSL xml:lang="fr">Loc+9+intérieur+AL</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">nɨ̀-dɔ́rɨ́</FORM>
+        <TRANSL xml:lang="fr">5-joie</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tsɛ̀ʔɛ̀</FORM>
+        <TRANSL xml:lang="fr">juste</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">nà-wìə́</FORM>
+        <TRANSL xml:lang="fr">5-grande+Me</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">Dans ce rêve, elle était dans une joie vraiment très grande.</TRANSL>
+  </S>
+  <S id="FOURMIs10"><AUDIO start="58.0078" end="63.9375"/>
+    <FORM kindOf="phono">w-ɛ́rə́ líyꜛə́ ndꜜíyə́ ŋ̀gvꜛúkꜜɨ́ ǹdꜛóꜜ ́,</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">w-ɛ́rə́</FORM>
+        <TRANSL xml:lang="fr">1-elle+1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">líyꜛə́</FORM>
+        <TRANSL xml:lang="fr">S+dormir</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ndꜜíyə́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+dormir</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋ̀gvꜛúkꜜɨ́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+secouer</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ǹdꜛóꜜ ́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+se lever</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">Après son somme, elle s'ébroua, se leva,</TRANSL>
+  </S>
+  <S id="FOURMIs11"><AUDIO start="64.0234" end="70.9844"/>
+    <FORM kindOf="phono">á bé à-fꜛúnꜜə́ nù ŋgꜛɯ́ꜜ ́ à sꜛéꜜ ́ bə̀ ndzɛ́n tsɛ̀ʔɛ̀ táʔà m-àngyě.</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">á</FORM>
+        <TRANSL xml:lang="fr">1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">bé</FORM>
+        <TRANSL xml:lang="fr">S+être</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">à-fꜛúnꜜə́</FORM>
+        <TRANSL xml:lang="fr">7-surprise+7+7</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">nù</FORM>
+        <TRANSL xml:lang="fr">chose</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋgꜛɯ́ꜜ ́</FORM>
+        <TRANSL xml:lang="fr">que</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">à</FORM>
+        <TRANSL xml:lang="fr">1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">sꜛéꜜ ́</FORM>
+        <TRANSL xml:lang="fr">P2+Nég</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">bə̀</FORM>
+        <TRANSL xml:lang="fr">encore</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ndzɛ́n</FORM>
+        <TRANSL xml:lang="fr">C[-F]+voir</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tsɛ̀ʔɛ̀</FORM>
+        <TRANSL xml:lang="fr">juste</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">táʔà</FORM>
+        <TRANSL xml:lang="fr">unité</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">m-àngyě</FORM>
+        <TRANSL xml:lang="fr">1-femme+Me</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">et fut surprise de ne plus voir une seule femme.</TRANSL>
+  </S>
+  <S id="FOURMIs12"><AUDIO start="73.1328" end="83.6172"/>
+    <FORM kindOf="phono">ɨ́lɔ̀ɣɨ̀nə́ n-dʒꜛwí w-ꜜá w-ɛ́rə́ kâ ŋgꜛɯ́ (ŋ̀kꜛá ŋgꜜɯ́) zꜜɯ́ tsꜛí lꜜáʔá kèʔé lyê,</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">ɨ́lɔ̀ɣɨ̀nə́</FORM>
+        <TRANSL xml:lang="fr">à partir+Loc</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">n-dʒꜛwí</FORM>
+        <TRANSL xml:lang="fr">9-jour</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">w-ꜜá</FORM>
+        <TRANSL xml:lang="fr">1-le</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">w-ɛ́rə́</FORM>
+        <TRANSL xml:lang="fr">1-elle+1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">kâ</FORM>
+        <TRANSL xml:lang="fr">S+jurer</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋgꜛɯ́</FORM>
+        <TRANSL xml:lang="fr">que</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">(ŋ̀kꜛá</FORM>
+        <TRANSL xml:lang="fr">(C[-F]+jurer</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋgꜜɯ́)</FORM>
+        <TRANSL xml:lang="fr">que)</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">zꜜɯ́</FORM>
+        <TRANSL xml:lang="fr">elle</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tsꜛí</FORM>
+        <TRANSL xml:lang="fr">P0+être</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">lꜜáʔá</FORM>
+        <TRANSL xml:lang="fr">C[+F]+jamais</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">kèʔé</FORM>
+        <TRANSL xml:lang="fr">C[+F]+Nég</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">lyê</FORM>
+        <TRANSL xml:lang="fr">dormir</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">A partir de ce jour, elle jura qu'elle ne pourrait plus jamais dormir,</TRANSL>
+  </S>
+  <S id="FOURMIs13"><AUDIO start="83.7891" end="89.0313"/>
+    <FORM kindOf="phono">ɨ́kyꜛɛ́rə̀ tsɛ̀ʔɛ̀ kyɛ̀rɨ̀nɨ́ ɨ́nꜛɯ́mə́ lꜜó̰ːnɨ̀ b-àngyè b-â,</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">ɨ́kyꜛɛ́rə̀</FORM>
+        <TRANSL xml:lang="fr">C[+F]+veiller+I</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">tsɛ̀ʔɛ̀</FORM>
+        <TRANSL xml:lang="fr">juste</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">kyɛ̀rɨ̀nɨ́</FORM>
+        <TRANSL xml:lang="fr">veiller</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ɨ́nꜛɯ́mə́</FORM>
+        <TRANSL xml:lang="fr">C[+F]+errer+I</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">lꜜó̰ːnɨ̀</FORM>
+        <TRANSL xml:lang="fr">C[+F]+chercher+I</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">b-àngyè</FORM>
+        <TRANSL xml:lang="fr">2-femmes</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">b-â</FORM>
+        <TRANSL xml:lang="fr">2-les</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">mais qu'elle resterait bien éveillée et qu'elle irait à la recherche des femmes,</TRANSL>
+  </S>
+  <S id="FOURMIs14"><AUDIO start="89.6328" end="97.2813"/>
+    <FORM kindOf="phono">á bé ŋgꜛɯ́ zꜜɯ́ ɣꜛɯ́ ndꜜáʔá ndzɛ́ zɯ́ bɔ̂ŋ nɔ̌ŋ lꜛíyə́ fɨ́-lꜜyê.</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">á</FORM>
+        <TRANSL xml:lang="fr">si</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">bé</FORM>
+        <TRANSL xml:lang="fr"></TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋgꜛɯ́</FORM>
+        <TRANSL xml:lang="fr"></TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">zꜜɯ́</FORM>
+        <TRANSL xml:lang="fr">elle</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ɣꜛɯ́</FORM>
+        <TRANSL xml:lang="fr">Cd+Aux</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ndꜜáʔá</FORM>
+        <TRANSL xml:lang="fr">C[-F]+jamais</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ndzɛ́</FORM>
+        <TRANSL xml:lang="fr">C[-F]+voir</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">zɯ́</FORM>
+        <TRANSL xml:lang="fr">elle</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">bɔ̂ŋ</FORM>
+        <TRANSL xml:lang="fr">S+être bien</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">nɔ̌ŋ</FORM>
+        <TRANSL xml:lang="fr">C[+F]+s'allonger</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">lꜛíyə́</FORM>
+        <TRANSL xml:lang="fr">C[+F]+dormir</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">fɨ́-lꜜyê</FORM>
+        <TRANSL xml:lang="fr">19-sommeil+Me</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">que si jamais elle les voyait, alors elle pourrait s'allonger et dormir.</TRANSL>
+  </S>
+  <S id="FOURMIs15"><AUDIO start="98.2266" end="104.0703"/>
+    <FORM kindOf="phono">kə́ ɣɯ̌ lꜛáʔá zꜜḛ́ bê ŋ-gùʔə̂ kè múŋ ká ŋwùə̀ ʒɛ́ yɛ́.</FORM>
+    <W>
+      <M>
+        <FORM kindOf="phono">kə́</FORM>
+        <TRANSL xml:lang="fr">ou+1+Fut</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ɣɯ̌</FORM>
+        <TRANSL xml:lang="fr">Aux</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">lꜛáʔá</FORM>
+        <TRANSL xml:lang="fr">C[+F]+jamais</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">zꜜḛ́</FORM>
+        <TRANSL xml:lang="fr">C[+F]+voir+1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">bê</FORM>
+        <TRANSL xml:lang="fr">Foc+Loc</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋ-gùʔə̂</FORM>
+        <TRANSL xml:lang="fr">9-temps+7</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">kè</FORM>
+        <TRANSL xml:lang="fr">quoi</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">múŋ</FORM>
+        <TRANSL xml:lang="fr">alors</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ká</FORM>
+        <TRANSL xml:lang="fr">Nég</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ŋwùə̀</FORM>
+        <TRANSL xml:lang="fr">1+personne+1</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">ʒɛ́</FORM>
+        <TRANSL xml:lang="fr">savoir+Fo</TRANSL>
+      </M>
+    </W>
+    <W>
+      <M>
+        <FORM kindOf="phono">yɛ́</FORM>
+        <TRANSL xml:lang="fr">elle+Me</TRANSL>
+      </M>
+    </W>
+    <TRANSL xml:lang="fr">Si ou quand elle les verra, personne ne le sait.</TRANSL>
+  </S>
+</TEXT>
+

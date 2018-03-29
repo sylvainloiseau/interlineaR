@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- See http://code.google.com/p/lift-standard for more information on the format used here. -->
+<lift producer="SIL.FLEx 8.2.8.42510" version="0.13">
+<header>
+<ranges>
+<range id="dialect" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="etymology" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="grammatical-info" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="lexical-relation" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="note-type" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="paradigm" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="reversal-type" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="semantic-domain-ddp4" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="status" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="users" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="location" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<!-- The following ranges are produced by FieldWorks Language Explorer, and are not part of the LIFT standard. -->
+<range id="anthro-code" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="translation-type" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<!-- The parts of speech are duplicated in another range because derivational affixes require a "From" PartOfSpeech as well as a "To" PartOfSpeech. -->
+<range id="from-part-of-speech" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="morph-type" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="exception-feature" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="inflection-feature" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="inflection-feature-type" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="gen-feature-value" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="num-feature-value" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="Nom-infl-class" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="Nom-stem-name" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="do-not-publish-in" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="domain-type" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="sense-type" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+<range id="usage-type" href="file://C:/Users/Inalco.AnaidDonabedian/Desktop/testFlex/lift/lift.lift-ranges"/>
+</ranges>
+<fields>
+<field tag="cv-pattern">
+<form lang="en"><text>This records the syllable pattern for a LexPronunciation in FieldWorks.</text></form>
+</field>
+<field tag="tone">
+<form lang="en"><text>This records the tone information for a LexPronunciation in FieldWorks.</text></form>
+</field>
+<field tag="comment">
+<form lang="en"><text>This records a comment (note) in a LexEtymology in FieldWorks.</text></form>
+</field>
+<field tag="import-residue">
+<form lang="en"><text>This records residue left over from importing a standard format file into FieldWorks (or LinguaLinks).</text></form>
+</field>
+<field tag="literal-meaning">
+<form lang="en"><text>This field is used to store a literal meaning of the entry.  Typically, this field is necessary only for a compound or an idiom where the meaning of the whole is different from the sum of its parts.</text></form>
+</field>
+<field tag="summary-definition">
+<form lang="en"><text>A summary definition (located at the entry level in the Entry pane) is a general definition summarizing all the senses of a primary entry. It has no theoretical value; its use is solely pragmatic.</text></form>
+</field>
+<field tag="scientific-name">
+<form lang="en"><text>This field stores the scientific name pertinent to the current sense.</text></form>
+</field>
+</fields>
+</header>
+<entry dateCreated="2018-02-23T18:43:27Z" dateModified="2018-02-23T18:44:21Z" id="nomofu_038f5815-457a-40d4-8650-c21acbd110ac" guid="038f5815-457a-40d4-8650-c21acbd110ac">
+<lexical-unit>
+<form lang="tww"><text>nomofu</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<relation type="_component-lexeme" ref="citation_form_851b7ca3-5cd3-4cfe-94d9-d9d92b91796e" order="0">
+<trait name="is-primary" value="true"/>
+<trait  name="complex-form-type" value="Composé"/>
+<field type="summary">
+<form lang="en"><text>literaly 'eye stone'</text></form>
+<form lang="fr"><text>littéralement 'pierre de l'oeil'</text></form>
+</field>
+</relation>
+<relation type="_component-lexeme" ref="fu_29bd0162-e0f7-4252-a50c-fb5c4908f7d8" order="1">
+<trait  name="complex-form-type" value="Composé"/>
+<field type="summary">
+<form lang="en"><text>literaly 'eye stone'</text></form>
+<form lang="fr"><text>littéralement 'pierre de l'oeil'</text></form>
+</field>
+</relation>
+<sense id="274c54c4-b813-4eae-b8b8-7cfe738c15ba">
+<grammatical-info value="Nom">
+</grammatical-info>
+<gloss lang="fr"><text>pupil</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2018-02-23T08:02:56Z" dateModified="2018-02-27T14:31:47Z" id="-ma_0ea31926-76dc-439b-92eb-b7675b6f13c0" guid="0ea31926-76dc-439b-92eb-b7675b6f13c0">
+<lexical-unit>
+<form lang="tww"><text>-ma</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="suffix"/>
+<relation type="Comparer" ref="citation_form_851b7ca3-5cd3-4cfe-94d9-d9d92b91796e"/>
+<sense id="07a203df-f939-4337-9497-717309f7c17f">
+<grammatical-info value="Nom">
+<trait name="type" value="inflAffix"/>
+</grammatical-info>
+<gloss lang="fr"><text>-LOC</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2018-02-23T08:02:04Z" dateModified="2018-02-27T14:36:05Z" id="a_1daa94f6-84f2-4b3e-9158-819f03719726" guid="1daa94f6-84f2-4b3e-9158-819f03719726">
+<lexical-unit>
+<form lang="tww"><text>a</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<citation>
+<form lang="tww"><text>a</text></form>
+</citation>
+<etymology type="borrowed" source="UNKNOWN">
+</etymology>
+<relation type="_component-lexeme" ref="citation_form_851b7ca3-5cd3-4cfe-94d9-d9d92b91796e" order="0">
+<trait  name="variant-type" value="Variante orthographique"/>
+<field type="summary">
+<form lang="fr"><text>cfr</text></form>
+<form lang="en"><text>cen</text></form>
+</field>
+</relation>
+<sense id="5328e40e-9a3d-48be-9b0b-ff544beb81f2">
+<grammatical-info value="Proforme">
+</grammatical-info>
+<gloss lang="fr"><text>1S</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2018-02-23T18:42:35Z" dateModified="2018-02-23T18:42:35Z" id="fu_29bd0162-e0f7-4252-a50c-fb5c4908f7d8" guid="29bd0162-e0f7-4252-a50c-fb5c4908f7d8">
+<lexical-unit>
+<form lang="tww"><text>fu</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="f480f889-df23-4fed-94de-dd9e7503ae92">
+<grammatical-info value="Nom">
+</grammatical-info>
+<gloss lang="en"><text>stone</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2018-02-23T08:02:32Z" dateModified="2018-02-27T14:35:12Z" id="teia_422fee77-7d8f-44f4-98f2-02561ef088de" guid="422fee77-7d8f-44f4-98f2-02561ef088de">
+<lexical-unit>
+<form lang="tww"><text>teia</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="a00ce8fa-4089-4b49-9b38-be73a18d51c8">
+<grammatical-info value="Nom">
+</grammatical-info>
+<gloss lang="fr"><text>garden</text></gloss>
+<relation type="Antonyme" ref="0f25dfd0-fae9-42ba-aaea-30100b7da3cf"/>
+</sense>
+</entry>
+<entry dateCreated="2018-02-23T08:03:24Z" dateModified="2018-02-23T08:03:24Z" id="-io_58105895-2a0b-4df0-b61a-5a46cc1abfb5" guid="58105895-2a0b-4df0-b61a-5a46cc1abfb5">
+<lexical-unit>
+<form lang="tww"><text>-io</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="suffix"/>
+<sense id="e23a1d92-3e81-4a61-b9f0-e04aa89ec6ab">
+<grammatical-info value="Verbe">
+<trait name="type" value="inflAffix"/>
+</grammatical-info>
+<gloss lang="fr"><text>-ACT</text></gloss>
+</sense>
+</entry>
+<entry dateCreated="2018-02-23T18:42:46Z" dateModified="2018-02-27T14:39:00Z" id="citation_form_851b7ca3-5cd3-4cfe-94d9-d9d92b91796e" guid="851b7ca3-5cd3-4cfe-94d9-d9d92b91796e">
+<lexical-unit>
+<form lang="tww"><text>nomo</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<citation>
+<form lang="tww"><text>citation_form</text></form>
+</citation>
+<note type="bibliography">
+<form lang="fr"><text>bibliogrfr</text></form>
+<form lang="en"><text>bibliogren</text></form>
+</note>
+<note>
+<form lang="fr"><text>noteen</text></form>
+<form lang="en"><text>notefr</text></form>
+</note>
+<field type="literal-meaning">
+<form lang="fr"><text>lit.meaningen</text></form>
+<form lang="en"><text>lit.meaningfr</text></form>
+</field>
+<note type="restrictions">
+<form lang="fr"><text>restrictionfr</text></form>
+<form lang="en"><text>restrictionen</text></form>
+</note>
+<field type="summary-definition">
+<form lang="fr"><text>summary definition fr</text></form>
+<form lang="en"><text>summary definitino en</text></form>
+</field>
+<variant>
+<form lang="tww"><text>nom</text></form>
+<trait name ="environment" value="/[C]_[C]"/>
+<trait  name="morph-type" value="stem"/>
+</variant>
+<etymology type="proto" source="2015.I.3">
+<form lang="tww"><text>nommo</text></form>
+<form lang="fr"><text>etymfr</text></form>
+<form lang="en"><text>etymen</text></form>
+<gloss lang="fr"><text>etymglossfr</text></gloss>
+<gloss lang="en"><text>etymglossen</text></gloss>
+<field type="comment">
+<form lang="fr"><text>etymcomfr</text></form>
+<form lang="en"><text><span lang="fr">etymcomen</span></text></form>
+</field>
+</etymology>
+<relation type="_component-lexeme" ref="i_e24d9e54-2e9d-4829-9651-ac2dd647addd" order="0">
+<trait name="is-primary" value="true"/>
+<trait  name="complex-form-type" value="Contraction"/>
+<field type="summary">
+<form lang="fr"><text>comFr</text></form>
+<form lang="en"><text>comEn</text></form>
+</field>
+</relation>
+<relation type="_component-lexeme" ref="f480f889-df23-4fed-94de-dd9e7503ae92" order="0">
+<trait  name="variant-type" value="Variante dialectale"/>
+<field type="summary">
+<form lang="fr"><text>varfr</text></form>
+<form lang="en"><text>varen</text></form>
+</field>
+</relation>
+<relation type="Comparer" ref="-ma_0ea31926-76dc-439b-92eb-b7675b6f13c0"/>
+<pronunciation>
+<form lang="tww"><text>nommo</text></form>
+<field type="cv-pattern">
+<form lang="en"><text>CVCV</text></form>
+</field>
+<field type="tone">
+<form lang="en"><text>HL</text></form>
+</field>
+<trait name="location" value="Tau_fr"/>
+</pronunciation>
+<sense id="0f25dfd0-fae9-42ba-aaea-30100b7da3cf" order="0">
+<grammatical-info value="Nom">
+<trait name="Nom-infl-class" value="ic1fr"/><trait name="inflection-feature" value="[nagr:[num:sg gen:m]]"/>
+<trait  name="exception-feature" value="gf"/>
+</grammatical-info>
+<gloss lang="en"><text>eye</text></gloss>
+<gloss lang="fr"><text>oeil</text></gloss>
+<definition>
+<form lang="fr"><text>Définitino fr</text></form>
+<form lang="en"><text>Définitino en</text></form>
+</definition>
+<example source="REF2015XYZ">
+<form lang="tww"><text>a nomo sipiale meli-io</text></form>
+<translation type="Traduction libre">
+<form lang="fr"><text>Je prie les yeux fermés</text></form>
+<form lang="en"><text>I pray eye closed</text></form>
+</translation>
+<note type="reference">
+<form lang="en"><text>REF2015XYZ</text></form>
+</note>
+</example>
+<trait name ="semantic-domain-ddp4" value="6 Le travail et diverses activités"/>
+<note type="anthropology">
+<form lang="fr"><text>a</text></form>
+</note>
+<note type="bibliography">
+<form lang="fr"><text>b</text></form>
+</note>
+<note type="discourse">
+<form lang="fr"><text>d</text></form>
+</note>
+<note type="encyclopedic">
+<form lang="fr"><text>e</text></form>
+</note>
+<note>
+<form lang="fr"><text>g</text></form>
+</note>
+<note type="grammar">
+<form lang="fr"><text>g</text></form>
+</note>
+<note type="phonology">
+<form lang="fr"><text>p</text></form>
+</note>
+<note type="restrictions">
+<form lang="fr"><text>r</text></form>
+</note>
+<field type="scientific-name">
+<form lang="en"><text>eyus globulus</text></form>
+</field>
+<note type="semantics">
+<form lang="fr"><text>s</text></form>
+</note>
+<note type="sociolinguistics">
+<form lang="fr"><text>so</text></form>
+</note>
+<note type="source">
+<form lang="en"><text>source</text></form>
+</note>
+<trait  name="anthro-code" value="170"/>
+<trait  name="domain-type" value="juridique"/>
+<reversal type="fr"><form lang="fr"><text>revresal entry</text></form>
+</reversal>
+<trait  name="sense-type" value="primaire"/>
+<trait  name="status" value="Pending"/>
+<trait  name="usage-type" value="familier"/>
+<trait  name="usage-type" value="haut"/>
+<relation type="Antonyme" ref="a00ce8fa-4089-4b49-9b38-be73a18d51c8"/>
+</sense>
+<sense id="b93e151d-f5b6-4483-98f5-ee984c3f815f" order="1">
+<grammatical-info value="Verbe">
+<trait  name="exception-feature" value="gf"/>
+</grammatical-info>
+<example>
+<form lang="tww"><text>exemple2.1</text></form>
+</example>
+</sense>
+</entry>
+<entry dateCreated="2018-02-23T08:03:12Z" dateModified="2018-02-23T08:03:12Z" id="i_e24d9e54-2e9d-4829-9651-ac2dd647addd" guid="e24d9e54-2e9d-4829-9651-ac2dd647addd">
+<lexical-unit>
+<form lang="tww"><text>i</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="03055421-0c86-4969-b4e3-3c3937830bec">
+<grammatical-info value="Verbe">
+</grammatical-info>
+<gloss lang="fr"><text>to_go</text></gloss>
+</sense>
+</entry>
+</lift>

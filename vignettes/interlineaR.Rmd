@@ -1,5 +1,5 @@
 ---
-title: "Importing interlinearized corpora and dictionary into R"
+title: "Importing interlinearized corpora and dictionaries as produced by descriptive linguistics softwares"
 author: "Sylvain Loiseau"
 date: "`r Sys.Date()`"
 output:
@@ -29,10 +29,9 @@ in various formats containing [*interlinearized corpora*](https://www.eva.mpg.de
 or dictionaryies produced by descriptive linguistics softwares, such as [SIL Toolbox](https://software.sil.org/toolbox/)
 of [SIL Fieldworks](https://software.sil.org/fieldworks/).
 
-Short selection of (very preliminary draft of a) dictionary and an
-interlinearized corpus of the Tuwari (Walioic (papuan), PNG) language
-(http://glottolog.org/resource/languoid/id/tuwa1242)
-are provided in the exampleData directory.
+All functions reading interlinearized text return a list of data frame, where each data frame correspond to an unit (text, sentence, word, morphem) and each row in the data frame describe an occurrence of the corresponding unit. In each data frame, some columns give IDs pointing to rows in the other data frame: you can join morphems to the words, sentences or texts they belong to.
+
+This pivot format allows for various reshaping into R (for instance, grouping morphems by words) as well as conversion between formats.
 
 # Reading EMELD XML interlinear corpus
 
@@ -45,17 +44,17 @@ corpuspath <- system.file("exampleData", "tuwariInterlinear.xml", package="inter
 corpus <- read.emeld(corpuspath, vernacular.languages="tww")
 ```
 
-The returned object is a list of data.frame, named 'morphems', 'words', 'sentences', 'texts' (unless some of them have been discarted through the function arguments). Each data frame describe the occurrences of a linguistic unit (texts, sentences, words, morphems.) Each data frame contains as many rows as there are occurrences of this unit.
+The returned object is a named list. Each slot of the list contain a data.frame. They are named 'morphems', 'words', 'sentences', 'texts' (unless some of them have been discarted through the function arguments). Each row in the data frame describe an occurrences of a linguistic unit (texts, sentences, words, morphems.)
 
-Let's look at the first row of the texts data.frame:
+Let's look at the first rows of the "texts" data.frame:
 
 ```{r}
 kable(head(corpus$morphems))
 ```
 
-The first columns contain ids (referencing to which text, sentence or word each morphem belongs to). Other columns contains information extracted from the document. The names of the column are made of the field name and the language of the field, separated by a dot. (The parameters of read.emeld allow you to indicate which field, and in wich language(s), you are interested in, for each unit). Each field may be repeated in different languages.
+The first columns contain ''ids'' (referencing to which text, sentence or word each morphem belongs to). Other columns contains information extracted from the document. The names of the column are made of the field name and the language of the field, separated by a dot. (The parameters of read.emeld allow you to indicate which field, and in wich language(s), you are interested in, for each unit). Each field may be repeated in different languages.
 
-Let's turn to the other data frame:
+The "words", "sentences" and "texts" table are made according to the same principles:
 
 ```{r}
 kable(head(corpus$words))
@@ -72,6 +71,15 @@ kable(head(corpus$texts))
 
 ## Contructing data set combining information from several data frame
 
+This set of data.frame is similar to the tables of a database: rows from various tables are pointing to each other through ids.
+
+Using these ids, new data.frame aggregating pieces of information coming from several data frame can be built. For instance, a table containing the columns of the morphems and the words can be built using:
+
+```{r}
+morphems_words <- merge(corpus$morphems, corpus$words[,-c(1,2)], by="word_id", suffixes = c(".morphem",".word"))
+kable(head(morphems_words))
+```
+
 # Reading Toolbox interlinear corpus
 
 Toolbox [https://software.sil.org/toolbox/] is widely used for producing interlinearized corpora. It uses a specific text-based format.
@@ -81,11 +89,17 @@ corpuspath <- system.file("exampleData", "tuwariToolbox.txt", package="interline
 corpus <- read.toolbox(corpuspath)
 ```
 
-Just as read.emeld, the result is a list containing the slots 'morphems', 'sentences' and 'texts' (but not 'words' since it cannot be infered). These slots are data frames.
-
-As with read.emeld, the morphem data frame contains one occurrence of morphem by row. The first two columns reference the text and the id this occurrence belongs to; the last three columns correspond to the form, the gloss and the part of speech of this occurrence.
+Just as read.emeld, the result is a list containing the slots 'morphems', 'sentences', 'words' and 'texts'. These slots are data frames, where each line describe an occurrence:
 
 ```{r}
+kable(head(corpus$morphems))
+```
+
+As with read.emeld, optional field can be declared. For instance, the kakabe corpus also contains morphem glosses in russian and french
+
+```{r}
+path <- system.file("exampleData", "kakabe.txt", package="interlineaR")
+corpus <- read.toolbox(path, morphem.fields.suppl = c("gr", "gf"))
 kable(head(corpus$morphems))
 ```
 
