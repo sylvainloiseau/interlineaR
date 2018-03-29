@@ -17,5 +17,9 @@ items.in.element(elements, fields, languages)
 a data frame with as many columns as fields.
 }
 \description{
-In EMELD vocabulary, most of the information is in "item" elements child of text, word (=sentence), word or morphs elements. These items have two attribute: type for indicating the field (part of speech, gloss, free translation...) and lang for indicating the language (either under scrutiny or used in the analysis).
+In EMELD vocabulary, most of the information is in "item" elements child of text,
+word (=sentence), word or morphs elements.
+These items have two attribute: @type for indicating the field
+(part of speech, gloss, free translation...)
+and @lang for indicating the language (either under scrutiny or used in the analysis).
 }

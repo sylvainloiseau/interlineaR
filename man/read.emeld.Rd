@@ -2,7 +2,7 @@
 % Please edit documentation in R/read.emeld.R
 \name{read.emeld}
 \alias{read.emeld}
-\title{Turn an EMELD XML document containing an interlinearized corpus into a list of data.frame.}
+\title{Read an EMELD XML document containing an interlinearized corpus.}
 \usage{
 read.emeld(file, vernacular.languages, analysis.languages = "en",
   get.morphems = TRUE, get.words = TRUE, get.sentences = TRUE,
@@ -35,21 +35,26 @@ read.emeld(file, vernacular.languages, analysis.languages = "en",
 
 \item{words.analysis.fields}{information (in analysis language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)}
 
-\item{morphems.vernacular.fields}{information (in vernacular language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems)}
+\item{morphems.vernacular.fields}{information (in vernacular language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems). May be null or empty.}
 
-\item{morphems.analysis.fields}{information (in analysis language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems)}
+\item{morphems.analysis.fields}{information (in analysis language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems). May be null or empty.}
 }
 \value{
-a named list. The elements are named "morphems", "words", "sentences", "texts" 
-(some element may have been excluded throuth the "get.*" arguments, see above).
-Each element is a data.frame containing the information on the corresponding unit.
-In each data.frame, each row is an occurrence (the first row of the result$morphems data.frame describe the first morphem of the corpus).
+a list with slots named "morphems", "words", "sentences", "texts" 
+(some slot may have been excluded throuth the "get.*" arguments, see above).
+Each slot is a data.frame containing the information on the corresponding unit.
+In each data.frame, each row describe an occurrence (the first row of the result$morphems data.frame describe the first morphem of the corpus).
 In each data.frame, the first columns give ids refering to the line in other data.frame (so that we can link the first morphem to the text, the sentence or the word it belongs to).
-The following columns give information about the actual occurrence. Which information are extracted from the document and included in the data frame depends upton the *.fields parameters (see above).
+The following columns give information about the corresponding occurrence of the unit. Which information are extracted from the document and included in the data frame depends upton the *.fields parameters (see above).
+Columns made are coined using the field name and the language code. For instance, if read.emeld is called with the parameters vernacular.languages="tww" and morphems.vernacular.fields=c("txt", "cf"), then the column txt.tww and cf.tww will be created in the morphems slot data frame.
 }
 \description{
 The EMELD XML vocabulary has been proposed for the encoding of interlinear glosses.
 It is used by the FieldWorks software (SIL FLEX) as an export format.
+}
+\details{
+Please note that if several 'note' fields in the same language are present in one sentence,
+the first one only will be kept.
 }
 \examples{
 path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
@@ -70,4 +75,6 @@ head(corpus$morphems)
 }
 \references{
 Baden Hughes, Steven Bird and Catherine Bow \emph{Encoding and Presenting Interlinear Text Using XML Technologies}, http://www.aclweb.org/anthology/U03-1008
+
+SIL FieldWorks: https://software.sil.org/fieldworks/
 }

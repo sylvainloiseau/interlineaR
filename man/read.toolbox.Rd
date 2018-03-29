@@ -2,26 +2,29 @@
 % Please edit documentation in R/read.toolbox.R
 \name{read.toolbox}
 \alias{read.toolbox}
-\title{Read a toolbox (SIL) text file and turn it into a list of data frame.}
+\title{Read a toolbox (SIL) text file}
 \usage{
-read.toolbox(path, add.unaligned = FALSE)
+read.toolbox(path, text.fields.suppl = NULL, sentence.fields.suppl = c("tx",
+  "nt", "ft"), word.fields.suppl = NULL, morphem.fields.suppl = NULL)
 }
 \arguments{
 \item{path}{: the path to a toolbox text file.}
 
-\item{add.unaligned}{: If TRUE: if any of the mb/ge/ps triplet does not have the same
-number of morphems (resp. morphem glosses and part of speech),
-an extra slot named 'unaligned' is added to the returned list giving information on all the unaligned triplets. If FALSE: print
-a warning message only.}
+\item{text.fields.suppl}{character vector: the code of supplementary fields to be searched for each text (genre, ...). "id" is mandatory and need not to be listed here.}
+
+\item{sentence.fields.suppl}{character vector: the code of supplementary fields to be searched for each sentence (such as tx, ft, nt). "ref" is mandatory and need not to be listed here.}
+
+\item{word.fields.suppl}{character vector: the code of supplementary fields to be searched for each word. "tx" is mandatory and need not to be listed here.}
+
+\item{morphem.fields.suppl}{character vector: the code of supplementary fields to be searched for each morphem. "mb", "ge", "ps" are mandatory and need not to be listed here.}
 }
 \value{
-a list with three slots "texts", "sentences" and "morphemes", each containing a data frame.
-In these data frame, each row is an occurrence of the unit concerned.
+a list with four slots "texts", "sentences", "words" and "morphemes",
+each one containing a data frame. In these data frame, each row describe an occurrence
+of the corresponding unit.
 }
 \description{
-The triplet of lines (mb, ge, ps) (containing reps. morphems, glosses
-and part of speech) that do not have an equal number of white-space
-separated item ('unaligned') are discarded.
+Read a toolbox (SIL) text file
 }
 \examples{
 corpuspath <- system.file("exampleData", "tuwariToolbox.txt", package="interlineaR")

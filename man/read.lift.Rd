@@ -12,14 +12,14 @@ read.lift(file, language.code = "tww")
 \item{language.code}{: the code of the language.}
 }
 \value{
-a data frame containing a dictionary
+a list with two slots named "lexems" and "senses", each slot containing a data.frame
 }
 \description{
 Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) format and turn it into a data.frame
 }
 \examples{
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
-dictionary <- read.lift.old(path, language.code="tww")
+dictionary <- read.lift(path, language.code="tww")
 }
 \references{
 http://code.google.com/p/lift-standard
