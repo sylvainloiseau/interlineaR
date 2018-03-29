@@ -1,1 +1,3 @@
-data.frame output could be in "long" rather than "wide" format
+- data.frame output should be in "long" rather than "wide" format
+- export function toward common ITG file formats.
+- export to CLFD format.
