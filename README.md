@@ -12,14 +12,23 @@ devtools::install_github("sylvainloiseau/interlineaR")
 
 # Usage
 
-Import an interlinearised corpus in the EMELD XML format (as exported from SIL FieldWorks for instance) :
+Import an interlinearised corpus in the EMELD XML format (as exported from SIL FieldWorks for instance):
 
 ```{r}
-corpus <- read.emeld("path")
+path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
+corpus <- read.emeld(path, vernacular.languages="tww")
 ```
 
-Import a dictionary in the LIFT XML format (as exported from SIL FieldWorks for instance) :
+Import an interlinearised corpus in Toolbox (SIL) format:
 
 ```{r}
-dictionary <- read.lift("path", language.code="tww")
+path <- system.file("exampleData", "tuwariToolbox.txt", package="interlineaR")
+corpus <- read.toolbox(path)
+```
+
+Import a dictionary in the LIFT XML format (as exported from SIL FieldWorks for instance):
+
+```{r}
+dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
+dictionary <- read.lift(dicpath, language.code="tww")
 ```
