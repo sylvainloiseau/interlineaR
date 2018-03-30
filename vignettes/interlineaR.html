@@ -721,14 +721,15 @@ corpus &lt;-<span class="st"> </span><span class="kw">read.toolbox</span>(path, 
 <div id="reading-lift-xml-dictionary" class="section level1">
 <h1>Reading LIFT XML dictionary</h1>
 <p>This XML vocabulary has been introduced by SIL : [<a href="http://code.google.com/p/lift-standard" class="uri">http://code.google.com/p/lift-standard</a>] and is used by SIL Fieldworks as an export format.</p>
-<p>The conversion of lift dictionary into set of dataframe is still incomplete.</p>
+<p>read.lift() produce a list of three data frame: “entries”, “senses”, “examples” (“relations” should be added). All the fields of the dictionary, in all languages, can be extracted.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dicpath &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;exampleData&quot;</span>, <span class="st">&quot;tuwariDictionary.lift&quot;</span>, <span class="dt">package=</span><span class="st">&quot;interlineaR&quot;</span>)
 dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpath, <span class="dt">vernacular.languages=</span><span class="st">&quot;tww&quot;</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kable</span>(dictionary<span class="op">$</span>entries)</code></pre></div>
 <table>
 <thead>
 <tr class="header">
-<th align="left">id</th>
+<th align="left">id_LIFT</th>
+<th align="right">id</th>
 <th align="left">lexical-unit.tww</th>
 <th align="left">morph-type</th>
 <th align="left">citation-form.tww</th>
@@ -755,6 +756,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 <tbody>
 <tr class="odd">
 <td align="left">nala_001199a3-0e7f-4b4d-ab9e-38cfd0fbff58</td>
+<td align="right">1</td>
 <td align="left">nala</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -779,6 +781,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">kemia napuo_002794b9-f063-4c6b-b77d-39b8ecd618d1</td>
+<td align="right">2</td>
 <td align="left">kemia napuo</td>
 <td align="left">phrase</td>
 <td align="left">NA</td>
@@ -803,6 +806,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">tiohomaa_0086205e-a924-4347-a17e-8cd59c03a04b</td>
+<td align="right">3</td>
 <td align="left">tiohomaa</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -827,6 +831,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">howaouu_00906b1e-0c28-4514-9e3f-0fed84e7c852</td>
+<td align="right">4</td>
 <td align="left">howaouu</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -851,6 +856,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">iahe_00909ffb-7e90-4b76-b948-cae56094abc9</td>
+<td align="right">5</td>
 <td align="left">iahe</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -875,6 +881,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">master_00933292-16a3-4041-b5bc-d73dd36dbd74</td>
+<td align="right">6</td>
 <td align="left">master</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -899,6 +906,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">totolo_00b3f2c3-bd07-4282-9287-603f2285c720</td>
+<td align="right">7</td>
 <td align="left">totolo</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -923,6 +931,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">ofa_00dba42e-1a59-40e8-848d-dbe5bc20012e</td>
+<td align="right">8</td>
 <td align="left">ofa</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -947,6 +956,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">wao_00ffba96-1af8-47cf-a044-d2846d33e1c2</td>
+<td align="right">9</td>
 <td align="left">wao</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -971,6 +981,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">-li1_011fce29-8d34-4bee-822c-0f5b61015338</td>
+<td align="right">10</td>
 <td align="left">-li</td>
 <td align="left">suffix</td>
 <td align="left">NA</td>
@@ -995,6 +1006,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">tia3_013a1198-262e-45c6-9cab-fb6168f4f223</td>
+<td align="right">11</td>
 <td align="left">tia</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1019,6 +1031,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">waia3_015e37a5-77f2-4c45-9404-e90a36e48014</td>
+<td align="right">12</td>
 <td align="left">waia</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1043,6 +1056,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">heneli2_01c07bb2-e5c0-4166-90fe-5be81ab804af</td>
+<td align="right">13</td>
 <td align="left">heneli</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1067,6 +1081,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">eifei_01ea07b3-2da9-4786-a882-56129914469d</td>
+<td align="right">14</td>
 <td align="left">eifei</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1091,6 +1106,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">koma_02018975-937e-4b3f-a47c-72354f62b345</td>
+<td align="right">15</td>
 <td align="left">koma</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1115,6 +1131,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">inamin_0225f869-bf14-4259-9805-8383076bdfdd</td>
+<td align="right">16</td>
 <td align="left">inamin</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1139,6 +1156,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">neiau_023fa475-2f0e-42b2-8d2a-0e5d09816ff4</td>
+<td align="right">17</td>
 <td align="left">neiau</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1163,6 +1181,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">kleiau_02b09801-a167-4004-b93a-aa23ac1e78a1</td>
+<td align="right">18</td>
 <td align="left">kleiau</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1187,6 +1206,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">api_02b125d7-5409-41ab-a0be-bfa6689246ec</td>
+<td align="right">19</td>
 <td align="left">api</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1211,6 +1231,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">henolo_02ce0328-42d3-4e46-ad27-41c60bf8dc2d</td>
+<td align="right">20</td>
 <td align="left">henolo</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1235,6 +1256,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">eli3_02d224d0-00bb-4156-9a59-4c67eeac1165</td>
+<td align="right">21</td>
 <td align="left">eli</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1259,6 +1281,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">totu2_02e15de6-6fde-4aeb-a54d-16f723339887</td>
+<td align="right">22</td>
 <td align="left">totu</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1283,6 +1306,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">heta_0315efea-0227-4f6a-b36d-0a686b2a0eeb</td>
+<td align="right">23</td>
 <td align="left">heta</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1307,6 +1331,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">fuʔoflo_03331d1f-fccf-4281-b655-9a894bc9cf8a</td>
+<td align="right">24</td>
 <td align="left">fuʔoflo</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1331,6 +1356,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">sali2_0362862e-3549-4b10-ae24-eefce1a51d02</td>
+<td align="right">25</td>
 <td align="left">sali</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1355,6 +1381,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">mus-_03684873-afa5-423c-9b5f-d69c91994a28</td>
+<td align="right">26</td>
 <td align="left">mus-</td>
 <td align="left">prefix</td>
 <td align="left">NA</td>
@@ -1379,6 +1406,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">hemalemo_0376fd9f-6d3d-4301-b2b1-a0ce30dec90a</td>
+<td align="right">27</td>
 <td align="left">hemalemo</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1403,6 +1431,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">te2_038371fe-83c2-4193-a3e3-b6918d315449</td>
+<td align="right">28</td>
 <td align="left">te</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1427,6 +1456,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">manase_03f20c39-2922-46ad-a7fa-e856c3565a5a</td>
+<td align="right">29</td>
 <td align="left">manase</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1451,6 +1481,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">osweli_04095ac0-7cea-48c3-8ccf-8147ffec923e</td>
+<td align="right">30</td>
 <td align="left">osweli</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1475,6 +1506,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">kanu_040aef83-2213-4135-bb94-e2a9e8c6b713</td>
+<td align="right">31</td>
 <td align="left">kanu</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1499,6 +1531,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">ialo_041d87ca-27ce-40ad-b3f9-25e3023d2d08</td>
+<td align="right">32</td>
 <td align="left">ialo</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1523,6 +1556,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">meli2_044a7307-a58c-49c3-8a2e-9f40f442add9</td>
+<td align="right">33</td>
 <td align="left">meli</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1547,6 +1581,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">namele_045224be-5698-4b65-8f90-279406ee76a4</td>
+<td align="right">34</td>
 <td align="left">namele</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1571,6 +1606,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">tiia_04655f29-ae8d-4239-9546-6a9bbeddcbaf</td>
+<td align="right">35</td>
 <td align="left">tiia</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1595,6 +1631,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">mine1_046c1ece-6841-4170-87a4-f5a4b61e7b9f</td>
+<td align="right">36</td>
 <td align="left">mine</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1619,6 +1656,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">walo_048bf538-c704-4858-8d42-26d6694a5eb7</td>
+<td align="right">37</td>
 <td align="left">walo</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1643,6 +1681,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">totonoo_049c082e-66bc-47d0-ac93-b3777623f1d1</td>
+<td align="right">38</td>
 <td align="left">totonoo</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1667,6 +1706,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">oplo_04ff80bc-4287-4321-aaf9-cdf1c6fa8b76</td>
+<td align="right">39</td>
 <td align="left">oplo</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1691,6 +1731,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">timoti_04ffa47d-162c-4d9c-a8e4-f3113cfee6a2</td>
+<td align="right">40</td>
 <td align="left">timoti</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1715,6 +1756,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">nalo ilonino_0536ce64-2399-4d69-8817-0897038254d2</td>
+<td align="right">41</td>
 <td align="left">nalo ilonino</td>
 <td align="left">phrase</td>
 <td align="left">NA</td>
@@ -1739,6 +1781,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">-te_054f56bc-e724-4181-8363-2976c81f92db</td>
+<td align="right">42</td>
 <td align="left">-te</td>
 <td align="left">suffix</td>
 <td align="left">NA</td>
@@ -1763,6 +1806,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">awii_0555231c-58ff-4290-ba78-62d4e19bbd67</td>
+<td align="right">43</td>
 <td align="left">awii</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1787,6 +1831,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">kesi_057f46ff-9a0c-4c34-8995-6a0e096b28ae</td>
+<td align="right">44</td>
 <td align="left">kesi</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1811,6 +1856,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">moni_05895947-e0f5-4714-8afc-6462a2821e50</td>
+<td align="right">45</td>
 <td align="left">moni</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1835,6 +1881,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">mine2_059bfa65-5679-4080-946a-6dff41fec2d2</td>
+<td align="right">46</td>
 <td align="left">mine</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1859,6 +1906,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">tuafe_05b4841a-ee24-473c-aaaf-535f07d9f722</td>
+<td align="right">47</td>
 <td align="left">tuafe</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1883,6 +1931,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">pla_05e1f51e-e746-4423-b9d0-6a4c6fc71671</td>
+<td align="right">48</td>
 <td align="left">pla</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1907,6 +1956,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="odd">
 <td align="left">sa3_061e7517-a685-4efc-99fe-a61524683737</td>
+<td align="right">49</td>
 <td align="left">sa</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
@@ -1931,6 +1981,7 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </tr>
 <tr class="even">
 <td align="left">olsa_062658aa-8365-477a-be8c-49505ad6b5b0</td>
+<td align="right">50</td>
 <td align="left">olsa</td>
 <td align="left">stem</td>
 <td align="left">NA</td>

@@ -133,7 +133,7 @@ read.toolbox <- function(path,
 
 #' read and collapse multi-line fields into one line.
 #' One can encouter:
-#'     \mb samuel -we  ta -li  -lo
+#'     \\mb samuel -we  ta -li  -lo
 #'     nefi    -mwii
 #' where a field is actually on two lines.
 line2field <- function(lines) {

@@ -116,7 +116,7 @@ the text data.frame contains a numeric id and the title (toolbox ID) of each tex
 
 This XML vocabulary has been introduced by SIL : [http://code.google.com/p/lift-standard] and is used by SIL Fieldworks as an export format.
 
-read.lift() produce a list of data frame: "entries", "senses", "examples" and "relations".
+read.lift() produce a list of three data frame: "entries", "senses", "examples" ("relations" should be added). All the fields of the dictionary, in all languages, can be extracted.
 
 ```{r}
 dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
