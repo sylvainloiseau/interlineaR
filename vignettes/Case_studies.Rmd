@@ -17,12 +17,13 @@ knitr::opts_chunk$set(
 library(interlineaR)
 ```
 
+# A corpus of the Tuwari language
 
-# Frequency of the part of speech in the lexicon
+## Frequency of the part of speech in the lexicon
 
-# Fréquency of the part of speech in the corpora
+## Fréquency of the part of speech in the corpora
 
-# Are Affixe types specialized in some parts of speech ?
+## Are Affixe types specialized in some parts of speech ?
 
-# Frequencies of the meaning of a polysemous lexems
+## Frequencies of the meaning of a polysemous lexems
 

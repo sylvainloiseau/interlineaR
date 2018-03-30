@@ -2,7 +2,7 @@
 % Please edit documentation in R/read.toolbox.R
 \name{read.toolbox}
 \alias{read.toolbox}
-\title{Read a toolbox (SIL) text file}
+\title{Parse a Toolbox (SIL) text file.}
 \usage{
 read.toolbox(path, text.fields.suppl = NULL, sentence.fields.suppl = c("tx",
   "nt", "ft"), word.fields.suppl = NULL, morphem.fields.suppl = NULL)
@@ -24,7 +24,7 @@ each one containing a data frame. In these data frame, each row describe an occu
 of the corresponding unit.
 }
 \description{
-Read a toolbox (SIL) text file
+Parse a Toolbox (SIL) text file.
 }
 \examples{
 corpuspath <- system.file("exampleData", "tuwariToolbox.txt", package="interlineaR")

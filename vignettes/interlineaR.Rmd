@@ -29,7 +29,7 @@ in various formats containing [*interlinearized corpora*](https://www.eva.mpg.de
 or dictionaryies produced by descriptive linguistics softwares, such as [SIL Toolbox](https://software.sil.org/toolbox/)
 of [SIL Fieldworks](https://software.sil.org/fieldworks/).
 
-All functions reading interlinearized text return a list of data frame, where each data frame correspond to an unit (text, sentence, word, morphem) and each row in the data frame describe an occurrence of the corresponding unit. In each data frame, some columns give IDs pointing to rows in the other data frame: you can join morphems to the words, sentences or texts they belong to.
+All functions reading interlinearized text return a list of data frame, where each data frame correspond to an unit (text, sentence, word, morphem) and each row in the data frame describe an occurrence of the corresponding unit. The set of tables is relational: in each data frame, some columns give IDs pointing to rows in the other data frame: you can join morphems to the words, sentences or texts they belong to.
 
 This pivot format allows for various reshaping into R (for instance, grouping morphems by words) as well as conversion between formats.
 
@@ -95,7 +95,7 @@ Just as read.emeld, the result is a list containing the slots 'morphems', 'sente
 kable(head(corpus$morphems))
 ```
 
-As with read.emeld, optional field can be declared. For instance, the kakabe corpus also contains morphem glosses in russian and french
+As with read.emeld, optional fields can be declared. For instance, the kakabe corpus (by Alexandra Vydrina) also contains morphem glosses in russian and french
 
 ```{r}
 path <- system.file("exampleData", "kakabe.txt", package="interlineaR")
@@ -116,13 +116,15 @@ the text data.frame contains a numeric id and the title (toolbox ID) of each tex
 
 This XML vocabulary has been introduced by SIL : [http://code.google.com/p/lift-standard] and is used by SIL Fieldworks as an export format.
 
+read.lift() produce a list of data frame: "entries", "senses", "examples" and "relations".
+
 ```{r}
 dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
-dictionary <- read.lift(dicpath, language.code="tww")
+dictionary <- read.lift(dicpath, vernacular.languages="tww")
 ```
 
 ```{r}
-kable(head(dictionary))
+kable(dictionary$entries)
 ```
 
 

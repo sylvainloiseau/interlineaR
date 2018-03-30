@@ -3,7 +3,7 @@ context("toolbox")
 test_that("fields", {
   corpuspath <- system.file("exampleData", "kakabe.txt", package="interlineaR")
   lines <- readLines(corpuspath)
-  fields <- interlineaR:::.line2field(lines);
+  fields <- interlineaR:::line2field(lines);
   fields <- fields[grepl(pattern = "^\\\\", fields)]
   fields <- fields[1:6]
 

@@ -22,14 +22,16 @@ read.pangloss(url, DOI = NULL, get.texts = TRUE, get.sentences = TRUE,
 }
 \value{
 a list with up to 5 slots corresponding to different units and named "texts", "sentences", "words", "morphems".
-Each slot containing a data frame where each line is an occurrence of the corresponding unit and each column a different
-information.
+Each slot contains a data frame where each line describe an occurrence of the corresponding unit.
 }
 \description{
-Read a file in the format used in the pangloss collection
+The pangloss collection (http://lacito.vjf.cnrs.fr/pangloss/index_en.html) is a large collection of interlinearized texts.
 }
 \examples{
 path <- system.file("exampleData", "FOURMI.xml", package="interlineaR")
 corpus <- read.pangloss(path)
 head(corpus$morphems)
+}
+\references{
+http://lacito.vjf.cnrs.fr/pangloss/index_en.html
 }

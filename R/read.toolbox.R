@@ -1,4 +1,4 @@
-#' Read a toolbox (SIL) text file
+#' Parse a Toolbox (SIL) text file.
 #' 
 #' @param path : the path to a toolbox text file.
 #' @param text.fields.suppl character vector: the code of supplementary fields to be searched for each text (genre, ...). "id" is mandatory and need not to be listed here.
@@ -32,7 +32,7 @@ read.toolbox <- function(path,
   morphem.fields  <- unique(c("mb", "ge", "ps", morphem.fields.suppl))
 
   ## clean texts
-  fields <- .line2field(lines);
+  fields <- line2field(lines);
 
   ## Blank lines cannot be remove yet. They are indicative of interlinear triplet (mb, ge, ps)
 
@@ -93,12 +93,12 @@ read.toolbox <- function(path,
   res$sentences <- sentences;
 
   ## words slot
-  words <- align.fields.with.masterfield(df, fields=word.fields, masterfield="tx", unit_id_name="words_id");
+  words <- tokenize.aligned.field.set(df, fields=word.fields, masterfield="tx", unit_id_name="words_id");
   res$words <- words;
 
   ## morphems slot
   words.outer <- df[field_name == "tx", "field_value"];
-  morphems <- align.fields.with.masterfield(df, fields=morphem.fields, masterfield="mb", unit_id_name="morphems_id"); #, included.in=words.outer);
+  morphems <- tokenize.aligned.field.set(df, fields=morphem.fields, masterfield="mb", unit_id_name="morphems_id"); #, included.in=words.outer);
   res$morphems <- morphems;
 
   return(res);
@@ -106,7 +106,7 @@ read.toolbox <- function(path,
 
 # read.dictionary <- function (url) {
 #   lines <- readLines(url)
-#   field_merged <- .line2field(lines);
+#   field_merged <- line2field(lines);
 #   
 #   field_merged <- .remove.header(field_merged, "lx");
 #   
@@ -136,7 +136,7 @@ read.toolbox <- function(path,
 #'     \mb samuel -we  ta -li  -lo
 #'     nefi    -mwii
 #' where a field is actually on two lines.
-.line2field <- function(lines) {
+line2field <- function(lines) {
 	continuing.index <- grep(pattern = "^[^\\\\]", x=lines);
 	if (length(continuing.index) > 0) {
 		lines[continuing.index-1] <- paste(lines[continuing.index-1], lines[continuing.index], sep=" ");
@@ -178,21 +178,21 @@ get.tokens.boundaries <- function(string) {
 #   return(data);
 # }
 
-#' Segment a group of fields associated to an unit (fields related to word, or to morphem) in toolbox
-#'
-#' Segment into tokens a master field (such as tx for words, or mb for morphems), and segment other fields
-#' associated with it (such as ge", or "ps" for the "mb" master field.)
+#' Tokenize a set of fields associated to an unit (the set of fields related to word, or to morphem).
+#' 
+#' Set of fields have a "master field" (such as tx for words, or mb for morphems), and other fields
+#' associated with it (such as "ge" and "ps" for the morphems master field.)
 #' 
 #' @param longformat the data table of the toolbox fields in long format (melted)
 #' @param fields character vector: the aligned fields to tokenize (for instance, "mb", "ge" and "ps")
 #' @param masterfield the master in the fields to be tokenized (for instance, "mb").
 #' @param unit_id_name character vector (length-1): the name of the column to be created containing an ID for each token.
 #' @param included.in character vector: an optional super-ordinated unit (for instance words for morphems).
-#' @param included.in_idcharacter vector (length-1): the name of the column to be created containing an ID of the outer unit.
+#' @param included.in_id character vector (length-1): the name of the column to be created containing an ID of the outer unit.
 #'
-#' @return a data frame with one token by row
+#' @return a data frame with one token by row and as many columns as fields.
 #' 
-align.fields.with.masterfield <- function(longformat,
+tokenize.aligned.field.set <- function(longformat,
 																					fields=c("mb", "ge", "ps"),
 																					masterfield="mb",
 																					unit_id_name="morphems_id",

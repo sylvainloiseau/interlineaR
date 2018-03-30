@@ -4,22 +4,44 @@
 \alias{read.lift}
 \title{Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) format and turn it into a data.frame}
 \usage{
-read.lift(file, language.code = "tww")
+read.lift(file, vernacular.languages, analysis.languages = "en",
+  get.entry = TRUE, get.sense = TRUE, get.example = TRUE,
+  get.relation = TRUE, entry.fields = entry.field(),
+  sense.fields = sense.field(), example.fields = example.field(),
+  relation.fields = relation.field())
 }
 \arguments{
 \item{file}{: a length-one character vector containing the path to a LIFT XML document.}
 
-\item{language.code}{: the code of the language.}
+\item{vernacular.languages}{character vector: the code of the language.}
+
+\item{analysis.languages}{character vector: code of the object language used in  the glosses and analyses.}
+
+\item{get.entry}{logical length-1 vector: include the entries table in the result?}
+
+\item{get.sense}{logical length-1 vector: include the senses table in the result?}
+
+\item{get.example}{logical length-1 vector: include the examples table in the result?}
+
+\item{get.relation}{logical length-1 vector: include the relations table in the result?}
+
+\item{entry.fields}{character vector: names of the fields to be included in the entries table}
+
+\item{sense.fields}{character vector: names of the fields to be included in the senses table}
+
+\item{example.fields}{character vector: names of the fields to be included in the examples table}
+
+\item{relation.fields}{character vector: names of the fields to be included in the relations table}
 }
 \value{
-a list with two slots named "lexems" and "senses", each slot containing a data.frame
+a list with up to four slots named "entries", "senses", "examples" and "relations", each slot containing a data.frame
 }
 \description{
 Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) format and turn it into a data.frame
 }
 \examples{
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
-dictionary <- read.lift(path, language.code="tww")
+dictionary <- read.lift(path, vernacular.languages="tww")
 }
 \references{
 http://code.google.com/p/lift-standard

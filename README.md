@@ -32,3 +32,7 @@ Import a dictionary in the LIFT XML format (as exported from SIL FieldWorks for 
 dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 dictionary <- read.lift(dicpath, language.code="tww")
 ```
+
+# Documentation
+
+See the vignette interlineaR for an overview of the data model and the functions of this package.

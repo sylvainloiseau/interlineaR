@@ -1,5 +1,7 @@
 #' Read a file in the format used in the pangloss collection
 #'
+#' The pangloss collection (http://lacito.vjf.cnrs.fr/pangloss/index_en.html) is a large collection of interlinearized texts.
+#'
 #' @param url a length one character vector with the url of the document to be imported
 #' @param DOI an unique identifier
 #' @param get.texts should the 'texts' data.frame be included in the result ?
@@ -9,8 +11,9 @@
 #'
 #' @export
 #' @return a list with up to 5 slots corresponding to different units and named "texts", "sentences", "words", "morphems".
-#' Each slot containing a data frame where each line is an occurrence of the corresponding unit and each column a different
-#' information.
+#' Each slot contains a data frame where each line describe an occurrence of the corresponding unit.
+#' 
+#' @references http://lacito.vjf.cnrs.fr/pangloss/index_en.html
 #'
 #' @examples
 #' path <- system.file("exampleData", "FOURMI.xml", package="interlineaR")
@@ -35,7 +38,6 @@ read.pangloss <- function(url,
   }
   
   sentences <- xml_find_all(corpusdoc, "/TEXT/S");
-  
   sentence_id <- xml_text(xml_find_first(sentences, "./@id"));
   if (get.sentences) {
     sentence.by.texts <- xml_find_num(texts, "count(./S)");

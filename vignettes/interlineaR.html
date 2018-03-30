@@ -12,7 +12,7 @@
 
 <meta name="author" content="Sylvain Loiseau" />
 
-<meta name="date" content="2018-03-28" />
+<meta name="date" content="2018-03-30" />
 
 <title>Importing interlinearized corpora and dictionaries as produced by descriptive linguistics softwares</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Importing interlinearized corpora and dictionaries as produced by descriptive linguistics softwares</h1>
 <h4 class="author"><em>Sylvain Loiseau</em></h4>
-<h4 class="date"><em>2018-03-28</em></h4>
+<h4 class="date"><em>2018-03-30</em></h4>
 
 
 <div id="TOC">
@@ -88,6 +88,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>This package contains utility functions for importing into R corpus in various formats containing <a href="https://www.eva.mpg.de/lingua/resources/glossing-rules.php"><em>interlinearized corpora</em></a> or dictionaryies produced by descriptive linguistics softwares, such as <a href="https://software.sil.org/toolbox/">SIL Toolbox</a> of <a href="https://software.sil.org/fieldworks/">SIL Fieldworks</a>.</p>
+<p>All functions reading interlinearized text return a list of data frame, where each data frame correspond to an unit (text, sentence, word, morphem) and each row in the data frame describe an occurrence of the corresponding unit. The set of tables is relational: in each data frame, some columns give IDs pointing to rows in the other data frame: you can join morphems to the words, sentences or texts they belong to.</p>
+<p>This pivot format allows for various reshaping into R (for instance, grouping morphems by words) as well as conversion between formats.</p>
 </div>
 <div id="reading-emeld-xml-interlinear-corpus" class="section level1">
 <h1>Reading EMELD XML interlinear corpus</h1>
@@ -498,28 +500,16 @@ corpus &lt;-<span class="st"> </span><span class="kw">read.emeld</span>(corpuspa
 <h1>Reading Toolbox interlinear corpus</h1>
 <p>Toolbox [<a href="https://software.sil.org/toolbox/" class="uri">https://software.sil.org/toolbox/</a>] is widely used for producing interlinearized corpora. It uses a specific text-based format.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">corpuspath &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;exampleData&quot;</span>, <span class="st">&quot;tuwariToolbox.txt&quot;</span>, <span class="dt">package=</span><span class="st">&quot;interlineaR&quot;</span>)
-corpus &lt;-<span class="st"> </span><span class="kw">read.toolbox</span>(corpuspath)
-<span class="co">#&gt; Warning in reshapeWide(data, idvar = idvar, timevar = timevar, varying =</span>
-<span class="co">#&gt; varying, : multiple rows match for field_name=tx : first taken</span>
-<span class="co">#&gt; Warning in reshapeWide(data, idvar = idvar, timevar = timevar, varying =</span>
-<span class="co">#&gt; varying, : multiple rows match for field_name=nt : first taken</span>
-<span class="co">#&gt; Warning in reshapeWide(data, idvar = idvar, timevar = timevar, varying =</span>
-<span class="co">#&gt; varying, : multiple rows match for field_name=mb : first taken</span>
-<span class="co">#&gt; Warning in reshapeWide(data, idvar = idvar, timevar = timevar, varying =</span>
-<span class="co">#&gt; varying, : multiple rows match for field_name=ge : first taken</span>
-<span class="co">#&gt; Warning in reshapeWide(data, idvar = idvar, timevar = timevar, varying =</span>
-<span class="co">#&gt; varying, : multiple rows match for field_name=ps : first taken</span>
-<span class="co">#&gt; Warning in read.toolbox(corpuspath): 357 interlinearized lines were deleted</span>
-<span class="co">#&gt; due to un enequals numbers of morphems between the mb, ge and ps lines.</span>
-<span class="co">#&gt; These interlinearized lines belong to the following references:</span></code></pre></div>
-<p>Just as read.emeld, the result is a list containing the slots ‘morphems’, ‘sentences’ and ‘texts’ (but not ‘words’ since it cannot be infered). These slots are data frames.</p>
-<p>As with read.emeld, the morphem data frame contains one occurrence of morphem by row. The first two columns reference the text and the id this occurrence belongs to; the last three columns correspond to the form, the gloss and the part of speech of this occurrence.</p>
+corpus &lt;-<span class="st"> </span><span class="kw">read.toolbox</span>(corpuspath)</code></pre></div>
+<p>Just as read.emeld, the result is a list containing the slots ‘morphems’, ‘sentences’, ‘words’ and ‘texts’. These slots are data frames, where each line describe an occurrence:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kable</span>(<span class="kw">head</span>(corpus<span class="op">$</span>morphems))</code></pre></div>
 <table>
 <thead>
 <tr class="header">
 <th align="right">texts_ids</th>
 <th align="right">sentences_ids</th>
+<th align="right">triplet_ids</th>
+<th align="right">morphems_id</th>
 <th align="left">mb</th>
 <th align="left">ge</th>
 <th align="left">ps</th>
@@ -529,44 +519,143 @@ corpus &lt;-<span class="st"> </span><span class="kw">read.toolbox</span>(corpus
 <tr class="odd">
 <td align="right">1</td>
 <td align="right">1</td>
-<td align="left">me</td>
-<td align="left">you</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">ta</td>
+<td align="left">we</td>
 <td align="left">Pr</td>
 </tr>
 <tr class="even">
 <td align="right">1</td>
 <td align="right">1</td>
-<td align="left">peisa</td>
-<td align="left">good</td>
-<td align="left">adv</td>
-</tr>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">*-</td>
-<td align="left">-</td>
-<td align="left">-</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">u</td>
-<td align="left">to_sleep</td>
-<td align="left">v</td>
-</tr>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">-*</td>
-<td align="left">-</td>
-<td align="left">-</td>
-</tr>
-<tr class="even">
 <td align="right">1</td>
 <td align="right">2</td>
-<td align="left">he</td>
-<td align="left">you(fem)</td>
-<td align="left">pr</td>
+<td align="left">samuel</td>
+<td align="left">Samuel</td>
+<td align="left">Npr</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="left">-we</td>
+<td align="left">-M.S</td>
+<td align="left">-sfx</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="left">m-</td>
+<td align="left">?-</td>
+<td align="left">?-</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">5</td>
+<td align="left">iasa</td>
+<td align="left">to_help</td>
+<td align="left">v</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">6</td>
+<td align="left">-ne</td>
+<td align="left">-Part</td>
+<td align="left">-mode</td>
+</tr>
+</tbody>
+</table>
+<p>As with read.emeld, optional fields can be declared. For instance, the kakabe corpus (by Alexandra Vydrina) also contains morphem glosses in russian and french</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;exampleData&quot;</span>, <span class="st">&quot;kakabe.txt&quot;</span>, <span class="dt">package=</span><span class="st">&quot;interlineaR&quot;</span>)
+corpus &lt;-<span class="st"> </span><span class="kw">read.toolbox</span>(path, <span class="dt">morphem.fields.suppl =</span> <span class="kw">c</span>(<span class="st">&quot;gr&quot;</span>, <span class="st">&quot;gf&quot;</span>))
+<span class="kw">kable</span>(<span class="kw">head</span>(corpus<span class="op">$</span>morphems))</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">texts_ids</th>
+<th align="right">sentences_ids</th>
+<th align="right">triplet_ids</th>
+<th align="right">morphems_id</th>
+<th align="left">mb</th>
+<th align="left">ge</th>
+<th align="left">gr</th>
+<th align="left">gf</th>
+<th align="left">ps</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">mùsu</td>
+<td align="left">woman</td>
+<td align="left">женщина -ART т</td>
+<td align="left">femme</td>
+<td align="left">n</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="left">-È</td>
+<td align="left">-AR</td>
+<td align="left">от б</td>
+<td align="left">-AR</td>
+<td align="left">-mr</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="left">dóo</td>
+<td align="left">T one</td>
+<td align="left">ыть ма</td>
+<td align="left">T un</td>
+<td align="left">phn</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="left">bi</td>
+<td align="left">be</td>
+<td align="left">ниока -AR</td>
+<td align="left">être</td>
+<td align="left">cop</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">5</td>
+<td align="left">bàntará</td>
+<td align="left">manioc</td>
+<td align="left">T толочь -ART</td>
+<td align="left">manioc</td>
+<td align="left">n</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">6</td>
+<td align="left">-È</td>
+<td align="left"></td>
+<td align="left">LOC</td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -575,69 +664,55 @@ corpus &lt;-<span class="st"> </span><span class="kw">read.toolbox</span>(corpus
 <table>
 <thead>
 <tr class="header">
-<th></th>
 <th align="right">texts_ids</th>
 <th align="right">sentences_ids</th>
-<th align="left">field_value.ref</th>
-<th align="left">field_value.tx</th>
-<th align="left">field_value.nt</th>
-<th align="left">field_value.ft</th>
+<th align="left">ft</th>
+<th align="left">ref</th>
+<th align="left">tx</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>2</td>
 <td align="right">1</td>
 <td align="right">1</td>
-<td align="left">2014.I.S2.001</td>
-<td align="left">me peisa to- u -no?</td>
-<td align="left">Toolbox problème</td>
-<td align="left">yu olsem wanem?</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">mùséè dóo bi bàntaráà tùgéè là</td>
 </tr>
 <tr class="even">
-<td>9</td>
 <td align="right">1</td>
 <td align="right">2</td>
-<td align="left">2014.I.S2.002</td>
-<td align="left">he peisa to- u -no?</td>
-<td align="left">Toolbox problem</td>
-<td align="left">yu(F) olsem wanem?</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">Músa kéle-la báti n na-kɔ̀ri</td>
 </tr>
 <tr class="odd">
-<td>16</td>
 <td align="right">1</td>
 <td align="right">3</td>
-<td align="left">2014.I.S2.003</td>
-<td align="left">a fali peisa uwo</td>
-<td align="left">NA</td>
-<td align="left">mi stap gut! (= I sleep gut ?)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">kín-na-ma t’ a ladíi</td>
 </tr>
 <tr class="even">
-<td>22</td>
 <td align="right">1</td>
 <td align="right">4</td>
-<td align="left">2014.I.S2.004</td>
-<td align="left">a fali peisa umwii</td>
-<td align="left">NA</td>
-<td align="left">mi stap gut! (= I sleep gut ?)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">wálè bi dúfen-na sínàn dé</td>
 </tr>
 <tr class="odd">
-<td>28</td>
 <td align="right">1</td>
 <td align="right">5</td>
-<td align="left">2014.I.S2.005</td>
-<td align="left">a peisa funeio</td>
-<td align="left">Toolbox problem : manque le u{to_sleep}</td>
-<td align="left">mi no stap gut (?) (= I didn’t sleep gut ?)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">dende bi faljɛ-la karaɲɛ tɔ</td>
 </tr>
 <tr class="even">
-<td>35</td>
 <td align="right">1</td>
 <td align="right">6</td>
-<td align="left">2014.I.S2.006</td>
-<td align="left">a kokuwa uwo</td>
-<td align="left">NA</td>
-<td align="left">mi no stap gut (?) (= I didn’t sleep gut ?)</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">kɛɛ syɔ́ɲɛ̀ bi fáa-nden</td>
 </tr>
 </tbody>
 </table>
@@ -646,80 +721,1235 @@ corpus &lt;-<span class="st"> </span><span class="kw">read.toolbox</span>(corpus
 <div id="reading-lift-xml-dictionary" class="section level1">
 <h1>Reading LIFT XML dictionary</h1>
 <p>This XML vocabulary has been introduced by SIL : [<a href="http://code.google.com/p/lift-standard" class="uri">http://code.google.com/p/lift-standard</a>] and is used by SIL Fieldworks as an export format.</p>
+<p>The conversion of lift dictionary into set of dataframe is still incomplete.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dicpath &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;exampleData&quot;</span>, <span class="st">&quot;tuwariDictionary.lift&quot;</span>, <span class="dt">package=</span><span class="st">&quot;interlineaR&quot;</span>)
-dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpath, <span class="dt">language.code=</span><span class="st">&quot;tww&quot;</span>)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kable</span>(<span class="kw">head</span>(dictionary))</code></pre></div>
+dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpath, <span class="dt">vernacular.languages=</span><span class="st">&quot;tww&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kable</span>(dictionary<span class="op">$</span>entries)</code></pre></div>
 <table>
 <thead>
 <tr class="header">
 <th align="left">id</th>
-<th align="left">form</th>
-<th align="left">order</th>
-<th align="left">type</th>
-<th align="left">pos1</th>
-<th align="left">sense1</th>
-<th align="left">domain1</th>
-<th align="left">class</th>
+<th align="left">lexical-unit.tww</th>
+<th align="left">morph-type</th>
+<th align="left">citation-form.tww</th>
+<th align="left">note-bibliographique.en</th>
+<th align="left">note.en</th>
+<th align="left">literal-meaning.en</th>
+<th align="left">note-restriction.en</th>
+<th align="left">summary-definition.en</th>
+<th align="left">variant.form.tww</th>
+<th align="left">variant.environment</th>
+<th align="left">variant.morph-type</th>
+<th align="left">etymology.source</th>
+<th align="left">etymology.type</th>
+<th align="left">etymology.form.en</th>
+<th align="left">etymology.form2.tww</th>
+<th align="left">etymology.gloss.en</th>
+<th align="left">etymology.comment.en</th>
+<th align="left">pronunciation.form.tww</th>
+<th align="left">pronunciation.cv-pattern.en</th>
+<th align="left">pronunciation.tone.en</th>
+<th align="left">pronunciation.location</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">nala_001199a3-0e7f-4b4d-ab9e-38cfd0fbff58</td>
 <td align="left">nala</td>
-<td align="left">NA</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
-<td align="left">?</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
 <tr class="even">
 <td align="left">kemia napuo_002794b9-f063-4c6b-b77d-39b8ecd618d1</td>
 <td align="left">kemia napuo</td>
-<td align="left">NA</td>
 <td align="left">phrase</td>
-<td align="left">Noun</td>
-<td align="left">short marita</td>
-<td align="left">1.5 Plant</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">tiohomaa_0086205e-a924-4347-a17e-8cd59c03a04b</td>
 <td align="left">tiohomaa</td>
-<td align="left">NA</td>
 <td align="left">stem</td>
-<td align="left">Verb</td>
-<td align="left">to_show</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
 <tr class="even">
 <td align="left">howaouu_00906b1e-0c28-4514-9e3f-0fed84e7c852</td>
 <td align="left">howaouu</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">howaou</td>
 <td align="left">NA</td>
 <td align="left">stem</td>
-<td align="left">Verb</td>
-<td align="left">to_wash</td>
-<td align="left">1.3 Water</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
 <tr class="odd">
 <td align="left">iahe_00909ffb-7e90-4b76-b948-cae56094abc9</td>
 <td align="left">iahe</td>
-<td align="left">NA</td>
 <td align="left">stem</td>
-<td align="left">Noun</td>
-<td align="left">local_language</td>
-<td align="left">3.5 Communication</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
 <tr class="even">
 <td align="left">master_00933292-16a3-4041-b5bc-d73dd36dbd74</td>
 <td align="left">master</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">UNKNOWN</td>
+<td align="left">borrowed</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">borrowing</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">totolo_00b3f2c3-bd07-4282-9287-603f2285c720</td>
+<td align="left">totolo</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">totolu</td>
 <td align="left">NA</td>
 <td align="left">stem</td>
-<td align="left">Noun</td>
-<td align="left">school_master</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">ofa_00dba42e-1a59-40e8-848d-dbe5bc20012e</td>
+<td align="left">ofa</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">wao_00ffba96-1af8-47cf-a044-d2846d33e1c2</td>
+<td align="left">wao</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">-li1_011fce29-8d34-4bee-822c-0f5b61015338</td>
+<td align="left">-li</td>
+<td align="left">suffix</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">-le</td>
+<td align="left">NA</td>
+<td align="left">suffix</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">tia3_013a1198-262e-45c6-9cab-fb6168f4f223</td>
+<td align="left">tia</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">waia3_015e37a5-77f2-4c45-9404-e90a36e48014</td>
+<td align="left">waia</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">heneli2_01c07bb2-e5c0-4166-90fe-5be81ab804af</td>
+<td align="left">heneli</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">eifei_01ea07b3-2da9-4786-a882-56129914469d</td>
+<td align="left">eifei</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">efa</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">koma_02018975-937e-4b3f-a47c-72354f62b345</td>
+<td align="left">koma</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">komnaa</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">inamin_0225f869-bf14-4259-9805-8383076bdfdd</td>
+<td align="left">inamin</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">neiau_023fa475-2f0e-42b2-8d2a-0e5d09816ff4</td>
+<td align="left">neiau</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">kleiau_02b09801-a167-4004-b93a-aa23ac1e78a1</td>
+<td align="left">kleiau</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">kleiawu</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">api_02b125d7-5409-41ab-a0be-bfa6689246ec</td>
+<td align="left">api</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">henolo_02ce0328-42d3-4e46-ad27-41c60bf8dc2d</td>
+<td align="left">henolo</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">henehe</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">eli3_02d224d0-00bb-4156-9a59-4c67eeac1165</td>
+<td align="left">eli</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">totu2_02e15de6-6fde-4aeb-a54d-16f723339887</td>
+<td align="left">totu</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">heta_0315efea-0227-4f6a-b36d-0a686b2a0eeb</td>
+<td align="left">heta</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">fuʔoflo_03331d1f-fccf-4281-b655-9a894bc9cf8a</td>
+<td align="left">fuʔoflo</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">sali2_0362862e-3549-4b10-ae24-eefce1a51d02</td>
+<td align="left">sali</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">mus-_03684873-afa5-423c-9b5f-d69c91994a28</td>
+<td align="left">mus-</td>
+<td align="left">prefix</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">hemalemo_0376fd9f-6d3d-4301-b2b1-a0ce30dec90a</td>
+<td align="left">hemalemo</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">te2_038371fe-83c2-4193-a3e3-b6918d315449</td>
+<td align="left">te</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">ti</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">manase_03f20c39-2922-46ad-a7fa-e856c3565a5a</td>
+<td align="left">manase</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">osweli_04095ac0-7cea-48c3-8ccf-8147ffec923e</td>
+<td align="left">osweli</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">oswali</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">kanu_040aef83-2213-4135-bb94-e2a9e8c6b713</td>
+<td align="left">kanu</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">ialo_041d87ca-27ce-40ad-b3f9-25e3023d2d08</td>
+<td align="left">ialo</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">iialo</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">meli2_044a7307-a58c-49c3-8a2e-9f40f442add9</td>
+<td align="left">meli</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">See 2015.III.S12 p. 48 for proof. Or 2015T32com</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">mele</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">namele_045224be-5698-4b65-8f90-279406ee76a4</td>
+<td align="left">namele</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">tiia_04655f29-ae8d-4239-9546-6a9bbeddcbaf</td>
+<td align="left">tiia</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">tia</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">mine1_046c1ece-6841-4170-87a4-f5a4b61e7b9f</td>
+<td align="left">mine</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">walo_048bf538-c704-4858-8d42-26d6694a5eb7</td>
+<td align="left">walo</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">totonoo_049c082e-66bc-47d0-ac93-b3777623f1d1</td>
+<td align="left">totonoo</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">oplo_04ff80bc-4287-4321-aaf9-cdf1c6fa8b76</td>
+<td align="left">oplo</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">timoti_04ffa47d-162c-4d9c-a8e4-f3113cfee6a2</td>
+<td align="left">timoti</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">nalo ilonino_0536ce64-2399-4d69-8817-0897038254d2</td>
+<td align="left">nalo ilonino</td>
+<td align="left">phrase</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">-te_054f56bc-e724-4181-8363-2976c81f92db</td>
+<td align="left">-te</td>
+<td align="left">suffix</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">awii_0555231c-58ff-4290-ba78-62d4e19bbd67</td>
+<td align="left">awii</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">awei</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">kesi_057f46ff-9a0c-4c34-8995-6a0e096b28ae</td>
+<td align="left">kesi</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">moni_05895947-e0f5-4714-8afc-6462a2821e50</td>
+<td align="left">moni</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">English</td>
+<td align="left">borrowed</td>
+<td align="left">borrowing</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">mine2_059bfa65-5679-4080-946a-6dff41fec2d2</td>
+<td align="left">mine</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">tuafe_05b4841a-ee24-473c-aaaf-535f07d9f722</td>
+<td align="left">tuafe</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">toafe</td>
+<td align="left">NA</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">pla_05e1f51e-e746-4423-b9d0-6a4c6fc71671</td>
+<td align="left">pla</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">sa3_061e7517-a685-4efc-99fe-a61524683737</td>
+<td align="left">sa</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">olsa_062658aa-8365-477a-be8c-49505ad6b5b0</td>
+<td align="left">olsa</td>
+<td align="left">stem</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
+<td align="left">NA</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
