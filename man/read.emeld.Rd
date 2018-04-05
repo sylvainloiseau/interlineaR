@@ -5,12 +5,12 @@
 \title{Read an EMELD XML document containing an interlinearized corpus.}
 \usage{
 read.emeld(file, vernacular.languages, analysis.languages = "en",
-  get.morphems = TRUE, get.words = TRUE, get.sentences = TRUE,
+  get.morphemes = TRUE, get.words = TRUE, get.sentences = TRUE,
   get.texts = TRUE, text.fields = c("title", "title-abbreviation", "source",
   "comment"), sentence.fields = c("segnum", "gls", "lit", "note"),
   words.vernacular.fields = "txt", words.analysis.fields = c("gls", "pos"),
-  morphems.vernacular.fields = c("txt", "cf"),
-  morphems.analysis.fields = c("gls", "msa", "hn"))
+  morphemes.vernacular.fields = c("txt", "cf"),
+  morphemes.analysis.fields = c("gls", "msa", "hn"))
 }
 \arguments{
 \item{file}{the path (or url) to a document in ELMED vocabulary}
@@ -19,7 +19,7 @@ read.emeld(file, vernacular.languages, analysis.languages = "en",
 
 \item{analysis.languages}{a character vector of one or more codes of languages used for the analyses (in glosses, translations, notes) in the document.}
 
-\item{get.morphems}{logical should the returned list include a slot for the description of morphems?}
+\item{get.morphemes}{logical should the returned list include a slot for the description of morphemes?}
 
 \item{get.words}{logical should the returned list include a slot for the description of words?}
 
@@ -35,18 +35,18 @@ read.emeld(file, vernacular.languages, analysis.languages = "en",
 
 \item{words.analysis.fields}{information (in analysis language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)}
 
-\item{morphems.vernacular.fields}{information (in vernacular language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems). May be null or empty.}
+\item{morphemes.vernacular.fields}{information (in vernacular language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.}
 
-\item{morphems.analysis.fields}{information (in analysis language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems). May be null or empty.}
+\item{morphemes.analysis.fields}{information (in analysis language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.}
 }
 \value{
-a list with slots named "morphems", "words", "sentences", "texts" 
+a list with slots named "morphemes", "words", "sentences", "texts" 
 (some slot may have been excluded throuth the "get.*" arguments, see above).
 Each slot is a data.frame containing the information on the corresponding unit.
-In each data.frame, each row describe an occurrence (the first row of the result$morphems data.frame describe the first morphem of the corpus).
-In each data.frame, the first columns give ids refering to the line in other data.frame (so that we can link the first morphem to the text, the sentence or the word it belongs to).
+In each data.frame, each row describe an occurrence (the first row of the result$morphemes data.frame describe the first morpheme of the corpus).
+In each data.frame, the first columns give ids refering to the line in other data.frame (so that we can link the first morpheme to the text, the sentence or the word it belongs to).
 The following columns give information about the corresponding occurrence of the unit. Which information are extracted from the document and included in the data frame depends upton the *.fields parameters (see above).
-Columns made are coined using the field name and the language code. For instance, if read.emeld is called with the parameters vernacular.languages="tww" and morphems.vernacular.fields=c("txt", "cf"), then the column txt.tww and cf.tww will be created in the morphems slot data frame.
+Columns made are coined using the field name and the language code. For instance, if read.emeld is called with the parameters vernacular.languages="tww" and morphemes.vernacular.fields=c("txt", "cf"), then the column txt.tww and cf.tww will be created in the morphemes slot data frame.
 }
 \description{
 The EMELD XML vocabulary has been proposed for the encoding of interlinear glosses.
@@ -59,19 +59,19 @@ the first one only will be kept.
 \examples{
 path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
 corpus <- read.emeld(path, vernacular="tww", analysis="en")
-head(corpus$morphems)
+head(corpus$morphemes)
 
 # In some cases, one may have to combine information coming from various data.frame.
-# Lets imagine one needs to have in the same data.frame the morphems data 
+# Lets imagine one needs to have in the same data.frame the morphemes data 
 # plus the "note" field attached to sentences:
-# - The easy way is to combine all the columns of the two data frame 'morphems' and 'sentence' :
-combined <- merge(corpus$morphems, corpus$sentences, by.x="sentence_id", by.y="sentence_id")
+# - The easy way is to combine all the columns of the two data frame 'morphemes' and 'sentence' :
+combined <- merge(corpus$morphemes, corpus$sentences, by.x="sentence_id", by.y="sentence_id")
 head(combined)
 
 # - Alternatively, one may use vector extraction in order to add only the desired column
-# to the morphems data frame:
-corpus$morphems$note = corpus$sentences$note.en[ corpus$morphems$sentence_id ]
-head(corpus$morphems)
+# to the morphemes data frame:
+corpus$morphemes$note = corpus$sentences$note.en[ corpus$morphemes$sentence_id ]
+head(corpus$morphemes)
 }
 \references{
 Baden Hughes, Steven Bird and Catherine Bow \emph{Encoding and Presenting Interlinear Text Using XML Technologies}, http://www.aclweb.org/anthology/U03-1008

@@ -7,7 +7,7 @@
 items.in.element(elements, fields, languages)
 }
 \arguments{
-\item{elements}{a set of node of the same unit (morphems, sentences...)}
+\item{elements}{a set of node of the same unit (morphemes, sentences...)}
 
 \item{fields}{a character vector of field names.}
 

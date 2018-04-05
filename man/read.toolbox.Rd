@@ -5,7 +5,7 @@
 \title{Parse a Toolbox (SIL) text file.}
 \usage{
 read.toolbox(path, text.fields.suppl = NULL, sentence.fields.suppl = c("tx",
-  "nt", "ft"), word.fields.suppl = NULL, morphem.fields.suppl = NULL)
+  "nt", "ft"), word.fields.suppl = NULL, morpheme.fields.suppl = NULL)
 }
 \arguments{
 \item{path}{: the path to a toolbox text file.}
@@ -16,7 +16,7 @@ read.toolbox(path, text.fields.suppl = NULL, sentence.fields.suppl = c("tx",
 
 \item{word.fields.suppl}{character vector: the code of supplementary fields to be searched for each word. "tx" is mandatory and need not to be listed here.}
 
-\item{morphem.fields.suppl}{character vector: the code of supplementary fields to be searched for each morphem. "mb", "ge", "ps" are mandatory and need not to be listed here.}
+\item{morpheme.fields.suppl}{character vector: the code of supplementary fields to be searched for each morpheme. "mb", "ge", "ps" are mandatory and need not to be listed here.}
 }
 \value{
 a list with four slots "texts", "sentences", "words" and "morphemes",

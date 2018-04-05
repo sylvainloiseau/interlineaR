@@ -5,7 +5,7 @@
 \title{Read a file in the format used in the pangloss collection}
 \usage{
 read.pangloss(url, DOI = NULL, get.texts = TRUE, get.sentences = TRUE,
-  get.words = TRUE, get.morphems = TRUE)
+  get.words = TRUE, get.morphemes = TRUE)
 }
 \arguments{
 \item{url}{a length one character vector with the url of the document to be imported}
@@ -18,10 +18,10 @@ read.pangloss(url, DOI = NULL, get.texts = TRUE, get.sentences = TRUE,
 
 \item{get.words}{should the 'words' data.frame be included in the result ?}
 
-\item{get.morphems}{should the 'morphems' data.frame be included in the result ?}
+\item{get.morphemes}{should the 'morphemes' data.frame be included in the result ?}
 }
 \value{
-a list with up to 5 slots corresponding to different units and named "texts", "sentences", "words", "morphems".
+a list with up to 5 slots corresponding to different units and named "texts", "sentences", "words", "morphemes".
 Each slot contains a data frame where each line describe an occurrence of the corresponding unit.
 }
 \description{
@@ -30,7 +30,7 @@ The pangloss collection (http://lacito.vjf.cnrs.fr/pangloss/index_en.html) is a 
 \examples{
 path <- system.file("exampleData", "FOURMI.xml", package="interlineaR")
 corpus <- read.pangloss(path)
-head(corpus$morphems)
+head(corpus$morphemes)
 }
 \references{
 http://lacito.vjf.cnrs.fr/pangloss/index_en.html

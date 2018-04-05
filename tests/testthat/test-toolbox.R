@@ -16,7 +16,7 @@ test_that("fields", {
   expect_equal(field_name, c("_sh", "id", "genre", "ref", "tag", "tx"))
 })
 
-test_that("get.morphems.boundaries", {
+test_that("get.morphemes.boundaries", {
   mb <- c("h p *- ux -*", "a");
   breaks <- interlineaR:::get.tokens.boundaries(mb)
   start <- breaks$index_start
@@ -39,7 +39,7 @@ test_that("get.morphems.boundaries", {
   expect_equal(end[[2]],   c(10000))
 })
 
-test_that("get.morphems.boundaries : multiple white space", {
+test_that("get.morphemes.boundaries : multiple white space", {
 
   # caveat not to turn white space into tab here !
   mb <- c("h     p", "a");
@@ -70,5 +70,5 @@ test_that("read.toolbox: tuwari tiny corpus", {
 		expect_equal(dim(corpus$texts), c(1, 2))	
 		expect_equal(dim(corpus$sentences), c(7, 6))	
 		expect_equal(dim(corpus$words), c(33, 5))	
-		expect_equal(dim(corpus$morphems), c(59, 7))	
+		expect_equal(dim(corpus$morphemes), c(59, 7))	
 })

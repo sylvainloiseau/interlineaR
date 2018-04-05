@@ -5,7 +5,7 @@ test_that("Emeld files: nb slots", {
   corpus <- read.emeld(path, vernacular="tww", analysis="en")
   expect_equal(length(corpus), 4)
   
-  corpus <- read.emeld(path, vernacular="tww", analysis="en", get.morphems=FALSE, get.words=FALSE, get.sentences=FALSE, get.texts=TRUE)
+  corpus <- read.emeld(path, vernacular="tww", analysis="en", get.morphemes=FALSE, get.words=FALSE, get.sentences=FALSE, get.texts=TRUE)
   expect_equal(length(corpus), 1)
 })
 
@@ -13,9 +13,9 @@ test_that("Emeld files: slots names", {
   path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
 
   corpus <- read.emeld(path, vernacular="tww", analysis="en")
-  expect_equal(names(corpus), c("texts", "sentences", "words", "morphems"));
+  expect_equal(names(corpus), c("texts", "sentences", "words", "morphemes"));
 
-  corpus <- read.emeld(path, vernacular="tww", analysis="en", get.morphems=FALSE, get.words=FALSE, get.sentences=FALSE, get.texts=TRUE)
+  corpus <- read.emeld(path, vernacular="tww", analysis="en", get.morphemes=FALSE, get.words=FALSE, get.sentences=FALSE, get.texts=TRUE)
   expect_equal(names(corpus), c("texts"));
 })
 
@@ -27,13 +27,13 @@ test_that("Emeld files: texts slot", {
 })
 
 #xmlstarlet sel -t -v "count(//morph)" inst/exampleData/tuwariInterlinear.xml
-test_that("Emeld files: morphems slot", {
+test_that("Emeld files: morphemes slot", {
   path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
   
   corpus <- read.emeld(path, vernacular="tww", analysis="en")
 
-  expect_equal(nrow(corpus$morphems), 212);
-  expect_equal(ncol(corpus$morphems), 10);
+  expect_equal(nrow(corpus$morphemes), 212);
+  expect_equal(ncol(corpus$morphemes), 10);
 })
 
 # xmlstarlet sel -t -v "count(//words/word)" inst/exampleData/tuwariInterlinear.xml
@@ -46,22 +46,22 @@ test_that("Emeld files: words slot", {
   expect_equal(ncol(corpus$words), 6);
 })
 
-test_that("Emeld files: no morphems.vernacular.fields", {
+test_that("Emeld files: no morphemes.vernacular.fields", {
   path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
-  corpus <- read.emeld(path, vernacular="tww", analysis="en", morphems.vernacular.fields=c())
-  expect_equal(ncol(corpus$morphems), 8);
+  corpus <- read.emeld(path, vernacular="tww", analysis="en", morphemes.vernacular.fields=c())
+  expect_equal(ncol(corpus$morphemes), 8);
 })
 
-test_that("Emeld files: no morphems.analysis.fields", {
+test_that("Emeld files: no morphemes.analysis.fields", {
   path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
-  corpus <- read.emeld(path, vernacular="tww", analysis="en", morphems.analysis.fields=c())
-  expect_equal(ncol(corpus$morphems), 7);
+  corpus <- read.emeld(path, vernacular="tww", analysis="en", morphemes.analysis.fields=c())
+  expect_equal(ncol(corpus$morphemes), 7);
 })
 
-test_that("Emeld files: no morphems.analysis.fields nor morphems.vernacular.fields", {
+test_that("Emeld files: no morphemes.analysis.fields nor morphemes.vernacular.fields", {
   path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
-  corpus <- read.emeld(path, vernacular="tww", analysis="en", morphems.analysis.fields=c(), morphems.vernacular.fields=c())
-  expect_equal(ncol(corpus$morphems), 5);
+  corpus <- read.emeld(path, vernacular="tww", analysis="en", morphemes.analysis.fields=c(), morphemes.vernacular.fields=c())
+  expect_equal(ncol(corpus$morphemes), 5);
 })
 
 test_that("Emeld files: vernacular languages argument", {

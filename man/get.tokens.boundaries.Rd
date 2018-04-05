@@ -7,16 +7,16 @@
 get.tokens.boundaries(string)
 }
 \arguments{
-\item{string}{character vector: strings to be tokenized in morphems}
+\item{string}{character vector: strings to be tokenized in morphemes}
 }
 \value{
 a list with two slot: (i) "index_mb_start", a list of vectors 
-(one per string in mb) giving the position of the first character of each morphems and (ii)
+(one per string in mb) giving the position of the first character of each morphemes and (ii)
 "index_mb_end", a list of vectors (one per string in mb) giving the position of the last character
-of each morphems
+of each morphemes
 }
 \description{
-For words (tx) or morphems (mb), several other fields may be aligned according to the positions
+For words (tx) or morphemes (mb), several other fields may be aligned according to the positions
 of tokens in this two "master" fields. The end boundaries of token is the last character of the token
 or, if there are following white space, the last white space following it.
 }

@@ -4,7 +4,7 @@
 #' @param text.fields.suppl character vector: the code of supplementary fields to be searched for each text (genre, ...). "id" is mandatory and need not to be listed here.
 #' @param sentence.fields.suppl character vector: the code of supplementary fields to be searched for each sentence (such as tx, ft, nt). "ref" is mandatory and need not to be listed here.
 #' @param word.fields.suppl character vector: the code of supplementary fields to be searched for each word. "tx" is mandatory and need not to be listed here.
-#' @param morphem.fields.suppl character vector: the code of supplementary fields to be searched for each morphem. "mb", "ge", "ps" are mandatory and need not to be listed here.
+#' @param morpheme.fields.suppl character vector: the code of supplementary fields to be searched for each morpheme. "mb", "ge", "ps" are mandatory and need not to be listed here.
 #'
 #' @return a list with four slots "texts", "sentences", "words" and "morphemes",
 #' each one containing a data frame. In these data frame, each row describe an occurrence
@@ -21,15 +21,15 @@ read.toolbox <- function(path,
                          text.fields.suppl=NULL,
                          sentence.fields.suppl=c("tx", "nt", "ft"),
 												 word.fields.suppl=NULL,
-                         morphem.fields.suppl=NULL) {
+                         morpheme.fields.suppl=NULL) {
  
   lines <- readLines(path);
 
   ## fields have mandatory elements for each level
   text.fields <- unique(c("id", text.fields.suppl));
   sentence.fields <- unique(c("ref", sentence.fields.suppl))
-  word.fields  <- unique(c("tx", morphem.fields.suppl))
-  morphem.fields  <- unique(c("mb", "ge", "ps", morphem.fields.suppl))
+  word.fields  <- unique(c("tx", morpheme.fields.suppl))
+  morpheme.fields  <- unique(c("mb", "ge", "ps", morpheme.fields.suppl))
 
   ## clean texts
   fields <- line2field(lines);
@@ -96,10 +96,10 @@ read.toolbox <- function(path,
   words <- tokenize.aligned.field.set(df, fields=word.fields, masterfield="tx", unit_id_name="words_id");
   res$words <- words;
 
-  ## morphems slot
+  ## morphemes slot
   words.outer <- df[field_name == "tx", "field_value"];
-  morphems <- tokenize.aligned.field.set(df, fields=morphem.fields, masterfield="mb", unit_id_name="morphems_id"); #, included.in=words.outer);
-  res$morphems <- morphems;
+  morphemes <- tokenize.aligned.field.set(df, fields=morpheme.fields, masterfield="mb", unit_id_name="morphemes_id"); #, included.in=words.outer);
+  res$morphemes <- morphemes;
 
   return(res);
 }
@@ -136,6 +136,7 @@ read.toolbox <- function(path,
 #'     \\mb samuel -we  ta -li  -lo
 #'     nefi    -mwii
 #' where a field is actually on two lines.
+#' @param lines character vector : lines of the toolbox file
 line2field <- function(lines) {
 	continuing.index <- grep(pattern = "^[^\\\\]", x=lines);
 	if (length(continuing.index) > 0) {
@@ -147,15 +148,15 @@ line2field <- function(lines) {
 
 #' Get the boudaries (start, end) of tokens in a vector of untokenized string.
 #'
-#' For words (tx) or morphems (mb), several other fields may be aligned according to the positions
+#' For words (tx) or morphemes (mb), several other fields may be aligned according to the positions
 #' of tokens in this two "master" fields. The end boundaries of token is the last character of the token
 #' or, if there are following white space, the last white space following it.
 #' 
-#' @param string character vector: strings to be tokenized in morphems
+#' @param string character vector: strings to be tokenized in morphemes
 #' @return a list with two slot: (i) "index_mb_start", a list of vectors 
-#' (one per string in mb) giving the position of the first character of each morphems and (ii)
+#' (one per string in mb) giving the position of the first character of each morphemes and (ii)
 #' "index_mb_end", a list of vectors (one per string in mb) giving the position of the last character
-#' of each morphems
+#' of each morphemes
 get.tokens.boundaries <- function(string) {
   index_start <- gregexpr("( [^ ]|^.)", string, perl=T);
   #mb_lengths <- nchar(string);
@@ -178,16 +179,16 @@ get.tokens.boundaries <- function(string) {
 #   return(data);
 # }
 
-#' Tokenize a set of fields associated to an unit (the set of fields related to word, or to morphem).
+#' Tokenize a set of fields associated to an unit (the set of fields related to word segmentation for instance, or to morpheme segmentation).
 #' 
-#' Set of fields have a "master field" (such as tx for words, or mb for morphems), and other fields
-#' associated with it (such as "ge" and "ps" for the morphems master field.)
+#' Set of fields have a "master field" (such as tx for words, or mb for morphemes), and other fields
+#' associated with it (such as "ge" and "ps" for the morphemes master field.)
 #' 
 #' @param longformat the data table of the toolbox fields in long format (melted)
 #' @param fields character vector: the aligned fields to tokenize (for instance, "mb", "ge" and "ps")
 #' @param masterfield the master in the fields to be tokenized (for instance, "mb").
 #' @param unit_id_name character vector (length-1): the name of the column to be created containing an ID for each token.
-#' @param included.in character vector: an optional super-ordinated unit (for instance words for morphems).
+#' @param included.in character vector: an optional super-ordinated unit (for instance words for morphemes).
 #' @param included.in_id character vector (length-1): the name of the column to be created containing an ID of the outer unit.
 #'
 #' @return a data frame with one token by row and as many columns as fields.
@@ -195,7 +196,7 @@ get.tokens.boundaries <- function(string) {
 tokenize.aligned.field.set <- function(longformat,
 																					fields=c("mb", "ge", "ps"),
 																					masterfield="mb",
-																					unit_id_name="morphems_id",
+																					unit_id_name="morphemes_id",
 																					included.in=NULL, included.in_id="words_id") {
   data <- longformat[longformat$field_name %in% fields, ];
   actual.fields <- unique(data$field_name); # actually found

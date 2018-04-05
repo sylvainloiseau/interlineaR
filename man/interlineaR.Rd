@@ -5,9 +5,9 @@
 \alias{interlineaR}
 \alias{interlineaR-package}
 \alias{interlineaR-package}
-\title{Importing interlinearized corpora and dictionaries as produced by descriptive linguistics softwares}
+\title{Importing interlinearized corpora and dictionaries as produced by descriptive linguistics software}
 \description{
-Importing interlinearized corpora and dictionaries as produced by descriptive linguistics softwares
+Importing interlinearized corpora and dictionaries as produced by descriptive linguistics software
 }
 \seealso{
 Useful links:

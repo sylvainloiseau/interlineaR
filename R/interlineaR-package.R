@@ -1,4 +1,4 @@
-#' Importing interlinearized corpora and dictionaries as produced by descriptive linguistics softwares
+#' Importing interlinearized corpora and dictionaries as produced by descriptive linguistics software
 #'
 #' @importFrom xml2 read_xml
 #' @importFrom xml2 xml_attr

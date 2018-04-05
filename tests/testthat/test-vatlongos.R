@@ -8,5 +8,5 @@ test_that("Vatlongos corpus", {
   expect_equal(nrow(corpus$texts), 10)
   expect_equal(nrow(corpus$sentences), 468)
   expect_equal(nrow(corpus$words), 5922)
-  expect_equal(nrow(corpus$morphems), 6034)
+  expect_equal(nrow(corpus$morphemes), 6034)
 })

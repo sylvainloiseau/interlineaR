@@ -1,5 +1,5 @@
 ---
-title: "Importing interlinearized corpora and dictionaries as produced by descriptive linguistics softwares"
+title: "interlineaR: Importing interlinearized corpora and dictionaries"
 author: "Sylvain Loiseau"
 date: "`r Sys.Date()`"
 output:
@@ -29,9 +29,9 @@ in various formats containing [*interlinearized corpora*](https://www.eva.mpg.de
 or dictionaryies produced by descriptive linguistics softwares, such as [SIL Toolbox](https://software.sil.org/toolbox/)
 of [SIL Fieldworks](https://software.sil.org/fieldworks/).
 
-All functions reading interlinearized text return a list of data frame, where each data frame correspond to an unit (text, sentence, word, morphem) and each row in the data frame describe an occurrence of the corresponding unit. The set of tables is relational: in each data frame, some columns give IDs pointing to rows in the other data frame: you can join morphems to the words, sentences or texts they belong to.
+All functions reading interlinearized text return a list of data frame, where each data frame correspond to an unit (text, sentence, word, morpheme) and each row in the data frame describe an occurrence of the corresponding unit. The set of tables is relational: in each data frame, some columns give IDs pointing to rows in the other data frame: you can join morphemes to the words, sentences or texts they belong to.
 
-This pivot format allows for various reshaping into R (for instance, grouping morphems by words) as well as conversion between formats.
+This pivot format allows for various reshaping into R (for instance, grouping morphemes by words) as well as conversion between formats.
 
 # Reading EMELD XML interlinear corpus
 
@@ -44,28 +44,38 @@ corpuspath <- system.file("exampleData", "tuwariInterlinear.xml", package="inter
 corpus <- read.emeld(corpuspath, vernacular.languages="tww")
 ```
 
-The returned object is a named list. Each slot of the list contain a data.frame. They are named 'morphems', 'words', 'sentences', 'texts' (unless some of them have been discarted through the function arguments). Each row in the data frame describe an occurrences of a linguistic unit (texts, sentences, words, morphems.)
+The returned object is a named list. Each slot of the list contain a data.frame. They are named 'morphemes', 'words', 'sentences', 'texts' (unless some of them have been discarted through the function arguments). Each row in the data frame describe an occurrences of a linguistic unit (texts, sentences, words, morphemes.)
 
 Let's look at the first rows of the "texts" data.frame:
 
-```{r}
-kable(head(corpus$morphems))
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(corpus$morphemes)
+```
+```{r echo=FALSE}
+kable(head(corpus$morphemes))
 ```
 
-The first columns contain ''ids'' (referencing to which text, sentence or word each morphem belongs to). Other columns contains information extracted from the document. The names of the column are made of the field name and the language of the field, separated by a dot. (The parameters of read.emeld allow you to indicate which field, and in wich language(s), you are interested in, for each unit). Each field may be repeated in different languages.
+The first columns contain ''ids'' (referencing to which text, sentence or word each morpheme belongs to). Other columns contains information extracted from the document. The names of the column are made of the field name and the language of the field, separated by a dot. (The parameters of read.emeld allow you to indicate which field, and in wich language(s), you are interested in, for each unit). Each field may be repeated in different languages.
 
 The "words", "sentences" and "texts" table are made according to the same principles:
 
-```{r}
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(corpus$words)
+```
+```{r echo=FALSE}
 kable(head(corpus$words))
 ```
 
-```{r}
-
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(corpus$sentences)
+```
+```{r echo=FALSE}
 kable(head(corpus$sentences), booktabs = T)
 ```
-
-```{r}
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(corpus$texts)
+```
+```{r echo=FALSE}
 kable(head(corpus$texts))
 ```
 
@@ -73,11 +83,15 @@ kable(head(corpus$texts))
 
 This set of data.frame is similar to the tables of a database: rows from various tables are pointing to each other through ids.
 
-Using these ids, new data.frame aggregating pieces of information coming from several data frame can be built. For instance, a table containing the columns of the morphems and the words can be built using:
+Using these ids, new data.frame aggregating pieces of information coming from several data frame can be built. For instance, a table containing the columns of the morphemes and the words can be built using:
 
-```{r}
-morphems_words <- merge(corpus$morphems, corpus$words[,-c(1,2)], by="word_id", suffixes = c(".morphem",".word"))
-kable(head(morphems_words))
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+morphemes_words <- merge(corpus$morphemes, corpus$words[,-c(1,2)], by="word_id", suffixes = c(".morpheme",".word"))
+head(morphemes_words)
+```
+```{r echo=FALSE}
+morphemes_words <- merge(corpus$morphemes, corpus$words[,-c(1,2)], by="word_id", suffixes = c(".morpheme",".word"))
+kable(head(morphemes_words))
 ```
 
 # Reading Toolbox interlinear corpus
@@ -89,24 +103,35 @@ corpuspath <- system.file("exampleData", "tuwariToolbox.txt", package="interline
 corpus <- read.toolbox(corpuspath)
 ```
 
-Just as read.emeld, the result is a list containing the slots 'morphems', 'sentences', 'words' and 'texts'. These slots are data frames, where each line describe an occurrence:
+Just as read.emeld, the result is a list containing the slots 'morphemes', 'sentences', 'words' and 'texts'. These slots are data frames, where each line describe an occurrence:
 
-```{r}
-kable(head(corpus$morphems))
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(corpus$morphemes)
+```
+```{r echo=FALSE}
+kable(head(corpus$morphemes))
 ```
 
-As with read.emeld, optional fields can be declared. For instance, the kakabe corpus (by Alexandra Vydrina) also contains morphem glosses in russian and french
+As with read.emeld, optional fields can be declared. For instance, the kakabe corpus (by Alexandra Vydrina) also contains morpheme glosses in russian and french
 
-```{r}
+```{r eval=FALSE, include=TRUE, echo=TRUE}
 path <- system.file("exampleData", "kakabe.txt", package="interlineaR")
-corpus <- read.toolbox(path, morphem.fields.suppl = c("gr", "gf"))
-kable(head(corpus$morphems))
+corpus <- read.toolbox(path, morpheme.fields.suppl = c("gr", "gf"))
+head(corpus$morphemes)
+```
+```{r echo=FALSE}
+path <- system.file("exampleData", "kakabe.txt", package="interlineaR")
+corpus <- read.toolbox(path, morpheme.fields.suppl = c("gr", "gf"))
+kable(head(corpus$morphemes))
 ```
 
 The 'sentences' data frame contains a numeric id, the reference created for each sentence ("ref" field in toolbox), plus (as with read.emeld) the original text, the free translation as well as the note ("tx", "nt", "ft" field in toolbox).
 
 
-```{r}
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(corpus$sentences)
+```
+```{r echo=FALSE}
 kable(head(corpus$sentences))
 ```
 
@@ -116,15 +141,33 @@ the text data.frame contains a numeric id and the title (toolbox ID) of each tex
 
 This XML vocabulary has been introduced by SIL : [http://code.google.com/p/lift-standard] and is used by SIL Fieldworks as an export format.
 
-read.lift() produce a list of three data frame: "entries", "senses", "examples" ("relations" should be added). All the fields of the dictionary, in all languages, can be extracted.
+read.lift() produce a list of three data frame: "entries", "senses", "examples" ("relations" should be added). These set of table are linked through IDs, as in a relational database. All the fields of the dictionary, in all languages, can be extracted.
 
 ```{r}
 dicpath <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 dictionary <- read.lift(dicpath, vernacular.languages="tww")
 ```
 
-```{r}
-kable(dictionary$entries)
+table of the lexial units:
+
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(dictionary$entries)
+```
+```{r echo=FALSE}
+kable(head(dictionary$entries))
 ```
 
 
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(dictionary$senses)
+```
+```{r echo=FALSE}
+kable(head(dictionary$senses))
+```
+
+```{r eval=FALSE, include=TRUE, echo=TRUE}
+head(dictionary$examples)
+```
+```{r echo=FALSE}
+kable(head(dictionary$examples))
+```

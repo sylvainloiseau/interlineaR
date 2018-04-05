@@ -9,7 +9,7 @@
 #' @param file the path (or url) to a document in ELMED vocabulary
 #' @param vernacular.languages a character vector of one or more codes of languages analysed in the document.
 #' @param analysis.languages a character vector of one or more codes of languages used for the analyses (in glosses, translations, notes) in the document.
-#' @param get.morphems logical should the returned list include a slot for the description of morphems?
+#' @param get.morphemes logical should the returned list include a slot for the description of morphemes?
 #' @param get.words logical should the returned list include a slot for the description of words?
 #' @param get.sentences logical should the returned list include a slot for the description of sentences?
 #' @param get.texts logical should the returned list include a slot for the description of texts?
@@ -17,16 +17,16 @@
 #' @param sentence.fields information to be extracted for the sentences (and turned into corresponding column in the data.frame describing sentences)
 #' @param words.vernacular.fields information (in vernacular language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
 #' @param words.analysis.fields information (in analysis language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
-#' @param morphems.vernacular.fields information (in vernacular language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems). May be null or empty.
-#' @param morphems.analysis.fields information (in analysis language(s)) to be extracted for the morphems (and turned into corresponding columns in the data.frame describing morphems). May be null or empty.
+#' @param morphemes.vernacular.fields information (in vernacular language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
+#' @param morphemes.analysis.fields information (in analysis language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
 #'
-#' @return a list with slots named "morphems", "words", "sentences", "texts" 
+#' @return a list with slots named "morphemes", "words", "sentences", "texts" 
 #' (some slot may have been excluded throuth the "get.*" arguments, see above).
 #' Each slot is a data.frame containing the information on the corresponding unit.
-#' In each data.frame, each row describe an occurrence (the first row of the result$morphems data.frame describe the first morphem of the corpus).
-#' In each data.frame, the first columns give ids refering to the line in other data.frame (so that we can link the first morphem to the text, the sentence or the word it belongs to).
+#' In each data.frame, each row describe an occurrence (the first row of the result$morphemes data.frame describe the first morpheme of the corpus).
+#' In each data.frame, the first columns give ids refering to the line in other data.frame (so that we can link the first morpheme to the text, the sentence or the word it belongs to).
 #' The following columns give information about the corresponding occurrence of the unit. Which information are extracted from the document and included in the data frame depends upton the *.fields parameters (see above).
-#' Columns made are coined using the field name and the language code. For instance, if read.emeld is called with the parameters vernacular.languages="tww" and morphems.vernacular.fields=c("txt", "cf"), then the column txt.tww and cf.tww will be created in the morphems slot data frame.
+#' Columns made are coined using the field name and the language code. For instance, if read.emeld is called with the parameters vernacular.languages="tww" and morphemes.vernacular.fields=c("txt", "cf"), then the column txt.tww and cf.tww will be created in the morphemes slot data frame.
 #' 
 #' @export
 #' 
@@ -36,29 +36,29 @@
 #' @examples
 #' path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")
 #' corpus <- read.emeld(path, vernacular="tww", analysis="en")
-#' head(corpus$morphems)
+#' head(corpus$morphemes)
 #' 
 #' # In some cases, one may have to combine information coming from various data.frame.
-#' # Lets imagine one needs to have in the same data.frame the morphems data 
+#' # Lets imagine one needs to have in the same data.frame the morphemes data 
 #' # plus the "note" field attached to sentences:
-#' # - The easy way is to combine all the columns of the two data frame 'morphems' and 'sentence' :
-#' combined <- merge(corpus$morphems, corpus$sentences, by.x="sentence_id", by.y="sentence_id")
+#' # - The easy way is to combine all the columns of the two data frame 'morphemes' and 'sentence' :
+#' combined <- merge(corpus$morphemes, corpus$sentences, by.x="sentence_id", by.y="sentence_id")
 #' head(combined)
 #' 
 #' # - Alternatively, one may use vector extraction in order to add only the desired column
-#' # to the morphems data frame:
-#' corpus$morphems$note = corpus$sentences$note.en[ corpus$morphems$sentence_id ]
-#' head(corpus$morphems)
+#' # to the morphemes data frame:
+#' corpus$morphemes$note = corpus$sentences$note.en[ corpus$morphemes$sentence_id ]
+#' head(corpus$morphemes)
 read.emeld <- function(file,
                         vernacular.languages,
                         analysis.languages="en", 
-                        get.morphems=TRUE, get.words=TRUE, get.sentences=TRUE, get.texts=TRUE,
+                        get.morphemes=TRUE, get.words=TRUE, get.sentences=TRUE, get.texts=TRUE,
                         text.fields=c("title", "title-abbreviation", "source", "comment"),
                         sentence.fields=c("segnum", "gls", "lit", "note"),
                         words.vernacular.fields="txt",
                         words.analysis.fields=c("gls", "pos"),
-                        morphems.vernacular.fields=c("txt", "cf"),
-                        morphems.analysis.fields=c("gls", "msa", "hn")
+                        morphemes.vernacular.fields=c("txt", "cf"),
+                        morphemes.analysis.fields=c("gls", "msa", "hn")
                         ) {
 
   corpusdoc <- read_xml(file);
@@ -146,7 +146,7 @@ read.emeld <- function(file,
     interlinearized$words <- wordsdf;
   }
 
-  if (get.morphems) {
+  if (get.morphemes) {
     morph.by.texts      <- xml_find_num(texts, "count(./paragraphs/paragraph/phrases/word/words/word/morphemes/morph)");
     #morph.by.paragraphs <- xml_find_num(paragraphs, "count(./phrases/word/words/word/morphemes/morph)");
     morph.by.sentences  <- xml_find_num(sentences, "count(./words/word/morphemes/morph)");
@@ -163,17 +163,17 @@ read.emeld <- function(file,
       stringsAsFactors=FALSE
     );
 
-    if (! is.null(morphems.vernacular.fields) & length(morphems.vernacular.fields) > 0) {
-      items <- items.in.element(morphs, morphems.vernacular.fields, vernacular.languages)
+    if (! is.null(morphemes.vernacular.fields) & length(morphemes.vernacular.fields) > 0) {
+      items <- items.in.element(morphs, morphemes.vernacular.fields, vernacular.languages)
       morphemsdf <- data.frame(morphemsdf, items, stringsAsFactors = FALSE);
     }
 
-    if (! is.null(morphems.analysis.fields) & length(morphems.analysis.fields) > 0) {
-      items <- items.in.element(morphs, morphems.analysis.fields, analysis.languages)
+    if (! is.null(morphemes.analysis.fields) & length(morphemes.analysis.fields) > 0) {
+      items <- items.in.element(morphs, morphemes.analysis.fields, analysis.languages)
       morphemsdf <- data.frame(morphemsdf, items, stringsAsFactors = FALSE);
     }
 
-    interlinearized$morphems <- morphemsdf; 
+    interlinearized$morphemes <- morphemsdf; 
   }
   return(interlinearized)
 }
@@ -186,7 +186,7 @@ read.emeld <- function(file,
 #' (part of speech, gloss, free translation...)
 #' and @lang for indicating the language (either under scrutiny or used in the analysis).
 #'
-#' @param elements a set of node of the same unit (morphems, sentences...)
+#' @param elements a set of node of the same unit (morphemes, sentences...)
 #' @param fields a character vector of field names.
 #' @param languages a character vector of language names
 #'

@@ -99,39 +99,12 @@
 </grammatical-info>
 <gloss lang="en"><text>to_show</text></gloss>
 <gloss lang="tpi"><text>soim</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2016-12-21T11:23:06Z" id="howaouu_00906b1e-0c28-4514-9e3f-0fed84e7c852" guid="00906b1e-0c28-4514-9e3f-0fed84e7c852">
-<lexical-unit>
-<form lang="tww"><text>howaouu</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>howaou</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>howao</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>howauw</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>howau</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>howu</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="49a7815c-466d-471c-853a-8fbf59d6945d">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="en"><text>to_wash</text></gloss>
-<gloss lang="tpi"><text>wasim</text></gloss>
-<trait name ="semantic-domain-ddp4" value="1.3 Water"/>
+<example>
+<form lang="tww"><text>exemple1.1</text></form>
+</example>
+<example>
+<form lang="tww"><text>exemple1.2</text></form>
+</example>
 </sense>
 </entry>
 <entry dateCreated="2015-04-28T20:28:41Z" dateModified="2015-06-16T17:15:12Z" id="iahe_00909ffb-7e90-4b76-b948-cae56094abc9" guid="00909ffb-7e90-4b76-b948-cae56094abc9">
@@ -145,6 +118,12 @@
 <gloss lang="en"><text>local_language</text></gloss>
 <gloss lang="tpi"><text>tok_ples</text></gloss>
 <trait name ="semantic-domain-ddp4" value="3.5 Communication"/>
+<example>
+<form lang="tww"><text>exemple2.1</text></form>
+</example>
+<example>
+<form lang="tww"><text>exemple2.2</text></form>
+</example>
 </sense>
 </entry>
 <entry dateCreated="2017-06-09T12:21:14Z" dateModified="2017-06-09T12:21:53Z" id="master_00933292-16a3-4041-b5bc-d73dd36dbd74" guid="00933292-16a3-4041-b5bc-d73dd36dbd74">

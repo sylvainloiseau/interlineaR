@@ -10,6 +10,9 @@ where a field is actually on two lines.}
 \usage{
 line2field(lines)
 }
+\arguments{
+\item{lines}{character vector : lines of the toolbox file}
+}
 \description{
 read and collapse multi-line fields into one line.
 One can encouter:

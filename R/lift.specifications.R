@@ -3,54 +3,60 @@
 #' @return a character vector of entries.
 #' @name lift.specification
 #' @export
-entry.field <- function(){ as.character(get.entry.spec()[,1]) }
+all.entry.fields <- function(){ as.character(entry.fields.spec()[,1]) }
 
 #' List of the available pieces of information for each sense (ie column in the sense table)
 #'
 #' @return a character vector of entries.
 #' @rdname lift.specification
 #' @export
-sense.field <- function(){ as.character(get.sense.spec()[,1]) }
+all.sense.fields <- function(){ as.character(sense.fields.spec()[,1]) }
 
 #' List of the available pieces of information for each example (ie column in the example table)
 #'
 #' @return a character vector of entries.
 #' @rdname lift.specification
 #' @export
-example.field <- function(){ as.character(get.example.spec()[,1]) }
+all.example.fields <- function(){ as.character(example.fields.spec()[,1]) }
 
 #' List of the available pieces of information for each relation (ie column in the relation table)
 #'
 #' @return a character vector of entries.
 #' @rdname lift.specification
 #' @export
-relation.field <- function(){ as.character(get.relation.spec()[,1]) }
+all.relation.fields <- function(){ as.character(relation.fields.spec()[,1]) }
 
-# These four functions give a specification of the LIFT XML format in order to easily
-# generate XML queries and populate tables.
-
-# each functions return a table with the following columns:
-# "Path": an XPath expression toward an element.
-# "Type" how to retreive the content of this element in some frequent cases:
-# - "form" indicates that the content is in ./form/text; form contains an attribute @lang
-#    with either vernacular languages code(s), or analysis language code(s).
-#    In this case, the Sub-type column state vernacular of analysis accordingly.
-# - "trait" indicate that the content is in a @value attribute;
-#    the trait has a "name" attribute give in the Sub-type column.
-# - "gloss" is similar to "form" above.
-# "Sub-type": in the cases where Type has the values "form" or "gloss", indicats if
-#    @lang is vernacular ou analysis;
-#    in the cases where Type has the value "trait" : the value of @name.
-# "Concat" an XPath expression for building the value with the element using XPath concat()
-# "Collapse": TRUE = element may appears several time and have to be collapsed
-#    in order to build the cell value.
-
+#' Information about the structure of the LIFT XML format in order to easily
+#' generate XPath expression and extract information.
+#' 
+#' There are four fonctions: one for each table to be built (entries, senses, examples, relations).
+#' 
+#' Each functions return a table with the following columns:
+#' A name for this field
+#' "Path": an XPath expression toward an element.
+#' "Type" how to retreive the content of this element in some frequent cases:
+#' - "form" indicates that the content is in ./form/text; form contains an attribute @lang
+#'    with either vernacular languages code(s), or analysis language code(s).
+#'    In this case, the Sub-type column state vernacular of analysis accordingly.
+#' - "trait" indicate that the content is in a @value attribute;
+#'    the trait has a "name" attribute give in the Sub-type column.
+#' - "gloss" is similar to "form" above.
+#' "Sub-type": in the cases where Type has the values "form" or "gloss", indicats if
+#'    @lang is vernacular ou analysis;
+#'    in the cases where Type has the value "trait" : the value of @name.
+#' "Concat" an XPath expression for building the value with the element using XPath concat()
+#' "Collapse": TRUE = element may appears several time and have to be collapsed
+#'    in order to build the cell value.
+#' @rdname lift-format
 
 
 # Lexical-unit, context node: ./entry
 # Name"                              ,	"Path"                                          ,	"Type" ,	"Sub-type"   ,	"Concat",	"Collapse",	"Note",	"URL produced (sample)"                         ,	"Commentary",
 
-get.entry.spec <- function() { return(as.data.frame(matrix(c(
+#' @return a data.frame
+#'
+#' @name lift-format
+entry.fields.spec <- function() { return(as.data.frame(matrix(c(
 "lexical-unit"                      ,	"./lexical-unit"                                ,	"form" ,	"vernacular" ,	""      ,	""        ,	""    ,	"'entry/lexical-unit/form[@lang=''tww'']/text/'",	"",
 "morph-type"                        ,	"."                                             ,	"trait",	"morph-type" ,	""      ,	""        ,	""    ,	"'entry/trait[@name=''morph-type'']/@value'"    ,	"",
 "citation-form"                     ,	"citation"                                      ,	"form" ,	"vernacular" ,	""      ,	""        ,	""    ,	""                                              ,	"",
@@ -81,7 +87,10 @@ get.entry.spec <- function() { return(as.data.frame(matrix(c(
 #"sense (under: entry)",	"./sense"
 #"Name"                              ,	"Path"                                          ,	"Type" ,	"Sub-type"            ,	"Concat"     ,	"Collapse",	"Note"  ,	"URL produced (sample)"                         ,	"Commentary",
 
-get.sense.spec <- function() {return(as.data.frame(matrix(c(
+#' @return a data.frame
+#'
+#' @name lift-format
+sense.fields.spec <- function() {return(as.data.frame(matrix(c(
 "grammatical-info.value"            ,	"grammatical-info/@value"                       ,	""     ,	""                    ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "gloss"                             ,	"gloss"                                         ,	""     ,	"analysis"            ,	""           ,	""        ,	""      ,	"'gloss[@lang=''en'']/text'"                    ,	"",
 "definition"                        ,	"definition"                                    ,	"form" ,	"analysis"            ,	""           ,	""        ,	""      ,	""                                              ,	"",
@@ -108,17 +117,26 @@ get.sense.spec <- function() {return(as.data.frame(matrix(c(
 
 #"example (under sense)",	base uri: "./sense/example"
 #"Name"                              ,	"Path"                                          ,	"Type" ,	"Sub-type"            ,	"Concat"     ,	"Collapse",	"Note"  ,	"URL produced (sample)"                         ,	"Commentary",
-get.example.spec <- function() {return(as.data.frame(matrix(c(
+
+#' @return a data.frame
+#'
+#' @name lift-format
+example.fields.spec <- function() {return(as.data.frame(matrix(c(
 "example.source"                    ,	"./@source"                                     ,	""     ,	""                    ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "example.form"                      ,	"./"                                            ,	"form" ,	"vernacular"          ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "example.translation"               ,	"./translation"                                 ,	"form" ,	"analysis"            ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "example.translation.type"          ,	"./translation/@type"                           ,	""     ,	""                    ,	""           ,	""        ,	""      ,	""                                              ,	"",
-"example.note"                      ,	"./note[@type=\"reference\"]"                   ,	"form" ,	"english"             ,	""           ,	""        ,	""      ,	""                                              ,	""
+"example.note"                      ,	"./note[@type=\"reference\"]"                   ,	"form" ,	"analysis"             ,	""           ,	""        ,	""      ,	""                                              ,	""
 ), ncol=9, byrow=TRUE), stringsAsFactors=FALSE))}
+# or english for the example.note?
 
 #"Relation (under entry)",	base uri "./relation"
 #"Name"                              ,	"Path"                                          ,	"Type" ,	"Sub-type"            ,	"Concat"     ,	"Collapse",	"Note"  ,	"URL produced (sample)"                         ,	"Commentary",
-get.relation.spec <- function() {return(as.data.frame(matrix(c(
+
+#' @return a data.frame
+#'
+#' @name lift-format
+relation.fields.spec <- function() {return(as.data.frame(matrix(c(
 "type"                              ,	"./@type"                                       ,	""     ,	""                    ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "ref"                               ,	"./ref"                                         ,	""     ,	""                    ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "order"                             ,	"./@order"                                      ,	""     ,	""                    ,	""           ,	""        ,	""      ,	""                                              ,	"",
