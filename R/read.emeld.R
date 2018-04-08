@@ -3,8 +3,8 @@
 #' The EMELD XML vocabulary has been proposed for the encoding of interlinear glosses.
 #' It is used by the FieldWorks software (SIL FLEX) as an export format.
 #' 
-#' Please note that if several 'note' fields in the same language are present in one sentence,
-#' the first one only will be kept.
+#' If several 'note' fields in the same language are present in a sentence,
+#' they will be concatenated (with "; ")
 #'
 #' @param file the path (or url) to a document in ELMED vocabulary
 #' @param vernacular.languages a character vector of one or more codes of languages analysed in the document.
@@ -85,14 +85,14 @@ read.emeld <- function(file,
 
   interlinearized <- list();
 
-  texts <- xml_find_all(corpusdoc, "/document/interlinear-text")
+  texts_node <- xml_find_all(corpusdoc, "/document/interlinear-text")
   if (get.texts) {
     textsdf <- data.frame(
-      text_id = 1:length(texts),
+      text_id = 1:length(texts_node),
       stringsAsFactors=FALSE
       );
     if (! is.null(text.fields) & length(text.fields) > 0) {
-      items <- items.in.element(texts, text.fields, analysis.languages)
+      items <- items.in.element(texts_node, text.fields, analysis.languages)
       textsdf <- data.frame(textsdf,
                             items,
                             stringsAsFactors = FALSE);
@@ -102,16 +102,25 @@ read.emeld <- function(file,
 
   #paragraphs <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph")
 
-  sentences <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph/phrases/word")
+  sentences_node <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph/phrases/word")
   if (get.sentences) {
-    sentence.by.texts <- xml_find_num(texts, "count(./paragraphs/paragraph/phrases/word)")
+    sentence.by.texts <- xml_find_num(texts_node, "count(./paragraphs/paragraph/phrases/word)")
     sentencesdf <- data.frame(
-      text_id     = rep(1:length(texts), times=sentence.by.texts),
-      sentence_id = 1:length(sentences),
+      text_id     = rep(1:length(texts_node), times=sentence.by.texts),
+      sentence_id = 1:length(sentences_node),
       stringsAsFactors=FALSE
     );
+    ## Note receive a special treatment
+    if ("note" %in% sentence.fields) {
+    	notes <- concatenate.items.in.element(sentences_node, "note", analysis.languages)
+    	sentencesdf <- data.frame(
+    		sentencesdf, notes,
+    		stringsAsFactors = FALSE
+    	);
+    	sentence.fields <- sentence.fields[sentence.fields != "note"]
+    }
     if (! is.null(sentence.fields) & length(sentence.fields) > 0) {
-      items <- items.in.element(sentences, sentence.fields, analysis.languages)
+      items <- items.in.element(sentences_node, sentence.fields, analysis.languages)
       sentencesdf <- data.frame(
         sentencesdf, items,
         stringsAsFactors = FALSE
@@ -120,25 +129,25 @@ read.emeld <- function(file,
     interlinearized$sentences <- sentencesdf;
   }
 
-  words <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph/phrases/word/words/word")
+  words_nodes <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph/phrases/word/words/word")
   if (get.words) {
-    word.by.texts     <- xml_find_num(texts,     "count(./paragraphs/paragraph/phrases/word/words/word)");
-    word.by.sentences <- xml_find_num(sentences, "count(./words/word)");
+    word.by.texts     <- xml_find_num(texts_node,     "count(./paragraphs/paragraph/phrases/word/words/word)");
+    word.by.sentences <- xml_find_num(sentences_node, "count(./words/word)");
     wordsdf <- data.frame(
-      text_id     = rep(1:length(texts), times=word.by.texts),
-      sentence_id = rep(1:length(sentences), times=word.by.sentences),
-      word_id     = 1:length(words),
+      text_id     = rep(1:length(texts_node), times=word.by.texts),
+      sentence_id = rep(1:length(sentences_node), times=word.by.sentences),
+      word_id     = 1:length(words_nodes),
       stringsAsFactors=FALSE
     );
     if (! is.null(words.vernacular.fields) & length(words.vernacular.fields) > 0) {
-      items <- items.in.element(words, words.vernacular.fields, vernacular.languages)
+      items <- items.in.element(words_nodes, words.vernacular.fields, vernacular.languages)
       wordsdf <- data.frame(wordsdf,
                             items,
                             stringsAsFactors = FALSE
                             );
     }
     if (! is.null(words.analysis.fields) & length(words.analysis.fields) > 0) {
-      items <- items.in.element(words, words.analysis.fields, analysis.languages)
+      items <- items.in.element(words_nodes, words.analysis.fields, analysis.languages)
       wordsdf <- data.frame(wordsdf,
                             items,
                             stringsAsFactors = FALSE);
@@ -147,29 +156,29 @@ read.emeld <- function(file,
   }
 
   if (get.morphemes) {
-    morph.by.texts      <- xml_find_num(texts, "count(./paragraphs/paragraph/phrases/word/words/word/morphemes/morph)");
+    morph.by.texts      <- xml_find_num(texts_node, "count(./paragraphs/paragraph/phrases/word/words/word/morphemes/morph)");
     #morph.by.paragraphs <- xml_find_num(paragraphs, "count(./phrases/word/words/word/morphemes/morph)");
-    morph.by.sentences  <- xml_find_num(sentences, "count(./words/word/morphemes/morph)");
-    morphs.by.word      <- xml_find_num(words, "count(./morphemes/morph)");
-    morphs              <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph/phrases/word/words/word/morphemes/morph");
+    morph.by.sentences  <- xml_find_num(sentences_node, "count(./words/word/morphemes/morph)");
+    morphs.by.word      <- xml_find_num(words_nodes, "count(./morphemes/morph)");
+    morph_nodes         <- xml_find_all(corpusdoc, "/document/interlinear-text/paragraphs/paragraph/phrases/word/words/word/morphemes/morph");
     
     morphemsdf <- data.frame(
-      text_id      = rep(1:length(texts), times=morph.by.texts),
+      text_id      = rep(1:length(texts_node), times=morph.by.texts),
       #paragraph_id = rep(1:length(paragraphs), times=morph.by.paragraphs),
-      sentence_id  = rep(1:length(sentences), times=morph.by.sentences),
-      word_id      = rep(1:length(words), times=morphs.by.word),
-      morphem_id   = 1:length(morphs),
-      type         = xml_attr(morphs, "type"),
+      sentence_id  = rep(1:length(sentences_node), times=morph.by.sentences),
+      word_id      = rep(1:length(words_nodes), times=morphs.by.word),
+      morphem_id   = 1:length(morph_nodes),
+      type         = xml_attr(morph_nodes, "type"),
       stringsAsFactors=FALSE
     );
 
     if (! is.null(morphemes.vernacular.fields) & length(morphemes.vernacular.fields) > 0) {
-      items <- items.in.element(morphs, morphemes.vernacular.fields, vernacular.languages)
+      items <- items.in.element(morph_nodes, morphemes.vernacular.fields, vernacular.languages)
       morphemsdf <- data.frame(morphemsdf, items, stringsAsFactors = FALSE);
     }
 
     if (! is.null(morphemes.analysis.fields) & length(morphemes.analysis.fields) > 0) {
-      items <- items.in.element(morphs, morphemes.analysis.fields, analysis.languages)
+      items <- items.in.element(morph_nodes, morphemes.analysis.fields, analysis.languages)
       morphemsdf <- data.frame(morphemsdf, items, stringsAsFactors = FALSE);
     }
 
@@ -190,7 +199,7 @@ read.emeld <- function(file,
 #' @param fields a character vector of field names.
 #' @param languages a character vector of language names
 #'
-#' @return a data frame with as many columns as fields.
+#' @return a data frame with as many columns as fields * languages.
 items.in.element <-function(elements, fields, languages) {
   itemsl <- vector(mode="list", length=length(fields) * length(languages))
   names(itemsl) <- paste(fields, rep(languages, each=length(fields)), sep="-")
@@ -200,6 +209,33 @@ items.in.element <-function(elements, fields, languages) {
     }
   }
   return(as.data.frame(itemsl, stringsAsFactors=FALSE))
+}
+
+#' Same as items.in.element, but if multiple instnaces of the same field with the same
+#' language are found, they are concatenated (with "; "). Used only for "note" in sentence.
+#'
+#' @param elements see items.in.element
+#' @param fields see items.in.element
+#' @param languages see items.in.element
+#'
+#' @return a data.frame. see items.in.element.
+concatenate.items.in.element <- function(elements, fields, languages) {
+	itemsl <- vector(mode="list", length=length(fields) * length(languages))
+	names(itemsl) <- paste(fields, rep(languages, each=length(fields)), sep="-")
+	for (field in fields) {
+		for (language in languages) {
+			xpath_count <- paste0("count(./item[@type='", field, "' and @lang='", language, "'])");
+			number_node <- xml_find_num(elements, xpath_count);
+			xpath_extract <- paste0("(./item[@type='", field,"' and @lang='", language, "'] | text())");
+			values <- xml_text(xml_find_all(elements, xpath_extract));
+			factor <- rep(1:length(elements), number_node);
+			res <- vector("character", length = length(elements))
+			values_concatened <- tapply(values, factor, paste, collapse = "; ")
+			res[as.numeric(names(values_concatened))] <- values_concatened;
+			itemsl[[paste(field, language, sep="-")]] = res;
+		}
+	}
+	return(as.data.frame(itemsl, stringsAsFactors=FALSE))
 }
 
 #' Extract the vernacular of analysis language of a EMELD document
