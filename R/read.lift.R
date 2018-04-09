@@ -1,4 +1,7 @@
-#' Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary and turn it into a data.frame
+#' Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary and turn it into a set of data.frame
+#'
+#' The dictionary is turned into a list of up to four data frame: "entries", "senses", "examples" and "relations".
+#' The data frame are pointing to each other through ID, following a relational data model.
 #'
 #' @param file : a length-one character vector containing the path to a LIFT XML document.
 #' @param vernacular.languages character vector: the code of the language.
@@ -12,11 +15,12 @@
 #' @param example.fields character vector: names of the fields to be included in the examples table. See all.example.fields() for the complete list of available field.
 #' @param relation.fields character vector: names of the fields to be included in the relations table. See all.relation.fields() for the complete list of available field.
 #' 
-#' @return a list with up to four slots named "entries", "senses", "examples" and "relations", each slot containing a data.frame
+#' @return a list with up to four slots named "entries", "senses", "examples" and "relations",
+#' each slot containing a data.frame
 #'
 #' @export
 #'
-#' @seealso read.emeld
+#' @seealso \link{read.sfm} for the toolbox dictionary format, \link{write.cldf} for
 #' @references http://code.google.com/p/lift-standard
 #' @examples
 #' path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
@@ -78,9 +82,23 @@ read.lift <- function(file, vernacular.languages, analysis.languages="en",
   	dictionary$examples <- exampledf;
   }
   
+  ## TODO get.relations
   return(dictionary)
 }
 
+#' Populate a data frame with pieces of information found in a node set according to a list of column to be crated.
+#'
+#' @param nodes a node set. Each node correspond to a row in the table. Nodes can be lexical entries, or exemples, or senses, or relations...
+#' @param table a table containing some information to be augmented with new columns.
+#' @param field.names character vector: the name of the field we are interested in. Each element in this vector
+#' will result in at least one column (if an element denote an information given in verncular or analysis language,
+#' and if several vernacular or analysis languages are declared (see the parameters "vernacular.languages" and
+#' "analysis.languages", then this element will result in several column)
+#' @param field.specs The specification (how to get information?) for all the available fields. See the page lift-format.
+#' @param vernacular.languages character vector: the code of the vernacular languages used in the dictionary
+#' @param analysis.languages character vector: the code of the vernacular languages used in the dictionary
+#'
+#' @return a data frame with the requested columns
 populate.table <- function(nodes, table, field.names, field.specs, vernacular.languages, analysis.languages) {
 	for (i in 1:length(field.names)) {
 		field.name <- field.names[i];
@@ -101,7 +119,7 @@ populate.table <- function(nodes, table, field.names, field.specs, vernacular.la
 #' @param spec A specification: contains information in order to build one or serveral XPath queries
 #' @param vernacular.languages character vector: the vernacular languages codes used in the dictionary
 #' @param analysis.languages character vector: the analysis languages codes used in the dictionary
-get.fields <- function(nodes, spec, vernacular.languages, analysis.languages) {
+get.fields <- function(nodes, spec, vernacular.languages, analysis.languages, separator=",") {
 	field.name <- spec[1, 1]
 	xpath <- spec[1, 2]
 	type <- spec[1, 3]
@@ -130,23 +148,38 @@ get.fields <- function(nodes, spec, vernacular.languages, analysis.languages) {
 				field_l [[ paste0(field.name, ".", l) ]] <- xml_text(xml_find_first(nodes, xpath));
 			}
 		} else if (type == "trait") {
-			## TODO : case of concat and collapse
-			# if (collapse=="TRUE") {
-			# 	select the node and iterate on nodes.
-			# use xml_find_all
-			# } else {
-			xpath <- paste0("(", xpath, "/trait[@name=\"", subtype, "\"]/@value | text())");
-			field_l [[ field.name ]] <- xml_text(xml_find_first(nodes, xpath));
-			# }
+			## case of collapse (no concat here)
+			if (collapse=="TRUE") {
+				xpath_count <- paste0("count(", xpath, "/trait[@name=\"", subtype, "\"])");
+				number_node <- xml_find_num(nodes, xpath_count);
+				xpath_extract <- paste0("(", xpath, "/trait[@name=\"", subtype, "\"]/@value | text())");
+				values <- xml_text(xml_find_all(nodes, xpath_extract));
+				nodes_by_parent_nodes <- rep(1:length(nodes), number_node);
+				res <- vector("character", length = length(nodes))
+				values_concatened <- tapply(values,  nodes_by_parent_nodes, paste, collapse = separator)
+				res[as.numeric(names(values_concatened))] <- values_concatened;
+				field_l [[ field.name ]] <- res;
+			} else {
+				xpath <- paste0("(", xpath, "/trait[@name=\"", subtype, "\"]/@value | text())");
+				field_l [[ field.name ]] <- xml_text(xml_find_first(nodes, xpath));
+			}
 		}
 	} else if (type == "") {
-			## TODO : case of concat and collapse
-			# if (collapse=="TRUE" & Concat != "") {
-			# 	select the node , iterate on nodes and run xpath...(Concat), collapse the result
-			# use xml_find_all
-			# } else {
+			## case of concat and collapse
+			if (collapse=="TRUE" & concat != "") {
+				xpath_count <- paste0("count(", xpath, ")");
+				number_node <- xml_find_num(nodes, xpath_count);
+				new_node <- xml_find_all(nodes, xpath);
+				print(concat)
+				values <- as.character(xml_find_first(new_node, concat));
+				nodes_by_parent_nodes <- rep(1:length(nodes), number_node);
+				res <- vector("character", length = length(nodes))
+				values_concatened <- tapply(values,  nodes_by_parent_nodes, paste, collapse = separator)
+				res[as.numeric(names(values_concatened))] <- values_concatened;
+				field_l [[ field.name ]] <- res;
+			} else {
 			field_l [[ field.name ]] <- xml_text(xml_find_first(nodes, xpath));
-			# }
+			}
 	} else {
 		stop(paste0("Unknown type value: ", type))
 	}

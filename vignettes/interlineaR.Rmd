@@ -171,3 +171,23 @@ head(dictionary$examples)
 ```{r echo=FALSE}
 kable(head(dictionary$examples))
 ```
+
+Some fields in LIFT may be repeated. For instance, several "semantic domain" can be expressed in the sense element:
+
+```xml
+<trait name ="semantic-domain-ddp4" value="1.3 Water"/>
+<trait name ="semantic-domain-ddp4" value="6.7 Tool"/>
+```
+
+In that case, the value are concatenated, and the column "semantic-domain-ddp4" contains a value "1.3 Water,6.7 Tool".
+
+Some other fields are both repeated and appearing as key-value pair, reflecting categories created for a language. In the following chunk, "Noun-infl-class" and "Noun-infl-class2" are two categories created for the nouns of a given language:
+
+```xml
+<grammatical-info value="Noun">
+  <trait name="Noun-infl-class" value="fo"/>
+  <trait name="Noun-infl-class2" value="hei"/>
+</grammatical-info>
+```
+
+In that case, the column "trait" in the data.frame example will turn out as: "Noun-infl-class:fo,Noun-infl-class2:hei".

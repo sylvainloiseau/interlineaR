@@ -14,7 +14,7 @@ items.in.element(elements, fields, languages)
 \item{languages}{a character vector of language names}
 }
 \value{
-a data frame with as many columns as fields.
+a data frame with as many columns as fields * languages.
 }
 \description{
 In EMELD vocabulary, most of the information is in "item" elements child of text,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/read.lift.R
 \name{read.lift}
 \alias{read.lift}
-\title{Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary and turn it into a data.frame}
+\title{Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary and turn it into a set of data.frame}
 \usage{
 read.lift(file, vernacular.languages, analysis.languages = "en",
   get.entry = TRUE, get.sense = TRUE, get.example = TRUE,
@@ -34,10 +34,12 @@ read.lift(file, vernacular.languages, analysis.languages = "en",
 \item{relation.fields}{character vector: names of the fields to be included in the relations table. See all.relation.fields() for the complete list of available field.}
 }
 \value{
-a list with up to four slots named "entries", "senses", "examples" and "relations", each slot containing a data.frame
+a list with up to four slots named "entries", "senses", "examples" and "relations",
+each slot containing a data.frame
 }
 \description{
-Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary and turn it into a data.frame
+The dictionary is turned into a list of up to four data frame: "entries", "senses", "examples" and "relations".
+The data frame are pointing to each other through ID, following a relational data model.
 }
 \examples{
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
@@ -47,5 +49,5 @@ dictionary <- read.lift(path, vernacular.languages="tww")
 http://code.google.com/p/lift-standard
 }
 \seealso{
-read.emeld
+\link{read.sfm} for the toolbox dictionary format, \link{write.cldf} for
 }

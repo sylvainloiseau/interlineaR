@@ -108,11 +108,11 @@ sense.fields.spec <- function() {return(as.data.frame(matrix(c(
 "note-source"                       ,	"./note[@type=\"source\"]"                      ,	"form" ,	"analysis"            ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "reversal"                          ,	"./reversal"                                    ,	"form" ,	"analysis"            ,	""           ,	""        ,	""      ,	""                                              ,	"attention un attribut @type qui contient la langue",
 "sense-type"                        ,	""                                              ,	"trait",	"sense-type"          ,	""           ,	""        ,	""      ,	""                                              ,	"",
-"status"                            ,	""                                              ,	"trait",	"status"              ,	""           ,	""        ,	""      ,	""                                              ,	""
-# "relation"                          ,	"relation"                                      ,	""     ,	""                    ,	"concat(@type,':'        ,@ref)"   ,	"TRUE",	""      ,	""                                              ,	"",
-# "usage-type"                        ,	""                                              ,	"trait",	"usage-type"          ,	""           ,	"TRUE"    ,	""      ,	""                                              ,	"",
-# "semantic-domain-ddp4"              ,	""                                              ,	"trait",	"semantic-domain-ddp4",	""           ,	"TRUE"    ,	""      ,	""                                              ,	"",
-# "grammatical-info.traits"           ,	"grammatical-info"                              ,	""     ,	""                    ,	"concat(@name,':'        ,@value)" ,	"TRUE",	""      ,	""                                              ,	""
+"status"                            ,	""                                              ,	"trait",	"status"              ,	""           ,	""        ,	""      ,	""                                              ,	"",
+#"relation"                          ,	"relation"                                      ,	""     ,	""                    ,	"concat(@type,':', @ref)"   ,	"TRUE",	""      ,	""                                              ,	"",
+"usage-type"                        ,	""                                              ,	"trait",	"usage-type"          ,	""           ,	"TRUE"    ,	""      ,	""                                              ,	"",
+"semantic-domain-ddp4"              ,	""                                              ,	"trait",	"semantic-domain-ddp4",	""           ,	"TRUE"    ,	""      ,	""                                              ,	"",
+"grammatical-info.traits"           ,	"grammatical-info/trait"                        ,	""     ,	""                    ,	"concat(@name,':', @value)" ,	"TRUE",	""      ,	""                                              ,	""
 ), ncol=9, byrow=TRUE), stringsAsFactors=FALSE))}
 
 #"example (under sense)",	base uri: "./sense/example"

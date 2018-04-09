@@ -4,7 +4,8 @@
 \alias{get.fields}
 \title{Extract values according to the specification of a field in a LIFT dictionary}
 \usage{
-get.fields(nodes, spec, vernacular.languages, analysis.languages)
+get.fields(nodes, spec, vernacular.languages, analysis.languages,
+  separator = ",")
 }
 \arguments{
 \item{nodes}{the context node to evaluate the XPath queries with}
