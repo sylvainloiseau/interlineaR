@@ -1,19 +1,29 @@
-#' Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary and turn it into a set of data.frame
+#' Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary
+#' and turn it into a set of data.frame
 #'
 #' The dictionary is turned into a list of up to four data frame: "entries", "senses", "examples" and "relations".
-#' The data frame are pointing to each other through ID, following a relational data model.
+#' The data frame are pointing to each other through IDs, following a relational data model.
+#' 
+#' "Field" in this document denote a piece of information in LIFT, such as the "gloss"
+#' in a sense or "citation form" of an entry. A field may correspond to several columns in the resulting data frame,
+#' since fields are multilingual. "gloss" is an analysis field, thus if two
+#' analysis.languages are declared, for instance "en" and "fr", then two columns
+#' will be present, gloss.en and gloss.fr, in the senses data frame.
+#' The "citation form" field, on the other hand, is an vernacular language field, thus if
+#' several vernacular fields are declared, several form columns will be present in the entries data frame.
 #'
 #' @param file : a length-one character vector containing the path to a LIFT XML document.
-#' @param vernacular.languages character vector: the code of the language.
-#' @param analysis.languages character vector: code of the object language used in  the glosses and analyses.
+#' @param vernacular.languages character vector: the code of the vernacular language.
+#' @param analysis.languages character vector: code of the object language used in the glosses and analyses.
 #' @param get.entry logical length-1 vector: include the entries table in the result?
 #' @param get.sense logical length-1 vector: include the senses table in the result?
 #' @param get.example logical length-1 vector: include the examples table in the result?
 #' @param get.relation logical length-1 vector: include the relations table in the result?
-#' @param entry.fields character vector: names of the fields to be included in the entries table. See all.entry.fields() for the complete list of available field.
-#' @param sense.fields character vector: names of the fields to be included in the senses table. See all.sense.fields() for the complete list of available field.
-#' @param example.fields character vector: names of the fields to be included in the examples table. See all.example.fields() for the complete list of available field.
-#' @param relation.fields character vector: names of the fields to be included in the relations table. See all.relation.fields() for the complete list of available field.
+#' @param entry.fields character vector: names of the fields to be included in the entries table. See available.entry.fields() for the complete list of the available fields.
+#' @param sense.fields character vector: names of the fields to be included in the senses table. See available.sense.fields() for the complete list of the available fields.
+#' @param example.fields character vector: names of the fields to be included in the examples table. See available.example.fields() for the complete list of the available fields.
+#' @param relation.fields character vector: names of the fields to be included in the relations table. See available.relation.fields() for the complete list of the available fields.
+#' @param simplify logical length-1 vector: if true, columns containing only empty values are removed from all data frame.
 #' 
 #' @return a list with up to four slots named "entries", "senses", "examples" and "relations",
 #' each slot containing a data.frame
@@ -25,9 +35,25 @@
 #' @examples
 #' path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 #' dictionary <- read.lift(path, vernacular.languages="tww")
+#' 
+#' # Get information in the different analysis languages (english and tok pisin)
+#' dictionary <- read.lift(path, vernacular.languages="tww", analysis.languages=c("en", "tpi"))
+#' 
+#' # If interested only in entries and senses dataframe, and only in some fields:
+#' path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
+#' dictionary <- read.lift(
+#'   path,
+#'   vernacular.languages="tww",
+#'   get.example=FALSE,
+#'   get.relation=FALSE,
+#'   entry.fields=c("lexical-unit", "morph-type"),
+#'   sense.fields=c("grammatical-info.value", "gloss", "definition")
+#' )
+#' 
 read.lift <- function(file, vernacular.languages, analysis.languages="en", 
 											get.entry=TRUE, get.sense=TRUE, get.example=TRUE, get.relation=TRUE,
-											entry.fields=all.entry.fields(), sense.fields=all.sense.fields(), example.fields=all.example.fields(), relation.fields=all.relation.fields()
+											entry.fields=available.entry.fields(), sense.fields=available.sense.fields(), example.fields=available.example.fields(), relation.fields=available.relation.fields(),
+											simplify=FALSE
 											) {
 	dictionary <- list();
 	dictionarydoc <- read_xml(file);
@@ -99,6 +125,7 @@ read.lift <- function(file, vernacular.languages, analysis.languages="en",
 #' @param analysis.languages character vector: the code of the vernacular languages used in the dictionary
 #'
 #' @return a data frame with the requested columns
+#' @noRd
 populate.table <- function(nodes, table, field.names, field.specs, vernacular.languages, analysis.languages) {
 	for (i in 1:length(field.names)) {
 		field.name <- field.names[i];
@@ -119,6 +146,7 @@ populate.table <- function(nodes, table, field.names, field.specs, vernacular.la
 #' @param spec A specification: contains information in order to build one or serveral XPath queries
 #' @param vernacular.languages character vector: the vernacular languages codes used in the dictionary
 #' @param analysis.languages character vector: the analysis languages codes used in the dictionary
+#' @noRd
 get.fields <- function(nodes, spec, vernacular.languages, analysis.languages, separator=",") {
 	field.name <- spec[1, 1]
 	xpath <- spec[1, 2]
@@ -144,8 +172,8 @@ get.fields <- function(nodes, spec, vernacular.languages, analysis.languages, se
 				stop(paste0("Unknown subtype: ", subtype))
 			}
 			for(l in languages) {
-				xpath <- paste0("(", xpath, "/", type, "[ @lang='", l, "']/text | text())");
-				field_l [[ paste0(field.name, ".", l) ]] <- xml_text(xml_find_first(nodes, xpath));
+				xpath_l <- paste0("(", xpath, "/", type, "[ @lang='", l, "']/text | text())");
+				field_l [[ paste0(field.name, ".", l) ]] <- xml_text(xml_find_first(nodes, xpath_l));
 			}
 		} else if (type == "trait") {
 			## case of collapse (no concat here)
