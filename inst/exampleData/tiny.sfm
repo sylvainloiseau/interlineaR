@@ -1,0 +1,21 @@
+\lx headword (starts Entry)
+\va variant 1 (starts Variant in Entry)
+\va variant 2 (ends 1st Variant and starts 2nd Variant in Entry)
+\ve variant comment
+\ps part of speech 1 (ends 2nd Variant & starts Sense in Entry)
+\ge English gloss 1
+\xv Vernacular example 1 (starts Example in Sense)
+\xe English translation 1
+\xv Vernacular example 2 (ends 1st Example & starts 2nd Example in Sense)
+\xe English translation 2
+\de English definition 1
+\ps part of speech 2 (ends 2nd Example & 1st Sense & starts 2nd Sense in Entry)
+\ge English gloss 2
+\de English definition 2
+\se subentry 1 (ends 2nd Sense & starts Subentry in Entry)
+\ps part of speech 3 (starts Sense in Subentry)
+\ge English gloss 3
+\se subentry 2 (ends Sense and 1st Subentry & starts 2nd Subentry in Entry)
+\ps part of speech 4 (starts Sense in 2nd Subentry)
+\ge English gloss 4
+\dt date modified (ends Sense & 2nd Subentry & falls back to Entry since dates are only allowed in Entry)

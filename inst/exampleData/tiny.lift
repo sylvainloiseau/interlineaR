@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<lift producer="SIL.FLEx 8.2.8.42510" version="0.13">
+<header>
+</header>
+<entry dateCreated="2015-06-19T08:46:53Z" dateModified="2015-06-19T08:46:53Z" id="nala_001199a3-0e7f-4b4d-ab9e-38cfd0fbff58" guid="001199a3-0e7f-4b4d-ab9e-38cfd0fbff58">
+<lexical-unit>
+<form lang="tww"><text>nala</text></form>
+</lexical-unit>
+<trait  name="morph-type" value="stem"/>
+<sense id="35888fca-f16c-4d26-9c71-3d9eea39d572">
+<gloss lang="en"><text>?</text></gloss>
+<gloss lang="tpi"><text>?</text></gloss>
+</sense>
+</entry>
+</lift>
