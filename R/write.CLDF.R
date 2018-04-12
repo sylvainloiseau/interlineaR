@@ -54,7 +54,7 @@ write_CLDF <- function(l, dir=".", newdir="CLDF", meta=create_CLDF_metadata(l)) 
 	write_CLDF_table_list(l, urls, meta$dialect, fullpath)
 }
 
-#' Create the CLDF metadata for a list of data frame representing a CLDF component
+#' Create the CLDF metadata for a list of data frame representing a CLDF Module
 #' (Supported: Dictionary, interlinear glossed text corpus)
 #' 
 #' Metadata are expressed, in R, as a tree of lists. This tree can be converted to JSON using jsonlite::toJSON. For instance,
