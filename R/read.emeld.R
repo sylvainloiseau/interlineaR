@@ -4,22 +4,58 @@
 #' It is used by the FieldWorks software (SIL FLEX) as an export format.
 #' 
 #' If several 'note' fields in the same language are present in a sentence,
-#' they will be concatenated (with "; ")
+#' they will be concatenated (see the "sep" argument)
 #'
 #' @param file the path (or url) to a document in ELMED vocabulary
-#' @param vernacular.languages a character vector of one or more codes of languages analysed in the document.
-#' @param analysis.languages a character vector of one or more codes of languages used for the analyses (in glosses, translations, notes) in the document.
-#' @param get.morphemes logical should the returned list include a slot for the description of morphemes?
-#' @param get.words logical should the returned list include a slot for the description of words?
-#' @param get.sentences logical should the returned list include a slot for the description of sentences?
-#' @param get.texts logical should the returned list include a slot for the description of texts?
-#' @param text.fields information to be extracted for the texts (and turned into corresponding column in the data.frame describing texts)
-#' @param sentence.fields information to be extracted for the sentences (and turned into corresponding column in the data.frame describing sentences)
-#' @param words.vernacular.fields information (in vernacular language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
-#' @param words.analysis.fields information (in analysis language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
-#' @param morphemes.vernacular.fields information (in vernacular language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
-#' @param morphemes.analysis.fields information (in analysis language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
-#' @param simplify logical length-1 vector: if true, columns containing only empty values are removed from all data frame.
+#' @param vernacular.languages character vector: one or more codes of languages analysed in the document.
+#' @param analysis.languages character vector: one or more codes of languages used for the analyses (in glosses, translations, notes) in the document.
+#' @param get.morphemes logical vector: should the returned list include a slot for the description of morphemes?
+#' @param get.words logical vector: should the returned list include a slot for the description of words?
+#' @param get.sentences logical vector: should the returned list include a slot for the description of sentences?
+#' @param get.texts logical vector: should the returned list include a slot for the description of texts?
+#' @param text.fields character vector: information to be extracted for the texts
+#' (and turned into corresponding column in the data.frame describing texts)
+#' The default are:
+#' \itemize{
+#' \item "title"
+#' \item "title-abbreviation"
+#' \item "source"
+#' \item "comment"
+#' }
+#' @param sentence.fields character vector: information to be extracted for the sentences
+#' (and turned into corresponding column in the data.frame describing sentences)
+#' The default are:
+#' \itemize{
+#' \item "segnum" : an ID of the sentende
+#' \item "gls": a translation (possibly in all analysis languages)
+#' \item "lit": a litteral translation (possibly in all analysis languages)
+#' \item "note": note (possibly in all analysis languages)
+#' }
+#' @param words.vernacular.fields character vector: information (in vernacular language(s))
+#' to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
+#' The default are:
+#' \itemize{
+#' \item "txt" : the original text
+#' }
+#' @param words.analysis.fields character vector: information (in analysis language(s))
+#' to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
+#' The default are:
+#' \itemize{
+#' \item "gls" : a gloss of the word
+#' \item "pos" : the part of speech of the word
+#' }
+#' @param morphemes.vernacular.fields character vector: information (in vernacular language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
+#' \itemize{
+#' \item "txt" : the text of the morpheme
+#' \item "cf" : the canonical form of the morpheme
+#' }
+#' @param morphemes.analysis.fields character vector: information (in analysis language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
+#' \itemize{
+#' \item "gls" : the gloss of the morpheme
+#' \item "msa" : the part of speech of the morpheme
+#' \item "hn" : a number for the identifiation of the morpheme amongst its homophone.
+#' }
+#' @param sep character vector: the character used to join multiple notes in the same language.
 #'
 #' @return a list with slots named "morphemes", "words", "sentences", "texts" 
 #' (some slot may have been excluded throuth the "get.*" arguments, see above).
@@ -60,7 +96,7 @@ read.emeld <- function(file,
                         words.analysis.fields=c("gls", "pos"),
                         morphemes.vernacular.fields=c("txt", "cf"),
                         morphemes.analysis.fields=c("gls", "msa", "hn"),
-											 	simplify=FALSE
+											 sep=";"
                         ) {
 
   corpusdoc <- read_xml(file);
@@ -114,7 +150,7 @@ read.emeld <- function(file,
     );
     ## Note receive a special treatment
     if ("note" %in% sentence.fields) {
-    	notes <- concatenate.items.in.element(sentences_node, "note", analysis.languages)
+    	notes <- concatenate.items.in.element(sentences_node, "note", analysis.languages, sep)
     	sentencesdf <- data.frame(
     		sentencesdf, notes,
     		stringsAsFactors = FALSE
@@ -187,10 +223,6 @@ read.emeld <- function(file,
     interlinearized$morphemes <- morphemsdf; 
   }
   
-  if (simplify) {
-  	interlinearized <- simplify_table_list(interlinearized)
-  }
-  
   return(interlinearized)
 }
 
@@ -225,10 +257,12 @@ items.in.element <-function(elements, fields, languages) {
 #' @param elements see items.in.element
 #' @param fields see items.in.element
 #' @param languages see items.in.element
+#' @param sep character vector: the separator
 #'
 #' @return a data.frame. see items.in.element.
 #' @noRd
-concatenate.items.in.element <- function(elements, fields, languages) {
+concatenate.items.in.element <- function(elements, fields, languages, sep) {
+	stopifnot(length(sep) == 1)
 	itemsl <- vector(mode="list", length=length(fields) * length(languages))
 	names(itemsl) <- paste(fields, rep(languages, each=length(fields)), sep="-")
 	for (field in fields) {
