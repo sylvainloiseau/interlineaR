@@ -24,36 +24,41 @@
 #' @param example.fields character vector: names of the fields to be included in the examples table. See available.example.fields() for the complete list of the available fields.
 #' @param relation.fields character vector: names of the fields to be included in the relations table. See available.relation.fields() for the complete list of the available fields.
 #' @param simplify logical length-1 vector: if true, columns containing only empty values are removed from all data frame.
+#' @param sep character vector: the character used to join multiple notes in the same language.
 #' 
 #' @return a list with up to four slots named "entries", "senses", "examples" and "relations",
 #' each slot containing a data.frame
 #'
 #' @export
 #'
-#' @seealso \link{read.sfm} for the toolbox dictionary format, \link{write.cldf} for
+#' @seealso write.CLDF for serialization
 #' @references http://code.google.com/p/lift-standard
 #' @examples
 #' path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 #' dictionary <- read.lift(path, vernacular.languages="tww")
 #' 
-#' # Get information in the different analysis languages (english and tok pisin)
+#' # Reduce the size of the data frame by filtering to columns actually containing something...
+#' dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+#' 
+#' # Get information in the different analysis languages used in the document (english and tok pisin)
 #' dictionary <- read.lift(path, vernacular.languages="tww", analysis.languages=c("en", "tpi"))
 #' 
-#' # If interested only in entries and senses dataframe, and only in some fields:
-#' path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
+#' # Restrict to entries and senses dataframe, and only to some fields:
 #' dictionary <- read.lift(
 #'   path,
 #'   vernacular.languages="tww",
 #'   get.example=FALSE,
 #'   get.relation=FALSE,
 #'   entry.fields=c("lexical-unit", "morph-type"),
-#'   sense.fields=c("grammatical-info.value", "gloss", "definition")
+#'   sense.fields=c("grammatical-info.value", "gloss", "definition",
+#'   "semantic-domain-ddp4", "grammatical-info.traits")
 #' )
 #' 
 read.lift <- function(file, vernacular.languages, analysis.languages="en", 
 											get.entry=TRUE, get.sense=TRUE, get.example=TRUE, get.relation=TRUE,
 											entry.fields=available.entry.fields(), sense.fields=available.sense.fields(), example.fields=available.example.fields(), relation.fields=available.relation.fields(),
-											simplify=FALSE
+											simplify=FALSE,
+											sep=";"
 											) {
 	dictionary <- list();
 	dictionarydoc <- read_xml(file);
@@ -67,7 +72,7 @@ read.lift <- function(file, vernacular.languages, analysis.languages="en",
   	);
 
   	entry.spec <- entry.fields.spec();
-  	entriesdf <- populate.table(entrie_nodes, entriesdf, entry.fields, entry.spec, vernacular.languages, analysis.languages);
+  	entriesdf <- populate.table(entrie_nodes, entriesdf, entry.fields, entry.spec, vernacular.languages, analysis.languages, sep);
   	
   	dictionary$entries <- entriesdf;
   }
@@ -83,7 +88,7 @@ read.lift <- function(file, vernacular.languages, analysis.languages="en",
   	);
 
   	sense.spec <- sense.fields.spec();
-  	sensedf <- populate.table(sense_nodes, sensedf, sense.fields, sense.spec, vernacular.languages, analysis.languages);
+  	sensedf <- populate.table(sense_nodes, sensedf, sense.fields, sense.spec, vernacular.languages, analysis.languages, sep);
   	
   	dictionary$senses <- sensedf;
   }
@@ -101,11 +106,15 @@ read.lift <- function(file, vernacular.languages, analysis.languages="en",
   		);
   		
   		example.spec <- example.fields.spec();
-  		exampledf <- populate.table(example_nodes, exampledf, example.fields, example.spec, vernacular.languages, analysis.languages);
+  		exampledf <- populate.table(example_nodes, exampledf, example.fields, example.spec, vernacular.languages, analysis.languages, sep);
   	} else {
   		exampledf <- data.frame();
   	}
   	dictionary$examples <- exampledf;
+  }
+  
+  if (simplify) {
+  	dictionary <- simplify_table_list(dictionary)
   }
   
   ## TODO get.relations
@@ -126,12 +135,12 @@ read.lift <- function(file, vernacular.languages, analysis.languages="en",
 #'
 #' @return a data frame with the requested columns
 #' @noRd
-populate.table <- function(nodes, table, field.names, field.specs, vernacular.languages, analysis.languages) {
+populate.table <- function(nodes, table, field.names, field.specs, vernacular.languages, analysis.languages, sep) {
 	for (i in 1:length(field.names)) {
 		field.name <- field.names[i];
 		spec <- field.specs[ field.specs[ ,1] == field.name, ];
 		if (nrow(spec) == 0) stop(paste0("Unknown field: ", field.name));
-		field <- get.fields(nodes, spec, vernacular.languages, analysis.languages);
+		field <- get.fields(nodes, spec, vernacular.languages, analysis.languages, sep);
 		returned_field_name <- names(field);
 		for (i in 1:length(field)) {
 			table[[ returned_field_name[i] ]] <- field[[i]];
@@ -147,7 +156,7 @@ populate.table <- function(nodes, table, field.names, field.specs, vernacular.la
 #' @param vernacular.languages character vector: the vernacular languages codes used in the dictionary
 #' @param analysis.languages character vector: the analysis languages codes used in the dictionary
 #' @noRd
-get.fields <- function(nodes, spec, vernacular.languages, analysis.languages, separator=",") {
+get.fields <- function(nodes, spec, vernacular.languages, analysis.languages, sep) {
 	field.name <- spec[1, 1]
 	xpath <- spec[1, 2]
 	type <- spec[1, 3]
@@ -184,7 +193,7 @@ get.fields <- function(nodes, spec, vernacular.languages, analysis.languages, se
 				values <- xml_text(xml_find_all(nodes, xpath_extract));
 				nodes_by_parent_nodes <- rep(1:length(nodes), number_node);
 				res <- vector("character", length = length(nodes))
-				values_concatened <- tapply(values,  nodes_by_parent_nodes, paste, collapse = separator)
+				values_concatened <- tapply(values,  nodes_by_parent_nodes, paste, collapse = sep)
 				res[as.numeric(names(values_concatened))] <- values_concatened;
 				field_l [[ field.name ]] <- res;
 			} else {
@@ -198,11 +207,10 @@ get.fields <- function(nodes, spec, vernacular.languages, analysis.languages, se
 				xpath_count <- paste0("count(", xpath, ")");
 				number_node <- xml_find_num(nodes, xpath_count);
 				new_node <- xml_find_all(nodes, xpath);
-				print(concat)
 				values <- as.character(xml_find_first(new_node, concat));
 				nodes_by_parent_nodes <- rep(1:length(nodes), number_node);
 				res <- vector("character", length = length(nodes))
-				values_concatened <- tapply(values,  nodes_by_parent_nodes, paste, collapse = separator)
+				values_concatened <- tapply(values,  nodes_by_parent_nodes, paste, collapse = sep)
 				res[as.numeric(names(values_concatened))] <- values_concatened;
 				field_l [[ field.name ]] <- res;
 			} else {
