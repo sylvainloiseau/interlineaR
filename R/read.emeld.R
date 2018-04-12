@@ -19,6 +19,7 @@
 #' @param words.analysis.fields information (in analysis language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
 #' @param morphemes.vernacular.fields information (in vernacular language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
 #' @param morphemes.analysis.fields information (in analysis language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
+#' @param simplify logical length-1 vector: if true, columns containing only empty values are removed from all data frame.
 #'
 #' @return a list with slots named "morphemes", "words", "sentences", "texts" 
 #' (some slot may have been excluded throuth the "get.*" arguments, see above).
@@ -58,7 +59,8 @@ read.emeld <- function(file,
                         words.vernacular.fields="txt",
                         words.analysis.fields=c("gls", "pos"),
                         morphemes.vernacular.fields=c("txt", "cf"),
-                        morphemes.analysis.fields=c("gls", "msa", "hn")
+                        morphemes.analysis.fields=c("gls", "msa", "hn"),
+											 	simplify=FALSE
                         ) {
 
   corpusdoc <- read_xml(file);
@@ -184,6 +186,11 @@ read.emeld <- function(file,
 
     interlinearized$morphemes <- morphemsdf; 
   }
+  
+  if (simplify) {
+  	interlinearized <- simplify_table_list(interlinearized)
+  }
+  
   return(interlinearized)
 }
 
@@ -200,6 +207,7 @@ read.emeld <- function(file,
 #' @param languages a character vector of language names
 #'
 #' @return a data frame with as many columns as fields * languages.
+#' @noRd
 items.in.element <-function(elements, fields, languages) {
   itemsl <- vector(mode="list", length=length(fields) * length(languages))
   names(itemsl) <- paste(fields, rep(languages, each=length(fields)), sep="-")
@@ -219,6 +227,7 @@ items.in.element <-function(elements, fields, languages) {
 #' @param languages see items.in.element
 #'
 #' @return a data.frame. see items.in.element.
+#' @noRd
 concatenate.items.in.element <- function(elements, fields, languages) {
 	itemsl <- vector(mode="list", length=length(fields) * length(languages))
 	names(itemsl) <- paste(fields, rep(languages, each=length(fields)), sep="-")
@@ -228,9 +237,9 @@ concatenate.items.in.element <- function(elements, fields, languages) {
 			number_node <- xml_find_num(elements, xpath_count);
 			xpath_extract <- paste0("(./item[@type='", field,"' and @lang='", language, "'] | text())");
 			values <- xml_text(xml_find_all(elements, xpath_extract));
-			factor <- rep(1:length(elements), number_node);
+		  nodes_by_parent_nodes <- rep(1:length(elements), number_node);
 			res <- vector("character", length = length(elements))
-			values_concatened <- tapply(values, factor, paste, collapse = "; ")
+			values_concatened <- tapply(values,  nodes_by_parent_nodes, paste, collapse = "; ")
 			res[as.numeric(names(values_concatened))] <- values_concatened;
 			itemsl[[paste(field, language, sep="-")]] = res;
 		}
@@ -244,7 +253,7 @@ concatenate.items.in.element <- function(elements, fields, languages) {
 #' @param type length-1 character vector, "vernacular" or "analysis"
 #'
 #' @return a character vector of language code.
-#'
+#' @noRd
 get.languages <- function(corpusdoc, type) {
   languages <- "";
   if (type=="vernacular") {
