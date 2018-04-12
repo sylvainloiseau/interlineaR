@@ -26,10 +26,10 @@ library(kableExtra)
 
 This package contains utility functions for importing into R corpus
 in various formats containing [*interlinearized corpora*](https://www.eva.mpg.de/lingua/resources/glossing-rules.php)
-or dictionaryies produced by descriptive linguistics softwares, such as [SIL Toolbox](https://software.sil.org/toolbox/)
+or dictionaries produced by descriptive linguistics softwares, such as [SIL Toolbox](https://software.sil.org/toolbox/)
 of [SIL Fieldworks](https://software.sil.org/fieldworks/).
 
-All functions reading interlinearized text return a list of data frame, where each data frame correspond to an unit (text, sentence, word, morpheme) and each row in the data frame describe an occurrence of the corresponding unit. The set of tables is relational: in each data frame, some columns give IDs pointing to rows in the other data frame: you can join morphemes to the words, sentences or texts they belong to.
+All functions reading interlinearized texts return a list of data frame, where each data frame correspond to an unit (text, sentence, word, morpheme) and each row in the data frame describe an occurrence of the corresponding unit. The set of tables is relational: in each data frame, some columns give IDs pointing to rows in the other data frame: you can join morphemes to the words, sentences or texts they belong to.
 
 This pivot format allows for various reshaping into R (for instance, grouping morphemes by words) as well as conversion between formats.
 
