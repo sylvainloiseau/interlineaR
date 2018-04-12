@@ -3,28 +3,28 @@
 #' @return a character vector of entries.
 #' @name lift.specification
 #' @export
-all.entry.fields <- function(){ as.character(entry.fields.spec()[,1]) }
+available.entry.fields <- function(){ as.character(entry.fields.spec()[,1]) }
 
 #' List of the available pieces of information for each sense (ie column in the sense table)
 #'
 #' @return a character vector of entries.
 #' @rdname lift.specification
 #' @export
-all.sense.fields <- function(){ as.character(sense.fields.spec()[,1]) }
+available.sense.fields <- function(){ as.character(sense.fields.spec()[,1]) }
 
 #' List of the available pieces of information for each example (ie column in the example table)
 #'
 #' @return a character vector of entries.
 #' @rdname lift.specification
 #' @export
-all.example.fields <- function(){ as.character(example.fields.spec()[,1]) }
+available.example.fields <- function(){ as.character(example.fields.spec()[,1]) }
 
 #' List of the available pieces of information for each relation (ie column in the relation table)
 #'
 #' @return a character vector of entries.
 #' @rdname lift.specification
 #' @export
-all.relation.fields <- function(){ as.character(relation.fields.spec()[,1]) }
+available.relation.fields <- function(){ as.character(relation.fields.spec()[,1]) }
 
 #' Information about the structure of the LIFT XML format in order to easily
 #' generate XPath expression and extract information.
@@ -92,7 +92,7 @@ entry.fields.spec <- function() { return(as.data.frame(matrix(c(
 #' @name lift-format
 sense.fields.spec <- function() {return(as.data.frame(matrix(c(
 "grammatical-info.value"            ,	"grammatical-info/@value"                       ,	""     ,	""                    ,	""           ,	""        ,	""      ,	""                                              ,	"",
-"gloss"                             ,	"gloss"                                         ,	""     ,	"analysis"            ,	""           ,	""        ,	""      ,	"'gloss[@lang=''en'']/text'"                    ,	"",
+"gloss"                             ,	""                                              ,	"gloss",	"analysis"            ,	""           ,	""        ,	""      ,	"'gloss[@lang=''en'']/text'"                    ,	"",
 "definition"                        ,	"definition"                                    ,	"form" ,	"analysis"            ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "note-anthropology"                 ,	"./note[@type=\"anthropology\"]"                ,	"form" ,	"analysis"            ,	""           ,	""        ,	""      ,	""                                              ,	"",
 "note-bibliography"                 ,	"./note[@type=\"bibliography\"]"                ,	"form" ,	"analysis"            ,	""           ,	""        ,	""      ,	""                                              ,	"",
