@@ -1,8 +1,8 @@
-#' Parse a Toolbox (SIL) text file.
+#' Parse a Toolbox (SIL) text file
 #' 
-#' @param path : the path to a toolbox text file.
+#' @param path length-1 character vector: the path to a toolbox text file.
 #' @param text.fields.suppl character vector: the code of supplementary fields to be searched for each text (genre, ...). "id" is mandatory and need not to be listed here.
-#' @param sentence.fields.suppl character vector: the code of supplementary fields to be searched for each sentence (such as tx, ft, nt). "ref" is mandatory and need not to be listed here.
+#' @param sentence.fields.suppl character vector: the code of supplementary fields to be searched for each sentence (such as ft, nt). "ref" is mandatory and need not to be listed here.
 #' @param word.fields.suppl character vector: the code of supplementary fields to be searched for each word. "tx" is mandatory and need not to be listed here.
 #' @param morpheme.fields.suppl character vector: the code of supplementary fields to be searched for each morpheme. "mb", "ge", "ps" are mandatory and need not to be listed here.
 #'
@@ -11,7 +11,7 @@
 #' of the corresponding unit.
 #' 
 #' @export
-#' @seealso read.emeld
+#' @seealso \link{read.emeld} (XML vocabulary for interlinearized glossed texts)
 #' @references https://software.sil.org/toolbox/
 #' @importFrom reshape2 dcast
 #' @examples
@@ -40,7 +40,7 @@ read.toolbox <- function(path,
   texts_index     <- grepl(pattern = "\\\\id",  x=fields, perl=TRUE);
   ### Remove all lines up to the first line beginning with "\id"
   first_id <- which(texts_index)[1]
-  if(length(first_id) == 0) {
+  if(is.na(first_id)) {
   	stop("The file seems not to be well-formed. No \\id field (i.e. text title) found.")
   }
   if (first_id > 1) {
@@ -104,39 +104,13 @@ read.toolbox <- function(path,
   return(res);
 }
 
-# read.dictionary <- function (url) {
-#   lines <- readLines(url)
-#   field_merged <- line2field(lines);
-#   
-#   field_merged <- .remove.header(field_merged, "lx");
-#   
-#   entry <- .group.by.key(field_merged, "lx");
-#   
-#   # extract field name
-#   field_name <- lapply(entry, substr, start=2, stop=3)
-#   
-#   # extract field value
-#   for (i in 1:length(entry)) {
-#     x <- entry[[i]];
-#     x <- substr(x, start=5, stop=nchar(x, type="c"));
-#     entry[[i]] <- x
-#   }
-#   
-#   # add field names to value
-#   for (i in 1:length(entry)) {
-#     x <- entry[[i]];
-#     names(x) <- field_name[[i]];
-#     entry[[i]] <- x
-#   }
-#   return(entry)
-# }
-
 #' read and collapse multi-line fields into one line.
 #' One can encouter:
 #'     \\mb samuel -we  ta -li  -lo
 #'     nefi    -mwii
 #' where a field is actually on two lines.
 #' @param lines character vector : lines of the toolbox file
+#' @noRd
 line2field <- function(lines) {
 	continuing.index <- grep(pattern = "^[^\\\\]", x=lines);
 	if (length(continuing.index) > 0) {
@@ -157,6 +131,7 @@ line2field <- function(lines) {
 #' (one per string in mb) giving the position of the first character of each morphemes and (ii)
 #' "index_mb_end", a list of vectors (one per string in mb) giving the position of the last character
 #' of each morphemes
+#' @noRd
 get.tokens.boundaries <- function(string) {
   index_start <- gregexpr("( [^ ]|^.)", string, perl=T);
   #mb_lengths <- nchar(string);
@@ -169,15 +144,6 @@ get.tokens.boundaries <- function(string) {
   index_end <- lapply(index_end, `attributes<-`, NULL)
   return(list(index_start=index_start, index_end=index_end));
 }
-
-# .group.by.key <- function(data, key) {
-#   key <- paste("^\\\\", key, sep="");
-#   entry_index <- grep(pattern = key, x=data, perl=TRUE)
-#   length_entry <- c(entry_index[2:length(entry_index)] - entry_index[1:(length(entry_index)-1)], (length(data)+1) - entry_index[length(entry_index)]);
-#   entry_id <- rep(1:length(entry_index), length_entry)
-#   data <- split(data, entry_id)
-#   return(data);
-# }
 
 #' Tokenize a set of fields associated to an unit (the set of fields related to word segmentation for instance, or to morpheme segmentation).
 #' 
@@ -193,6 +159,7 @@ get.tokens.boundaries <- function(string) {
 #'
 #' @return a data frame with one token by row and as many columns as fields.
 #' 
+#' @noRd
 tokenize.aligned.field.set <- function(longformat,
 																					fields=c("mb", "ge", "ps"),
 																					masterfield="mb",
