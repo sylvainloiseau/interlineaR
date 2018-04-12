@@ -2,19 +2,19 @@
 % Please edit documentation in R/lift.specifications.R
 \name{lift.specification}
 \alias{lift.specification}
-\alias{all.entry.fields}
-\alias{all.sense.fields}
-\alias{all.example.fields}
-\alias{all.relation.fields}
+\alias{available.entry.fields}
+\alias{available.sense.fields}
+\alias{available.example.fields}
+\alias{available.relation.fields}
 \title{List of the available pieces of information for each entry (ie column in the entry table)}
 \usage{
-\method{all}{entry.fields}()
+available.entry.fields()
 
-\method{all}{sense.fields}()
+available.sense.fields()
 
-\method{all}{example.fields}()
+available.example.fields()
 
-\method{all}{relation.fields}()
+available.relation.fields()
 }
 \value{
 a character vector of entries.

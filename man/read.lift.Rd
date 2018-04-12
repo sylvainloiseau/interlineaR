@@ -2,20 +2,23 @@
 % Please edit documentation in R/read.lift.R
 \name{read.lift}
 \alias{read.lift}
-\title{Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary and turn it into a set of data.frame}
+\title{Parse a dictionary in XML LIFT (Lexicon Interchange FormaT) vocabulary
+and turn it into a set of data.frame}
 \usage{
 read.lift(file, vernacular.languages, analysis.languages = "en",
   get.entry = TRUE, get.sense = TRUE, get.example = TRUE,
-  get.relation = TRUE, entry.fields = all.entry.fields(),
-  sense.fields = all.sense.fields(), example.fields = all.example.fields(),
-  relation.fields = all.relation.fields())
+  get.relation = TRUE, entry.fields = available.entry.fields(),
+  sense.fields = available.sense.fields(),
+  example.fields = available.example.fields(),
+  relation.fields = available.relation.fields(), simplify = FALSE,
+  sep = ";")
 }
 \arguments{
 \item{file}{: a length-one character vector containing the path to a LIFT XML document.}
 
-\item{vernacular.languages}{character vector: the code of the language.}
+\item{vernacular.languages}{character vector: the code of the vernacular language.}
 
-\item{analysis.languages}{character vector: code of the object language used in  the glosses and analyses.}
+\item{analysis.languages}{character vector: code of the object language used in the glosses and analyses.}
 
 \item{get.entry}{logical length-1 vector: include the entries table in the result?}
 
@@ -25,13 +28,17 @@ read.lift(file, vernacular.languages, analysis.languages = "en",
 
 \item{get.relation}{logical length-1 vector: include the relations table in the result?}
 
-\item{entry.fields}{character vector: names of the fields to be included in the entries table. See all.entry.fields() for the complete list of available field.}
+\item{entry.fields}{character vector: names of the fields to be included in the entries table. See available.entry.fields() for the complete list of the available fields.}
 
-\item{sense.fields}{character vector: names of the fields to be included in the senses table. See all.sense.fields() for the complete list of available field.}
+\item{sense.fields}{character vector: names of the fields to be included in the senses table. See available.sense.fields() for the complete list of the available fields.}
 
-\item{example.fields}{character vector: names of the fields to be included in the examples table. See all.example.fields() for the complete list of available field.}
+\item{example.fields}{character vector: names of the fields to be included in the examples table. See available.example.fields() for the complete list of the available fields.}
 
-\item{relation.fields}{character vector: names of the fields to be included in the relations table. See all.relation.fields() for the complete list of available field.}
+\item{relation.fields}{character vector: names of the fields to be included in the relations table. See available.relation.fields() for the complete list of the available fields.}
+
+\item{simplify}{logical length-1 vector: if true, columns containing only empty values are removed from all data frame.}
+
+\item{sep}{character vector: the character used to join multiple notes in the same language.}
 }
 \value{
 a list with up to four slots named "entries", "senses", "examples" and "relations",
@@ -39,15 +46,42 @@ each slot containing a data.frame
 }
 \description{
 The dictionary is turned into a list of up to four data frame: "entries", "senses", "examples" and "relations".
-The data frame are pointing to each other through ID, following a relational data model.
+The data frame are pointing to each other through IDs, following a relational data model.
+}
+\details{
+"Field" in this document denote a piece of information in LIFT, such as the "gloss"
+in a sense or "citation form" of an entry. A field may correspond to several columns in the resulting data frame,
+since fields are multilingual. "gloss" is an analysis field, thus if two
+analysis.languages are declared, for instance "en" and "fr", then two columns
+will be present, gloss.en and gloss.fr, in the senses data frame.
+The "citation form" field, on the other hand, is an vernacular language field, thus if
+several vernacular fields are declared, several form columns will be present in the entries data frame.
 }
 \examples{
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 dictionary <- read.lift(path, vernacular.languages="tww")
+
+# Reduce the size of the data frame by filtering to columns actually containing something...
+dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+
+# Get information in the different analysis languages used in the document (english and tok pisin)
+dictionary <- read.lift(path, vernacular.languages="tww", analysis.languages=c("en", "tpi"))
+
+# Restrict to entries and senses dataframe, and only to some fields:
+dictionary <- read.lift(
+  path,
+  vernacular.languages="tww",
+  get.example=FALSE,
+  get.relation=FALSE,
+  entry.fields=c("lexical-unit", "morph-type"),
+  sense.fields=c("grammatical-info.value", "gloss", "definition",
+  "semantic-domain-ddp4", "grammatical-info.traits")
+)
+
 }
 \references{
 http://code.google.com/p/lift-standard
 }
 \seealso{
-\link{read.sfm} for the toolbox dictionary format, \link{write.cldf} for
+write.CLDF for serialization
 }

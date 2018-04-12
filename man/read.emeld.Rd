@@ -10,34 +10,72 @@ read.emeld(file, vernacular.languages, analysis.languages = "en",
   "comment"), sentence.fields = c("segnum", "gls", "lit", "note"),
   words.vernacular.fields = "txt", words.analysis.fields = c("gls", "pos"),
   morphemes.vernacular.fields = c("txt", "cf"),
-  morphemes.analysis.fields = c("gls", "msa", "hn"))
+  morphemes.analysis.fields = c("gls", "msa", "hn"), sep = ";")
 }
 \arguments{
 \item{file}{the path (or url) to a document in ELMED vocabulary}
 
-\item{vernacular.languages}{a character vector of one or more codes of languages analysed in the document.}
+\item{vernacular.languages}{character vector: one or more codes of languages analysed in the document.}
 
-\item{analysis.languages}{a character vector of one or more codes of languages used for the analyses (in glosses, translations, notes) in the document.}
+\item{analysis.languages}{character vector: one or more codes of languages used for the analyses (in glosses, translations, notes) in the document.}
 
-\item{get.morphemes}{logical should the returned list include a slot for the description of morphemes?}
+\item{get.morphemes}{logical vector: should the returned list include a slot for the description of morphemes?}
 
-\item{get.words}{logical should the returned list include a slot for the description of words?}
+\item{get.words}{logical vector: should the returned list include a slot for the description of words?}
 
-\item{get.sentences}{logical should the returned list include a slot for the description of sentences?}
+\item{get.sentences}{logical vector: should the returned list include a slot for the description of sentences?}
 
-\item{get.texts}{logical should the returned list include a slot for the description of texts?}
+\item{get.texts}{logical vector: should the returned list include a slot for the description of texts?}
 
-\item{text.fields}{information to be extracted for the texts (and turned into corresponding column in the data.frame describing texts)}
+\item{text.fields}{character vector: information to be extracted for the texts
+(and turned into corresponding column in the data.frame describing texts)
+The default are:
+\itemize{
+\item "title"
+\item "title-abbreviation"
+\item "source"
+\item "comment"
+}}
 
-\item{sentence.fields}{information to be extracted for the sentences (and turned into corresponding column in the data.frame describing sentences)}
+\item{sentence.fields}{character vector: information to be extracted for the sentences
+(and turned into corresponding column in the data.frame describing sentences)
+The default are:
+\itemize{
+\item "segnum" : an ID of the sentende
+\item "gls": a translation (possibly in all analysis languages)
+\item "lit": a litteral translation (possibly in all analysis languages)
+\item "note": note (possibly in all analysis languages)
+}}
 
-\item{words.vernacular.fields}{information (in vernacular language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)}
+\item{words.vernacular.fields}{character vector: information (in vernacular language(s))
+to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
+The default are:
+\itemize{
+\item "txt" : the original text
+}}
 
-\item{words.analysis.fields}{information (in analysis language(s)) to be extracted for the words (and turned into corresponding columns in the data.frame describing words)}
+\item{words.analysis.fields}{character vector: information (in analysis language(s))
+to be extracted for the words (and turned into corresponding columns in the data.frame describing words)
+The default are:
+\itemize{
+\item "gls" : a gloss of the word
+\item "pos" : the part of speech of the word
+}}
 
-\item{morphemes.vernacular.fields}{information (in vernacular language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.}
+\item{morphemes.vernacular.fields}{character vector: information (in vernacular language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
+\itemize{
+\item "txt" : the text of the morpheme
+\item "cf" : the canonical form of the morpheme
+}}
 
-\item{morphemes.analysis.fields}{information (in analysis language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.}
+\item{morphemes.analysis.fields}{character vector: information (in analysis language(s)) to be extracted for the morphemes (and turned into corresponding columns in the data.frame describing morphemes). May be null or empty.
+\itemize{
+\item "gls" : the gloss of the morpheme
+\item "msa" : the part of speech of the morpheme
+\item "hn" : a number for the identifiation of the morpheme amongst its homophone.
+}}
+
+\item{sep}{character vector: the character used to join multiple notes in the same language.}
 }
 \value{
 a list with slots named "morphemes", "words", "sentences", "texts" 
@@ -53,8 +91,8 @@ The EMELD XML vocabulary has been proposed for the encoding of interlinear gloss
 It is used by the FieldWorks software (SIL FLEX) as an export format.
 }
 \details{
-Please note that if several 'note' fields in the same language are present in one sentence,
-the first one only will be kept.
+If several 'note' fields in the same language are present in a sentence,
+they will be concatenated (see the "sep" argument)
 }
 \examples{
 path <- system.file("exampleData", "tuwariInterlinear.xml", package="interlineaR")

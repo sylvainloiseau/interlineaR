@@ -2,17 +2,17 @@
 % Please edit documentation in R/read.toolbox.R
 \name{read.toolbox}
 \alias{read.toolbox}
-\title{Parse a Toolbox (SIL) text file.}
+\title{Parse a Toolbox (SIL) text file}
 \usage{
 read.toolbox(path, text.fields.suppl = NULL, sentence.fields.suppl = c("tx",
   "nt", "ft"), word.fields.suppl = NULL, morpheme.fields.suppl = NULL)
 }
 \arguments{
-\item{path}{: the path to a toolbox text file.}
+\item{path}{length-1 character vector: the path to a toolbox text file.}
 
 \item{text.fields.suppl}{character vector: the code of supplementary fields to be searched for each text (genre, ...). "id" is mandatory and need not to be listed here.}
 
-\item{sentence.fields.suppl}{character vector: the code of supplementary fields to be searched for each sentence (such as tx, ft, nt). "ref" is mandatory and need not to be listed here.}
+\item{sentence.fields.suppl}{character vector: the code of supplementary fields to be searched for each sentence (such as ft, nt). "ref" is mandatory and need not to be listed here.}
 
 \item{word.fields.suppl}{character vector: the code of supplementary fields to be searched for each word. "tx" is mandatory and need not to be listed here.}
 
@@ -24,7 +24,7 @@ each one containing a data frame. In these data frame, each row describe an occu
 of the corresponding unit.
 }
 \description{
-Parse a Toolbox (SIL) text file.
+Parse a Toolbox (SIL) text file
 }
 \examples{
 corpuspath <- system.file("exampleData", "tuwariToolbox.txt", package="interlineaR")
@@ -34,5 +34,5 @@ corpus <- read.toolbox(corpuspath)
 https://software.sil.org/toolbox/
 }
 \seealso{
-read.emeld
+\link{read.emeld} (XML vocabulary for interlinearized glossed texts)
 }
