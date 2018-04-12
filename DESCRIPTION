@@ -7,10 +7,10 @@ Authors@R: person("Sylvain", "Loiseau", email = "sylvain.loiseau@univ-paris13.fr
 Maintainer: Sylvain Loiseau <sylvain.loiseau@univ-paris13.fr>
 Description: utility functions for importing into R corpora of interlinearized texts and associated dictionaries.
 License: BSD_3_clause + file LICENSE
-Depends: R (>= 2.9.0), xml2, reshape2
+Depends: R (>= 2.9.0), xml2, reshape2, jsonlite
 Lazyload: yes
 URL: https://github.com/sylvainloiseau/interlineaR
-Collate: read.emeld.R read.lift.R interlineaR-package.R read.toolbox.R read.pangloss.R dataset.R lift.specifications.R
+Collate: read.emeld.R read.lift.R interlineaR-package.R read.toolbox.R read.pangloss.R dataset.R lift.specifications.R write.CLDF.R read.CLDF.R common.R
 BuildResaveData: xz
 Encoding: UTF-8
 RoxygenNote: 6.0.1
