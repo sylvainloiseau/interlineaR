@@ -7,7 +7,7 @@
 # Installation
 
 ```{r}
-devtools::install_github("sylvainloiseau/interlineaR")
+devtools::install_github("sylvainloiseau/interlineaR",  build_vignettes=TRUE)
 ```
 
 # Usage
