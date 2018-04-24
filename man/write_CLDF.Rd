@@ -2,37 +2,50 @@
 % Please edit documentation in R/write.CLDF.R
 \name{write_CLDF}
 \alias{write_CLDF}
-\title{Serialize a list of data frame (representing for instance a dictionary
+\title{Serialize a list of data frames (representing for instance a dictionary
 or a corpus of interlinear glossed texts) following the CLDF specifications.}
 \usage{
-write_CLDF(l, dir = ".", newdir = "CLDF", meta = create_CLDF_metadata(l))
+write_CLDF(l, dir = ".", cldf_dir = "CLDF",
+  meta = create_CLDF_metadata(l), metadata_filenames = "metadata.json")
 }
 \arguments{
-\item{l}{a list of data frame}
+\item{l}{a list of data frames}
 
-\item{dir}{length-1 character vector: the directory to use}
+\item{dir}{length-1 character vector: a path to an existing directory}
 
-\item{newdir}{length-1 character vector: a directory to be created (into dir) containing the created files}
+\item{cldf_dir}{length-1 character vector: the name of a directory to be created (into 'dir') that will received the set of files}
 
-\item{meta}{a tree of list expressing the metadata and ready to be serialized with jsonlite::toJSON. See \link{create_CLDF_metadata} for easily generating metadata. Can be NULL to skip writting a metadata file. 
-\link{create_CLDF_metadata} can be used to generate a skeleton of default values to be further refined and passed to the meta parameter.}
+\item{meta}{a list: the metadata (a format that can be serialized with jsonlite::toJSON). You can (see examples):
+\itemize{
+  \item use NULL to skip writting any metadata file. The list slot names are used as CSV filenames.
+  \item ignore this argument. \link{create_CLDF_metadata} will be silently called and a default metadata file will be generated.
+  \item provide a list containing the metadata. You can call \link{create_CLDF_metadata} and edit the returned list
+  in order not to create it from scratch.
+}}
 }
 \description{
-Serialize a list of data frame (representing for instance a dictionary
-or a corpus of interlinear glossed texts) following the CLDF specifications.
+According to the CLDF specifications, the data frames are turned into a set
+of CVS files plus an optional metadata file in JSON. See \link{create_CLDF_metadata}
+for the generation of the metadata. The csv file names as well as the CSV options are specified in the metadata.
 }
 \examples{
-# serializing with CLDF using the default metadata values (thanks to the class attribute)
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+
+# No metadata file
+#write_CLDF(dictionary, meta=NULL)
+
+# with no 'meta' argument, create_CLDF_metadata() is called:
 #write_CLDF(dictionary)
 
-# serializing with overriding the defaults
+# Use create_CLDF_metadata to create a skeleton to be edited:
 meta <- create_CLDF_metadata(dictionary)
-meta$tables[[2]]$`dc:conformsTo` <- "http://cldf.clld.org/v1.0/terms.rdf#SenseTable"
+meta$foo$bar <- "gaz"
 #write_CLDF(dictionary, meta=meta)
-
 }
 \references{
 http://cldf.clld.org https://github.com/cldf/cldf/
+}
+\seealso{
+create_CLDF_metadata
 }

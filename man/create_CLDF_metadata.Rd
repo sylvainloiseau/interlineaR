@@ -2,60 +2,56 @@
 % Please edit documentation in R/write.CLDF.R
 \name{create_CLDF_metadata}
 \alias{create_CLDF_metadata}
-\title{Create the CLDF metadata for a list of data frame representing a CLDF component
-(Supported: Dictionary, interlinear glossed text corpus)}
+\title{Create the CLDF metadata for a list of data frame representing a CLDF Module
+(Supported: Dictionary Module)}
 \usage{
-create_CLDF_metadata(l)
+create_CLDF_metadata(l, module = NULL)
 }
 \arguments{
-\item{l}{the list of data.frame
+\item{l}{list: the list of data.frames}
 
-This function tries to generate the metadata tree according to the following heuristic:
+\item{module}{length-1 character vector: the name of a CLDF Module
+
+This function generate the metadata tree according to the following rules:
+
 \itemize{
+  \item if the "module" argument is not NULL, it is used as a CLDF Module short name.
   \item if the list or some of the inner tables have an attribute "CLDF_metadata", the content of
   this attribute is supposed to be a tree of lists expressing the metadata for this object and it
-  is aggregated to the metadata.
-  \item if the outer list has CLDF Module name in its "class" attributes,
+  is aggregated to the returned metadata.
+  \item if the outer list has CLDF Module name in its "class" attribute,
   it will be used for generating the correct Module metadata.
-  If some of the inner table have a CLDF Component name in their class attribute,
+  If some of the inner tables have a CLDF Component name in their "class" attributes,
   it will also be used for generating the correct metadata.
   For instance, a list with the value "Dictionary" in its class attribute, containing tables with
   "EntryTable" and "SenseTable" in their class attribues, will result in a metadata file describing
   a Dictionary module with its two mandatory components.
-  \item In last resort, if no information is found about the table, the names of their slot in the outer list will be
-  used as url and as component name in the metadata file.
 }}
 }
 \value{
 a tree of list containing the metadata. This tree is ready to be serialized using jsonlite::toJSON.
 }
 \description{
-Metadata are expressed, in R, as a tree of lists. This tree can be converted to JSON using jsonlite::toJSON. For instance,
-\verb{
-list(
-  format=list(
-    x="a",
-    y="b"
-  ),
-  version=list(
-    "1",
-    "b"
-  )
-)
+Metadata are expressed as lists of lists.
 }
-will result in the following JSON fragment:
-\verb{
-{
-	"format": {
-		"x": "a",
-		"y": "b"
-	},
-	"version": [
-		"1",
-		"b"
-		]
-}
-}
+\examples{
+
+# Use the class attribute in order for create_CLDF_metadata to generate the correct metadata :
+path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
+dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+class(dictionary) <- append(class(dictionary), "Dictionary")
+meta <- create_CLDF_metadata(dictionary)
+
+# If the list does not contain any class information nor a CLDF_metadata attribute,
+# the Module is supposed to be "Generic" and the slot names of the list are used as Component name.
+path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
+dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+meta <- create_CLDF_metadata(dictionary)
+
+# The returned list can be edited
+meta <- create_CLDF_metadata(dictionary)
+meta$tables[[2]]$`dc:conformsTo` <- "http://cldf.clld.org/v1.0/terms.rdf#SenseTable"
+#write_CLDF(dictionary, meta=meta)
 }
 \references{
 http://cldf.clld.org https://github.com/cldf/cldf/

@@ -2,20 +2,28 @@
 % Please edit documentation in R/read.CLDF.R
 \name{read.CLDF}
 \alias{read.CLDF}
-\title{Read a set of csv files according to a metadata files following the CLDF format.}
+\title{Read a set of CSV files following the CLDF format.}
 \usage{
-read.CLDF(directory, metadata_filename)
+read.CLDF(directory, metadata_filename = NULL)
 }
 \arguments{
-\item{directory}{path to the directory containing the CLDF bundle}
+\item{directory}{length-1 character vector: path to the directory containing the CLDF files}
 
-\item{metadata_filename}{name of the metadata file in the directory}
+\item{metadata_filename}{name of the metadata file in the directory, or NULL if no metadata file exists.
+If NULL, we try to match the filenames in the directory with the default filenames of the Modules in order
+to guess the Module of this data set.}
 }
 \value{
-a list of data frame.
+a list of data frames. The CLDF Module name is recorded in the class attribute of the outer list and the CLDF Component name(s)
+are recorded in the class attributes of the inner data frames.
 }
 \description{
-Read the metadata file in order to get the csv dialect specification, Module and Component information.
-The CLDF name (for module and component) are recorded in the class attribute of the outer list and of the inner data.frame).
-The metadata fragment describing a table is recorded in an "CLDF_metadata" attribute on each data frame.
+Read the metadata file in order to get the CSV dialect specification, Module and Component information,
+or use default values if no metadata file is provided.
+}
+\details{
+The metadata fragment describing a table is stored in an "CLDF_metadata" attribute on each data frame.
+}
+\references{
+http://cldf.clld.org https://github.com/cldf/cldf/
 }

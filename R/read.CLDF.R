@@ -1,91 +1,167 @@
-#' Read a set of csv files according to a metadata files following the CLDF format.
+#' Read a set of CSV files following the CLDF format.
 #'
-#' Read the metadata file in order to get the csv dialect specification, Module and Component information.
-#' The CLDF name (for module and component) are recorded in the class attribute of the outer list and of the inner data.frame).
-#' The metadata fragment describing a table is recorded in an "CLDF_metadata" attribute on each data frame.
-#' 
-#' @param directory path to the directory containing the CLDF bundle
+#' Read the metadata file in order to get the CSV dialect specification, Module and Component information,
+#' or use default values if no metadata file is provided.
 #'
-#' @param metadata_filename name of the metadata file in the directory
-#' 
-#' @return a list of data frame.
+#' The metadata fragment describing a table is stored in an "CLDF_metadata" attribute on each data frame.
+#'
+#' @param directory length-1 character vector: path to the directory containing the CLDF files
+#'
+#' @param metadata_filename name of the metadata file in the directory, or NULL if no metadata file exists.
+#' If NULL, we try to match the filenames in the directory with the default filenames of the Modules in order
+#' to guess the Module of this data set.
+#'
+#' @return a list of data frames. The CLDF Module name is recorded in the class attribute of the outer list and the CLDF Component name(s)
+#' are recorded in the class attributes of the inner data frames.
 #'
 #' @export
 #' @importFrom jsonlite fromJSON
 #' @importFrom utils read.table
-read.CLDF <- function(directory, metadata_filename) {
-  ## Read file and parse JSON
-	metaFile <- readLines(paste0(directory,"/",metadata_filename))
-  meta <- fromJSON(metaFile, simplifyVector = FALSE)
-  
-  ## filename of each csv file
-  filenames <- sapply(meta$tables, function(x) x$url)
-  
-  ## CLDF type url for each csv file
-  qtypes <- sapply(meta$tables, function(x) x$`dc:conformsTo`)
-  
-  ## short CLDF type for each csv file
-  types <- sapply(strsplit(qtypes, "#"), `[[`, 2)
+#' @references http://cldf.clld.org https://github.com/cldf/cldf/
+read.CLDF <- function(directory, metadata_filename=NULL) {
+  stopifnot(length(directory) == 1)
+  if (file.access(directory, 0) != 0) stop(paste0("The directory ", directory, " does not seem to exist"))
+  if (file.access(directory, 4) != 0) stop(paste0("The directory ", directory, " cannot be read"))
 
-  ## a R name for each table : either the the short CLDF type, or
-  ## back to the filename
-  tablename <- mapply(ifelse, (!is.null(types)) & types != "", types, filenames)
+	metadata_filename_full <- paste0(directory, "/", metadata_filename)
+  if (!is.null(metadata_filename)) {
+  	if (file.access(metadata_filename_full, 0) != 0) stop(paste0("The metadata file ", metadata_filename_full, " does not seem to exist"))
+  	if (file.access(metadata_filename_full, 4) != 0) stop(paste0("The metadata file ", metadata_filename_full, " cannot be read"))
+  	
+    ## Read file and parse JSON
+    metaFile <- readLines(metadata_filename_full)
+    meta <- fromJSON(metaFile, simplifyVector = FALSE)
+
+    ## filename of each csv file
+    filenames <- sapply(meta$tables, function(x) x$url)
+
+    ## Get dialect definition from metadata or back to default
+    dialect <- get_dialect_or_default(meta$dialect)
+  } else {
+  	## If there is no metadata, we are supposed to be able to guess the Components
+  	## through the filenames and the Module through the Components. Otherwise, an
+  	## error is thrown.
+    filenames <- list.files(directory, all.files = FALSE, include.dirs = FALSE, full.names = FALSE)
+    meta <- guess_modules_metadata(filenames)
+    
+    ## If here is no metadata, the default CSV dialect is used.
+    dialect <- get_default_dialect()
+  }
+
+  module_qname <- meta$`dc:conformsTo`
+  module_name <- strsplit(module_qname, "#")[[1]][2]
+
+  ## filenames as ordered in metadata
+  filenames <- sapply(meta$tables, `[[`, "url")
   
-  ## Get dialect definition from metadata or back to default
-  dialect <- meta$dialect
-  
-  encoding <- getMetaOrDefault(dialect$encoding, "utf-8")
-  lineTerminators <- getMetaOrDefault(dialect$lineTerminators, 
-    c("\r\n", "\n"))
-  quoteChar <- getMetaOrDefault(dialect$quoteChar, "\"")
-  doubleQuote <- getMetaOrDefault(dialect$doubleQuote, TRUE)
-  skipRows <- getMetaOrDefault(dialect$skipRows, 0)
-  commentPrefix <- getMetaOrDefault(dialect$commentPrefix, 
-    "#")
-  header <- getMetaOrDefault(dialect$header, TRUE)
-  headerRowCount <- getMetaOrDefault(dialect$headerRowCount, 
-    1)
-  delimiter <- getMetaOrDefault(dialect$delimiter, ",")
-  skipColumns <- getMetaOrDefault(dialect$skipColumns, 0)
-  skipBlankRows <- getMetaOrDefault(dialect$skipBlankRows, 
-    FALSE)
-  skipInitialSpace <- getMetaOrDefault(dialect$skipInitialSpace, 
-    FALSE)
-  trim <- getMetaOrDefault(dialect$trim, FALSE)
-  
+  ## qualified CLDF component url for each csv file
+  components_qnames <- sapply(meta$tables, function(x) x$`dc:conformsTo`)
+  ## short CLDF component name for each csv file
+  component_names <- sapply(strsplit(components_qnames, "#"), `[[`, 2)
+
+  ## a R name for each table
+  tablename <- component_names
+
   ## The outer list to be populated
-  res <- list();
+  res <- vector(mode = "list", length = length(tablename))
+  names(res) <- tablename
+  class(res) <- append(class(res), c("CLDF", module_name))
+
+  module_metadata <- meta
+  module_metadata$table <- NULL
+  attr(res, "CLDF_metadata") <- module_metadata
   
   for (i in 1:length(filenames)) {
-  	## Get the colnames according to the metadata
-    colnames <- sapply(meta$tables[[i]]$tableSchema$columns, `[[`, "name")
-    
+    ## Get the col names according to the metadata
+    col_names <- sapply(meta$tables[[i]]$tableSchema$columns, `[[`, "name")
+
+    ## TODO check if a specific dialect exist for this table?
+
     ## Read the table
-    table <- read.table(paste0(directory, "/", filenames[i]), 
-      header = header, sep = delimiter, quote = quoteChar, 
-      fileEncoding = encoding, comment.char = commentPrefix, #col.names = colnames, 
-      blank.lines.skip = skipBlankRows, strip.white = trim, 
-      skip = skipRows, stringsAsFactors = FALSE)
-    
+    table <- read.table(paste0(directory, "/", filenames[i]),
+      header = dialect$header, sep = dialect$delimiter, quote = dialect$quoteChar,
+      fileEncoding = dialect$encoding, comment.char = dialect$commentPrefix, #col.names = col_names,
+      blank.lines.skip = dialect$skipBlankRows, strip.white = dialect$trim,
+      skip = dialect$skipRows, stringsAsFactors = FALSE
+    )
     ## TODO : unused: headerRowCount doubleQuote skipInitialSpace lineTerminators
     # http://w3c.github.io/csvw/metadata/#dialect-commentPrefix
+    
+    if (ncol(table) == length(col_names)) {
+    	colnames(table) <- col_names
+    } else {
+    	warning(paste("supplementary column(s) in data. Can't use metadata column names (table: ", tablename[[i]], ").") )
+    }
 
     ## Skip Columns
-    if (skipColumns > 0) {
-      stopifnot(skipColumns <= ncol(table))
-      table <- table[, (skipColumns + 1):ncol(table), drop = FALSE]
+    if (dialect$skipColumns > 0) {
+      stopifnot(dialect$skipColumns <= ncol(table))
+      table <- table[, (dialect$skipColumns + 1):ncol(table), drop = FALSE]
     }
-    
+
     ## Store metadata information
     attr(table, "CLDF_metadata") <- meta$tables[[i]]
-    class(table) <- c(class(table), types[i])
-    
-    res[[tablename[i]]] <- table;
+    class(table) <- append(class(table), component_names[i])
+
+    res[[tablename[i]]] <- table
   }
 
   return(res)
 }
 
-getMetaOrDefault <- function(meta, default) {
-  ifelse(!is.null(meta), meta, default)
+guess_modules_metadata <- function(files) {
+  modules <- c("Dictionary")
+  for (module in modules) {
+    m_specification <- get_modules_default_metadata(module)
+    m_files <- sapply(m_specification$tables, `[[`, "url")
+    if (setequal(files, m_files)) {
+      meta <- m_specification
+      return(meta)
+    }
+  }
+  stop(paste(
+    "No Module specification matching the filenames found in the directory: ",
+    paste(files, collapse = " ")
+  ))
 }
+
+get_dialect_or_default <- function(metadata_dialect) {
+  default_dialect <- get_default_dialect()
+  dialect <- list()
+  for (feature in c("encoding", "lineTerminators", "quoteChar", "doubleQuote", "skipRows", "commentPrefix", "header", "headerRowCount", "delimiter", "skipColumns", "skipBlankRows", "skipInitialSpace", "trim")) {
+    given <- metadata_dialect[[feature]]
+    default <- default_dialect[[feature]]
+    dialect[[feature]] <- ifelse(!is.null(given), given, default)
+  }
+  return(dialect)
+}
+
+get_default_dialect <- function() {
+  dialect <- list(
+    encoding = "utf-8",
+    lineTerminators = c("\r\n", "\n"),
+    quoteChar = "\"",
+    doubleQuote = TRUE,
+    skipRows = 0,
+    commentPrefix = "#",
+    header = TRUE,
+    headerRowCount = 1,
+    delimiter = ",",
+    skipColumns = 0,
+    skipBlankRows = FALSE,
+    skipInitialSpace = FALSE,
+    trim = FALSE
+  )
+  return(dialect)
+}
+
+get_modules_default_metadata <- function(module_name) {
+  path <- system.file("cldf", paste0(module_name, ".json"), package = "interlineaR")
+  if (file.access(path, 0) != 0) stop(paste0("The specification file ", path, " does not seem to exist"))
+  if (file.access(path, 4) != 0) stop(paste0("The metadata file ", path, " cannot be read"))
+  
+  lines <- readLines(path)
+  specif <- fromJSON(lines, simplifyVector = FALSE)
+  return(specif)
+}
+
