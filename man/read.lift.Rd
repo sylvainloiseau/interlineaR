@@ -61,13 +61,13 @@ several vernacular fields are declared, several form columns will be present in 
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 dictionary <- read.lift(path, vernacular.languages="tww")
 
-# Reduce the size of the data frame by filtering to columns actually containing something...
+# Reduce the size of the data frames by filtering to columns actually containing something...
 dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
 
 # Get information in the different analysis languages used in the document (english and tok pisin)
 dictionary <- read.lift(path, vernacular.languages="tww", analysis.languages=c("en", "tpi"))
 
-# Restrict to entries and senses dataframe, and only to some fields:
+# Restrict to entries and senses dataframe, and explicitly ask for some fields:
 dictionary <- read.lift(
   path,
   vernacular.languages="tww",
