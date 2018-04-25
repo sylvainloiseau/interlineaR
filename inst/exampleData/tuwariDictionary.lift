@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<!-- This is a selection of a (very preliminary draft of a) dictionary of 
- | the tuwari (tww) language. It contains a subset of the entries (50 first 
- | entries by lexicographic order.). Export date : 20180203 -->
+<!-- This is an arbitrary selection of some lexems -->
 
 
 <!-- See http://code.google.com/p/lift-standard for more information on the format used here. -->
@@ -63,42 +61,33 @@
 </field>
 </fields>
 </header>
-<entry dateCreated="2015-06-19T08:46:53Z" dateModified="2015-06-19T08:46:53Z" id="nala_001199a3-0e7f-4b4d-ab9e-38cfd0fbff58" guid="001199a3-0e7f-4b4d-ab9e-38cfd0fbff58">
+
+<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2015-06-16T17:15:41Z" id="u_002794b9-f063-4c6b-b77d-39b8ecd618d1" guid="002794b9-f063-4c6b-b77d-39b8ecd618d1">
 <lexical-unit>
-<form lang="tww"><text>nala</text></form>
+<form lang="tww"><text>u</text></form>
 </lexical-unit>
 <trait  name="morph-type" value="stem"/>
-<sense id="35888fca-f16c-4d26-9c71-3d9eea39d572">
-<gloss lang="en"><text>?</text></gloss>
-<gloss lang="tpi"><text>?</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2015-06-16T17:15:41Z" id="kemia napuo_002794b9-f063-4c6b-b77d-39b8ecd618d1" guid="002794b9-f063-4c6b-b77d-39b8ecd618d1">
-<lexical-unit>
-<form lang="tww"><text>kemia napuo</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="phrase"/>
 <sense id="582795c9-9350-4e3b-af34-b72e9b5c89aa">
 <grammatical-info value="Noun">
+<trait name="Noun-infl-class" value="tano"/>
 </grammatical-info>
-<gloss lang="en"><text>short marita</text></gloss>
-<gloss lang="tpi"><text>shorpla liklik marita</text></gloss>
-<trait name ="semantic-domain-ddp4" value="1.5 Plant"/>
-<note type="source">
-<form lang="en"><text>2014.VI.87</text></form>
-</note>
+<gloss lang="en"><text>fire</text></gloss>
+<gloss lang="tpi"><text>paia</text></gloss>
 </sense>
 </entry>
-<entry dateCreated="2015-05-05T09:35:32Z" dateModified="2015-06-16T17:15:32Z" id="tiohomaa_0086205e-a924-4347-a17e-8cd59c03a04b" guid="0086205e-a924-4347-a17e-8cd59c03a04b">
+
+<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2015-06-16T17:15:12Z" id="ia_00909ffb-7e90-4b76-b948-cae56094abc9" guid="00909ffb-7e90-4b76-b948-cae56094abc9">
 <lexical-unit>
-<form lang="tww"><text>tiohomaa</text></form>
+<form lang="tww"><text>ia</text></form>
 </lexical-unit>
 <trait  name="morph-type" value="stem"/>
-<sense id="310ca9fb-fe3e-4075-9d25-6a914c42d3b3">
-<grammatical-info value="Verb">
+<sense id="5da1286e-07b0-47f2-81ae-5633ca9c875c">
+<grammatical-info value="Noun">
+<trait name="Noun-infl-class" value="he"/>
 </grammatical-info>
-<gloss lang="en"><text>to_show</text></gloss>
-<gloss lang="tpi"><text>soim</text></gloss>
+<gloss lang="en"><text>talk</text></gloss>
+<gloss lang="tpi"><text>tok</text></gloss>
+<trait name ="semantic-domain-ddp4" value="3.5 Communication"/>
 <example>
 <form lang="tww"><text>exemple1.1</text></form>
 </example>
@@ -106,16 +95,11 @@
 <form lang="tww"><text>exemple1.2</text></form>
 </example>
 </sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2015-06-16T17:15:12Z" id="iahe_00909ffb-7e90-4b76-b948-cae56094abc9" guid="00909ffb-7e90-4b76-b948-cae56094abc9">
-<lexical-unit>
-<form lang="tww"><text>iahe</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="5da1286e-07b0-47f2-81ae-5633ca9c875c">
+<sense id="5da1286e-07b0-47f2-81ae-5633ca9c875d">
 <grammatical-info value="Noun">
+<trait name="Noun-infl-class" value="he"/>
 </grammatical-info>
-<gloss lang="en"><text>local_language</text></gloss>
+<gloss lang="en"><text>vernacular_language</text></gloss>
 <gloss lang="tpi"><text>tok_ples</text></gloss>
 <trait name ="semantic-domain-ddp4" value="3.5 Communication"/>
 <example>
@@ -125,23 +109,22 @@
 <form lang="tww"><text>exemple2.2</text></form>
 </example>
 </sense>
-</entry>
-<entry dateCreated="2017-06-09T12:21:14Z" dateModified="2017-06-09T12:21:53Z" id="master_00933292-16a3-4041-b5bc-d73dd36dbd74" guid="00933292-16a3-4041-b5bc-d73dd36dbd74">
-<lexical-unit>
-<form lang="tww"><text>master</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<etymology type="borrowed" source="UNKNOWN">
-<field type="comment">
-<form lang="en"><text>borrowing</text></form>
-</field>
-</etymology>
-<sense id="11553860-0f89-4dd2-9d71-06f496fb1bec">
+<sense id="5da1286e-07b0-47f2-81ae-5633ca9c875d">
 <grammatical-info value="Noun">
+<trait name="Noun-infl-class" value="he"/>
 </grammatical-info>
-<gloss lang="en"><text>school_master</text></gloss>
+<gloss lang="en"><text>word</text></gloss>
+<gloss lang="tpi"><text>tok</text></gloss>
+<trait name ="semantic-domain-ddp4" value="3.5 Communication"/>
+<example>
+<form lang="tww"><text>exemple3.1</text></form>
+</example>
+<example>
+<form lang="tww"><text>exemple3.2</text></form>
+</example>
 </sense>
 </entry>
+
 <entry dateCreated="2015-07-01T19:19:41Z" dateModified="2016-11-30T17:17:59Z" id="totolo_00b3f2c3-bd07-4282-9287-603f2285c720" guid="00b3f2c3-bd07-4282-9287-603f2285c720">
 <lexical-unit>
 <form lang="tww"><text>totolo</text></form>
@@ -163,6 +146,7 @@
 <trait name ="semantic-domain-ddp4" value="1.2 World"/>
 </sense>
 </entry>
+
 <entry dateCreated="2015-04-28T20:28:41Z" dateModified="2016-02-26T06:27:03Z" id="ofa_00dba42e-1a59-40e8-848d-dbe5bc20012e" guid="00dba42e-1a59-40e8-848d-dbe5bc20012e">
 <lexical-unit>
 <form lang="tww"><text>ofa</text></form>
@@ -179,54 +163,10 @@
 <grammatical-info value="Adverb">
 </grammatical-info>
 <gloss lang="en"><text>today</text></gloss>
+<gloss lang="tpi"><text>tude</text></gloss>
 </sense>
 </entry>
-<entry dateCreated="2016-04-22T13:18:30Z" dateModified="2016-04-22T13:18:30Z" id="wao_00ffba96-1af8-47cf-a044-d2846d33e1c2" guid="00ffba96-1af8-47cf-a044-d2846d33e1c2">
-<lexical-unit>
-<form lang="tww"><text>wao</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="95396a65-ecd7-4e6b-8020-bee265fff0bf">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>tree_specie</text></gloss>
-<gloss lang="tpi"><text>kaind_diwai</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2017-12-14T14:44:02Z" id="-li1_011fce29-8d34-4bee-822c-0f5b61015338" guid="011fce29-8d34-4bee-822c-0f5b61015338" order="1">
-<lexical-unit>
-<form lang="tww"><text>-li</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="suffix"/>
-<variant>
-<form lang="tww"><text>-le</text></form>
-<trait  name="morph-type" value="suffix"/>
-</variant>
-<sense id="442bcc6a-d31f-4f62-8d0b-994c58a1da35" order="0">
-<grammatical-info value="pro-form">
-<trait name="type" value="affix"/>
-</grammatical-info>
-<gloss lang="en"><text>-?</text></gloss>
-<note>
-<form lang="en"><text>valeur COM?</text></form>
-</note>
-</sense>
-<sense id="5b71c8b8-4ec8-466c-b8ae-52bdf8c63f4a" order="1">
-<grammatical-info value="Pro-form">
-</grammatical-info>
-<gloss lang="en"><text>-O</text></gloss>
-</sense>
-<sense id="4600dacc-1dfc-4e83-b8b6-5ab044f8f54f" order="2">
-<grammatical-info value="Personal pronoun">
-</grammatical-info>
-<gloss lang="en"><text>-DUAL</text></gloss>
-</sense>
-<sense id="7abac86d-dfc2-47f9-ac8a-b8233c7abca5" order="3">
-<grammatical-info value="Pro-form">
-</grammatical-info>
-<gloss lang="en"><text>yet</text></gloss>
-</sense>
-</entry>
+
 <entry dateCreated="2015-07-03T01:05:40Z" dateModified="2015-07-03T01:05:40Z" id="tia3_013a1198-262e-45c6-9cab-fb6168f4f223" guid="013a1198-262e-45c6-9cab-fb6168f4f223" order="3">
 <lexical-unit>
 <form lang="tww"><text>tia</text></form>
@@ -239,17 +179,19 @@
 <gloss lang="tpi"><text>yet</text></gloss>
 </sense>
 </entry>
+
 <entry dateCreated="2017-08-30T11:00:14Z" dateModified="2017-08-30T11:00:14Z" id="waia3_015e37a5-77f2-4c45-9404-e90a36e48014" guid="015e37a5-77f2-4c45-9404-e90a36e48014" order="3">
 <lexical-unit>
 <form lang="tww"><text>waia</text></form>
 </lexical-unit>
 <trait  name="morph-type" value="stem"/>
 <sense id="09af8a01-2e20-4ff0-a7fe-b00c826f12b9">
-<grammatical-info value="n_Npr">
+<grammatical-info value="PrN (oronym)">
 </grammatical-info>
 <gloss lang="en"><text>Waia</text></gloss>
 </sense>
 </entry>
+
 <entry dateCreated="2015-06-17T15:05:37Z" dateModified="2015-06-17T15:05:37Z" id="heneli2_01c07bb2-e5c0-4166-90fe-5be81ab804af" guid="01c07bb2-e5c0-4166-90fe-5be81ab804af" order="2">
 <lexical-unit>
 <form lang="tww"><text>heneli</text></form>
@@ -261,7 +203,14 @@
 <gloss lang="en"><text>hot</text></gloss>
 <gloss lang="tpi"><text>hotpla</text></gloss>
 </sense>
+<sense id="4c7c3d22-bee1-419e-8280-d60c8e0ea077">
+<grammatical-info value="Noun">
+</grammatical-info>
+<gloss lang="en"><text>sun</text></gloss>
+<gloss lang="tpi"><text>san</text></gloss>
+</sense>
 </entry>
+
 <entry dateCreated="2015-05-04T15:51:34Z" dateModified="2017-06-30T10:11:52Z" id="eifei_01ea07b3-2da9-4786-a882-56129914469d" guid="01ea07b3-2da9-4786-a882-56129914469d">
 <lexical-unit>
 <form lang="tww"><text>eifei</text></form>
@@ -278,7 +227,7 @@
 <sense id="4e7e5d63-4264-4df3-b802-6338553f99e6" order="0">
 <grammatical-info value="Verb">
 </grammatical-info>
-<gloss lang="en"><text>to_hold</text></gloss>
+<gloss lang="en"><text>hold</text></gloss>
 <gloss lang="tpi"><text>holim</text></gloss>
 <trait name ="semantic-domain-ddp4" value="7 Physical actions"/>
 </sense>
@@ -289,6 +238,7 @@
 <gloss lang="tpi"><text>sisis</text></gloss>
 </sense>
 </entry>
+
 <entry dateCreated="2015-04-28T20:28:41Z" dateModified="2017-07-03T14:36:29Z" id="koma_02018975-937e-4b3f-a47c-72354f62b345" guid="02018975-937e-4b3f-a47c-72354f62b345">
 <lexical-unit>
 <form lang="tww"><text>koma</text></form>
@@ -313,92 +263,11 @@
 <grammatical-info value="Adverb">
 </grammatical-info>
 <gloss lang="en"><text>on_the_top</text></gloss>
-<gloss lang="tpi"><text>antap_lo_montain</text></gloss>
+<gloss lang="tpi"><text>antap</text></gloss>
 <trait name ="semantic-domain-ddp4" value="8.5.2 Direction"/>
 </sense>
 </entry>
-<entry dateCreated="2015-04-30T10:40:20Z" dateModified="2015-06-16T17:14:20Z" id="inamin_0225f869-bf14-4259-9805-8383076bdfdd" guid="0225f869-bf14-4259-9805-8383076bdfdd">
-<lexical-unit>
-<form lang="tww"><text>inamin</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="2a9fb1e2-34da-4436-a21e-41ea93f95235">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="en"><text>to_fish?</text></gloss>
-<gloss lang="tpi"><text>painim_pis</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2016-05-09T16:28:38Z" id="neiau_023fa475-2f0e-42b2-8d2a-0e5d09816ff4" guid="023fa475-2f0e-42b2-8d2a-0e5d09816ff4">
-<lexical-unit>
-<form lang="tww"><text>neiau</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="24babc47-0e06-442a-bd90-5d4a5ba9cb83">
-<grammatical-info value="Noun">
-<trait name="Noun-infl-class" value="fo"/></grammatical-info>
-<gloss lang="en"><text>kapiok</text></gloss>
-<gloss lang="tpi"><text>kapiok</text></gloss>
-<trait name ="semantic-domain-ddp4" value="1.5 Plant"/>
-<note type="source">
-<form lang="en"><text>2014.VI.S9, p. 53, 2014.I.S11</text></form>
-</note>
-</sense>
-</entry>
-<entry dateCreated="2017-01-11T09:34:36Z" dateModified="2017-02-24T14:36:03Z" id="kleiau_02b09801-a167-4004-b93a-aa23ac1e78a1" guid="02b09801-a167-4004-b93a-aa23ac1e78a1">
-<lexical-unit>
-<form lang="tww"><text>kleiau</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>kleiawu</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>kleau</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="38286ac1-6de6-4435-8c94-2f4ef76d7e22">
-<grammatical-info value="n_Npr">
-</grammatical-info>
-<gloss lang="en"><text>Kleiau</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-04-29T18:06:08Z" dateModified="2017-02-10T16:40:39Z" id="api_02b125d7-5409-41ab-a0be-bfa6689246ec" guid="02b125d7-5409-41ab-a0be-bfa6689246ec">
-<lexical-unit>
-<form lang="tww"><text>api</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="3f8e19e7-d6bc-4eee-9282-998e5cddf7de">
-<grammatical-info value="n_Npr_hydronyme">
-</grammatical-info>
-<gloss lang="en"><text>River_api</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2016-02-29T16:10:49Z" dateModified="2017-10-06T11:35:04Z" id="henolo_02ce0328-42d3-4e46-ad27-41c60bf8dc2d" guid="02ce0328-42d3-4e46-ad27-41c60bf8dc2d">
-<lexical-unit>
-<form lang="tww"><text>henolo</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>henehe</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>henlo</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="5624d970-815f-4c33-a957-14dfe8cf8e62" order="0">
-<grammatical-info value="Demonstrative">
-</grammatical-info>
-<gloss lang="en"><text>DEM</text></gloss>
-</sense>
-<sense id="a2fe38c0-491e-43c7-b380-934f65a12e61" order="1">
-<grammatical-info value="Pronoun">
-</grammatical-info>
-<gloss lang="en"><text>this</text></gloss>
-</sense>
-</entry>
+
 <entry dateCreated="2017-05-12T11:23:14Z" dateModified="2017-05-12T11:23:14Z" id="eli3_02d224d0-00bb-4156-9a59-4c67eeac1165" guid="02d224d0-00bb-4156-9a59-4c67eeac1165" order="3">
 <lexical-unit>
 <form lang="tww"><text>eli</text></form>
@@ -408,409 +277,8 @@
 <grammatical-info value="Adjective">
 </grammatical-info>
 <gloss lang="en"><text>sharp</text></gloss>
+<gloss lang="tpi"><text>sap</text></gloss>
 </sense>
 </entry>
-<entry dateCreated="2016-04-11T14:34:11Z" dateModified="2017-06-30T12:55:25Z" id="totu2_02e15de6-6fde-4aeb-a54d-16f723339887" guid="02e15de6-6fde-4aeb-a54d-16f723339887" order="2">
-<lexical-unit>
-<form lang="tww"><text>totu</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="c0d24dea-b06c-476d-bc3b-25d256ac71ef" order="0">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="en"><text>leave?</text></gloss>
-</sense>
-<sense id="051c727f-5a56-470e-b902-32fe992f2d7f" order="1">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="en"><text>?</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2017-12-15T16:11:13Z" dateModified="2017-12-15T16:11:13Z" id="heta_0315efea-0227-4f6a-b36d-0a686b2a0eeb" guid="0315efea-0227-4f6a-b36d-0a686b2a0eeb">
-<lexical-unit>
-<form lang="tww"><text>heta</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="47eb84c5-9f5a-4684-810a-bc65ed48ff08">
-<gloss lang="en"><text>?</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2016-12-13T10:11:01Z" dateModified="2016-12-13T10:11:01Z" id="fuʔoflo_03331d1f-fccf-4281-b655-9a894bc9cf8a" guid="03331d1f-fccf-4281-b655-9a894bc9cf8a">
-<lexical-unit>
-<form lang="tww"><text>fuʔoflo</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="cd8efa26-82b7-407e-8709-4bcb2845ee77">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="en"><text>to_hide</text></gloss>
-<gloss lang="tpi"><text>haidim</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2016-12-07T14:30:22Z" dateModified="2016-12-07T14:30:22Z" id="sali2_0362862e-3549-4b10-ae24-eefce1a51d02" guid="0362862e-3549-4b10-ae24-eefce1a51d02" order="2">
-<lexical-unit>
-<form lang="tww"><text>sali</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="7766b9ee-4de3-4311-91c7-0c5795cf4102">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>?</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2016-03-04T09:12:33Z" id="mus-_03684873-afa5-423c-9b5f-d69c91994a28" guid="03684873-afa5-423c-9b5f-d69c91994a28">
-<lexical-unit>
-<form lang="tww"><text>mus-</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="prefix"/>
-<sense id="6c29cb37-c0d1-4f21-9e8b-71547950fc03">
-<gloss lang="en"><text>?-</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2016-04-22T16:00:53Z" dateModified="2016-04-22T16:00:53Z" id="hemalemo_0376fd9f-6d3d-4301-b2b1-a0ce30dec90a" guid="0376fd9f-6d3d-4301-b2b1-a0ce30dec90a">
-<lexical-unit>
-<form lang="tww"><text>hemalemo</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="66de3db9-dd1c-4e44-af59-e75af0916199">
-<grammatical-info value="Pro-form">
-</grammatical-info>
-<gloss lang="en"><text>all_any</text></gloss>
-<gloss lang="tpi"><text>ol</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-05-04T10:19:21Z" dateModified="2015-06-29T09:30:45Z" id="te2_038371fe-83c2-4193-a3e3-b6918d315449" guid="038371fe-83c2-4193-a3e3-b6918d315449" order="2">
-<lexical-unit>
-<form lang="tww"><text>te</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>ti</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="30246e88-f20b-4df3-95ee-c2fd7d05f571">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="en"><text>to_go</text></gloss>
-<gloss lang="tpi"><text>go</text></gloss>
-<trait name ="semantic-domain-ddp4" value="8.5.2 Direction"/>
-</sense>
-</entry>
-<entry dateCreated="2015-04-29T16:26:45Z" dateModified="2015-04-29T16:26:45Z" id="manase_03f20c39-2922-46ad-a7fa-e856c3565a5a" guid="03f20c39-2922-46ad-a7fa-e856c3565a5a">
-<lexical-unit>
-<form lang="tww"><text>manase</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="bf5bc36b-34ca-4273-9ce4-edb44a2314bd">
-<grammatical-info value="n_Npr">
-</grammatical-info>
-<gloss lang="en"><text>Manas</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2017-01-09T12:15:51Z" dateModified="2017-01-09T12:16:13Z" id="osweli_04095ac0-7cea-48c3-8ccf-8147ffec923e" guid="04095ac0-7cea-48c3-8ccf-8147ffec923e">
-<lexical-unit>
-<form lang="tww"><text>osweli</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>oswali</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="8bfa78ef-3374-4cfa-8420-6079dedd5b80">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="en"><text>to_drown</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2015-06-19T12:46:22Z" id="kanu_040aef83-2213-4135-bb94-e2a9e8c6b713" guid="040aef83-2213-4135-bb94-e2a9e8c6b713">
-<lexical-unit>
-<form lang="tww"><text>kanu</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="f20fe7f1-e4da-49e3-a88b-e323b389ef28">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>canoe</text></gloss>
-<gloss lang="tpi"><text>kanu</text></gloss>
-<trait name ="semantic-domain-ddp4" value="1.3 Water"/>
-<trait name ="semantic-domain-ddp4" value="6.7 Tool"/>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2017-09-04T09:16:11Z" id="ialo_041d87ca-27ce-40ad-b3f9-25e3023d2d08" guid="041d87ca-27ce-40ad-b3f9-25e3023d2d08">
-<lexical-unit>
-<form lang="tww"><text>ialo</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>iialo</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>iolo</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>iole</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="df1caeb0-ff7e-4a02-8d90-78599c2a7e85">
-<grammatical-info value="?">
-</grammatical-info>
-<gloss lang="en"><text>COMP</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2017-05-19T10:11:51Z" dateModified="2018-02-01T14:45:11Z" id="meli2_044a7307-a58c-49c3-8a2e-9f40f442add9" guid="044a7307-a58c-49c3-8a2e-9f40f442add9" order="2">
-<lexical-unit>
-<form lang="tww"><text>meli</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<note>
-<form lang="en"><text>See 2015.III.S12 p. 48 for proof. Or 2015T32com</text></form>
-</note>
-<variant>
-<form lang="tww"><text>mele</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="b08976ae-e37b-499b-bd5a-8eff418fa27f">
-<grammatical-info value="Personal pronoun">
-</grammatical-info>
-<gloss lang="en"><text>3DUAL</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-06-16T09:36:38Z" dateModified="2015-06-16T09:36:38Z" id="namele_045224be-5698-4b65-8f90-279406ee76a4" guid="045224be-5698-4b65-8f90-279406ee76a4">
-<lexical-unit>
-<form lang="tww"><text>namele</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="088a7eee-4d2d-4042-9c8c-409d99904770">
-<grammatical-info value="Interrogative pro-form">
-</grammatical-info>
-<gloss lang="en"><text>for_what?</text></gloss>
-<gloss lang="tpi"><text>long_wanem?</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2017-08-30T12:14:47Z" dateModified="2017-11-23T11:52:24Z" id="tiia_04655f29-ae8d-4239-9546-6a9bbeddcbaf" guid="04655f29-ae8d-4239-9546-6a9bbeddcbaf">
-<lexical-unit>
-<form lang="tww"><text>tiia</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>tia</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="659fc8f5-3e5e-45e7-bd53-299cad2c6e6e">
-<grammatical-info value="Adverb">
-</grammatical-info>
-<gloss lang="tpi"><text>longpla_taim</text></gloss>
-<relation type="Antonym" ref="afb52a2f-75c5-4ada-9d47-aeaa8d66a05d"/>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2017-06-07T10:39:27Z" id="mine1_046c1ece-6841-4170-87a4-f5a4b61e7b9f" guid="046c1ece-6841-4170-87a4-f5a4b61e7b9f" order="1">
-<lexical-unit>
-<form lang="tww"><text>mine</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="da82fcc9-5d03-4698-a10f-2c4b4f51a745">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="en"><text>to_walk</text></gloss>
-<gloss lang="tpi"><text>wokabout</text></gloss>
-<trait name ="semantic-domain-ddp4" value="8.5.2 Direction"/>
-</sense>
-</entry>
-<entry dateCreated="2017-07-06T15:06:56Z" dateModified="2017-07-06T15:18:06Z" id="walo_048bf538-c704-4858-8d42-26d6694a5eb7" guid="048bf538-c704-4858-8d42-26d6694a5eb7">
-<lexical-unit>
-<form lang="tww"><text>walo</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="f5e1699e-b9d9-4abf-9532-060869bb75cf">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>third_boy</text></gloss>
-<gloss lang="tpi"><text>pikinini_man_namba_tri</text></gloss>
-<trait name ="semantic-domain-ddp4" value="4.1.9.1.9 Birth order"/>
-<relation type="Generic" ref="b35f4874-95d8-4178-bdcf-423a9532dd74"/>
-</sense>
-</entry>
-<entry dateCreated="2017-07-06T15:34:20Z" dateModified="2017-07-06T15:34:20Z" id="totonoo_049c082e-66bc-47d0-ac93-b3777623f1d1" guid="049c082e-66bc-47d0-ac93-b3777623f1d1">
-<lexical-unit>
-<form lang="tww"><text>totonoo</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="63abcc74-8f89-4d00-9ca9-e0f1d0bd3bf0">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>twin</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2017-07-06T16:01:19Z" dateModified="2017-07-06T16:01:19Z" id="oplo_04ff80bc-4287-4321-aaf9-cdf1c6fa8b76" guid="04ff80bc-4287-4321-aaf9-cdf1c6fa8b76">
-<lexical-unit>
-<form lang="tww"><text>oplo</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="45671729-3cba-462e-960e-5f97c273ce1e">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>to_cut(vegetable)</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-06-15T12:48:37Z" dateModified="2015-06-15T12:48:37Z" id="timoti_04ffa47d-162c-4d9c-a8e4-f3113cfee6a2" guid="04ffa47d-162c-4d9c-a8e4-f3113cfee6a2">
-<lexical-unit>
-<form lang="tww"><text>timoti</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="d5f90698-2272-4966-99ff-afb4ea416850">
-<grammatical-info value="n_Npr">
-</grammatical-info>
-<gloss lang="en"><text>Timothy</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2017-12-08T16:57:26Z" dateModified="2017-12-08T16:57:26Z" id="nalo ilonino_0536ce64-2399-4d69-8817-0897038254d2" guid="0536ce64-2399-4d69-8817-0897038254d2">
-<lexical-unit>
-<form lang="tww"><text>nalo ilonino</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="phrase"/>
-<relation type="_component-lexeme" ref="">
-<trait  name="complex-form-type" value="Compound"/>
-</relation>
-<sense id="6d935c2b-2974-45a5-bee4-044831bdcc6e">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="tpi"><text>hard_wokabout__ples_nogut</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2016-04-13T08:24:34Z" id="-te_054f56bc-e724-4181-8363-2976c81f92db" guid="054f56bc-e724-4181-8363-2976c81f92db">
-<lexical-unit>
-<form lang="tww"><text>-te</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="suffix"/>
-<sense id="f41a7488-e99d-45fa-82b4-7ec8724ba607">
-<grammatical-info value="Verb">
-<trait name="type" value="inflAffix"/>
-</grammatical-info>
-<gloss lang="en"><text>-?</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-06-08T16:26:47Z" dateModified="2017-05-17T12:17:59Z" id="awii_0555231c-58ff-4290-ba78-62d4e19bbd67" guid="0555231c-58ff-4290-ba78-62d4e19bbd67">
-<lexical-unit>
-<form lang="tww"><text>awii</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>awei</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<variant>
-<form lang="tww"><text>awi</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="7e0e6899-d79d-408b-bb40-3d9badfb2537" order="0">
-<grammatical-info value="Interrogative pro-form">
-</grammatical-info>
-<gloss lang="en"><text>who</text></gloss>
-<gloss lang="tpi"><text>husat</text></gloss>
-</sense>
-<sense id="56a0b7fb-f293-469d-b0ef-20f1a7f00b34" order="1">
-<grammatical-info value="Interrogative pro-form">
-</grammatical-info>
-<gloss lang="en"><text>who</text></gloss>
-<gloss lang="tpi"><text>husat</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2017-07-21T14:07:32Z" dateModified="2017-07-21T14:10:30Z" id="kesi_057f46ff-9a0c-4c34-8995-6a0e096b28ae" guid="057f46ff-9a0c-4c34-8995-6a0e096b28ae">
-<lexical-unit>
-<form lang="tww"><text>kesi</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="dc8822d4-de4a-4e7c-a23b-1d9f1a28ef99">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>fruit_pulp</text></gloss>
-<gloss lang="tpi"><text>meme</text></gloss>
-<trait name ="semantic-domain-ddp4" value="1.5.5 Parts of a plant"/>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2015-06-16T18:08:24Z" id="moni_05895947-e0f5-4714-8afc-6462a2821e50" guid="05895947-e0f5-4714-8afc-6462a2821e50">
-<lexical-unit>
-<form lang="tww"><text>moni</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<etymology type="borrowed" source="English">
-<form lang="en"><text>borrowing</text></form>
-</etymology>
-<sense id="2ee7223a-b3b6-49dc-90b6-cd12433f2643">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>money</text></gloss>
-<gloss lang="tpi"><text>moni</text></gloss>
-<trait name ="semantic-domain-ddp4" value="6.8 Finance"/>
-</sense>
-</entry>
-<entry dateCreated="2015-04-30T08:17:31Z" dateModified="2015-06-16T17:13:27Z" id="mine2_059bfa65-5679-4080-946a-6dff41fec2d2" guid="059bfa65-5679-4080-946a-6dff41fec2d2" order="2">
-<lexical-unit>
-<form lang="tww"><text>mine</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="cdfb8299-32aa-4397-aef6-a90ab6b3c18f">
-<grammatical-info value="Noun">
-</grammatical-info>
-<gloss lang="en"><text>branch_leaf</text></gloss>
-<gloss lang="tpi"><text>lip</text></gloss>
-<trait name ="semantic-domain-ddp4" value="1.5 Plant"/>
-</sense>
-</entry>
-<entry dateCreated="2015-04-28T20:28:41Z" dateModified="2016-02-02T16:45:47Z" id="tuafe_05b4841a-ee24-473c-aaaf-535f07d9f722" guid="05b4841a-ee24-473c-aaaf-535f07d9f722">
-<lexical-unit>
-<form lang="tww"><text>tuafe</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<variant>
-<form lang="tww"><text>toafe</text></form>
-<trait  name="morph-type" value="stem"/>
-</variant>
-<sense id="945ae702-90f2-4cd0-a288-f699d01ff6d1" order="0">
-<grammatical-info value="Adverb">
-</grammatical-info>
-<gloss lang="en"><text>behind</text></gloss>
-<gloss lang="tpi"><text>bihain</text></gloss>
-<trait name ="semantic-domain-ddp4" value="8.5.2 Direction"/>
-</sense>
-<sense id="2b2ec6a9-6656-4367-9724-b682647faab9" order="1">
-<grammatical-info value="Adverb">
-</grammatical-info>
-<gloss lang="en"><text>next</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2017-05-16T15:45:17Z" dateModified="2017-05-16T15:45:45Z" id="pla_05e1f51e-e746-4423-b9d0-6a4c6fc71671" guid="05e1f51e-e746-4423-b9d0-6a4c6fc71671">
-<lexical-unit>
-<form lang="tww"><text>pla</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="29d66097-9cf5-4bba-b760-68758b44ed5c">
-<grammatical-info value="Adjective">
-</grammatical-info>
-<gloss lang="en"><text>?</text></gloss>
-</sense>
-</entry>
-<entry dateCreated="2015-07-05T07:18:42Z" dateModified="2015-07-05T07:19:23Z" id="sa3_061e7517-a685-4efc-99fe-a61524683737" guid="061e7517-a685-4efc-99fe-a61524683737" order="3">
-<lexical-unit>
-<form lang="tww"><text>sa</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="aaba28a2-cf47-4126-9d46-38cd9b07fba1">
-<grammatical-info value="Verb">
-</grammatical-info>
-<gloss lang="tpi"><text>kumautim</text></gloss>
-<trait name ="semantic-domain-ddp4" value="6.2 Agriculture"/>
-</sense>
-</entry>
-<entry dateCreated="2016-02-02T11:51:12Z" dateModified="2016-02-02T11:51:12Z" id="olsa_062658aa-8365-477a-be8c-49505ad6b5b0" guid="062658aa-8365-477a-be8c-49505ad6b5b0">
-<lexical-unit>
-<form lang="tww"><text>olsa</text></form>
-</lexical-unit>
-<trait  name="morph-type" value="stem"/>
-<sense id="ed22b0b5-cdbc-4fd6-992e-d3f6ce4fdfe1">
-<gloss lang="en"><text>all</text></gloss>
-</sense>
-</entry>
+
 </lift>
