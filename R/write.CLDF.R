@@ -27,15 +27,15 @@
 #' dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE, get.example=FALSE)
 #'
 #' # No metadata file
-#' #write_CLDF(dictionary, meta=NULL)
+#' #write_CLDF(dictionary, dir="~", meta=NULL)
 #'
 #' # with no 'meta' argument, create_CLDF_metadata() is called:
-#' #write_CLDF(dictionary)
+#' #write_CLDF(dictionary, dir="~")
 #'
 #' # Use create_CLDF_metadata to create a skeleton to be edited:
 #' meta <- create_CLDF_metadata(dictionary)
 #' meta$foo$bar <- "gaz"
-#' #write_CLDF(dictionary, meta=meta)
+#' #write_CLDF(dictionary, dir="~", meta=meta)
 write_CLDF <- function(l, dir=".", cldf_dir="CLDF", meta=create_CLDF_metadata(l), metadata_filenames="metadata.json") {
 
   ## The bare minimum: URLs for each table
@@ -43,7 +43,7 @@ write_CLDF <- function(l, dir=".", cldf_dir="CLDF", meta=create_CLDF_metadata(l)
   ## either from the metadata, if any...
   if (!is.null(meta)) {
     urls <- sapply(meta$tables, `[[`, "url")
-    if (any(sapply(urls, is.null))) stop("The metadata don't contain URLs")
+    if (any(sapply(urls, is.null))) stop("The metadata doesn't contain URLs")
   } else {
     ## ...or from the slot names.
     if (is.null(names(l))) stop("Can't guess filenames: no metadata and no slot names in the outer list.")

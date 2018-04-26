@@ -35,15 +35,15 @@ path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR
 dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE, get.example=FALSE)
 
 # No metadata file
-#write_CLDF(dictionary, meta=NULL)
+#write_CLDF(dictionary, dir="~", meta=NULL)
 
 # with no 'meta' argument, create_CLDF_metadata() is called:
-#write_CLDF(dictionary)
+#write_CLDF(dictionary, dir="~")
 
 # Use create_CLDF_metadata to create a skeleton to be edited:
 meta <- create_CLDF_metadata(dictionary)
 meta$foo$bar <- "gaz"
-#write_CLDF(dictionary, meta=meta)
+#write_CLDF(dictionary, dir="~", meta=meta)
 }
 \references{
 http://cldf.clld.org https://github.com/cldf/cldf/
