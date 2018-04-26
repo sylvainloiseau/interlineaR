@@ -31,8 +31,8 @@ read_CLDF <- function(directory, metadata_filename=NULL) {
   	if (file.access(metadata_filename_full, 4) != 0) stop(paste0("The metadata file ", metadata_filename_full, " cannot be read"))
   	
     ## Read file and parse JSON
-    metaFile <- readLines(metadata_filename_full)
-    meta <- fromJSON(metaFile, simplifyVector = FALSE)
+    meta_text <- readLines(metadata_filename_full)
+    meta <- fromJSON(meta_text, simplifyVector = FALSE)
   } else {
   	## If there is no metadata, we are supposed to be able to guess the Components
   	## through the filenames, the Module through the Components, and the metadata of this Module.
@@ -44,19 +44,21 @@ read_CLDF <- function(directory, metadata_filename=NULL) {
 	## Get dialect definition from metadata or back to default
 	dialect <- get_dialect_or_default(meta$dialect)
 	
-  module_qname <- meta$`dc:conformsTo`
-  module_name <- strsplit(module_qname, "#")[[1]][2]
+  module_url <- meta$`dc:conformsTo`
+  module_name <- strsplit(module_url, "#")[[1]][2]
 
   ## filenames, as ordered in metadata
   filenames <- sapply(meta$tables, `[[`, "url")
-  
-  ## qualified CLDF component url for each csv file
-  components_qnames <- sapply(meta$tables, function(x) x$`dc:conformsTo`)
-  ## short CLDF component name for each csv file
-  component_names <- sapply(strsplit(components_qnames, "#"), `[[`, 2)
+  ##TODO buggy here: may not mach the order of slot in the list
 
+  ## qualified CLDF component url for each csv file
+  components_url <- sapply(meta$tables, function(x) x$`dc:conformsTo`)
+  ## short CLDF component name for each csv file
+  component_names <- sapply(strsplit(components_url, "#"), `[[`, 2)
+  component_nicknames <- sub(".csv", "", sapply(meta$tables, function(x) x$`url`))
+  	
   ## an R name for each table
-  tablename <- component_names
+  tablename <- component_nicknames
 
   ## The outer list to be populated
   res <- vector(mode = "list", length = length(tablename))
@@ -67,7 +69,7 @@ read_CLDF <- function(directory, metadata_filename=NULL) {
   attr(res, "CLDF_metadata") <- module_metadata
   
   for (i in 1:length(filenames)) {
-    ## Get the col names according to the metadata
+    ## Get the column names according to the metadata
     col_names <- sapply(meta$tables[[i]]$tableSchema$columns, `[[`, "name")
 
     ## TODO check if a specific dialect exist for this table?
@@ -105,7 +107,7 @@ read_CLDF <- function(directory, metadata_filename=NULL) {
 }
 
 guess_modules_metadata <- function(components, match.with.field="url") {
-  modules <- c("Dictionary")
+  modules <- c("Dictionary", "Generic", "ParallelText", "StructureDataset", "Wordlist")
   for (module in modules) {
     m_specification <- get_modules_default_metadata(module)
     m_field <- "";
@@ -130,10 +132,10 @@ guess_modules_metadata <- function(components, match.with.field="url") {
 get_dialect_or_default <- function(metadata_dialect) {
   default_dialect <- get_default_dialect()
   dialect <- list()
-  for (feature in c("encoding", "lineTerminators", "quoteChar", "doubleQuote", "skipRows", "commentPrefix", "header", "headerRowCount", "delimiter", "skipColumns", "skipBlankRows", "skipInitialSpace", "trim")) {
-    given <- metadata_dialect[[feature]]
+  for (feature in names(default_dialect)) {
+    found <- metadata_dialect[[feature]]
     default <- default_dialect[[feature]]
-    dialect[[feature]] <- ifelse(!is.null(given), given, default)
+    dialect[[feature]] <- ifelse(!is.null(found), found, default)
   }
   return(dialect)
 }
@@ -163,7 +165,7 @@ get_modules_default_metadata <- function(module_name) {
   if (file.access(path, 4) != 0) stop(paste0("The metadata file ", path, " cannot be read"))
   
   lines <- readLines(path)
-  specif <- fromJSON(lines, simplifyVector = FALSE)
-  return(specif)
+  metadata <- fromJSON(lines, simplifyVector = FALSE)
+  return(metadata)
 }
 
