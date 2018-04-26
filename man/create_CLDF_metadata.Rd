@@ -2,50 +2,58 @@
 % Please edit documentation in R/write.CLDF.R
 \name{create_CLDF_metadata}
 \alias{create_CLDF_metadata}
-\title{Create the CLDF metadata for a list of data frame representing a CLDF Module
-(Supported: Dictionary Module)}
+\title{Generate a CLDF metadata tree from a list of data frames representing a CLDF Module}
 \usage{
-create_CLDF_metadata(l, module = NULL)
+create_CLDF_metadata(l)
 }
 \arguments{
-\item{l}{list: the list of data.frames}
+\item{l}{list: the list of data.frames
 
-\item{module}{length-1 character vector: the name of a CLDF Module
+This function generate a metadata tree according to the following heuristic:
 
-This function generate the metadata tree according to the following rules:
+1/ generating metadata for the Module:
 
 \itemize{
-  \item if the "module" argument is not NULL, it is used as a CLDF Module short name.
-  \item if the list or some of the inner tables have an attribute "CLDF_metadata", the content of
+  \item if the list has an attribute "CLDF_metadata", the content of
   this attribute is supposed to be a tree of lists expressing the metadata for this object and it
   is aggregated to the returned metadata.
   \item if the outer list has CLDF Module name in its "class" attribute,
-  it will be used for generating the correct Module metadata.
-  If some of the inner tables have a CLDF Component name in their "class" attributes,
+  it will be used for determining the Module name.
+  \item in last ressort, the names of the list elements (the tables) are matched
+  with the default Components of each Module in order to determine the Module name.
+  \item if everything fails an error is thrown.
+}
+
+2/ generating metadata for the Components:
+
+\itemize{
+  \item for each inner table, if it has an attribute "CLDF_metadata", the content of
+  this attribute is supposed to be a tree of lists expressing the metadata for this object and it
+  is aggregated to the returned metadata.
+  \item if it has a CLDF Component name in its "class" attributes,
   it will also be used for generating the correct metadata.
-  For instance, a list with the value "Dictionary" in its class attribute, containing tables with
-  "EntryTable" and "SenseTable" in their class attribues, will result in a metadata file describing
-  a Dictionary module with its two mandatory components.
+  \item The table names are matched with the Component "alternate" names (ie. lower case and pluralised: entries for EntryTable, etc.)
 }}
 }
 \value{
 a tree of list containing the metadata. This tree is ready to be serialized using jsonlite::toJSON.
 }
 \description{
-Metadata are expressed as lists of lists.
+Metadata are represented as lists of lists. The order of the Component metadata in the "tables"
+slot match the order of the data frame in the list.
 }
 \examples{
 
 # Use the class attribute in order for create_CLDF_metadata to generate the correct metadata :
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
-dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE, get.example = FALSE)
 class(dictionary) <- append(class(dictionary), "Dictionary")
 meta <- create_CLDF_metadata(dictionary)
 
 # If the list does not contain any class information nor a CLDF_metadata attribute,
-# the Module is supposed to be "Generic" and the slot names of the list are used as Component name.
+# the Module the slot names of the list are matched with the Component alternate names.
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
-dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE, get.example = FALSE)
 meta <- create_CLDF_metadata(dictionary)
 
 # The returned list can be edited
