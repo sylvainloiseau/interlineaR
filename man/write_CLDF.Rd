@@ -22,15 +22,17 @@ write_CLDF(l, dir = ".", cldf_dir = "CLDF",
   \item provide a list containing the metadata. You can call \link{create_CLDF_metadata} and edit the returned list
   in order not to create it from scratch.
 }}
+
+\item{metadata_filenames}{length-1 character vector: name of the metadata file to be written (if any).}
 }
 \description{
 According to the CLDF specifications, the data frames are turned into a set
 of CVS files plus an optional metadata file in JSON. See \link{create_CLDF_metadata}
-for the generation of the metadata. The csv file names as well as the CSV options are specified in the metadata.
+for the generation of the metadata.
 }
 \examples{
 path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
-dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE, get.example=FALSE)
 
 # No metadata file
 #write_CLDF(dictionary, meta=NULL)

@@ -14,7 +14,7 @@ removedir <- function(dir) {
 
 test_that("Read file set with metadata", {
 	path <- system.file("exampleData/cldf/Dictionary_1", package="interlineaR")
-	l <- read.CLDF(path, "Dictionary-metadata.json")
+	l <- read_CLDF(path, "Dictionary-metadata.json")
 	expect_equal(length(l), 2)
 	expect_equal(nrow(l[[1]]), 6)
 	expect_equal(nrow(l[[2]]), 8)
@@ -23,7 +23,7 @@ test_that("Read file set with metadata", {
 
 test_that("Read file set without metadata", {
 	path <- system.file("exampleData/cldf/Dictionary_2", package="interlineaR")
-	l <- read.CLDF(path, NULL)
+	l <- read_CLDF(path, NULL)
 	expect_equal(length(l), 2)
 	expect_equal(nrow(l[[1]]), 6)
 	expect_equal(nrow(l[[2]]), 8)
@@ -32,18 +32,22 @@ test_that("Read file set without metadata", {
 
 test_that("Read file set without metadata and wrong filenames", {
 	path <- system.file("exampleData/cldf/Dictionary_4_wrong_filenames", package="interlineaR")
-	expect_error(read.CLDF(path, NULL), regexp="No Module specification matching the filenames found in the directory")
+	expect_error(read_CLDF(path, NULL), regexp="No Module specification matching the urls")
 })
 
-test_that("Write", {
+test_that("Write, guessing the module with table names", {
 	path <- system.file("exampleData", "tuwariDictionary.lift", package="interlineaR")
 	dictionary <- read.lift(path, vernacular.languages="tww", simplify=TRUE)
+	
+	# By default, the Dictionary module has only the entries and senses tables
+	dictionary[[3]] <- NULL
+
 	path <- "~/test_interlineaR"
 	dir <- "CLDF_1"
 	write_CLDF(dictionary, dir=path, cldf_dir=dir)
 	
 	fs <- list.files(paste0(path, "/", dir), full.names=TRUE)
-	expect_equal(length(fs), 4)
+	expect_equal(length(fs), 3)
 
 	removedir(paste0(path, "/", dir))
 })
