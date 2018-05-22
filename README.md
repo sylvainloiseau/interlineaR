@@ -3,10 +3,15 @@
 **Author:** Sylvain Loiseau<br/>
 **License:** [BSD_3_clause](https://opensource.org/licenses/BSD-3-Clause)
 
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/interlineaR)](https://cran.r-project.org/package=interlineaR)
 
 # Installation
 
 ```{r}
+# stable version:
+install.packages("interlineaR")
+
+# development version:
 devtools::install_github("sylvainloiseau/interlineaR",  build_vignettes=TRUE)
 ```
 

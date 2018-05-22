@@ -1,16 +1,25 @@
 Package: interlineaR
 Type: Package
-Title: Importing interlinearized corpora and dictionaries as produced by descriptive linguistics softwares
+Title: Importing Interlinearized Corpora and Dictionaries as Produced by Descriptive Linguistics Software
 Version: 1.0
-Date: 2015-03-18
+Date: 2018-05-18
 Authors@R: person("Sylvain", "Loiseau", email = "sylvain.loiseau@univ-paris13.fr", role = c("aut", "cre"))
-Maintainer: Sylvain Loiseau <sylvain.loiseau@univ-paris13.fr>
-Description: utility functions for importing into R corpora of interlinearized texts and associated dictionaries.
+Description: Interlinearized glossed texts (IGT) are used in descriptive linguistics for
+ representing a morphological analysis of a text through a morpheme-by-morpheme gloss.
+ 'InterlineaR' provide a set of functions that targets several popular formats of IGT
+ ('SIL Toolbox', 'EMELD XML') and that turns an IGT into a set of data frames following
+ a relational model (the tables represent the different linguistic units: texts,
+ sentences, word, morphems).
+ The same pieces of software ('SIL FLEX', 'SIL Toolbox') typically produce dictionaries
+ of the morphemes used in the glosses. 'InterlineaR' provide a function for turning
+ the LIFT XML dictionary format into a set of data frames following a relational model
+ in order to represent the dictionary entries, the sense(s) attached to the entries,
+ the example(s) attached to senses, etc.
 License: BSD_3_clause + file LICENSE
-Depends: R (>= 2.9.0), xml2, reshape2, jsonlite
-Lazyload: yes
+Depends: R (>= 2.14), xml2, reshape2
+LazyData: true
 URL: https://github.com/sylvainloiseau/interlineaR
-Collate: read.emeld.R read.lift.R interlineaR-package.R read.toolbox.R read.pangloss.R dataset.R lift.specifications.R write.CLDF.R read.CLDF.R common.R
+Collate: read.emeld.R read.lift.R interlineaR-package.R read.toolbox.R read.pangloss.R dataset.R lift.specifications.R common.R
 BuildResaveData: xz
 Encoding: UTF-8
 RoxygenNote: 6.0.1

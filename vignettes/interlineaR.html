@@ -12,7 +12,7 @@
 
 <meta name="author" content="Sylvain Loiseau" />
 
-<meta name="date" content="2018-04-10" />
+<meta name="date" content="2018-05-18" />
 
 <title>interlineaR: Importing interlinearized corpora and dictionaries</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">interlineaR: Importing interlinearized corpora and dictionaries</h1>
 <h4 class="author"><em>Sylvain Loiseau</em></h4>
-<h4 class="date"><em>2018-04-10</em></h4>
+<h4 class="date"><em>2018-05-18</em></h4>
 
 
 <div id="TOC">
@@ -720,9 +720,9 @@ corpus &lt;-<span class="st"> </span><span class="kw">read.toolbox</span>(path, 
 <div id="reading-lift-xml-dictionary" class="section level1">
 <h1>Reading LIFT XML dictionary</h1>
 <p>This XML vocabulary has been introduced by SIL : [<a href="http://code.google.com/p/lift-standard" class="uri">http://code.google.com/p/lift-standard</a>] and is used by SIL Fieldworks as an export format.</p>
-<p>read.lift() produce a list of three data frame: “entries”, “senses”, “examples” (“relations” should be added). These set of table are linked through IDs, as in a relational database. All the fields of the dictionary, in all languages, can be extracted.</p>
+<p>read.lift() produce a list of three data frame: “entries”, “senses”, “examples” (“relations” should be added). These set of table are linked through IDs, as in a relational database. All the fields of the dictionary, in all languages, can be extracted. THe arguments of read.lift() allow to manually list the fields you are interested in for each data frame; you can also reduce the field (columns) to those that have non-empty values in some columns with simplify=TRUE.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dicpath &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;exampleData&quot;</span>, <span class="st">&quot;tuwariDictionary.lift&quot;</span>, <span class="dt">package=</span><span class="st">&quot;interlineaR&quot;</span>)
-dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpath, <span class="dt">vernacular.languages=</span><span class="st">&quot;tww&quot;</span>)</code></pre></div>
+dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpath, <span class="dt">vernacular.languages=</span><span class="st">&quot;tww&quot;</span>, <span class="dt">simplify=</span><span class="ot">TRUE</span>)</code></pre></div>
 <p>table of the lexial units:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(dictionary<span class="op">$</span>entries)</code></pre></div>
 <table>
@@ -732,175 +732,56 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 <th align="right">id</th>
 <th align="left">lexical-unit.tww</th>
 <th align="left">morph-type</th>
-<th align="left">citation-form.tww</th>
-<th align="left">note-bibliographique.en</th>
-<th align="left">note.en</th>
-<th align="left">literal-meaning.en</th>
-<th align="left">note-restriction.en</th>
-<th align="left">summary-definition.en</th>
 <th align="left">variant.form.tww</th>
-<th align="left">variant.environment</th>
 <th align="left">variant.morph-type</th>
-<th align="left">etymology.source</th>
-<th align="left">etymology.type</th>
-<th align="left">etymology.form.en</th>
-<th align="left">etymology.form2.tww</th>
-<th align="left">etymology.gloss.en</th>
-<th align="left">etymology.comment.en</th>
-<th align="left">pronunciation.form.tww</th>
-<th align="left">pronunciation.cv-pattern.en</th>
-<th align="left">pronunciation.tone.en</th>
-<th align="left">pronunciation.location</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">nala_001199a3-0e7f-4b4d-ab9e-38cfd0fbff58</td>
+<td align="left">u_002794b9-f063-4c6b-b77d-39b8ecd618d1</td>
 <td align="right">1</td>
-<td align="left">nala</td>
+<td align="left">u</td>
 <td align="left">stem</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
 <tr class="even">
-<td align="left">kemia napuo_002794b9-f063-4c6b-b77d-39b8ecd618d1</td>
+<td align="left">ia_00909ffb-7e90-4b76-b948-cae56094abc9</td>
 <td align="right">2</td>
-<td align="left">kemia napuo</td>
-<td align="left">phrase</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">ia</td>
+<td align="left">stem</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
 <tr class="odd">
-<td align="left">tiohomaa_0086205e-a924-4347-a17e-8cd59c03a04b</td>
-<td align="right">3</td>
-<td align="left">tiohomaa</td>
-<td align="left">stem</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
-<td align="left">iahe_00909ffb-7e90-4b76-b948-cae56094abc9</td>
-<td align="right">4</td>
-<td align="left">iahe</td>
-<td align="left">stem</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="odd">
-<td align="left">master_00933292-16a3-4041-b5bc-d73dd36dbd74</td>
-<td align="right">5</td>
-<td align="left">master</td>
-<td align="left">stem</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">UNKNOWN</td>
-<td align="left">borrowed</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">borrowing</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-</tr>
-<tr class="even">
 <td align="left">totolo_00b3f2c3-bd07-4282-9287-603f2285c720</td>
-<td align="right">6</td>
+<td align="right">3</td>
 <td align="left">totolo</td>
 <td align="left">stem</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
 <td align="left">totolu</td>
-<td align="left">NA</td>
+<td align="left">stem</td>
+</tr>
+<tr class="even">
+<td align="left">ofa_00dba42e-1a59-40e8-848d-dbe5bc20012e</td>
+<td align="right">4</td>
+<td align="left">ofa</td>
 <td align="left">stem</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">tia3_013a1198-262e-45c6-9cab-fb6168f4f223</td>
+<td align="right">5</td>
+<td align="left">tia</td>
+<td align="left">stem</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">waia3_015e37a5-77f2-4c45-9404-e90a36e48014</td>
+<td align="right">6</td>
+<td align="left">waia</td>
+<td align="left">stem</td>
 <td align="left">NA</td>
 <td align="left">NA</td>
 </tr>
@@ -915,22 +796,6 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 <th align="right">lexem_id</th>
 <th align="left">grammatical-info.value</th>
 <th align="left">gloss.en</th>
-<th align="left">definition.en</th>
-<th align="left">note-anthropology.en</th>
-<th align="left">note-bibliography.en</th>
-<th align="left">note-discourse.en</th>
-<th align="left">note-encyclopedic.en</th>
-<th align="left">note.en</th>
-<th align="left">note-grammar.en</th>
-<th align="left">note-phonology.en</th>
-<th align="left">note-restrictions.en</th>
-<th align="left">scientific-name.en</th>
-<th align="left">note-semantics.en</th>
-<th align="left">note-sociolinguistics.en</th>
-<th align="left">note-source.en</th>
-<th align="left">reversal.en</th>
-<th align="left">sense-type</th>
-<th align="left">status</th>
 <th align="left">usage-type</th>
 <th align="left">semantic-domain-ddp4</th>
 <th align="left">grammatical-info.traits</th>
@@ -938,160 +803,64 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">35888fca-f16c-4d26-9c71-3d9eea39d572</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td align="left">582795c9-9350-4e3b-af34-b72e9b5c89aa</td>
-<td align="right">2</td>
-<td align="right">2</td>
+<td align="right">1</td>
+<td align="right">1</td>
 <td align="left">Noun</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">2014.VI.87</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left"></td>
-<td align="left">1.5 Plant</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">310ca9fb-fe3e-4075-9d25-6a914c42d3b3</td>
-<td align="right">3</td>
-<td align="right">3</td>
-<td align="left">Verb</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">fire</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left"></td>
+<td align="left">Noun-infl-class:tano</td>
 </tr>
 <tr class="even">
 <td align="left">5da1286e-07b0-47f2-81ae-5633ca9c875c</td>
-<td align="right">4</td>
-<td align="right">4</td>
+<td align="right">2</td>
+<td align="right">2</td>
 <td align="left">Noun</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">talk</td>
 <td align="left"></td>
 <td align="left">3.5 Communication</td>
-<td align="left"></td>
+<td align="left">Noun-infl-class:he</td>
 </tr>
 <tr class="odd">
-<td align="left">11553860-0f89-4dd2-9d71-06f496fb1bec</td>
-<td align="right">5</td>
-<td align="right">5</td>
+<td align="left">5da1286e-07b0-47f2-81ae-5633ca9c875d</td>
+<td align="right">3</td>
+<td align="right">2</td>
 <td align="left">Noun</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">vernacular_language</td>
 <td align="left"></td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">3.5 Communication</td>
+<td align="left">Noun-infl-class:he</td>
 </tr>
 <tr class="even">
-<td align="left">ed8e2d65-f3da-4efe-92cc-f381d08f0c08</td>
-<td align="right">6</td>
-<td align="right">6</td>
+<td align="left">5da1286e-07b0-47f2-81ae-5633ca9c875d</td>
+<td align="right">4</td>
+<td align="right">2</td>
 <td align="left">Noun</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+<td align="left">word</td>
+<td align="left"></td>
+<td align="left">3.5 Communication</td>
+<td align="left">Noun-infl-class:he</td>
+</tr>
+<tr class="odd">
+<td align="left">ed8e2d65-f3da-4efe-92cc-f381d08f0c08</td>
+<td align="right">5</td>
+<td align="right">3</td>
+<td align="left">Noun</td>
+<td align="left">island</td>
 <td align="left"></td>
 <td align="left">1.2 World</td>
 <td align="left">Noun-infl-class:fo</td>
+</tr>
+<tr class="even">
+<td align="left">8c5651bd-27b4-4647-b46b-d7b209a2477f</td>
+<td align="right">6</td>
+<td align="right">4</td>
+<td align="left">Adverb</td>
+<td align="left">now</td>
+<td align="left"></td>
+<td align="left">8.4 Time</td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>
@@ -1102,53 +871,45 @@ dictionary &lt;-<span class="st"> </span><span class="kw">read.lift</span>(dicpa
 <th align="right">id</th>
 <th align="right">lexem_id</th>
 <th align="right">sense_id</th>
-<th align="left">example.source</th>
 <th align="left">example.form.tww</th>
-<th align="left">example.translation.en</th>
-<th align="left">example.translation.type</th>
-<th align="left">example.note.en</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="right">1</td>
-<td align="right">3</td>
-<td align="right">3</td>
-<td align="left">NA</td>
+<td align="right">2</td>
+<td align="right">2</td>
 <td align="left">exemple1.1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
 </tr>
 <tr class="even">
 <td align="right">2</td>
-<td align="right">3</td>
-<td align="right">3</td>
-<td align="left">NA</td>
+<td align="right">2</td>
+<td align="right">2</td>
 <td align="left">exemple1.2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
 </tr>
 <tr class="odd">
 <td align="right">3</td>
-<td align="right">4</td>
-<td align="right">4</td>
-<td align="left">NA</td>
+<td align="right">2</td>
+<td align="right">3</td>
 <td align="left">exemple2.1</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
 </tr>
 <tr class="even">
 <td align="right">4</td>
-<td align="right">4</td>
-<td align="right">4</td>
-<td align="left">NA</td>
+<td align="right">2</td>
+<td align="right">3</td>
 <td align="left">exemple2.2</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
-<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">2</td>
+<td align="right">4</td>
+<td align="left">exemple3.1</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">2</td>
+<td align="right">4</td>
+<td align="left">exemple3.2</td>
 </tr>
 </tbody>
 </table>
