@@ -45,10 +45,10 @@ read.pangloss <- function(url,
     sentencesdf <- data.frame(
       sentence_id = sentence_id,
       text_id     = rep(1:length(texts), times = sentence.by.texts),
-      audio_start = xml_text(xml_find_first(texts, "/TEXT/S/AUDIO/@start")),
-      audio_end   = xml_text(xml_find_first(texts, "/TEXT/S/AUDIO/@end")),
-      form = xml_text(xml_find_first(texts, "/TEXT/S/FORM")),
-      translation = xml_text(xml_find_first(texts, "/TEXT/S/TRANSL"))
+      audio_start = xml_text(xml_find_all(texts, "/TEXT/S/AUDIO/@start")),
+      audio_end   = xml_text(xml_find_all(texts, "/TEXT/S/AUDIO/@end")),
+      form = xml_text(xml_find_all(texts, "/TEXT/S/FORM")),
+      translation = xml_text(xml_find_all(texts, "/TEXT/S/TRANSL"))
     );
     interlinearized$sentences <- sentencesdf;
   }
