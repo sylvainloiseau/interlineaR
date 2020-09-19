@@ -21,9 +21,10 @@ read.toolbox <- function(path,
                          text.fields.suppl=NULL,
                          sentence.fields.suppl=c("tx", "nt", "ft"),
 												 word.fields.suppl=NULL,
-                         morpheme.fields.suppl=NULL) {
+                         morpheme.fields.suppl=NULL, 
+												 encoding = "unknown") {
  
-  lines <- readLines(path);
+  lines <- readLines(path, encoding = encoding);
 
   ## fields have mandatory elements for each level
   text.fields <- unique(c("id", text.fields.suppl));
